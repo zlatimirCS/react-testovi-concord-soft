@@ -1,3 +1,5 @@
+## Uputstvo
+
 klonirati sve projekte git clone https://github.com/zlatimirCS/react-testovi-concord-soft.git
 
 navigirati u folder /02-tours/setup
