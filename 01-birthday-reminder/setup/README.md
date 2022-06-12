@@ -12,7 +12,6 @@ git checkout -b {naziv-brancha}
 
 git push
 github username: zlatimir_rk@yahoo.com
-github password: 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
 
 Ocekivani rezultat
 https://react-projects-1-birthday-reminder.netlify.app/
