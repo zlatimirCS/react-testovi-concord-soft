@@ -1,0 +1,16 @@
+.item_container {
+  display: flex;
+  align-items: center;
+}
+
+.item_container_img {
+  height: 75px;
+  width: 75px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
