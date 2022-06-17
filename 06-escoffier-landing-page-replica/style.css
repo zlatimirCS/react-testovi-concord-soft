@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap");
+/* mixins */
+/* Basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Archivo Narrow", sans-serif;
+  color: #000000;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+  .container {
+    max-width: 94%;
+  }
+}
+
+/*****************
+nav
+*****************/
+.navigation {
+  background-color: #ffffff;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+  .navigation {
+    padding: 10px 30px;
+  }
+}
+
+.navigation .nav-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 70px;
+}
+
+.navigation .nav-box .nav-logo {
+  /* PROVERITI SIRINU OVOG KONTEJNERA - TREBA DA BUDE UZE!  */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation .nav-box .nav-logo img {
+  width: 50%;
+}
+
+.navigation .nav-box .nav-left-menu {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  color: #ffffff;
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+  .navigation .nav-box .nav-left-menu {
+    visibility: hidden;
+  }
+}
+
+.navigation .nav-box .nav-left-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.navigation .nav-box .nav-left-menu ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0 15px;
+  color: #000000;
+}
+
+.navigation .nav-box .nav-left-menu ul li a:hover {
+  color: #bb1133;
+}
+
+.navigation .nav-box .nav-right-menu {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  text-align: right;
+}
+
+.navigation .nav-box .nav-right-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.navigation .nav-box .nav-right-menu a:hover {
+  color: #bb1133;
+}
+
+.navigation .nav-box .nav-right-menu button {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #bb1133;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.navigation .nav-box .nav-right-menu button:hover {
+  background: #ffffff;
+  color: #bb1133;
+  border-color: #bb1133;
+}
+
+/* hero */
+.hero {
+  background-image: linear-gradient(89.75deg, rgba(252, 250, 250, 0.01) -11.31%, rgba(252, 250, 250, 0) 91.78%), url(img/bg-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .container {
+  height: 60vh;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero .container h1 {
+  font-weight: 700;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 75px;
+  line-height: 87px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0px 5px 10px #000000;
+}
+
+.hero .container p {
+  margin: 20px 0;
+  font-size: 30px;
+  line-height: 31px;
+  font-weight: 700;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.hero .container .hero-buttons {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #bb1133;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero .container .hero-buttons:hover {
+  background: #ffffff;
+  color: #bb1133;
+  border-color: #bb1133;
+}
+/*# sourceMappingURL=style.css.map */
