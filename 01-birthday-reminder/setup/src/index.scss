@@ -1,3 +1,76 @@
-.test {
-    color: red;
+body {
+  background: #f28ab2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  *,
+  &:after,
+  &:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+      width: 90vw;
+      margin: 5rem 0;
+      max-width: 450px;
+      background: #fff;
+      border-radius: 0.25rem;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.4);
+      h3 {
+        font-weight: 400;
+        text-transform: none;
+        margin-bottom: 2rem;
+        line-height: 1;
+        font-size: 1.75rem;
+        letter-spacing: .1rem;
+      }
+      .person {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 0.75rem;
+        -webkit-column-gap: 0.75rem;
+        column-gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        img {
+          width: 75px;
+          height: 75px;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
+        }
+        h4 {
+          margin-bottom: 0.35rem;
+          line-height: 1;
+          letter-spacing: 0.1rem;
+          text-transform: capitalize;
+        }
+        p {
+          margin-bottom: 0;
+          color: #617d98;
+        }
+      }
+      button {
+        color: #fff;
+        display: block;
+        width: 100%;
+        border-color: transparent;
+        background: #f28ab2;
+        margin: 2rem auto 0;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        letter-spacing: 0.1rem;
+        border-radius: 0.25rem;
+        outline: 1px solid rgba(242, 138, 178, 0.8);
+        cursor: pointer;
+      }
+    }
+  }
 }

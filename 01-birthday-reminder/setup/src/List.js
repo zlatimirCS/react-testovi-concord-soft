@@ -1,11 +1,18 @@
-import React from 'react';
+import React from "react";
+import data from "./data";
 
-const List = () => {
+export default function List(props) {
+  console.log(props, "testing");
   return (
-    <>
-      <h2>list component</h2>
-    </>
+    <article className="person" id={props.id}>
+    
+      <img src={props.image} alt={props.name} />
+      <div>
+        <h4>{props.name}</h4>
+        <p>{props.age} years</p>
+      </div>
+    </article>
   );
-};
+}
 
-export default List;
+
