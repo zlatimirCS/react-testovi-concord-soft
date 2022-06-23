@@ -3,9 +3,11 @@ import BirthdayList from "./component/BirthList";
 import data from "./data";
 import List from "./List";
 function App() {
+  const [people, setPeople] = useState(data);
+
   return (
     <div>
-      <BirthdayList data={data} />
+      <BirthdayList data={people} />
     </div>
   );
 }

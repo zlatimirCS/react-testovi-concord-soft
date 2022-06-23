@@ -2,7 +2,6 @@ import React from "react";
 import style from "./birthItem.module.scss";
 
 function BirthdayItem(props) {
-  console.log(props.data);
   const { id, name, age, image } = props.data;
 
   return (
@@ -13,7 +12,7 @@ function BirthdayItem(props) {
         </div>
         <div className={style.item_container_text}>
           <h4 className={style.item_container_text_name}>{name}</h4>
-          <p className={style.item_container_text_age}>{age}</p>
+          <p className={style.item_container_text_age}>{age} years</p>
         </div>
       </div>
     </li>

@@ -1,8 +1,45 @@
 @use "../index.scss" as main;
 
 .shrink {
-  width: 80%;
+  width: 30%;
   background-color: white;
-  margin: 0 auto;
+  padding: 2rem 2rem;
   border-radius: 10px;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list_action_container {
+  width: 100%;
+  position: relative;
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.list_clear_btn {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background-color: #f28ab2;
+  color: white;
+  font-size: 1.75rem;
+  cursor: pointer;
+  &:disabled {
+    background-color: var(--clr-grey-3);
+    cursor: not-allowed;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-bottom: 1.75rem;
+  span {
+    margin-right: 1rem;
+  }
 }

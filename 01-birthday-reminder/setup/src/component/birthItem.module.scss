@@ -1,6 +1,7 @@
 .item_container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .item_container_img {
@@ -12,5 +13,20 @@
     object-fit: cover;
     align-items: center;
     border-radius: 50%;
+  }
+}
+
+.item_container_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  h4 {
+    margin: 0;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0;
+    color: var(--clr-grey-5);
   }
 }
