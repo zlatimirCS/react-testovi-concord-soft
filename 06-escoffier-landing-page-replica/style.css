@@ -18,7 +18,7 @@ body {
   max-width: 90%;
   margin: auto;
 }
-@media (min-width: 401px) and (max-width: 800px) {
+@media (min-width: 421px, max-width: 766px) {
   .container {
     max-width: 94%;
   }
@@ -28,7 +28,7 @@ body {
   max-width: 70%;
   margin: auto;
 }
-@media (min-width: 401px) and (max-width: 800px) {
+@media (min-width: 421px, max-width: 766px) {
   .container2 {
     max-width: 80%;
   }
@@ -40,7 +40,7 @@ body {
   padding: 10px 0;
   display: flex;
 }
-@media (min-width: 401px) and (max-width: 800px) {
+@media (min-width: 421px, max-width: 766px) {
   .navigation {
     padding: 10px 30px;
   }
@@ -63,7 +63,7 @@ body {
   justify-items: start;
   color: #ffffff;
 }
-@media (min-width: 401px) and (max-width: 800px) {
+@media (min-width: 421px, max-width: 766px) {
   .navigation .nav-box .nav-left-menu {
     visibility: hidden;
   }
@@ -73,26 +73,39 @@ body {
   align-items: center;
   padding: 0 30px;
 }
+.navigation .nav-box .nav-left-menu ul li {
+  display: flex;
+  justify-content: center;
+}
 .navigation .nav-box .nav-left-menu ul li a {
+  text-align: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  padding: 0 15px;
+  padding: 0 18px;
   color: #000000;
 }
 .navigation .nav-box .nav-left-menu ul li a:hover {
   color: #bb1133;
 }
 .navigation .nav-box .nav-right-menu {
-  justify-items: end;
+  display: flex;
   align-items: center;
 }
+@media (min-width: 767px, max-width: 949px) {
+  .navigation .nav-box .nav-right-menu {
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+    align-items: end;
+  }
+}
 .navigation .nav-box .nav-right-menu a {
-  margin-right: 40px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   color: #000000;
+  padding: 0 18px 0 0;
 }
 .navigation .nav-box .nav-right-menu a:hover {
   color: #bb1133;
@@ -243,15 +256,12 @@ body {
   background-size: cover;
 }
 .insights .container {
-  height: 70vh;
+  height: 75vh;
   color: #ffffff;
-  display: flex;
-  align-items: left;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 .insights .container h3 {
+  display: flex;
+  justify-content: center;
   font-weight: 500;
   font-family: "Archivo Narrow", sans-serif;
   font-size: 40px;
@@ -264,24 +274,28 @@ body {
 }
 .insights .container .elements {
   display: flex;
+  justify-content: space-between;
 }
 .insights .container .elements article {
-  flex: 1 1 40%;
+  flex: 0 0 40%;
   font-weight: 500;
   font-family: "Archivo Narrow", sans-serif;
   font-size: 35px;
   text-shadow: 0px 5px 10px #000000;
 }
 .insights .container .elements .cards {
+  max-width: 700px;
   display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
   flex-wrap: wrap;
-  flex: 1 1 60%;
-  padding: 0 90px 0 30px;
+  flex: 0 0 60%;
   margin-bottom: 30px;
 }
 .insights .container .elements .cards .card {
   flex: 1 1 35%;
   max-width: 300px;
+  min-height: 215px;
   letter-spacing: 1px;
   background: #f4f4f4;
   margin: 15px;
@@ -308,11 +322,14 @@ body {
 }
 .connect .top-content {
   display: flex;
+  justify-content: space-between;
   margin-left: 100px;
   margin-top: 60px;
 }
 .connect .top-content .c-text {
   padding-top: 16px;
+  display: block;
+  max-width: 600px;
 }
 .connect .top-content .c-text h3 {
   display: inline-flex;

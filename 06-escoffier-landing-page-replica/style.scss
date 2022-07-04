@@ -11,6 +11,31 @@ $fontFamily: 'Archivo Narrow', sans-serif;
 
 $transition: all 0.3s ease;
 
+$breakpoints: (
+  'phone': (
+    max-width: 420px,
+  ),
+  'tablet': (
+    min-width: 421px,
+    max-width: 766px,
+  ),
+  'small': (
+    min-width: 767px,
+    max-width: 949px,
+  ),
+  'medium': (
+    min-width: 950px,
+    max-width: 1299px,
+  ),
+  'large': (
+    min-width: 1300px,
+    max-width: 1599px,
+  ),
+  'xlarge': (
+    min-width: 1600px,
+  ),
+) !default;
+
 /* mixins */
 
 @mixin dugme($txtColor: $white, $bgColor: $primary, $borderHover: $primary) {
@@ -35,18 +60,31 @@ $transition: all 0.3s ease;
   flex-direction: $direction;
   flex-wrap: $wrap;
 }
-@mixin responsive($device) {
-  @if $device == tablet {
-    @media (min-width: 401px) and (max-width: 800px) {
+// @mixin responsive($device) {
+//   @if $device == desktop {
+//     @media (min-width: 992px) {
+//       display: block;
+//     }
+//   @if $device == tablet {
+//     @media (min-width: 401px) and (max-width: 800px) {
+//       @content;
+//     }
+//       }
+//   @if $device == mobile {
+//     @media (max-width: 400px) {
+//       @content;
+//     }
+//   }
+// }
+
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
-    }
-    @if $device == mobile {
-      @media (max-width: 400px) {
-        @content;
-      }
     }
   }
 }
+
 /* Basic styles */
 
 * {
@@ -120,11 +158,14 @@ body {
         align-items: center;
         padding: 0 30px;
         li {
+          display: flex;
+          justify-content: center;
           a {
+            text-align: center;
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
-            padding: 0 15px;
+            padding: 0 18px;
             color: $black;
             &:hover {
               color: $primary;
@@ -134,19 +175,20 @@ body {
       }
     }
     .nav-right-menu {
-      justify-items: end;
+      display: flex;
       align-items: center;
-      @include responsive(tablet) {
-      }
-      @include responsive(mobile) {
+      @include responsive(small) {
+        display: flex;
+        flex-direction: column;
+        justify-items: end;
+        align-items: end;
       }
       a {
-        margin-right: 40px;
         text-decoration: none;
         font-size: 16px;
         font-weight: 600;
-        // margin: 10px 10px;
         color: $black;
+        padding: 0 18px 0 0;
         &:hover {
           color: $primary;
         }
@@ -280,10 +322,13 @@ body {
   background-position: center;
   background-size: cover;
   .container {
-    height: 70vh;
+    height: 75vh;
     color: $white;
-    @include flex(left, center, column);
+    @include responsive(large) {
+    }
     h3 {
+      display: flex;
+      justify-content: center;
       font-weight: 500;
       font-family: $fontFamily;
       font-size: 40px;
@@ -297,22 +342,27 @@ body {
 
     .elements {
       display: flex;
+      justify-content: space-between;
       article {
-        flex: 1 1 40%;
+        flex: 0 0 40%;
         font-weight: 500;
         font-family: $fontFamily;
         font-size: 35px;
         text-shadow: 0px 5px 10px #000000;
       }
       .cards {
+        max-width: 700px;
         display: flex;
+        justify-content: space-evenly;
+        justify-items: center;
         flex-wrap: wrap;
-        flex: 1 1 60%;
-        padding: 0 90px 0 30px;
+        flex: 0 0 60%;
+        // padding: 0 90px 0 30px;
         margin-bottom: 30px;
         .card {
           flex: 1 1 35%;
           max-width: 300px;
+          min-height: 215px;
           letter-spacing: 1px;
           background: $grey;
           margin: 15px;
@@ -343,10 +393,13 @@ body {
   flex-direction: column;
   .top-content {
     display: flex;
+    justify-content: space-between;
     margin-left: 100px;
     margin-top: 60px;
     .c-text {
       padding-top: 16px;
+      display: block;
+      max-width: 600px;
       h3 {
         display: inline-flex;
         flex-direction: column;
