@@ -11,31 +11,6 @@ $fontFamily: 'Archivo Narrow', sans-serif;
 
 $transition: all 0.3s ease;
 
-$breakpoints: (
-  'phone': (
-    max-width: 420px,
-  ),
-  'tablet': (
-    min-width: 421px,
-    max-width: 766px,
-  ),
-  'small': (
-    min-width: 767px,
-    max-width: 949px,
-  ),
-  'medium': (
-    min-width: 950px,
-    max-width: 1299px,
-  ),
-  'large': (
-    min-width: 1300px,
-    max-width: 1599px,
-  ),
-  'xlarge': (
-    min-width: 1600px,
-  ),
-) !default;
-
 /* mixins */
 
 @mixin dugme($txtColor: $white, $bgColor: $primary, $borderHover: $primary) {
@@ -47,42 +22,20 @@ $breakpoints: (
   padding: 10px 20px;
   cursor: pointer;
   font-weight: 600;
+
   &:hover {
     background: $txtColor;
     color: $bgColor;
     border-color: $borderHover;
   }
 }
+
 @mixin flex($align, $justify, $direction: row, $wrap: wrap) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
   flex-direction: $direction;
   flex-wrap: $wrap;
-}
-// @mixin responsive($device) {
-//   @if $device == desktop {
-//     @media (min-width: 992px) {
-//       display: block;
-//     }
-//   @if $device == tablet {
-//     @media (min-width: 401px) and (max-width: 800px) {
-//       @content;
-//     }
-//       }
-//   @if $device == mobile {
-//     @media (max-width: 400px) {
-//       @content;
-//     }
-//   }
-// }
-
-@mixin responsive($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media #{inspect(map-get($breakpoints, $breakpoint))} {
-      @content;
-    }
-  }
 }
 
 /* Basic styles */
@@ -92,31 +45,22 @@ $breakpoints: (
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-size: $fontSize;
   font-family: $fontFamily;
   color: $black;
   background: $white;
 }
+
 .container {
   max-width: 90%;
   margin: auto;
-  @include responsive(tablet) {
-    max-width: 94%;
-  }
-  @include responsive(mobile) {
-    max-width: 98%;
-  }
 }
+
 .container2 {
   max-width: 70%;
   margin: auto;
-  @include responsive(tablet) {
-    max-width: 80%;
-  }
-  @include responsive(mobile) {
-    max-width: 90%;
-  }
 }
 
 /* navbar */
@@ -125,41 +69,52 @@ body {
   background-color: $white;
   padding: 10px 0;
   display: flex;
-  @include responsive(tablet) {
-    padding: 10px 30px;
-  }
-  @include responsive(mobile) {
-    padding: 10px 20px;
-  }
+
   .nav-box {
     width: 100%;
     display: flex;
     align-items: center;
     padding: 0 70px;
+
+    @media (max-width: 700px) {
+      justify-content: space-evenly;
+    }
+
     .nav-logo {
       display: flex;
+
       img {
         width: 140px;
         height: 60px;
       }
     }
+
     .nav-left-menu {
       flex: 3 2 70%;
       justify-items: start;
       color: $white;
-      @include responsive(tablet) {
-        visibility: hidden;
+
+      @media (max-width: 700px) {
+        max-width: 50px;
       }
-      @include responsive(mobile) {
-        width: 100%;
-      }
+
       ul {
         display: flex;
         align-items: center;
         padding: 0 30px;
+
+        @media (max-width: 700px) {
+          visibility: hidden;
+        }
+
         li {
           display: flex;
           justify-content: center;
+
+          @media (max-width: 700px) {
+            visibility: hidden;
+          }
+
           a {
             text-align: center;
             text-decoration: none;
@@ -167,6 +122,11 @@ body {
             font-weight: 600;
             padding: 0 18px;
             color: $black;
+
+            @media (max-width: 700px) {
+              visibility: hidden;
+            }
+
             &:hover {
               color: $primary;
             }
@@ -174,25 +134,36 @@ body {
         }
       }
     }
+
     .nav-right-menu {
       display: flex;
       align-items: center;
-      @include responsive(small) {
-        display: flex;
+
+      @media (max-width: 1300px) {
         flex-direction: column;
-        justify-items: end;
-        align-items: end;
       }
+
+      @media (max-width: 700px) {
+        justify-content: space-evenly;
+      }
+
       a {
         text-decoration: none;
         font-size: 16px;
         font-weight: 600;
         color: $black;
         padding: 0 18px 0 0;
+
+        @media (max-width: 1300px) {
+          padding: 5px;
+          ;
+        }
+
         &:hover {
           color: $primary;
         }
       }
+
       button {
         @include dugme($white, $primary);
       }
@@ -203,18 +174,23 @@ body {
 /* hero */
 
 .hero {
-  background-image: linear-gradient(
-      89.75deg,
+  background-image: linear-gradient(89.75deg,
       rgba(252, 250, 250, 0.01) -11.31%,
-      rgba(252, 250, 250, 0) 91.78%
-    ),
+      rgba(252, 250, 250, 0) 91.78%),
     url(img/bg-1.jpg);
   background-position: center;
   background-size: cover;
+
   .container {
     height: 60vh;
     color: $white;
     @include flex(left, center, column);
+
+    @media (max-width: 515px) {
+      height: 80vh;
+      flex-direction: column;
+    }
+
     h1 {
       font-weight: 700;
       font-family: $fontFamily;
@@ -223,7 +199,13 @@ body {
       letter-spacing: 0.03em;
       text-transform: uppercase;
       text-shadow: 0px 5px 10px #000000;
+
+      @media (max-width: 420px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
     }
+
     .hero-p {
       margin: 30px 0;
       font-size: 30px;
@@ -231,21 +213,31 @@ body {
       font-weight: 700;
       font-family: $fontFamily;
     }
+
     .hero-btn {
       .hero-btn-1 {
         @include dugme($white, $primary);
+
         i {
           margin-left: 10px;
         }
+
         padding: 16px 20px;
         font-size: 14px;
         margin-right: 30px;
       }
+
       .hero-btn-2 {
         @include dugme($white, $primary);
+
+        @media (max-width: 500px) {
+          margin-top: 15px;
+        }
+
         i {
           margin-left: 10px;
         }
+
         padding: 16px 30px;
         font-size: 14px;
       }
@@ -264,6 +256,13 @@ body {
     max-width: 55%;
     margin: auto;
     padding: 50px 0;
+
+    @media (max-width: 830px) {
+      &:last-child {
+        align-items: center;
+      }
+    }
+
     .edu-text {
       h2 {
         color: $primary;
@@ -274,6 +273,7 @@ body {
         text-transform: uppercase;
         padding-bottom: 30px;
       }
+
       p {
         font-weight: 600;
         font-size: 18px;
@@ -282,10 +282,27 @@ body {
         padding-bottom: 30px;
       }
     }
+
     .edu-fc {
       display: flex;
       justify-content: space-between;
+
+      @media (max-width: 830px) {
+        flex-direction: column;
+        flex: 1 48%;
+        justify-content: center;
+        align-items: center;
+        max-width: 48%;
+      }
+
       .edu-fc-1 {
+        @media (max-width: 990px) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex: 1 1 45%;
+        }
+
         .image {
           width: 100px;
           height: 100px;
@@ -295,7 +312,9 @@ body {
           border-radius: 50% 50%;
           background: $grey;
           margin: 0 auto;
+
         }
+
         h5 {
           color: $secondary;
           font-size: 14px;
@@ -304,6 +323,11 @@ body {
           line-height: 16px;
           text-transform: uppercase;
           margin: 10px;
+          max-width: 150px;
+
+          @media (max-width: 1087px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -313,19 +337,21 @@ body {
 /* insights */
 
 .insights {
-  background-image: linear-gradient(
-      89.75deg,
+  background-image: linear-gradient(89.75deg,
       rgba(252, 250, 250, 0.01) -11.31%,
-      rgba(252, 250, 250, 0) 91.78%
-    ),
+      rgba(252, 250, 250, 0) 91.78%),
     url(img/bg-2.jpg);
   background-position: center;
   background-size: cover;
+
   .container {
-    height: 75vh;
+    height: 80vh;
     color: $white;
-    @include responsive(large) {
+
+    @media (max-width: 990) {
+      height: 60vh;
     }
+
     h3 {
       display: flex;
       justify-content: center;
@@ -343,22 +369,27 @@ body {
     .elements {
       display: flex;
       justify-content: space-between;
+
       article {
         flex: 0 0 40%;
         font-weight: 500;
         font-family: $fontFamily;
         font-size: 35px;
         text-shadow: 0px 5px 10px #000000;
+
+        @media (max-width: 820px) {
+          font-size: 25px;
+        }
       }
+
       .cards {
-        max-width: 700px;
         display: flex;
         justify-content: space-evenly;
         justify-items: center;
         flex-wrap: wrap;
-        flex: 0 0 60%;
-        // padding: 0 90px 0 30px;
+        flex: 0 0 55%;
         margin-bottom: 30px;
+
         .card {
           flex: 1 1 35%;
           max-width: 300px;
@@ -370,15 +401,37 @@ body {
           border-radius: 4px;
           background: $grey;
           padding: 30px;
+
+          @media (max-width: 1045px) {
+            max-width: 200px;
+            margin: 10px;
+            padding: 20px;
+          }
+
+          @media (max-width: 715px) {
+            margin: 5px;
+            padding: 10px;
+          }
+
           h4 {
             color: $primary;
             font-size: 40px;
             padding-bottom: 20px;
           }
+
+          @media (max-width: 715px) {
+            font-size: 30px;
+          }
+
           p {
             color: $black;
             font-size: 16px;
             line-height: 20px;
+
+            @media (max-width: 715px) {
+              font-size: 12px;
+              line-height: 15px;
+            }
           }
         }
       }
@@ -391,15 +444,18 @@ body {
 .connect {
   display: flex;
   flex-direction: column;
+
   .top-content {
     display: flex;
     justify-content: space-between;
     margin-left: 100px;
     margin-top: 60px;
+
     .c-text {
       padding-top: 16px;
       display: block;
       max-width: 600px;
+
       h3 {
         display: inline-flex;
         flex-direction: column;
@@ -408,12 +464,18 @@ body {
         font-size: 60px;
         text-transform: uppercase;
         padding: 0 16px;
+
+        @media (max-width: 1355px) {
+          font-size: 45px;
+        }
       }
+
       h5 {
         margin: 30px 0;
         font-size: 20px;
         line-height: 22px;
       }
+
       p {
         font-size: 14px;
         font-weight: lighter;
@@ -422,8 +484,20 @@ body {
         font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
       }
     }
+
+    img {
+      width: 100%;
+    }
   }
+
   .bottom-content {
+    @media (max-width: 970px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     h4 {
       color: $primary;
       font-size: 35px;
@@ -432,60 +506,97 @@ body {
       text-align: center;
       margin-bottom: 30px;
     }
+
     .articles {
       display: flex;
-      justify-content: space-between;
-      max-width: 55%;
-      margin: 0 auto;
+      justify-content: space-evenly;
+      align-items: center;
+      flex: 0 0 45%;
+      // max-width: 55%;
+      // margin: 0 100px auto;
       margin-bottom: 30px;
 
-      .article {
-        display: flex;
+      @media (max-width: 970px) {
         flex-direction: column;
-        background-color: $grey;
-        border-radius: 5px;
-        max-width: 46%;
-        h6 {
-          color: $primary;
-          font-size: 18px;
-          font-weight: 700;
-          text-transform: uppercase;
-          text-align: center;
-          margin: 30px 0;
+        flex: 0 0 80%;
+        align-items: center;
+        max-width: 400px;
+        justify-content: center;
+
+        &:last-child {
+          margin-top: 30px;
         }
-        .span-t {
-          font-size: 14px;
-          font-weight: bolder;
-          margin-bottom: 20px;
-        }
-        .container2 {
-          .addition {
-            display: flex;
-            margin-bottom: 15px;
-            i {
-              color: $secondary;
-              margin-right: 10px;
-              padding-top: 5px;
-            }
-            p {
-              font-size: 14px;
-            }
-          }
-        }
-        button {
-          @include dugme($white, $primary);
+      }
+    }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      background-color: $grey;
+      border-radius: 5px;
+
+      @media (max-width: 850px) {
+        margin: 0 0 30px 0;
+      }
+
+      h6 {
+        color: $primary;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .span-t {
+        font-size: 14px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+
+      .container2 {
+        .addition {
+          display: flex;
+          margin-bottom: 15px;
+
           i {
-            margin-left: 10px;
+            color: $secondary;
+            margin-right: 10px;
+            padding-top: 5px;
           }
-          padding: 12px 10px;
-          font-size: 12px;
-          font-weight: 600;
-          margin: 0 80px 30px 80px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      button {
+        @include dugme($white, $primary);
+        padding: 12px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0 80px 30px 80px;
+
+        @media (max-width: 1483px) {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          margin: 0 30px 20px 30px;
+        }
+
+        @media (max-width: 1055px) {
+          margin: 10px auto;
+        }
+
+        i {
+          margin-left: 10px;
         }
       }
     }
   }
 }
+
 
 /* crown */
 
@@ -500,6 +611,7 @@ body {
 
 .partners {
   background-color: $grey;
+
   h4 {
     font-size: 20px;
     font-weight: 700;
@@ -507,25 +619,36 @@ body {
     text-align: center;
     padding: 30px 0;
   }
+
   .container {
     display: flex;
-    justify-content: space-between;
+    flex: 0 0 30%;
+    justify-content: space-evenly;
     max-width: 75%;
+
+    @media (max-width: 1070px) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 40%;
+    }
+
     .partner {
-      padding: 0 30px;
-      max-width: 35%;
-      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 10px 50px 10px;
+
       .partner-logo {
         display: flex;
         justify-content: center;
         align-items: center;
         background: $white;
         height: 120px;
-        max-width: 330px;
+        max-width: inherit;
       }
+
       .partner-pic {
         img {
-          width: 330px;
+          max-width: max-content;
         }
       }
     }
