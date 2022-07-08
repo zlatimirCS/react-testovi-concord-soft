@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Tours from "./Tours";
 
+import style from "./app.module.scss";
+
 const url = "https://course-api.com/react-tours-project";
 
 function App() {
@@ -36,9 +38,9 @@ function App() {
           <h1>Our Tours</h1>
         </div>
         {items.map((item) => (
-          <article key={item.id}>
+          <div className={style.wrapper} key={item.id}>
             <Tours tours={item} />
-          </article>
+          </div>
         ))}
       </div>
     );
