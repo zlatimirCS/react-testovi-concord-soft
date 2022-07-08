@@ -1,0 +1,15 @@
+@use "./base/main.scss" as main;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: main.$main-font;
+}
+
+:root {
+  background-color: main.$clr-grey-10;
+}

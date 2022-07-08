@@ -1,0 +1,5 @@
+@use "../styles/base/main.scss" as main;
+
+.wrapper {
+  @include main.shrink(50%);
+}

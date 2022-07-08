@@ -1,0 +1,13 @@
+@use "../styles/base/main.scss" as main;
+
+.wrapper {
+  margin-bottom: 40px;
+}
+
+.container_img {
+  width: 100%;
+  img {
+    width: 100%;
+    border-radius: 5% 5% 0 0;
+  }
+}

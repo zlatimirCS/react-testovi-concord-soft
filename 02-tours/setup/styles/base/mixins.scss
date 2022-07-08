@@ -1,0 +1,6 @@
+@mixin shrink($width: 80%, $padding: 0px) {
+  width: $width;
+  padding: $padding;
+  margin: 0 auto;
+  background-color: white;
+}

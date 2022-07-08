@@ -1,0 +1,8 @@
+@mixin google-fonts($font) {
+  $font: unquote($font);
+  @import url("https://fonts.googleapis.com/css2?family=#{$font}");
+}
+
+@include google-fonts("Ubuntu");
+
+$main-font: "Ubuntu", sans-serif;
