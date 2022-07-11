@@ -5,8 +5,9 @@ import Tours from "./Tours";
 const url = "https://course-api.com/react-tours-project";
 
 function App() {
-  const [tours, setTours] = useState();
+  const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [title, setTitle] = useState ('Our Tours')
 
   const getData = () => {
     fetch(url, {
@@ -24,6 +25,15 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
+
+  useEffect(() => {
+    // console.log(tours.length);
+    if (tours?.length > 0) {
+      setTitle("Our tours")
+    } else {
+      setTitle("No Tours Left")
+    }
+  }, [tours])
 
   const deleteFromArray = (id) => {
     const newArray = tours.filter((tour) => {
@@ -58,7 +68,7 @@ function App() {
     <main>
       <section>
         <div className="title">
-          <h2>Our Tours</h2>
+          <h2>{title}</h2>
           <div className="underline"></div>
         </div>
         {renderList()}
