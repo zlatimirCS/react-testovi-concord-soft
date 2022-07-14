@@ -10,6 +10,7 @@ function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  var duplicate = [];
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -17,6 +18,7 @@ function App() {
         (result) => {
           setIsLoaded(true);
           setItems(result);
+          duplicate = [...result];
         },
         (error) => {
           setIsLoaded(true);
@@ -25,7 +27,13 @@ function App() {
       );
   }, []);
 
-  console.log(items);
+  function notInterestedHanddler(id) {
+    setItems(
+      items.filter((item) => {
+        return item.id !== id;
+      })
+    );
+  }
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -33,13 +41,14 @@ function App() {
     return <Loading />;
   } else {
     return (
-      <div>
-        <div>
-          <h1>Our Tours</h1>
+      <div className={style.wrapper_headline}>
+        <div className={style.container}>
+          <h2 className={style.headline}>Our Tours</h2>
+          <div className={style.underline}></div>
         </div>
         {items.map((item) => (
           <div className={style.wrapper} key={item.id}>
-            <Tours tours={item} />
+            <Tours tours={item} notInterested={notInterestedHanddler} />
           </div>
         ))}
       </div>

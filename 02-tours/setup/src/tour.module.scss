@@ -11,3 +11,66 @@
     border-radius: main.$radius main.$radius 0 0;
   }
 }
+
+.info_wrapper {
+  padding: 1.5rem;
+}
+
+.headline_price_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.headline {
+  h3 {
+    display: flex;
+    word-spacing: main.$horizontal_spacing;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+}
+
+.price {
+  padding: 0.25rem 0.5rem;
+  background-color: main.$clr-primary-10;
+  p {
+    font-weight: bold;
+    color: main.$clr-primary-5;
+    font-size: 0.8rem;
+  }
+}
+
+.read_btn {
+  border: none;
+  background-color: transparent;
+  font-size: 0.75rem;
+  color: main.$clr-primary-5;
+  text-transform: capitalize;
+  margin-left: 0.25rem;
+  cursor: pointer;
+}
+
+.info_container {
+  p {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+.actions_container {
+  button {
+    display: block;
+    margin: 1.5rem auto 0;
+    text-transform: capitalize;
+    color: main.$clr-red-dark;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: 1px solid main.$clr-red-dark;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+}

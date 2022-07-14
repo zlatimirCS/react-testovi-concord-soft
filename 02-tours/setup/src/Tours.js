@@ -3,10 +3,14 @@ import Tour from "./Tour";
 
 import style from "./tours.module.scss";
 const Tours = (props) => {
-  console.log(props.tours);
+  console.log(props);
   return (
     <div className={style.wrapper}>
-      <Tour key={props.tours.id} tour={props.tours} />
+      <Tour
+        key={props.tours.id}
+        tour={props.tours}
+        delete={props.notInterested}
+      />
     </div>
   );
 };

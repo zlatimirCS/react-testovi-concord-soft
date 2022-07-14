@@ -1,19 +1,19 @@
 @use "../styles/base/main.scss" as main;
 
 .wrapper {
-  @include main.shrink(50%);
+  @include main.shrink(40%);
   border-radius: main.$radius;
   box-shadow: main.$dark-shadow;
   @include main.mobile-screens {
-    @include main.shrink(90%);
-  }
-  @include main.tablet-screens {
     @include main.shrink(80%);
   }
-  @include main.laptop-screens {
+  @include main.tablet-screens {
     @include main.shrink(70%);
   }
-  @include main.desctop-screens {
+  @include main.laptop-screens {
     @include main.shrink(60%);
+  }
+  @include main.desctop-screens {
+    @include main.shrink(50%);
   }
 }
