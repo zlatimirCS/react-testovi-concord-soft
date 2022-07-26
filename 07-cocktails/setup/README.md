@@ -21,9 +21,3 @@ npm install react-router-dom@6
 https://www.udemy.com/course/react-tutorial-and-projects-course/
 
 Section 8: Cocktails API project
-
-udemy account:
-
-julijanramac@gmail.com
-
-Freeway5
