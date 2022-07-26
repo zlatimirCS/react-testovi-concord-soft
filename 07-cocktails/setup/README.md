@@ -1,15 +1,16 @@
-#### React Router Fix
+## Uputstvo
 
-(Fix)[https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc]
+navigirati u folder /07-cocktails/setup
 
-#### CRA Fix
+npm install
 
-```
+git push
 
-"build": "CI= react-scripts build",
+github username: zlatimir_rk@yahoo.com
 
-```
+Ocekivani rezultat
 
-```sh
+https://react-projects-3-reviews.netlify.app/
+
+Neophodno je instalirati react-router
 npm install react-router-dom@6
-```
