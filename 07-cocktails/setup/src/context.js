@@ -7,7 +7,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("a");
-  const [coctails, setCoctails] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
 
   const fetchDrinks = async () => {
     setLoading(true);
@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
       const data = await response.json();
       console.log(data);
       const { drinks } = data;
-      // Iteracija
+      
       if (drinks) {
         const newCocktails = drinks.map((item) => {
           const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } =
@@ -29,9 +29,9 @@ const AppProvider = ({ children }) => {
             glass: strGlass,
           };
         });
-        setCoctails(newCocktails);
+        setCocktails(newCocktails);
       } else {
-        setCoctails([]); // Null
+        setCocktails([]); // Null
       }
       setLoading(false);
     } catch (error) {
@@ -44,12 +44,12 @@ const AppProvider = ({ children }) => {
   }, [searchTerm]);
 
   return (
-    <AppContext.Provider value={{ loading, coctails, setSearchTerm }}>
+    <AppContext.Provider value={{ loading, cocktails, setSearchTerm }}>
       {children}
     </AppContext.Provider>
   );
 };
-// make sure use
+
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

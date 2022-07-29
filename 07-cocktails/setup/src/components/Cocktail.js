@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Cocktail = (image, info, id, name, glass) => {
+const Cocktail = ({ image, info, id, name, glass }) => {
   return (
     <article className="cocktail">
       <div className="img-container">
@@ -11,7 +11,9 @@ const Cocktail = (image, info, id, name, glass) => {
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
-        <Link to={`/coctail/${id}`} className="btn btn-primary btn-details" />
+        <Link to={`/cocktail/${id}`} className="btn btn-primary btn-details">
+          details
+        </Link>
       </div>
     </article>
   );

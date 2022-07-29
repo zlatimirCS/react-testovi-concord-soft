@@ -17,7 +17,7 @@ function App() {
         </Route>
         <Route path='/about' element={<About />}>
         </Route>
-        <Route path='/coctail/:id' element={<SingleCocktail />}>
+        <Route path='/cocktail/:id' element={<SingleCocktail />}>
         </Route>
         <Route path='*' element={<Error />}>
         </Route>
