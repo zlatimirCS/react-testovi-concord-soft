@@ -1,0 +1,84 @@
+@use "../styles/base/main.scss" as main;
+
+.item_wrapper {
+  padding: 24px 32px;
+  background-color: main.$clr-white;
+}
+
+.item_img_container {
+  position: relative;
+  width: 150px;
+  height: 180px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.item_img {
+  position: relative;
+  img {
+    @include main.pictureSize;
+    position: absolute;
+  }
+}
+
+.item_img_background {
+  @include main.pictureSize;
+  position: absolute;
+  background-color: main.$clr-primary-5;
+  top: -5px;
+  left: 5px;
+}
+
+.faQuoteRight {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: main.$clr-primary-5;
+  z-index: 2;
+  padding: 5px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.item_name_job {
+  text-align: center;
+  h5 {
+    text-transform: capitalize;
+    letter-spacing: main.$horizontal_spacing;
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+.item_description {
+  margin-top: 0.5rem;
+  text-align: center;
+  p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.item_actions_container_shavron {
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.item_actions_button {
+  text-align: center;
+  button {
+    @include main.button($backgroundColor: main.$clr-primary-5);
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    border-color: transparent;
+  }
+}
+
+.chevron {
+  color: main.$clr-primary-5;
+}

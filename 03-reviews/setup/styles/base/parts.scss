@@ -1,0 +1,16 @@
+@mixin button(
+  $margin: 0.5rem,
+  $backgroundColor,
+  $padding: 0.25rem 0.5rem,
+  $border-radius: 0.25rem,
+  $darken: 25
+) {
+  margin-top: $margin;
+  background: $backgroundColor;
+  padding: $padding;
+  border-radius: $border-radius;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($color: $backgroundColor, $amount: $darken);
+  }
+}

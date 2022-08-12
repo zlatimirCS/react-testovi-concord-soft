@@ -1,20 +1,17 @@
-#### Idea
+## Uputstvo
 
-[uidesigndaily](https://uidesigndaily.com/posts/sketch-accordion-website-day-1175)
+klonirati sve projekte git clone https://github.com/zlatimirCS/react-testovi-concord-soft.git
 
-![](./idea.png);
+navigirati u folder /04-accordion/setup
 
-#### React Icons
+npm install
 
-[react icons](https://react-icons.github.io/react-icons/)
+kreirati svoj branch git checkout -b {naziv-brancha}
 
-```
-npm install react-icons --save
-```
+git push
 
-```javascript
-import { FaHome } from 'react-icons/fa';
-const Component = () => {
-  return <FaHome className='icon'></FaHome>;
-};
-```
+github username: zlatimir_rk@yahoo.com
+
+Ocekivani rezultat 
+
+[https://react-projects-3-reviews.netlify.app/](https://react-projects-4-accordion.netlify.app/)

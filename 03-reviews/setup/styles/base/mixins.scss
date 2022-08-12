@@ -1,0 +1,12 @@
+@mixin shrink($width: 80%, $padding: 0px) {
+  width: $width;
+  padding: $padding;
+  margin: 0 auto;
+}
+
+@mixin pictureSize($width: 150px, $height: 150px) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  border-radius: 50%;
+}

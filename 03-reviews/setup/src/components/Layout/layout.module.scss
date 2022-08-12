@@ -1,0 +1,21 @@
+@use "../../../styles/base/main.scss" as main;
+
+.layout_main_wrapper {
+  @include main.shrink(50%);
+
+  @include main.desctop-screens {
+    @include main.shrink(65%);
+  }
+
+  @include main.laptop-screens {
+    @include main.shrink(70%);
+  }
+
+  @include main.tablet-screens {
+    @include main.shrink(80%);
+  }
+
+  @include main.mobile-screens {
+    @include main.shrink(90%);
+  }
+}

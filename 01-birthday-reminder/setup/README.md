@@ -16,3 +16,6 @@ github username: zlatimir_rk@yahoo.com
 
 Ocekivani rezultat
 https://react-projects-1-birthday-reminder.netlify.app/
+
+Rezultat:
+https://birthday-reminder2022.netlify.app/
