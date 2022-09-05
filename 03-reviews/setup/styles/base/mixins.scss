@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-@mixin pictureSize($width: 150px, $height: 150px) {
+@mixin pictureSize($width: 130px, $height: 130px) {
   width: $width;
   height: $height;
   object-fit: cover;

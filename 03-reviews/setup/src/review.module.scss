@@ -3,12 +3,13 @@
 .item_wrapper {
   padding: 24px 32px;
   background-color: main.$clr-white;
+  border-radius: 0.2rem;
 }
 
 .item_img_container {
   position: relative;
-  width: 150px;
-  height: 180px;
+  width: 130px;
+  height: 150px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -57,13 +58,16 @@
     font-size: 0.9rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
+    color: main.$clr-primary-5;
+    letter-spacing: main.$horizontal_spacing;
   }
 }
 
 .item_description {
   margin-top: 0.5rem;
+  margin-bottom: 0.6rem;
   text-align: center;
   p {
     font-size: 0.75rem;
