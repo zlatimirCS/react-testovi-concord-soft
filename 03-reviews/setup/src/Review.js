@@ -33,7 +33,7 @@ const Review = () => {
       <div className={styles.item_img_container}>
         <div className={styles.item_img_background}></div>
         <div className={styles.faQuoteRight}>
-          <FaQuoteRight color="white" />
+          <FaQuoteRight color="white" className={styles.fa} />
         </div>
         <div className={styles.item_img}>
           <img src={people[newPerson].image} alt={people[newPerson].name} />
@@ -56,7 +56,9 @@ const Review = () => {
           </div>
         </div>
         <div className={styles.item_actions_button}>
-          <button onClick={random}>click me</button>
+          <button onClick={random}>
+            <span>Surprise me</span>
+          </button>
         </div>
       </div>
     </div>

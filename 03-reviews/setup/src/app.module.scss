@@ -1,14 +1,9 @@
 @use "../styles/base/main.scss" as main;
 
 .main_wrapper {
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 20% 60% 20%;
-  // grid-template-areas: "." "main" ".";
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .sescond_child {
@@ -23,11 +18,14 @@
   letter-spacing: main.$horizontal_spacing;
   text-align: center;
   margin-bottom: 0.2rem;
+  font-size: 2rem;
 }
 
 .main_headline_underline {
   height: 0.2rem;
-  width: 5rem;
+  width: 4rem;
   background-color: main.$clr-primary-4;
   margin: 0 auto;
+  position: relative;
+  right: -5px;
 }

@@ -6,11 +6,18 @@
   $darken: 25
 ) {
   margin-top: $margin;
-  background: $backgroundColor;
+  background: lighten($color: $backgroundColor, $amount: 30);
   padding: $padding;
   border-radius: $border-radius;
+  span {
+    color: darken($color: $backgroundColor, $amount: $darken);
+  }
+
   cursor: pointer;
   &:hover {
-    background-color: darken($color: $backgroundColor, $amount: $darken);
+    background-color: $backgroundColor;
+    span {
+      color: lighten($color: $backgroundColor, $amount: $darken);
+    }
   }
 }

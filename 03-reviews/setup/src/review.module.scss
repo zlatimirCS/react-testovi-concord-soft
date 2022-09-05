@@ -40,6 +40,15 @@
   border-radius: 50%;
 }
 
+.fa {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .item_name_job {
   text-align: center;
   h5 {
@@ -71,6 +80,7 @@
 
 .item_actions_button {
   text-align: center;
+
   button {
     @include main.button($backgroundColor: main.$clr-primary-5);
     text-transform: capitalize;
@@ -81,4 +91,7 @@
 
 .chevron {
   color: main.$clr-primary-5;
+  &:hover {
+    color: darken($color: main.$clr-primary-5, $amount: 25);
+  }
 }
