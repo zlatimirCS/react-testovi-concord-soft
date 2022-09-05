@@ -91,6 +91,7 @@
 
 .chevron {
   color: main.$clr-primary-5;
+  cursor: pointer;
   &:hover {
     color: darken($color: main.$clr-primary-5, $amount: 25);
   }

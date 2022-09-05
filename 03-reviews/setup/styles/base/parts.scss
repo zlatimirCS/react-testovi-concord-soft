@@ -9,6 +9,7 @@
   background: lighten($color: $backgroundColor, $amount: 30);
   padding: $padding;
   border-radius: $border-radius;
+  // border: none;
   span {
     color: darken($color: $backgroundColor, $amount: $darken);
   }

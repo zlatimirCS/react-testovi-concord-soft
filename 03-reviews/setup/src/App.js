@@ -12,7 +12,7 @@ function App() {
         <div className={styles.sescond_child}></div>
         <div className={styles.grid_child}>
           <div className={styles.main_headline_container}>
-            <h2 className={styles.main_headline}>Our Rewievs</h2>
+            <h2 className={styles.main_headline}>Our Reviews</h2>
             <div className={styles.main_headline_underline}></div>
           </div>
           <Review />
