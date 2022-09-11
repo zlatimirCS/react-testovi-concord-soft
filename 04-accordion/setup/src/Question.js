@@ -21,6 +21,7 @@ const Question = (props) => {
 
     return React.cloneElement(AiOutlinePlus(), SAFE_PROPS, SAFE_CHILDREN);
   };
+  // outline plus replacement end
 
   // outline minus desplacement
   const AiOutlineMinusReplacement = (props) => {
@@ -39,6 +40,7 @@ const Question = (props) => {
     const SAFE_PROPS = { attr: rest, ...props };
     return React.cloneElement(AiOutlineMinus(), SAFE_PROPS, SAFE_CHILDREN);
   };
+  // outline minus desplacement end
 
   function visibleQUbutton() {
     if (visibleQuestion) {
@@ -56,11 +58,9 @@ const Question = (props) => {
         </div>
         <div className={styles.item_button} onClick={visibleQUbutton}>
           {visibleQuestion ? (
-            // <AiOutlineMinus className={styles.btnbtn} />
             <AiOutlineMinusReplacement className={styles.btnbtn} />
           ) : (
             <AiOutlinePlusReplacement className={styles.btnbtn} />
-            // <AiOutlinePlus className={styles.btnbtn} />
           )}
         </div>
       </div>
