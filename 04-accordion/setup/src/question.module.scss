@@ -1,0 +1,42 @@
+@use "../styles/base/main.scss" as main;
+
+.question_item_container {
+  padding: 1rem 1.5rem;
+  border: 2px solid main.$clr-grey-special;
+  border-radius: main.$radius;
+  margin-bottom: 1rem;
+  box-shadow: main.$light-shadow;
+}
+
+.item_headline_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item_button {
+  width: 2rem;
+  height: 2rem;
+  background-color: main.$clr-grey-special;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 1rem;
+}
+
+.btnbtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: main.$clr-red-special;
+  cursor: pointer;
+}
+
+.question_item_answer {
+  margin-top: 0.5rem;
+  line-height: 1.3rem;
+  letter-spacing: 0rem;
+  @include main.tablet_and_more_screens {
+    line-height: 1.5rem;
+  }
+}

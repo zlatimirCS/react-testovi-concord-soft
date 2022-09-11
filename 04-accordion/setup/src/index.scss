@@ -1,3 +1,57 @@
-.test {
-  color: red;
+@use "../styles/base.scss" as main;
+
+html {
+  min-width: main.$fixed-width;
+}
+
+body {
+  letter-spacing: main.$spacing;
+  font-family: main.$secondary-font;
+  font-size: main.$mobile-font-size;
+  line-height: main.$line-height;
+  background-color: main.$clr-purple;
+  @include main.tablet_and_more_screens {
+    font-size: main.$tablet-and-more;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  text-transform: capitalize;
+  color: main.$clr-grey-1;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  @include main.tablet_and_more_screens {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  color: main.$clr-grey-1;
+  font-size: 0.875rem;
+  @include main.tablet_and_more_screens {
+    font-size: 1rem;
+  }
+}
+
+p {
+  color: main.$clr-grey-3;
+}
+
+.firsthidden {
+  display: none;
+}
+
+.visibleQ {
+  display: block;
+}
+.hiddenQ {
+  display: hidden;
 }

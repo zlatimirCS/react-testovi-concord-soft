@@ -1,0 +1,27 @@
+@use "../styles/base/main.scss" as main;
+
+.main {
+  @include main.nine_and_more_screens {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main_wrapper {
+  width: 90vw;
+  max-width: 920px;
+  background-color: main.$clr-white;
+  margin: 5rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: main.$radius;
+}
+
+.main_container {
+  display: grid;
+  gap: 1rem 2rem;
+  @include main.nine_and_more_screens {
+    grid-template-columns: 250px 1fr;
+  }
+}
