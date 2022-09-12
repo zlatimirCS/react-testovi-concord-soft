@@ -1,0 +1,30 @@
+@use "../styles/base/main.scss" as main;
+
+.main_wrapper {
+  padding: 5rem 0;
+}
+
+.main_container {
+  width: 90vw;
+  max-width: main.$max-width;
+  margin: 0 auto;
+}
+
+.headline {
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+
+  background: main.$clr-gold;
+  margin-left: auto;
+  margin-right: auto;
+}

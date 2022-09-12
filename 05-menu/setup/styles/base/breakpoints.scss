@@ -1,0 +1,41 @@
+// @mixin mobile-screens() {
+//   @media (min-width: 0px) and (max-width: 480px) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet-screens() {
+//   @media (min-width: 481px) and (max-width: 768px) {
+//     @content;
+//   }
+// }
+
+// @mixin laptop-screens() {
+//   @media (min-width: 769px) and (max-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin desctop-screens() {
+//   @media (min-width: 1025px) and (max-width: 1200px) {
+//     @content;
+//   }
+// }
+
+// @mixin large-screens() {
+//   @media (min-width: 1201px) {
+//     @content;
+//   }
+// }
+
+@mixin tablet_and_more_screens {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin nine_and_more_screens {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
