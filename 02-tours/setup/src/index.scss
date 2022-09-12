@@ -1,1 +1,25 @@
-@use "../styles/base.scss";
+@use "../styles/base.scss" as main;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 450px;
+}
+
+body {
+  background-color: main.$clr-grey-10;
+  font-family: main.$secondary-font;
+  font-size: main.$mobile-font-size;
+  letter-spacing: main.$spacing;
+  color: main.$clr-grey-1;
+}
+
+h2 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}

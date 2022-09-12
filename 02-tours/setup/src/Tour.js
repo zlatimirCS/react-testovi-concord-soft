@@ -4,7 +4,6 @@ import style from "./tour.module.scss";
 const Tour = (props) => {
   const { id, name, image, info, price } = props.tour;
   const [isReadMore, setIsReadMore] = useState(false);
-  console.log(props.delete);
 
   let priceUS = new Intl.NumberFormat("en-US", {
     style: "currency",

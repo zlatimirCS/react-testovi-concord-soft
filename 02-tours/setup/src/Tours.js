@@ -3,7 +3,6 @@ import Tour from "./Tour";
 
 import style from "./tours.module.scss";
 const Tours = (props) => {
-  console.log(props);
   return (
     <div className={style.wrapper}>
       <Tour

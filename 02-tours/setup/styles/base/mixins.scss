@@ -2,5 +2,11 @@
   width: $width;
   padding: $padding;
   margin: 0 auto;
-  background-color: white;
+}
+
+@mixin pictureSize($width: 130px, $height: 130px) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  border-radius: 50%;
 }
