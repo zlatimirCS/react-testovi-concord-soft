@@ -1,45 +1,37 @@
-@use "../index.scss" as main;
+@use "../../styles/base/main.scss" as main;
 
-.shrink {
-  width: 30%;
-  background-color: white;
-  padding: 2rem 2rem;
-  border-radius: 10px;
-  position: relative;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.list_wrapper {
+  width: 90vw;
+  max-width: main.$fixed-width;
+  padding: 1.5rem 2rem;
+  border-radius: main.$radius;
+  box-shadow: main.$dark-shadow;
+  background-color: main.$clr-white;
 }
 
-.list_action_container {
-  width: 100%;
-  position: relative;
-  display: table;
-  content: "";
-  clear: both;
-}
-
-.list_clear_btn {
-  width: 100%;
-  padding: 0.5rem 0.5rem;
-  border: 0;
-  border-radius: 0.4rem;
-  background-color: #f28ab2;
-  color: white;
-  font-size: 1.75rem;
-  cursor: pointer;
-  &:disabled {
-    background-color: var(--clr-grey-3);
-    cursor: not-allowed;
+.list_headline {
+  h3 {
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-transform: none;
   }
 }
 
-h1 {
-  font-weight: 400;
-  font-size: 1.75rem;
-  margin-bottom: 1.75rem;
-  span {
-    margin-right: 1rem;
+.list_action_container {
+  button {
+    background: main.$clr-primary-green-7;
+    border-color: transparent;
+    border-radius: 0.25rem;
+    border-radius: main.$radius;
+    color: main.$clr-white;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    letter-spacing: main.$spacing;
+    margin: 2rem auto 0;
+    padding: 0.5rem 0;
+    text-transform: capitalize;
+    width: 100%;
   }
 }

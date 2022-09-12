@@ -1,0 +1,9 @@
+@use "../styles/base/main.scss" as main;
+
+.main_wrapper {
+  padding: 5rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
