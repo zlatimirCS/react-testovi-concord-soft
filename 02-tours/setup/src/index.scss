@@ -16,10 +16,65 @@ body {
   font-size: main.$mobile-font-size;
   letter-spacing: main.$spacing;
   color: main.$clr-grey-1;
+  @include main.tablet_and_more_screens {
+    font-size: main.$tablet-and-more;
+  }
 }
 
 h2 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
+
+  @include main.tablet_and_more_screens {
+    line-height: 1;
+  }
+}
+
+h3 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  letter-spacing: main.$spacing;
+  @include main.tablet_and_more_screens {
+    line-height: 1;
+  }
+}
+
+.loading {
+  margin: 5rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.anything_wrapper {
+  margin: 5rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  h5 {
+    line-height: 1.25;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    @include main.tablet_and_more_screens {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+  }
+}
+
+.anything_refresh {
+  button {
+    background: main.$clr-primary-5;
+    padding: 0.25rem 0.5rem;
+    border-radius: main.$radius;
+    text-transform: capitalize;
+    color: main.$clr-white;
+    letter-spacing: main.$spacing;
+    border-color: transparent;
+    cursor: pointer;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
 }

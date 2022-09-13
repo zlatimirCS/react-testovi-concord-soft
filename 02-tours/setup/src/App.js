@@ -10,7 +10,7 @@ function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  var duplicate = [];
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -18,7 +18,6 @@ function App() {
         (result) => {
           setIsLoaded(true);
           setItems(result);
-          duplicate = [...result];
         },
         (error) => {
           setIsLoaded(true);
@@ -35,10 +34,27 @@ function App() {
     );
   }
 
+  function reloadWindows() {
+    return window.location.reload();
+  }
+
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
     return <Loading />;
+  } else if (items.length === 0) {
+    return (
+      <div className={"anything_wrapper"}>
+        <div className={"anything_container"}>
+          <div className={"anything_headline"}>
+            <h5>no tours left</h5>
+          </div>
+          <div className={"anything_refresh"}>
+            <button onClick={reloadWindows}>Refresh</button>
+          </div>
+        </div>
+      </div>
+    );
   } else {
     return (
       <div className={style.wrapper_headline}>

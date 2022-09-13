@@ -39,7 +39,7 @@ const Tour = (props) => {
         {/* info about place */}
         <div className={style.info_container}>
           <p>
-            {isReadMore ? info : info.substr(0, 150) + "..."}
+            {isReadMore ? info : info.substr(0, 200) + "..."}
             <button onClick={toggleIsReadMore} className={style.read_btn}>
               {isReadMore ? "show less" : "read more"}
             </button>

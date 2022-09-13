@@ -21,3 +21,75 @@
 .info_wrapper {
   padding: 1.5rem 2rem;
 }
+
+.headline_price_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  h3 {
+    font-size: 0.875rem;
+    @include main.tablet_and_more_screens {
+      font-size: 1rem;
+    }
+  }
+
+  .price {
+    background: main.$clr-primary-10;
+    padding: 0.25rem 0.5rem;
+    border-radius: main.$radius;
+    p {
+      font-size: 0.875rem;
+      font-weight: bold;
+      color: main.$clr-primary-5;
+      line-height: 1.25;
+      @include main.tablet_and_more_screens {
+        font-size: 1rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.info_container {
+  p {
+    margin-bottom: 1.25rem;
+    color: main.$clr-grey-5;
+    font-size: 0.875rem;
+    letter-spacing: 0;
+    line-height: 1.5;
+    @include main.tablet_and_more_screens {
+      font-size: 1rem;
+    }
+  }
+
+  button {
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: main.$clr-primary-5;
+    cursor: pointer;
+    padding-left: 0.25rem;
+  }
+}
+
+.actions_container {
+  button {
+    text-transform: capitalize;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: main.$spacing;
+  }
+}
+
+.actions_btn {
+  display: block;
+  width: 200px;
+  margin: 1rem auto 0;
+  color: main.$clr-red-dark;
+  background: transparent;
+  border: 1px solid main.$clr-red-dark;
+  padding: 0.25rem 0.5rem;
+  border-radius: main.$radius;
+}
