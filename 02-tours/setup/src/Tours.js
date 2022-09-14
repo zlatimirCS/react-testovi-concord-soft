@@ -1,10 +1,9 @@
 import React from "react";
 import Tour from "./Tour";
 
-import style from "./tours.module.scss";
 const Tours = (props) => {
   return (
-    <div className={style.wrapper}>
+    <div>
       <Tour
         key={props.tours.id}
         tour={props.tours}
