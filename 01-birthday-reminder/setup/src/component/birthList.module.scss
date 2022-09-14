@@ -1,12 +1,10 @@
-@use "../../styles/base/main.scss" as main;
-
 .list_wrapper {
   width: 90vw;
-  max-width: main.$fixed-width;
+  max-width: 450px;
   padding: 1.5rem 2rem;
-  border-radius: main.$radius;
-  box-shadow: main.$dark-shadow;
-  background-color: main.$clr-white;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .list_headline {
@@ -19,16 +17,16 @@
 
 .list_action_container {
   button {
-    background: main.$clr-primary-green-7;
+    background: #13795b;
     border-color: transparent;
     border-radius: 0.25rem;
-    border-radius: main.$radius;
-    color: main.$clr-white;
+    border-radius: 0.25rem;
+    color: #fff;
     cursor: pointer;
     display: block;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
-    letter-spacing: main.$spacing;
+    letter-spacing: 0.1rem;
     margin: 2rem auto 0;
     padding: 0.5rem 0;
     text-transform: capitalize;
