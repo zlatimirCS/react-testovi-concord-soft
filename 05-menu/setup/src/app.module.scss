@@ -1,13 +1,15 @@
-@use "../styles/base/main.scss" as main;
-
 .main_wrapper {
   padding: 5rem 0;
 }
 
 .main_container {
   width: 90vw;
-  max-width: main.$max-width;
+  max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.main_headline_container {
+  margin-bottom: 2rem;
 }
 
 .headline {
@@ -19,12 +21,27 @@
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 800px) {
+  .headline {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
 
 .underline {
   width: 5rem;
   height: 0.25rem;
-
-  background: main.$clr-gold;
+  background: var(--clr-gold);
   margin-left: auto;
   margin-right: auto;
+}
+
+.manu_item_wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
 }

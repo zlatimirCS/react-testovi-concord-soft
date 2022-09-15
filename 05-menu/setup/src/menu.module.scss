@@ -1,0 +1,42 @@
+.menu_container {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-gap: 3rem 2rem;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+
+.menu_item {
+  display: grid;
+  grid-gap: 1rem 2rem;
+  gap: 1rem 2rem;
+  max-width: 25rem;
+}
+
+.menu_item_img {
+  display: block;
+  height: 200px;
+  width: 100%;
+  img {
+    height: 100%;
+    object-fit: cover;
+    border: 0.25rem solid var(--clr-gold);
+    border-radius: var(--radius);
+  }
+}
+
+.menu_item_info_header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted var(--clr-grey-5);
+  h2 {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+    color: var(--clr-gold);
+  }
+}
