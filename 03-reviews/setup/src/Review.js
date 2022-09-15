@@ -31,7 +31,6 @@ const Review = () => {
   return (
     <div className={styles.item_wrapper}>
       <div className={styles.item_img_container}>
-        <div className={styles.item_img_background}></div>
         <div className={styles.faQuoteRight}>
           <FaQuoteRight color="white" className={styles.fa} />
         </div>

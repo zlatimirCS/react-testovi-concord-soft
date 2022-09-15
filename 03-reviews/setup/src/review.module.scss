@@ -1,102 +1,127 @@
-@use "../styles/base/main.scss" as main;
-
 .item_wrapper {
-  padding: 24px 32px;
-  background-color: main.$clr-white;
-  border-radius: 0.2rem;
+  width: 80vw;
+  max-width: 620px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  text-align: center;
+}
+
+.item_wrapper:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .item_img_container {
-  position: relative;
-  width: 130px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -0.25rem;
+  right: -0.5rem;
+}
+
+.item_img_container {
+  width: 150px;
   height: 150px;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-.item_img {
+  margin: 0 auto;
   position: relative;
-  img {
-    @include main.pictureSize;
-    position: absolute;
-  }
-}
-
-.item_img_background {
-  @include main.pictureSize;
-  position: absolute;
-  background-color: main.$clr-primary-5;
   top: -5px;
-  left: 5px;
-}
-
-.faQuoteRight {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: main.$clr-primary-5;
-  z-index: 2;
-  padding: 5px;
-  display: flex;
+  right: -7px;
   border-radius: 50%;
-}
+  background-color: #49a6e9;
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: -8px;
+    top: 5px;
+    right: 0;
+  }
 
-.fa {
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  .faQuoteRight {
+    position: absolute;
+    top: 5px;
+    left: -8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    transform: translateY(25%);
+    color: #fff;
+    background-color: #49a6e9;
+    border-radius: 50%;
+    z-index: 1;
+  }
 }
 
 .item_name_job {
-  text-align: center;
   h5 {
+    font-size: 0.875rem;
+    letter-spacing: 0.1rem;
     text-transform: capitalize;
-    letter-spacing: main.$horizontal_spacing;
-    font-size: 0.9rem;
+    @media screen and (min-width: 800px) {
+      font-size: 1rem;
+      line-height: 1;
+      margin-bottom: 0.18rem;
+    }
   }
   p {
-    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    color: main.$clr-primary-5;
-    letter-spacing: main.$horizontal_spacing;
+    color: #49a6e9;
+    font-size: 0.85rem;
   }
 }
 
 .item_description {
-  margin-top: 0.5rem;
-  margin-bottom: 0.6rem;
-  text-align: center;
+  margin-bottom: 0.75rem;
+  color: #617d98;
+  justify-content: center;
   p {
-    font-size: 0.75rem;
-    line-height: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    @media screen and (min-width: 800px) {
+      font-size: 1rem;
+
+      margin-bottom: 0.18rem;
+    }
   }
 }
 
 .item_actions_container_shavron {
-  margin-top: 0.3rem;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
-}
 
-.item_actions_button {
-  text-align: center;
-
-  button {
-    @include main.button($backgroundColor: main.$clr-primary-5);
-    text-transform: capitalize;
-    transition: all 0.3s linear;
+  .item_actions_shavron_left,
+  .item_actions_shavron_right {
+    color: #8bcbf9;
+    font-size: 1.25rem;
+    background: transparent;
     border-color: transparent;
+    @media screen and (min-width: 800px) {
+      margin: 0 0.6rem;
+    }
+    margin: 0 0.5rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
   }
 }
 
-.chevron {
-  color: main.$clr-primary-5;
-  cursor: pointer;
-  &:hover {
-    color: darken($color: main.$clr-primary-5, $amount: 25);
+.item_actions_button {
+  button {
+    margin-top: 0.5rem;
+    background: #ebf7ff;
+    padding: 0.25rem 0.5rem;
+    text-transform: capitalize;
+    border-radius: 0.25rem;
+    transition: all 0.3s linear;
+    border-color: transparent;
+    color: #49a6e9;
+    cursor: pointer;
   }
 }
