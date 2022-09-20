@@ -9,7 +9,7 @@ const Categories = (props) => {
   });
 
   const uniqueCategory = [...new Set(category)];
-  console.log(props.newMenu);
+
   return (
     <div className={styles.category_main_wrapper}>
       <div className={styles.category_main_container}>

@@ -6,7 +6,6 @@ import styles from "./app.module.scss";
 
 function App() {
   const [menu, setMenu] = useState(items);
-  const [filteredMenu, setFilteredMenu] = useState([]);
 
   function newMenuArry(category) {
     if (category.target.value === "") {
