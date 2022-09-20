@@ -4,26 +4,30 @@
   max-width: 1170px;
   display: grid;
   grid-gap: 3rem 2rem;
-  gap: 3rem 2rem;
+
   justify-items: center;
 }
 
 .menu_item {
-  display: grid;
-  grid-gap: 1rem 2rem;
-  gap: 1rem 2rem;
   max-width: 25rem;
+  display: grid;
+  gap: 1rem 2rem;
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 225px 1fr;
+  }
 }
 
 .menu_item_img {
-  display: block;
   height: 200px;
-  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
+  display: flex;
   img {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border: 0.25rem solid var(--clr-gold);
-    border-radius: var(--radius);
+    object-position: center;
   }
 }
 

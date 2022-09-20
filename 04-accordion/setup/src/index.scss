@@ -1,7 +1,7 @@
 @use "../styles/base.scss" as main;
 
 html {
-  min-width: main.$fixed-width;
+  min-width: 450px;
 }
 
 body {
