@@ -14,7 +14,6 @@ const AppProvider = ({ children }) => {
 
   function searchValueHandler(value) {
     setSearchValue(value);
-    console.log(value);
   }
 
   function singleCocktailHandler(id) {

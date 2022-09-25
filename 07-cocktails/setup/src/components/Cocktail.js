@@ -16,8 +16,9 @@ const Cocktail = (props) => {
           className="btn btn-primary btn-detailes"
           to={{
             pathname: `/singlecocktail/${prop.idDrink}`,
-            state: prop.idDrink,
+            state: { prop },
           }}
+          state={prop}
         >
           details
         </Link>

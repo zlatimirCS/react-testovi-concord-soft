@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Loading from "../components/Loading";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCocktail = (props) => {
   const { type } = useParams();
-  let coc;
+  const location = useLocation();
+  const data = location.state;
+  const [cocktail, setcocktail] = useState([]);
+  console.log(data);
 
   React.useEffect(() => {
     fetch(url + type)
@@ -16,16 +19,35 @@ const SingleCocktail = (props) => {
         return data;
       })
       .then((data) => {
-        coc = data;
+        const { drinks } = data;
+        setcocktail(drinks[0]);
       });
   }, []);
 
-  console.log(coc);
+  // console.log(cocktail);
 
+  const {
+    idDrink: name,
+    strCategory: category,
+    strAlcoholic: alcohol,
+    strGlass: glass,
+  } = cocktail;
+
+  const instructions = [],
+    ingredient = [],
+    measure = [];
+
+  for (const key in cocktail) {
+    // console.log(key);
+    if (Object.hasOwnProperty.call(cocktail, key)) {
+      const element = cocktail[key];
+      // console.log(element);
+    }
+  }
   return (
-    <div>
-      <h2>asdfafdadsfadfa</h2>
-    </div>
+    <section>
+      <h2>sadfad</h2>
+    </section>
   );
 };
 
