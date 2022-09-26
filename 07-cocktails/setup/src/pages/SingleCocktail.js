@@ -1,52 +1,71 @@
 import React, { useState } from "react";
 import Loading from "../components/Loading";
-import { useParams, Link, useLocation } from "react-router-dom";
-const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
+import { Link, useLocation, useParams } from "react-router-dom";
+// const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCocktail = (props) => {
-  const { type } = useParams();
+  const type = useParams();
   const location = useLocation();
   const data = location.state;
-  const [cocktail, setcocktail] = useState([]);
-  console.log(data);
-
-  React.useEffect(() => {
-    fetch(url + type)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        return data;
-      })
-      .then((data) => {
-        const { drinks } = data;
-        setcocktail(drinks[0]);
-      });
-  }, []);
-
-  // console.log(cocktail);
-
   const {
-    idDrink: name,
+    strDrink: name,
     strCategory: category,
-    strAlcoholic: alcohol,
+    strAlcoholic: info,
     strGlass: glass,
-  } = cocktail;
+    strDrinkThumb: pic,
+  } = data;
 
-  const instructions = [],
+  let instructions = [],
     ingredient = [],
     measure = [];
 
-  for (const key in cocktail) {
-    // console.log(key);
-    if (Object.hasOwnProperty.call(cocktail, key)) {
-      const element = cocktail[key];
-      // console.log(element);
+  function extractionsOfValues(data, valueArray, string, number) {
+    let data1 = data;
+    for (const key in data1) {
+      if (Object.hasOwnProperty.call(data1, key)) {
+        if (key.substring(3, number) === string) {
+          valueArray.push(data1[key]);
+        }
+      }
     }
   }
+
+  extractionsOfValues(data, ingredient, "Ingredient", 13);
+  extractionsOfValues(data, instructions, "Instructions", 15);
+  extractionsOfValues(data, measure, "Measure", 10);
+
   return (
-    <section>
-      <h2>sadfad</h2>
+    <section className="section cocktail-section">
+      <Link to="/">
+        <span className="btn btn-primary">back home</span>
+      </Link>
+      <h2 className="section-title">{name}</h2>
+      <div className="drink">
+        <img src={pic} alt={name} />
+        <div className="drink-info">
+          <p>
+            <span className="drink-data"> name :</span> {name}
+          </p>
+          <p>
+            <span class="drink-data">category :</span> {category}
+          </p>
+          <p>
+            <span class="drink-data">info :</span> {info}
+          </p>
+          <p>
+            <span class="drink-data">glass :</span> {glass}
+          </p>
+          <p>
+            <span class="drink-data">instructons :</span> {instructions[0]}
+          </p>
+          <p>
+            <span class="drink-data">ingredients :</span>
+            {ingredient.map((val, index) => {
+              return <span key={index}>{val}</span>;
+            })}
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
