@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Loading from "../components/Loading";
-import { Link, useLocation, useParams } from "react-router-dom";
+import React from "react";
+
+import { Link, useLocation } from "react-router-dom";
 // const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
-const SingleCocktail = (props) => {
-  const type = useParams();
+const SingleCocktail = () => {
   const location = useLocation();
   const data = location.state;
+
   const {
     strDrink: name,
     strCategory: category,
@@ -33,7 +33,6 @@ const SingleCocktail = (props) => {
   extractionsOfValues(data, ingredient, "Ingredient", 13);
   extractionsOfValues(data, instructions, "Instructions", 15);
   extractionsOfValues(data, measure, "Measure", 10);
-
   return (
     <section className="section cocktail-section">
       <Link to="/">
@@ -47,19 +46,19 @@ const SingleCocktail = (props) => {
             <span className="drink-data"> name :</span> {name}
           </p>
           <p>
-            <span class="drink-data">category :</span> {category}
+            <span className="drink-data">category :</span> {category}
           </p>
           <p>
-            <span class="drink-data">info :</span> {info}
+            <span className="drink-data">info :</span> {info}
           </p>
           <p>
-            <span class="drink-data">glass :</span> {glass}
+            <span className="drink-data">glass :</span> {glass}
           </p>
           <p>
-            <span class="drink-data">instructons :</span> {instructions[0]}
+            <span className="drink-data">instructons :</span> {instructions[0]}
           </p>
           <p>
-            <span class="drink-data">ingredients :</span>
+            <span className="drink-data">ingredients :</span>
             {ingredient.map((val, index) => {
               return <span key={index}>{val}</span>;
             })}

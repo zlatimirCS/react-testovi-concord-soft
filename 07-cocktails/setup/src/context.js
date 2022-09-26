@@ -1,16 +1,18 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useCallback } from "react";
+// import { useCallback } from "react";
 
 const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const AppContext = React.createContext({
   coctails: [],
   searchCoctails: (value) => {},
   filterCocktail: (id) => {},
+  loading: Boolean,
 });
 
 const AppProvider = ({ children }) => {
   const [searchCoctails, setSearchCocktails] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [loading, setLoading] = useState(true);
 
   function searchValueHandler(value) {
     setSearchValue(value);
@@ -25,10 +27,12 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     fetch(url + searchValue)
       .then((response) => {
+        setLoading(true);
         return response.json();
       })
       .then((data) => {
         setSearchCocktails(data.drinks);
+        setLoading(false);
       });
   }, [searchValue]);
 
@@ -36,6 +40,7 @@ const AppProvider = ({ children }) => {
     coctails: searchCoctails,
     searchCoctails: searchValueHandler,
     filterCocktail: singleCocktailHandler,
+    loading: loading,
   };
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
