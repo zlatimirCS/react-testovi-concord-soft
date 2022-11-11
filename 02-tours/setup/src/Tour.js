@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
 const Tour = () => {
   return <h2>tour component</h2>;
