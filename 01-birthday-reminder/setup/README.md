@@ -1,3 +1,3 @@
-# Birth Reminder React App
+# Birthday Reminder React App
 
-## Aleksa Otasevic
+Aleksa Otasevic
