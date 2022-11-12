@@ -8,29 +8,21 @@ const Tours = ({ tours, deleteTour, fetchTours, loading }) => {
   let content = null;
   if (tours.length === 0) {
     content = (
-      <>
+      <div className="no-tours">
         <h2>No Tours Left</h2>
         <button onClick={refreshHandler}>Refresh</button>
-      </>
+      </div>
     );
   } else {
     content = (
       <>
-        <h2>Our Tours</h2>
+        <div className="title">
+          <h2>Our Tours</h2>
+          <div className="underline"></div>
+        </div>
         <ul>
           {tours.map((tour) => {
-            return (
-              <Tour
-                key={tour.id}
-                tour={tour}
-                // id={tour.id}
-                // name={tour.name}
-                // price={tour.price}
-                // info={tour.info}
-                // image={tour.image}
-                deleteTour={deleteTour}
-              />
-            );
+            return <Tour key={tour.id} tour={tour} deleteTour={deleteTour} />;
           })}
         </ul>
       </>

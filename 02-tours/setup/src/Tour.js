@@ -13,15 +13,21 @@ const Tour = ({ tour, deleteTour }) => {
   return (
     <li className="tour">
       <img src={image} alt="/" />
-      <p>{name}</p>
-      <p>${price}</p>
-      <p className="info">
-        <span>{isReadMore ? truncatedInfo : info}</span>
-        <button onClick={readMoreHandler}>
-          {isReadMore ? "Read More" : "Show Less"}
+      <div className="description">
+        <div className="tour-title-price">
+          <h4>{name}</h4>
+          <h4 className="price">${price}</h4>
+        </div>
+        <p className="info">
+          <span>{isReadMore ? truncatedInfo : info}</span>
+          <button onClick={readMoreHandler}>
+            {isReadMore ? "Read More" : "Show Less"}
+          </button>
+        </p>
+        <button onClick={notInterestedHandler} className="delete-btn">
+          Not interested
         </button>
-      </p>
-      <button onClick={notInterestedHandler}>Not interested</button>
+      </div>
     </li>
   );
 };
