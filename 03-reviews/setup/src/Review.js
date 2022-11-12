@@ -22,9 +22,11 @@ const Review = () => {
     setId(randomId);
   };
   return (
-    <article>
+    <article className="card">
       <div className="person">
-        <img src={people[id].image} alt="" />
+        <div className="img-container">
+          <img src={people[id].image} alt="" />
+        </div>
         <p> {people[id].name}</p>
         <p> {people[id].job}</p>
         <p> {people[id].text}</p>
