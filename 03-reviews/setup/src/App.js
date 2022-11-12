@@ -1,7 +1,11 @@
-import React from 'react';
-import Review from './Review';
+import Review from "./Review";
 function App() {
-  return <h2 className="test">reviews project setup</h2>;
+  return (
+    <main>
+      <h1>Review App</h1>
+      <Review />
+    </main>
+  );
 }
 
 export default App;
