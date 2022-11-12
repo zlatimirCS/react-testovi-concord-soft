@@ -3,7 +3,45 @@ import people from "./data";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 
 const Review = () => {
-  return <h2>review component</h2>;
+  const [id, setId] = useState(0);
+  const numOfPersons = people.length - 1;
+  const previousHandler = () => {
+    setId((prev) => {
+      if (id === 0) return numOfPersons;
+      return prev - 1;
+    });
+  };
+  const nextHandler = () => {
+    setId((prev) => {
+      if (id === numOfPersons) return 0;
+      return prev + 1;
+    });
+  };
+  const surpriseHandler = () => {
+    const randomId = Math.floor(Math.random() * 4);
+    setId(randomId);
+  };
+  return (
+    <article>
+      <div className="person">
+        <img src={people[id].image} alt="" />
+        <p> {people[id].name}</p>
+        <p> {people[id].job}</p>
+        <p> {people[id].text}</p>
+      </div>
+      <div className="controls">
+        <div>
+          <button onClick={previousHandler}>
+            <FaChevronLeft />
+          </button>
+          <button onClick={nextHandler}>
+            <FaChevronRight />
+          </button>
+        </div>
+        <button onClick={surpriseHandler}>Surprise me</button>
+      </div>
+    </article>
+  );
 };
 
 export default Review;

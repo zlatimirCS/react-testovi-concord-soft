@@ -2,7 +2,10 @@ import Review from "./Review";
 function App() {
   return (
     <main>
-      <h1>Review App</h1>
+      <div className="title">
+        <h2>Our reviews</h2>
+        <div className="underline"></div>
+      </div>
       <Review />
     </main>
   );
