@@ -25,22 +25,27 @@ const Review = () => {
     <article className="card">
       <div className="person">
         <div className="img-container">
-          <img src={people[id].image} alt="" />
+          <span className="quotes">
+            <FaQuoteRight />
+          </span>
+          <img src={people[id].image} alt={people[id].name} />
         </div>
-        <p> {people[id].name}</p>
-        <p> {people[id].job}</p>
-        <p> {people[id].text}</p>
+        <h4 className="name"> {people[id].name}</h4>
+        <p className="job"> {people[id].job}</p>
+        <p className="text"> {people[id].text}</p>
       </div>
       <div className="controls">
         <div>
-          <button onClick={previousHandler}>
+          <button onClick={previousHandler} className="prev-btn">
             <FaChevronLeft />
           </button>
-          <button onClick={nextHandler}>
+          <button onClick={nextHandler} className="next-btn">
             <FaChevronRight />
           </button>
         </div>
-        <button onClick={surpriseHandler}>Surprise me</button>
+        <button onClick={surpriseHandler} className="surprise-btn">
+          Surprise me
+        </button>
       </div>
     </article>
   );
