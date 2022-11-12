@@ -14,6 +14,13 @@ function App() {
     setIsLoading(false);
   };
 
+  const deleteTour = (id) => {
+    const filteredTours = tours.filter((tour) => {
+      return tour.id !== id;
+    });
+    setTours(filteredTours);
+  };
+
   let content;
 
   useEffect(() => {
@@ -23,11 +30,17 @@ function App() {
   if (isLoading) {
     content = <Loading />;
   } else if (tours) {
-    console.log(tours);
-    content = <Tours tours={tours} />;
+    content = (
+      <Tours
+        tours={tours}
+        deleteTour={deleteTour}
+        fetchTours={fetchTours}
+        loading={setIsLoading}
+      />
+    );
   }
 
-  return <main>{content}</main>;
+  return <main className="container">{content}</main>;
 }
 
 export default App;

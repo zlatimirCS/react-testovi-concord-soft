@@ -1,12 +1,16 @@
 import Tour from "./Tour";
 
-const Tours = ({ tours }) => {
+const Tours = ({ tours, deleteTour, fetchTours, loading }) => {
+  const refreshHandler = () => {
+    fetchTours();
+    loading(true);
+  };
   let content = null;
   if (tours.length === 0) {
     content = (
       <>
         <h2>No Tours Left</h2>
-        <button>Refresh</button>
+        <button onClick={refreshHandler}>Refresh</button>
       </>
     );
   } else {
@@ -18,10 +22,13 @@ const Tours = ({ tours }) => {
             return (
               <Tour
                 key={tour.id}
-                name={tour.name}
-                price={tour.price}
-                info={tour.info}
-                image={tour.image}
+                tour={tour}
+                // id={tour.id}
+                // name={tour.name}
+                // price={tour.price}
+                // info={tour.info}
+                // image={tour.image}
+                deleteTour={deleteTour}
               />
             );
           })}

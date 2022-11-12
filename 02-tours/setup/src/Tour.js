@@ -1,15 +1,27 @@
 import { useState } from "react";
 
-const Tour = ({ name, price, info, image }) => {
-  const [isReadMore, setIsReadMore] = useState(false);
+const Tour = ({ tour, deleteTour }) => {
+  const { id, name, price, info, image } = tour;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const truncatedInfo = info.slice(0, 200) + "...";
+  const notInterestedHandler = () => {
+    deleteTour(id);
+  };
+  const readMoreHandler = () => {
+    setIsReadMore((prev) => !prev);
+  };
   return (
-    <li>
-      <p>{name}</p>
-      <p>{price}</p>
-      <p>{info}</p>
-      <button> {isReadMore ? "Show Less" : "Read More"} </button>
+    <li className="tour">
       <img src={image} alt="/" />
-      <button>Not interested</button>
+      <p>{name}</p>
+      <p>${price}</p>
+      <p className="info">
+        <span>{isReadMore ? truncatedInfo : info}</span>
+        <button onClick={readMoreHandler}>
+          {isReadMore ? "Read More" : "Show Less"}
+        </button>
+      </p>
+      <button onClick={notInterestedHandler}>Not interested</button>
     </li>
   );
 };
