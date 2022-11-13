@@ -1,13 +1,146 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f8;
+  color: #102a42;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+h2,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+.app {
+  padding: 5rem 0;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  background: #c59d5f;
+  margin: 0 auto;
+}
+.filter {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.filter button {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  color: #c59d5f;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.filter button:hover {
+  background: #c59d5f;
+  color: #fff;
+}
+.menu {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.meal {
+  max-width: 400px;
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.meal .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.meal img {
+  display: block;
+  height: 200px;
+  width: 100%;
+  border: 0.25rem solid #c59d5f;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px dotted #617d98;
+}
+.info h4 {
+  margin-bottom: 0.5rem;
+}
+.info .price {
+  color: #c59d5f;
+}
+.meal .desc {
+  color: #617d98;
+}
+
+@media screen and (min-width: 768px) {
+  .meal {
+    grid-template-columns: 225px 1fr;
+    max-width: 40rem;
+  }
+  .meal img {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  h2,
+  h4 {
+    line-height: 1;
+  }
+  .title h2 {
+    font-size: 2.5rem;
+  }
+  .info h4 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    width: 95vw;
+    max-width: 1170px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+  }
+  .meal {
+    gap: 1.25rem;
+  }
+  .meal img {
+    height: 150px;
+  }
 }
