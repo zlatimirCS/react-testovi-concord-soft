@@ -4,10 +4,18 @@ const Categories = () => {
   return (
     <div className="filter">
       <ul>
-        <li>all</li>
-        <li>breakfast</li>
-        <li>lunch</li>
-        <li>shakes</li>
+        <button>
+          <li>all</li>
+        </button>
+        <button>
+          <li>breakfast</li>
+        </button>
+        <button>
+          <li>lunch</li>
+        </button>
+        <button>
+          <li>shakes</li>
+        </button>
       </ul>
     </div>
   );
