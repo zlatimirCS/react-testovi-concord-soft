@@ -1,7 +1,13 @@
-import React from "react";
+import data from "./data.js";
 
 const Menu = () => {
-  return <h2>menu component</h2>;
+  return (
+    <main className="menu">
+      {data.map((item) => {
+        return <img src={item.img} alt={item.title} />;
+      })}
+    </main>
+  );
 };
 
 export default Menu;
