@@ -1,4 +1,37 @@
-.test {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/*# sourceMappingURL=index.css.map */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  background-color: #4b145b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 90vw;
+  max-width: 920px;
+  min-height: 50vh;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  display: flex;
+  padding: 2.5rem 2rem;
+}
+.title {
+  flex: 1;
+  background-color: green;
+}
+.questions-container {
+  flex: 2;
+  background-color: red;
+}
