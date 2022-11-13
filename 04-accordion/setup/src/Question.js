@@ -6,14 +6,14 @@ const Question = ({ question }) => {
     setShowAll((prev) => !prev);
   };
   return (
-    <article>
-      <h4>{question.title}</h4>
-
-      <button onClick={showAllHandler}>
-        {showAll ? <AiOutlineMinus /> : <AiOutlinePlus />}
-      </button>
-
-      {showAll ? <p> {question.info} </p> : null}
+    <article className="question">
+      <div className="question-header">
+        <h4>{question.title}</h4>
+        <button className="btn" onClick={showAllHandler}>
+          {showAll ? <AiOutlineMinus /> : <AiOutlinePlus />}
+        </button>
+      </div>
+      {showAll ? <p className="info"> {question.info} </p> : null}
     </article>
   );
 };
