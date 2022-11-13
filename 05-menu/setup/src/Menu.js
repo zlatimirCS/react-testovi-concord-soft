@@ -1,9 +1,7 @@
-import data from "./data.js";
-
-const Menu = () => {
+const Menu = ({ items }) => {
   return (
     <main className="menu">
-      {data.map((item) => {
+      {items.map((item) => {
         return (
           <article key={item.id}>
             <img src={item.img} alt={item.title} />
