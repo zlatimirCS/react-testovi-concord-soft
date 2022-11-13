@@ -32,9 +32,9 @@ button {
   letter-spacing: 0.1rem;
 }
 .title {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.25;
 }
 .list {
   margin-block: 2rem;
@@ -55,9 +55,11 @@ button {
   object-fit: cover;
 }
 .list h4 {
+  font-size: 0.875rem;
   margin-bottom: 0.1rem;
 }
 .list h4 + p {
+  font-size: 0.875rem;
   color: #617d98;
 }
 .btn {
@@ -74,5 +76,17 @@ button {
 @media screen and (min-width: 500px) {
   .app {
     width: 450px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .list h4 {
+    font-size: 1rem;
+  }
+  .list h4 + p {
+    font-size: 1rem;
   }
 }
