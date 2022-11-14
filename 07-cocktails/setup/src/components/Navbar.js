@@ -4,9 +4,13 @@ import logo from "../logo.svg";
 
 const Navbar = () => {
   return (
-    <div>
-      <h2>navbar component</h2>
-    </div>
+    <header>
+      <img src={logo} alt="logo" width={100} height={50} />
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+    </header>
   );
 };
 
