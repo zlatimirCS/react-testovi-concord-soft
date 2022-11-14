@@ -5,25 +5,37 @@ import {
   useEffect,
   useCallback,
 } from "react";
+import api from "./api/drinks";
 
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
-
-const AppContext = createContext();
+const AppContext = createContext({});
 
 const AppProvider = ({ children }) => {
-  const [drinks, setDrinks] = useState();
-
-  const fetchDrinks = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setDrinks(data);
-  };
+  const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
+    console.log("useEffect");
+    const fetchDrinks = async () => {
+      try {
+        const response = await api.get();
+        if (response && response.data) {
+          setDrinks(response.data.drinks);
+        }
+      } catch (error) {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else {
+          console.log(`Error: ${error.message}`);
+        }
+      }
+    };
     fetchDrinks();
   }, []);
-
-  return <AppContext.Provider value={drinks}>{children}</AppContext.Provider>;
+  console.log("DRINKS: ", drinks);
+  return (
+    <AppContext.Provider value={{ drinks }}>{children}</AppContext.Provider>
+  );
 };
 // make sure use
 export const useGlobalContext = () => {
