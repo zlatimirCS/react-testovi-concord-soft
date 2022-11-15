@@ -16,7 +16,39 @@ const SingleCocktail = () => {
     strGlass,
     strInstructions,
     strDrinkThumb,
+    strIngredient1,
+    strIngredient2,
+    strIngredient3,
+    strIngredient4,
+    strIngredient5,
+    strIngredient6,
+    strIngredient7,
+    strIngredient8,
+    strIngredient9,
+    strIngredient10,
+    strIngredient11,
+    strIngredient12,
+    strIngredient13,
+    strIngredient14,
+    strIngredient15,
   } = singleCocktail;
+  const ingredients = [
+    strIngredient1,
+    strIngredient2,
+    strIngredient3,
+    strIngredient4,
+    strIngredient5,
+    strIngredient6,
+    strIngredient7,
+    strIngredient8,
+    strIngredient9,
+    strIngredient10,
+    strIngredient11,
+    strIngredient12,
+    strIngredient13,
+    strIngredient14,
+    strIngredient15,
+  ];
   return (
     <div>
       <Link to="/">back home</Link>
@@ -27,6 +59,11 @@ const SingleCocktail = () => {
       <h2>{strGlass}</h2>
       <h2>{strAlcoholic}</h2>
       <h2>{strInstructions}</h2>
+      <p>
+        {ingredients.map((ingredient) => (
+          <span> {ingredient} </span>
+        ))}
+      </p>
     </div>
   );
 };

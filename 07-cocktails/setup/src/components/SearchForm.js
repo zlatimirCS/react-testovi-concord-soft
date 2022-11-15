@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef } from "react";
 import { useGlobalContext } from "../context";
 
 const SearchForm = () => {
@@ -6,14 +6,21 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  const handleChange = (e) => {
-    setSearchTerm(e.target.value);
+  const inputValue = useRef();
+  const handleChange = () => {
+    setSearchTerm(inputValue.current.value);
   };
   return (
     <div className="search-container">
-      <h2>search your favorite cocktail</h2>
+      <label htmlFor="search">search your favorite cocktail</label>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} value={searchTerm} />
+        <input
+          type="text"
+          name="search"
+          ref={inputValue}
+          onChange={handleChange}
+          value={searchTerm}
+        />
       </form>
     </div>
   );
