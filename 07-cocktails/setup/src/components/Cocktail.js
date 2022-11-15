@@ -2,10 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cocktail = ({ drink }) => {
+  // const address = `/cocktail/:${drink.idDrink}`;
   return (
-    <div>
-      <h2> {drink.strDrink} </h2>
-    </div>
+    <article>
+      <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+      <p> {drink.strDrink} </p>
+      <p> {drink.strGlass} </p>
+      <p> {drink.strAlcoholic} </p>
+      <Link to={`/cocktail/${drink.idDrink}`}>details</Link>
+    </article>
   );
 };
 

@@ -7,7 +7,6 @@ const Home = () => {
   const { notFound } = useGlobalContext();
   return (
     <div>
-      <h2>home page</h2>
       <SearchForm />
       {notFound ? (
         <p>No Cocktails Matched Your Search Criteria</p>

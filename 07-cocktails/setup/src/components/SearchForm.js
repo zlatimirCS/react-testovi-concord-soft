@@ -10,7 +10,7 @@ const SearchForm = () => {
     setSearchTerm(e.target.value);
   };
   return (
-    <div>
+    <div className="search-container">
       <h2>search your favorite cocktail</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} value={searchTerm} />
