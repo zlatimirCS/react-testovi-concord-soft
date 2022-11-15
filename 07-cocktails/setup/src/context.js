@@ -11,14 +11,18 @@ const AppContext = createContext({});
 
 const AppProvider = ({ children }) => {
   const [drinks, setDrinks] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    console.log("useEffect");
     const fetchDrinks = async () => {
       try {
         const response = await api.get();
         if (response && response.data) {
-          setDrinks(response.data.drinks);
+          setDrinks(
+            response.data.drinks.filter((drink) =>
+              drink.strDrink.toLowerCase().includes(searchTerm)
+            )
+          );
         }
       } catch (error) {
         if (error.response) {
@@ -31,10 +35,11 @@ const AppProvider = ({ children }) => {
       }
     };
     fetchDrinks();
-  }, []);
-  console.log("DRINKS: ", drinks);
+  }, [searchTerm]);
   return (
-    <AppContext.Provider value={{ drinks }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ drinks, searchTerm, setSearchTerm }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 // make sure use

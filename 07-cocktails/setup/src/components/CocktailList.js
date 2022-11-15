@@ -1,20 +1,22 @@
 import { useContext } from "react";
 import Cocktail from "./Cocktail";
 import Loading from "./Loading";
-import { AppContext, useGlobalContext } from "../context";
+import { useGlobalContext } from "../context";
 
 const CocktailList = () => {
-  // const { drinks } = useContext(AppContext);
   const { drinks } = useGlobalContext();
-  console.log("drinks: ", drinks);
 
   return (
     <div>
-      <h2>cocktail list component</h2>
+      <h2>cocktails</h2>
       {drinks.map((drink) => {
         return (
           <article key={drink.idDrink}>
+            <img src={drink.strDrinkThumb} alt={drink.strDrink} />
             <p> {drink.strDrink} </p>
+            <p> {drink.strGlass} </p>
+            <p> {drink.strAlcoholic} </p>
+            <button>details</button>
           </article>
         );
       })}
