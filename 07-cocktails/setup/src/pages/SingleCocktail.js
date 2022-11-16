@@ -2,20 +2,23 @@ import { useCallback, useEffect, useState } from "react";
 import api from "../api/drinks";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 // const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCocktail = () => {
   const { id } = useParams();
   const [singleCocktail, setSingleCocktail] = useState(null);
+  const { isLoading } = useGlobalContext();
+  const [noCocktail, setNoCocktail] = useState(false);
+  console.log(isLoading);
 
   const fetchSingleCocktail = useCallback(async () => {
     try {
       const response = await api.get(`lookup.php?i=${id}`);
       if (response.data.drinks === null || response.data.drinks === undefined) {
-        // setIsLoading(false);
-        console.log("No such cocktail!");
+        setNoCocktail(true);
       } else {
-        // setIsLoading(false);
+        setNoCocktail(false);
         setSingleCocktail(response.data.drinks[0]);
       }
     } catch (error) {
@@ -33,7 +36,12 @@ const SingleCocktail = () => {
     fetchSingleCocktail();
   }, [fetchSingleCocktail]);
 
-  console.log("Single Cocktail: ", singleCocktail);
+  if (isLoading) {
+    return <Loading />;
+  }
+  if (noCocktail) {
+    return <h2>No cocktail to display</h2>;
+  }
   if (singleCocktail) {
     const {
       strDrink,
@@ -80,25 +88,23 @@ const SingleCocktail = () => {
       <div>
         <Link to="/">back home</Link>
 
-        {singleCocktail && (
-          <>
-            <h2>{strDrink}</h2>
-            <img src={strDrinkThumb} alt={strDrink} />
-            <h2>{strDrink}</h2>
-            <h2>{strCategory}</h2>
-            <h2>{strGlass}</h2>
-            <h2>{strAlcoholic}</h2>
-            <h2>{strInstructions}</h2>
-            <p>
-              {ingredients.map(
-                (ingredient) =>
-                  ingredient !== null && (
-                    <span key={ingredient}> {ingredient} </span>
-                  )
-              )}
-            </p>
-          </>
-        )}
+        <>
+          <h2>{strDrink}</h2>
+          <img src={strDrinkThumb} alt={strDrink} />
+          <h2>{strDrink}</h2>
+          <h2>{strCategory}</h2>
+          <h2>{strGlass}</h2>
+          <h2>{strAlcoholic}</h2>
+          <h2>{strInstructions}</h2>
+          <p>
+            {ingredients.map(
+              (ingredient) =>
+                ingredient !== null && (
+                  <span key={ingredient}> {ingredient} </span>
+                )
+            )}
+          </p>
+        </>
       </div>
     );
   }
