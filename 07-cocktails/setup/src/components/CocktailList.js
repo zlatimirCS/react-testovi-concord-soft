@@ -10,12 +10,14 @@ const CocktailList = () => {
     return <Loading />;
   } else {
     return (
-      <section>
-        <h2>cocktails</h2>
-        {drinks.map((drink) => {
-          return <Cocktail key={drink.idDrink} drink={drink} />;
-        })}
-      </section>
+      <>
+        <h2 className="main-title">cocktails</h2>
+        <section className="cocktails-container">
+          {drinks.map((drink) => {
+            return <Cocktail key={drink.idDrink} drink={drink} />;
+          })}
+        </section>
+      </>
     );
   }
 };

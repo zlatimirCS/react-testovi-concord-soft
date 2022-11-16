@@ -6,7 +6,7 @@ import { useGlobalContext } from "../context";
 const Home = () => {
   const { notFound } = useGlobalContext();
   return (
-    <div>
+    <div className="home-container">
       <SearchForm />
       {notFound ? (
         <p>No Cocktails Matched Your Search Criteria</p>
