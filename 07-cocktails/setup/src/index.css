@@ -16,6 +16,8 @@ a {
   text-decoration: none;
   color: #222;
 }
+
+/* Navbar */
 .app-header-container {
   border-bottom: 2px solid #476a2e;
   box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
@@ -49,6 +51,30 @@ a {
 .app-header a:hover {
   color: #476a2e;
 }
+
+/* Search component */
 .search-container {
-  background-color: coral;
+  margin: 6rem auto;
+  width: 85vw;
+  max-width: 40rem;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  box-shadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.search-container label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  color: #476a2e;
+}
+.search-container form input {
+  width: 100%;
+  border: transparent;
+  background: #f1f5f8;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
 }

@@ -12,8 +12,8 @@ const SearchForm = () => {
   };
   return (
     <div className="search-container">
-      <label htmlFor="search">search your favorite cocktail</label>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="search">search your favorite cocktail</label>
         <input
           type="text"
           name="search"
