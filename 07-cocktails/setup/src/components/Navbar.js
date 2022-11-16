@@ -8,12 +8,14 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    <header>
-      <img src={logo} alt="logo" width={100} height={50} onClick={goHome} />
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
+    <header className="app-header-container">
+      <div className="app-header">
+        <img src={logo} alt="logo" onClick={goHome} />
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </nav>
+      </div>
     </header>
   );
 };
