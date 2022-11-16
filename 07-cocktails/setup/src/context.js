@@ -13,14 +13,17 @@ const AppProvider = ({ children }) => {
   const [drinks, setDrinks] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [notFound, setNotFound] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchDrinks = useCallback(async () => {
     try {
-      const response = await api.get(`?s=${searchTerm}`);
+      const response = await api.get(`search.php?s=${searchTerm}`);
       if (response.data.drinks === null || response.data.drinks === undefined) {
         setNotFound(true);
+        setIsLoading(false);
       } else {
         setNotFound(false);
+        setIsLoading(false);
         setDrinks(response.data.drinks);
       }
     } catch (error) {
@@ -39,7 +42,7 @@ const AppProvider = ({ children }) => {
   }, [searchTerm, fetchDrinks]);
   return (
     <AppContext.Provider
-      value={{ drinks, searchTerm, setSearchTerm, notFound }}
+      value={{ drinks, searchTerm, setSearchTerm, notFound, isLoading }}
     >
       {children}
     </AppContext.Provider>
