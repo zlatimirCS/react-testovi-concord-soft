@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home-container">
       <SearchForm />
       {notFound ? (
-        <p>No Cocktails Matched Your Search Criteria</p>
+        <h2 className="no-match">No Cocktails Matched Your Search Criteria</h2>
       ) : (
         <CocktailList />
       )}

@@ -40,7 +40,7 @@ const SingleCocktail = () => {
     return <Loading />;
   }
   if (noCocktail) {
-    return <h2>No cocktail to display</h2>;
+    return <h2 className="no-match">No cocktail to display</h2>;
   }
   if (singleCocktail) {
     const {
@@ -85,27 +85,63 @@ const SingleCocktail = () => {
     ];
 
     return (
-      <div>
-        <Link to="/">back home</Link>
-
-        <>
+      <section className="single-cocktail-container">
+        <div className="single-cocktail-title">
+          <Link to="/" className="btn btn-primary">
+            back home
+          </Link>
           <h2>{strDrink}</h2>
+        </div>
+        <div className="single-cocktail-details">
           <img src={strDrinkThumb} alt={strDrink} />
-          <h2>{strDrink}</h2>
-          <h2>{strCategory}</h2>
-          <h2>{strGlass}</h2>
-          <h2>{strAlcoholic}</h2>
-          <h2>{strInstructions}</h2>
-          <p>
-            {ingredients.map(
-              (ingredient) =>
-                ingredient !== null && (
-                  <span key={ingredient}> {ingredient} </span>
-                )
-            )}
-          </p>
-        </>
-      </div>
+          <div className="single-cocktitle-details-text">
+            <p>
+              <span className="single-cocktitle-details-text-title">
+                Name :{" "}
+              </span>
+              {strDrink}
+            </p>
+            <p>
+              <span className="single-cocktitle-details-text-title">
+                Category :{" "}
+              </span>
+              {strCategory}
+            </p>
+            <p>
+              <span className="single-cocktitle-details-text-title">
+                Info :{" "}
+              </span>
+              {strAlcoholic}
+            </p>
+            <p>
+              <span className="single-cocktitle-details-text-title">
+                Glass :{" "}
+              </span>
+              {strGlass}
+            </p>
+            <p>
+              <span className="single-cocktitle-details-text-title">
+                Instructions :{" "}
+              </span>
+              {strInstructions}
+            </p>
+            <p>
+              <span className="single-cocktitle-details-text-title">
+                Ingredients :{" "}
+              </span>
+              {ingredients.map(
+                (ingredient) =>
+                  ingredient !== null && (
+                    <span className="ingredients" key={ingredient}>
+                      {" "}
+                      {ingredient}{" "}
+                    </span>
+                  )
+              )}
+            </p>
+          </div>
+        </div>
+      </section>
     );
   }
 };

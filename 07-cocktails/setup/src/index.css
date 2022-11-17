@@ -42,6 +42,12 @@ h4 {
   color: #fff;
   border-color: transparent;
 }
+.btn-primary:hover {
+  /* color: #476a2e; */
+  background: #d4e6a5;
+  border-color: #d4e6a5;
+  color: #708b5d;
+}
 
 /* Navbar */
 .app-header-container {
@@ -164,4 +170,68 @@ h4 {
   background: #d4e6a5;
   border-color: #d4e6a5;
   color: rgb(112, 139, 93);
+}
+.no-match {
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/**** Single Cocktail ****/
+.single-cocktail-container {
+  margin: 5rem auto;
+  width: 85vw;
+  max-width: 1170px;
+}
+.single-cocktail-title {
+  text-align: center;
+}
+.single-cocktail-title h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+}
+.single-cocktail-details {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.single-cocktail-details img {
+  flex: 2;
+  width: 100%;
+  display: block;
+}
+.single-cocktitle-details-text {
+  flex: 3;
+}
+.single-cocktitle-details-text p {
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+.single-cocktitle-details-text-title {
+  background: #d4e6a5;
+  padding: 0.25rem 0.3rem 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #476a2e;
+  margin-right: 0.7rem;
+}
+.ingredients {
+  margin-right: 0.5rem;
+}
+
+/**** About page ****/
+.about {
+  width: 85vw;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.about p {
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
