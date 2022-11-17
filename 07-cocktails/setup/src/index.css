@@ -244,3 +244,9 @@ h4 {
   margin: 5rem 0 1.2rem;
   font-size: x-large;
 }
+
+/**** Loading ****/
+.loader {
+  display: block;
+  margin: 0 auto;
+}

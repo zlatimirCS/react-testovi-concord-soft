@@ -3,11 +3,15 @@ import Loading from "./Loading";
 import { useGlobalContext } from "../context";
 
 const CocktailList = () => {
-  const { drinks, isLoading } = useGlobalContext();
+  const { drinks, isLoading, notFound } = useGlobalContext();
   console.log(drinks);
   if (isLoading) {
     console.log("Loading..");
     return <Loading />;
+  } else if (notFound) {
+    return (
+      <h2 className="no-match">No Cocktails Matched Your Search Criteria</h2>
+    );
   } else {
     return (
       <>
