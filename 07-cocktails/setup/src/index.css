@@ -235,3 +235,12 @@ h4 {
   font-weight: 400;
   letter-spacing: 2px;
 }
+
+/**** Error page ****/
+.error {
+  text-align: center;
+}
+.error h2 {
+  margin: 5rem 0 1.2rem;
+  font-size: x-large;
+}
