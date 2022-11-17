@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const Alert = () => {
-  return <h2>alert component</h2>;
+  return <p>alert component</p>;
 };
 
 export default Alert;
