@@ -192,13 +192,14 @@ Grocery List
   color: #155724;
   background: #d4edda;
 }
-.grocery-form h3 {
+.main-title {
   color: var(--clr-primary-1);
   margin-bottom: 1.5rem;
   text-align: center;
 }
 .form-control {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 .grocery {

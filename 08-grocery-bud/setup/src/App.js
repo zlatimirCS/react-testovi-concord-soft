@@ -83,20 +83,28 @@ function App() {
     }
   }, [items]);
   return (
-    <section>
+    <section className="section-center">
       {alert.show && <Alert {...alert} removeAlert={showAlert} />}
-      <h2>grocery bud</h2>
-      <form onSubmit={handleSubmit}>
+      <h3 className="main-title">grocery bud</h3>
+      <form onSubmit={handleSubmit} className="form-control">
         <input
           type="text"
           placeholder="e.g. eggs"
           onChange={handleInput}
           value={term}
+          className="grocery"
         />
         {toEditItem ? (
-          <button onClick={() => onButtonClick("edit")}>Edit</button>
+          <button onClick={() => onButtonClick("edit")} className="submit-btn">
+            Edit
+          </button>
         ) : (
-          <button onClick={() => onButtonClick("submit")}>Submit</button>
+          <button
+            onClick={() => onButtonClick("submit")}
+            className="submit-btn"
+          >
+            Submit
+          </button>
         )}
       </form>
       {items.length !== 0 && (
