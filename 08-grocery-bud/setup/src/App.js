@@ -7,42 +7,36 @@ function App() {
     JSON.parse(localStorage.getItem("todos")) || []
   );
   const [term, setTerm] = useState("");
-  const [alert, setAlert] = useState(false);
+  const [alert, setAlert] = useState({
+    show: false,
+    msg: "",
+    type: "",
+  });
   const [toEditItem, setToEditItem] = useState(null);
 
   const handleSubmit = (e) => e.preventDefault();
-
-  let timer = useRef(null);
-  const parentFunction = () => {
-    const runTimer = () => {
-      timer.current = setTimeout(() => {
-        setAlert(false);
-      }, 3000);
-    };
-    runTimer();
-
-    return () => {
-      setAlert(true);
-      runTimer();
-    };
-  };
 
   const handleInput = (e) => {
     setTerm(e.target.value);
   };
 
+  const showAlert = (show = false, msg = "", type = "") => {
+    setAlert({ show, msg, type });
+  };
+
   const onButtonClick = (action, ...args) => {
     switch (true) {
-      case action === "submit" && !term:
-      case action === "edit" && !term:
-        parentFunction()();
+      case (action === "submit" && !term) || (action === "edit" && !term):
+        showAlert(true, "please enter value", "danger");
         break;
       case action === "submit":
+        showAlert(true, "item added to the list", "success");
         setItems(() => [...items, { id: Math.random(), item: term }]);
         localStorage.setItem("items", JSON.stringify(items));
         setTerm("");
         break;
       case action === "edit":
+        showAlert(true, "value changed", "success");
         const editedItems = [...items];
         const index = editedItems.findIndex(
           (item) => item.id === toEditItem.id
@@ -60,12 +54,14 @@ function App() {
         setTerm(filteredToEdit[0].item);
         break;
       case action === "delete":
+        showAlert(true, "item is removed", "danger");
         const newItems = items.filter((item) => {
           return item.id !== args[0];
         });
         setItems(newItems);
         break;
       case action === "clear":
+        showAlert(true, "empty list", "danger");
         setItems([]);
         break;
       default:
@@ -88,7 +84,7 @@ function App() {
   }, [items]);
   return (
     <section>
-      {alert && <Alert />}
+      {alert.show && <Alert {...alert} removeAlert={showAlert} />}
       <h2>grocery bud</h2>
       <form onSubmit={handleSubmit}>
         <input
