@@ -1,5 +1,8 @@
 ## Notes
 
+Ocekivani rezultat
+https://react-course-comfy-sloth-store.netlify.app/
+
 #### Older React Version
 
 ```
