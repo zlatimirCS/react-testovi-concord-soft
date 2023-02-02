@@ -1,3 +1,121 @@
-.test {
-  color: red;
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.menu-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-line {
+  height: 0.25rem;
+  width: 5rem;
+  background-color: rgb(134, 88, 26);
+}
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.nav-button {
+  border: 0;
+  background-color: transparent;
+  color: rgb(134, 88, 26);
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.nav-button:hover {
+  background-color: rgb(134, 88, 26);
+  color: whitesmoke;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-offer {
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: auto auto;
+  }
+}
+
+.menu-card {
+  max-width: 400px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  @media screen and (min-width: 700px) {
+    max-width: 600px;
+    grid-template-columns: 250px 350px;
+  }
+}
+
+.article-image {
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
+  border-radius: 3px;
+  border: 5px solid rgb(134, 88, 26);
+}
+
+.article-details {
+  @media screen and (min-width: 700px) {
+    margin-left: 20px;
+  }
+}
+
+.article-details header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  border-bottom: 1px dotted #444444;
+}
+
+.article-details p {
+  color:rgb(81, 86, 112)
+}
+
+h4 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0;
+  color: rgb(29, 21, 10);
+}
+
+.price {
+  color: rgb(134, 88, 26);
 }
