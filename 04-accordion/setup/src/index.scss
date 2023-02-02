@@ -1,3 +1,90 @@
-.test {
-  color: red;
+body {
+  background-color: rgb(69, 25, 92);
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(48, 48, 48);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.qwrap {
+  display: flex;
+  background-color: azure;
+  padding: 25px;
+  border-radius: 5px;
+  flex-direction: column;
+  width: 100vw;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    width: 800px;
+  }
+}
+
+h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+h4 {
+  margin: 10px
+}
+
+.title {
+  width: 100%;
+  @media screen and (min-width: 800px) {
+    width: 25%;
+  }
+}
+
+.questions {
+  width: 100%;
+  @media screen and (min-width: 800px) {
+    width: 75%;
+  }
+}
+
+.question-box {
+  border: 1px solid #CCCCCC;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px #CCCCCC;
+}
+
+.accordion-button {
+  position: absolute;
+  margin: 5px;
+  right: 10px;
+  background-color: #afafaf;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:rgb(69, 25, 92);
+  cursor: pointer;
+  border: 0;
+}
+
+.accordion-text {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: 0.3s ease all;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
 }
