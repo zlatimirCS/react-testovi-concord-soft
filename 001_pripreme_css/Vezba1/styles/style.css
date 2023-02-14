@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+:root {
+
+   --light-color: #ffffff;
+   --brown-color: #cb9e61;
+   --font-p: 'Barlow';
+   --font-h1: 'Libre Baskerville';
+
+}
+
+*,
+*::before,
+*::after {
+   box-sizing:border-box;
+}
+
+body {
+
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   margin:0;
+   padding:0;
+   background-size: 100% auto;
+   background-repeat: no-repeat;
+   background-image: url("../assets/background.png");
+
+ }
+ 
+h1 {
+
+   display:flex;
+   justify-content: center;
+   color: var(--brown-color);
+   font-family: var(--font-h1), serif;
+
+}
+
+p {
+
+   padding:0;
+   margin:0;
+   color: var(--light-color);
+   font-family: var(--font-p), serif;
+   background-color: #343434;
+
+}
+
+.container {
+
+   display:flex;
+   padding: 0;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-content: center;
+
+}
+
+.box {
+
+   display:flex;
+   flex-direction: column;
+   padding: 30px;
+   flex-wrap: wrap;
+   align-content: center;
+
+}
+
+
+
+
