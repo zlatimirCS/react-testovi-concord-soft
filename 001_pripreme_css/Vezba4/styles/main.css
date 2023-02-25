@@ -1,0 +1,130 @@
+@import "imports.css";
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+img {
+    max-width: 100%;
+}
+.line--height {
+    line-height: 1.15;
+}
+.text__title--size {
+    font-size: 42px;
+}
+.text__desc--size {
+    font-size: 21px;
+}
+.text__font {
+    font-family: 'Open Sans';
+}
+.text--bold {
+    font-weight: 650;
+}
+.text--regular {
+    font-weight: 500;
+}
+.text--center {
+    text-align: center;
+}
+.text--color-grey {
+    color: var(--text-color);
+}
+.features {
+    display: grid;
+    gap:20px;
+}
+.features__desc {
+    padding: 0 10px 0 10px;
+}
+.features--maxwidth {
+    max-width: 400px;
+    margin: 20px auto;
+}
+.background {
+    background-color: var(--color-yellow);
+}
+.container {
+    display: grid;
+    gap: 36px;
+    padding: 20px 20px 20px 20px;
+}
+.cards {
+    display: grid;
+    gap:42px;
+    margin:0 0 40px 0;
+}
+.card {
+    position: relative;
+    padding: 15px;
+}
+.card__image {
+    display: block;
+    margin: 35px auto;
+    max-height: 100px;
+}
+.card__desc {
+    padding: 0 0 20px 0;
+    max-width: 90%;
+    margin:5px auto;
+}
+.card__readme {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    color: var(--color-yellow);
+    text-decoration: none;
+}
+.mainArticle {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+@media (min-width:800px) {
+    .content {
+        max-width: 1100px;
+        margin: auto;
+    }
+    .container {
+        padding: 100px 10px 73px 10px;
+        grid-template-areas: 
+            "one two"
+        ;
+    }
+    .container:nth-child(1) {
+        grid-area: one;
+    }
+    .container:nth-child(2) {
+        grid-area: two;
+    }
+    .cards {
+        grid-template-areas: 
+            "one two three"
+            "four five six"
+        ;
+    }
+    .cards:nth-child(1){
+        grid-area: one;
+    }
+    .cards:nth-child(2){
+        grid-area: two;
+    }
+    .cards:nth-child(3){
+        grid-area: three;
+    }
+    .cards:nth-child(4){
+        grid-area: four;
+    }
+    .cards:nth-child(5){
+        grid-area: five;
+    }
+    .cards:nth-child(6){
+        grid-area: six;
+    }
+    .features {
+        gap: 40px;
+    }
+    .features--maxwidth {
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+}

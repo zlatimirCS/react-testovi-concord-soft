@@ -1,0 +1,92 @@
+@import "imports.css";
+body {
+    max-width: 400px;
+    margin: auto;
+}
+img {
+    max-width: 100%;
+}
+.text--desc-padding {
+    padding: 0 0 67px 0;
+}
+.text--font-lato {
+    font-family: 'Lato', sans-serif;
+}
+.text--font-black {
+    font-weight: 900;
+}
+.text--font-bold {
+    font-weight: 700;
+}
+.text--font-regular {
+    font-weight: 400;
+}
+.text--font-light {
+    font-weight: 300;
+}
+.text--size-title {
+    font-size: 36px;
+}
+.text--size-desc {
+    font-size: 20px;
+}
+.text--margin {
+    margin: 49px auto 5px auto;
+}
+.text--padding {
+    padding: 0 20px 0 20px;
+}
+.text--center{
+    text-align: center;   
+}
+.text--color-blue {
+    color:var(--color-blue);
+}
+.text--color-gray {
+    color:var(--color-grey);
+}
+.text--color-dark {
+    color:var(--color-dark);
+}
+.container {
+    display: grid;
+    gap: 0.5em;
+}
+.card {
+    text-align: center;
+}
+.card__title--margin {
+    margin: 30px auto;
+}
+.card__title--size {
+    font-size: 15px;
+}
+.card__desc--width {
+    max-width: 70%;
+    margin: 30px auto;
+}
+.card__desc--size {
+    font-size: 13px;
+}
+@media (min-width:800px) {
+    body {
+        max-width: 1480px;
+    }
+    .container {
+        grid-template-areas:
+        "one two three four"
+        ;
+    }
+    .container:nth-child(1){
+        grid-area: one;
+    }
+    .container:nth-child(2){
+        grid-area: two;
+    }
+    .container:nth-child(3){
+        grid-area: three;
+    }
+    .container:nth-child(4){
+        grid-area: four;
+    }
+}
