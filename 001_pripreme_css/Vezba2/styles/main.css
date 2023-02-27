@@ -1,10 +1,11 @@
 @import "imports.css";
 body {
-    max-width: 500px;
+    max-width: 1440px;
     margin: auto;
 }
 img {
     max-width: 100%;
+    margin:auto;
 }
 button {
     display: inline-block;
@@ -15,7 +16,7 @@ button {
     color: white;
 }
 .wrapper {
-    width: 70%;
+    width: 80%;
     margin: 30px auto;
 }
 .box {
@@ -85,16 +86,37 @@ button {
 .card--bgcolor--light {
     background-color: white;
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
+    .image img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        max-width: 800px;
+    }
     .box {
         align-items: center;
         text-align: center;
     }
 }
-@media (min-width: 720px) {
-    body {
-        max-width: 1440px;
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2,1fr);
     }
+    .container--area {
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+        "one two"
+        ;
+    }
+    .container--area:nth-child(1){
+        grid-area: "one";
+    }
+    .container--area:nth-child(2){
+        grid-area: "two";
+    }
+}
+@media (min-width: 730px) {
     button {
         cursor: pointer;
     }
@@ -102,7 +124,7 @@ button {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
     .wrapper {
-        width: 80%;
+        width: 90%;
         max-width: 1220px;
         margin: 30px auto;
     }
@@ -117,25 +139,13 @@ button {
             clamp(79px / 4, 79px / 2, 79px)
         ;
     }
-    .container--area {
-        grid-auto-columns: 1fr;
-        grid-template-areas:
-        "one two"
-        ;
-    }
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    .container--area:nth-child(1){
-        grid-area: "one";
-    }
-    .container--area:nth-child(2){
-        grid-area: "two";
-    }
     .text--width {
         max-width: 50%;
     }
     .text--margin {
         margin: auto;
+    }
+    .cards {
+        grid-template-columns: repeat(3,1fr);
     }
 }
