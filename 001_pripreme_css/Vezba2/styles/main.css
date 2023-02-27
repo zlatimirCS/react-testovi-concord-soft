@@ -104,16 +104,7 @@ button {
         grid-template-columns: repeat(2,1fr);
     }
     .container--area {
-        grid-auto-columns: 1fr;
-        grid-template-areas:
-        "one two"
-        ;
-    }
-    .container--area:nth-child(1){
-        grid-area: "one";
-    }
-    .container--area:nth-child(2){
-        grid-area: "two";
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media (min-width: 730px) {
