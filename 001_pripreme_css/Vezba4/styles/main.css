@@ -86,39 +86,10 @@ img {
     }
     .container {
         padding: 100px 10px 73px 10px;
-        grid-template-areas: 
-            "one two"
-        ;
-    }
-    .container:nth-child(1) {
-        grid-area: one;
-    }
-    .container:nth-child(2) {
-        grid-area: two;
+        grid-template-columns: repeat(2,1fr);
     }
     .cards {
-        grid-template-areas: 
-            "one two three"
-            "four five six"
-        ;
-    }
-    .cards:nth-child(1){
-        grid-area: one;
-    }
-    .cards:nth-child(2){
-        grid-area: two;
-    }
-    .cards:nth-child(3){
-        grid-area: three;
-    }
-    .cards:nth-child(4){
-        grid-area: four;
-    }
-    .cards:nth-child(5){
-        grid-area: five;
-    }
-    .cards:nth-child(6){
-        grid-area: six;
+        grid-template-columns: repeat(3, 1fr);
     }
     .features {
         gap: 40px;
