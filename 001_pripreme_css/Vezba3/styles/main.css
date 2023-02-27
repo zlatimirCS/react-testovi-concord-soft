@@ -1,8 +1,5 @@
 @import "imports.css";
-body {
-    max-width: 400px;
-    margin: auto;
-}
+
 img {
     max-width: 100%;
 }
@@ -68,25 +65,22 @@ img {
 .card__desc--size {
     font-size: 13px;
 }
+@media (min-width:430px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width:600px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media (min-width:800px) {
     body {
         max-width: 1480px;
     }
     .container {
-        grid-template-areas:
-        "one two three four"
-        ;
+        grid-template-columns: repeat(4,1fr) ;
     }
-    .container:nth-child(1){
-        grid-area: one;
-    }
-    .container:nth-child(2){
-        grid-area: two;
-    }
-    .container:nth-child(3){
-        grid-area: three;
-    }
-    .container:nth-child(4){
-        grid-area: four;
-    }
+
 }
