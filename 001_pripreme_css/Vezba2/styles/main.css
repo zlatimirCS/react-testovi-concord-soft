@@ -1,8 +1,4 @@
 @import "imports.css";
-body {
-    max-width: 1440px;
-    margin: auto;
-}
 img {
     max-width: 100%;
     margin:auto;
