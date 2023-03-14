@@ -1,0 +1,41 @@
+@media (max-width: 840px) {
+    .card--wrapper {
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 750px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .hamburger-menu {
+        float: left;
+    }
+    .logo {
+        float: right;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__nav-button {
+        display: none;
+    }
+}
+@media (min-width: 500px) {
+    .hamburger-menu {
+        display: none;
+    }
+    .logo {
+        float: left;
+    }
+}

@@ -1,0 +1,54 @@
+$font: 'Brandon Grotesque';
+$default-text-size: 62.5%;
+$color-light:#fafafa;
+$color-grey:#777777;
+
+html {
+    box-sizing: border-box;
+    font-size: $default-text-size;
+    font-family: $font;
+}
+input,
+textarea,
+textarea::placeholder,
+input::placeholder {
+    font-family: $font;
+    font-size: 1.8rem;
+    width: 100%;
+    background: white;
+    border: .1rem solid $color-light;
+    border-radius: .3rem;
+    color: $color-grey;
+}
+input {
+    height: 5vh;
+    padding:2rem 3rem 2rem 3rem;
+}
+textarea {
+    padding:2rem 3rem 2rem 3rem;
+    resize: none;
+}
+button {
+    font-family: $font;
+    font-size: 1.8rem;
+    font-weight: 800;
+    width: 200px;
+    background: white;
+    border: .1rem solid $color-light;
+    border-radius: .3rem;
+    color: $color-grey;
+    &:hover {
+        cursor: pointer;
+    }
+}
+img {
+    max-width: 100%;
+}
+*,
+*::before,
+*::after {
+   box-sizing:inherit;
+}
+a {
+    text-decoration: none;
+}

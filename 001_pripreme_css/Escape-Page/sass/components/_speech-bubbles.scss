@@ -1,0 +1,44 @@
+.bubble {
+	position: relative;
+	background-color: #fff;
+	padding: 3rem 6rem;
+	border-radius: 1rem;
+    box-shadow:	0 .125rem .5rem rgba(0, 0, 0, .3), 0 .0625rem .125rem rgba(0, 0, 0, .2);
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 50%;
+        left: -.4rem;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent; 
+        border-right:10px solid white; 
+        filter: drop-shadow(-.125rem 0 .1rem rgba(0, 0, 0, .2));
+    }
+    &--mirrored {
+        @extend .bubble;
+        &::before {
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid white;
+            border-right: none;
+            left: auto;
+            right: -1.4rem;
+            filter: drop-shadow(.125rem 0 .1rem rgba(0, 0, 0, .2));
+        }
+    }
+}
+.bubble__padding {
+    padding: 3rem 0;
+}
+.bubble__quote {
+    display: block;
+    font-size: 2.6rem;
+    line-height: 3rem;
+}
+.bubble__quote-by {
+    display: block;
+    font-size: 2rem;
+    line-height: 3rem;
+}

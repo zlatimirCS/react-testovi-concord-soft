@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.card--mirrored {
+    flex-direction: row-reverse;
+}
+.card__text {
+    flex: 0 1 auto;
+}
+.card__image {
+    flex: 0 0 auto;
+}

@@ -1,0 +1,45 @@
+/* brandon-grotesque regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Brandon Grotesque';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/BrandonGrotesque-Regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../../assets/fonts/BrandonGrotesque-Regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* brandon-grotesque light - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Brandon Grotesque';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../../assets/fonts/BrandonGrotesque-Light.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../../assets/fonts/BrandonGrotesque-Light.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* brandon-grotesque medium - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Brandon Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../assets/fonts/BrandonGrotesque-Medium.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../../assets/fonts/BrandonGrotesque-Medium.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* brandon-grotesque bold - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Brandon Grotesque';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../assets/fonts/BrandonGrotesque-Bold.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../../assets/fonts/BrandonGrotesque-Bold.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* brandon-grotesque black - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Brandon Grotesque';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../../assets/fonts/BrandonGrotesque-Black.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../../assets/fonts/BrandonGrotesque-Black.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }

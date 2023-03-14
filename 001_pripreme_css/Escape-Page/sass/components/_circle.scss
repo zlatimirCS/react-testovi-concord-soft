@@ -1,0 +1,19 @@
+$color-dark:#111111;
+.circle {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: $color-dark;
+    border-radius: 50%;
+    &--bordered {
+        @extend .circle;
+        border: .5rem solid white;
+        &-small {
+            @extend .circle--bordered;
+            height: 50px;
+            width: 50px;
+            border: .2rem solid white;
+        }
+    }
+}

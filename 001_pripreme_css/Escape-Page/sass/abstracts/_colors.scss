@@ -1,0 +1,30 @@
+$color-white:#fff;
+$color-blue:#7690c5;
+$color-light:#fafafa;
+$color-dark:#111111;
+$color-grey:#777777;
+
+.background--light {
+    background-color: $color-light;
+}
+.background--white {
+    background-color: $color-white;
+}
+.background--dark {
+    background-color: $color-dark;
+}
+.background--blue {
+    background-color: $color-blue;
+}
+.text-color--grey {
+    color: $color-grey;
+}
+.text-color--dark {
+    color: $color-dark;
+}
+.text-color--white {
+    color: $color-white;
+}
+.text-color--blue {
+    color: $color-blue;
+}
