@@ -1,3 +1,323 @@
-.test {
-  color: red;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+//body variables
+$background-color: #f8fafc;
+
+//text variables
+$textColor: #0f172a;
+$letterSpacing: 1px;
+
+//main variables
+$max-width: 1200px;
+
+//color variables
+$white: #fff;
+$red: red;
+$blue: #49a6e9;
+$grey: #64748b;
+
+//other variables
+$borderRadius: 0.25rem;
+$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$box-shadow-alt: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$transition: 0.3s ease-in-out all;
+
+body {
+  background: $background-color;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: $textColor;
+}
+
+h1,
+h2,
+h5 {
+  text-transform: capitalize;
+  letter-spacing: $letterSpacing;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.tour__image {
+  width: 100%;
+  height: 20rem;
+  display: block;
+  object-fit: cover;
+}
+
+.btn {
+  cursor: pointer;
+  color: $white;
+  background: $blue;
+  border: transparent;
+  border-radius: $borderRadius;
+  letter-spacing: $letterSpacing;
+  padding: 0.375rem 0.75rem;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.loading {
+  margin: 0 auto;
+  & h1 {
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+  & h2 {
+    font-weight: 700;
+  }
+}
+
+.title-underline {
+  background: $blue;
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+main {
+  width: 90vw;
+  max-width: $max-width;
+  margin: 5rem auto;
+}
+
+.tours {
+  padding: 2rem 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.tour {
+  background: $white;
+  border-radius: $borderRadius;
+  box-shadow: $box-shadow;
+  transition: $transition;
+  position: relative;
+}
+
+.tour:hover {
+  box-shadow: $box-shadow-alt;
+}
+
+.tour .tour__image {
+  height: 20rem;
+  border-top-right-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+}
+
+.tour__price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: $blue;
+  letter-spacing: 2px;
+  background: $white;
+  border-top-right-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+}
+
+.tour__info {
+  padding: 1.5rem 2rem;
+  & h5 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  & p {
+    line-height: 1.5;
+    color: $grey;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.tour__info-btn,
+.delete-btn {
+  background: transparent;
+  border: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.tour__info-btn {
+  color: $blue;
+  font-weight: 600;
+}
+
+.delete-btn {
+  border: 1px solid $red;
+  color: $red;
+  max-width: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .tours {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+@media screen and (min-width: 992px) {
+  .tours {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
 }
