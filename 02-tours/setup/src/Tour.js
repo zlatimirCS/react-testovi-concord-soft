@@ -7,12 +7,10 @@ const Tour = ({ id, image, info, price, name, removeTour }) => {
   const toggleReadMore = () => {
     if (readMore) {
       setReadMore(!readMore);
-      textButton = 'Read more';
-      setTextButton(textButton);
+      setTextButton('Read more');
     } else {
       setReadMore(!readMore);
-      textButton = 'Read less';
-      setTextButton(textButton);
+      setTextButton('Read less');
     }
   };
 
