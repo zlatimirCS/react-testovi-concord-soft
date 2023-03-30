@@ -1,3 +1,118 @@
-.test {
-  color: red;
+@import 'reset.scss';
+
+//colors
+$purple: #4b145b;
+$grey-1: hsl(209, 61%, 16%);
+$grey-2: hsl(210, 22%, 49%);
+$grey-3: hsl(209, 34%, 30%);
+$grey-special: #eae6eb;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$red-special: #b4345c;
+//other variables
+$spacing: 0.1rem;
+$max-width: 920px;
+$radius: 0.25rem;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: $purple;
+  color: $grey-1;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h3,
+h4 {
+  letter-spacing: $spacing;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: $grey-2;
+}
+
+@media screen and (min-width: 800px) {
+  h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+@media screen and (min-width: 900px) {
+  main {
+    grid-template-columns: 250px 1fr;
+  }
+}
+main {
+  display: grid;
+  width: 90vw;
+  gap: 1rem 2rem;
+  background-color: white;
+  max-width: $max-width;
+  border-radius: $radius;
+  padding: 2.5rem 2rem;
+  margin: 5rem auto;
+}
+
+.question {
+  padding: 1rem 1.5rem;
+  border: 2px solid $grey-special;
+  margin-bottom: 1rem;
+  border-radius: $radius;
+  box-shadow: $light-shadow;
+  & h4 {
+    text-transform: none;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  & p {
+    color: $grey-3;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
+  & section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & section h4 {
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  background: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  background: $grey-special;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: $red-special;
+  cursor: pointer;
+  margin-left: 1rem;
+  align-self: center;
 }

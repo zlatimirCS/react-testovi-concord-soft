@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
 import data from './data';
 import SingleQuestion from './Question';
 function App() {
-  return <h2 className="test">accordion project setup</h2>;
+  return (
+    <main>
+      <h3>Questions And Answers About Login</h3>
+      <article>
+        {data.map((question) => {
+          return <SingleQuestion key={question.id} {...question} />;
+        })}
+      </article>
+    </main>
+  );
 }
 
 export default App;
