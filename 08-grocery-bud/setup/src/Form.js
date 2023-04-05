@@ -5,12 +5,10 @@ const Form = () => {
   const [newItemName, setNewItemName] = useState('');
 
   let toggleEdit = false;
-  let id = null;
   if (items) {
     items.forEach((item) => {
       if (item.edit) {
         toggleEdit = true;
-        id = item.id;
       }
     });
   }
