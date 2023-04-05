@@ -276,6 +276,10 @@ Grocery List
 .edit-btn {
   color: var(--clr-green-light);
 }
+.edit-btn-toggle {
+  border-radius: 50%;
+  border: 0.1px solid red;
+}
 .edit-btn:hover {
   color: var(--clr-green-dark);
 }
