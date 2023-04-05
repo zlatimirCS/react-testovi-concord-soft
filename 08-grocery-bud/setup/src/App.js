@@ -5,12 +5,10 @@ import Alert from './Alert';
 import { useGlobalContext } from './context';
 
 function App() {
-  const { alert, alertMessage } = useGlobalContext();
+  const { alert } = useGlobalContext();
   return (
     <section className='section-center'>
-      {alert && (
-        <Alert message={alertMessage.message} alertType={alertMessage.type} />
-      )}
+      {alert && <Alert />}
       <Form />
       <List />
     </section>

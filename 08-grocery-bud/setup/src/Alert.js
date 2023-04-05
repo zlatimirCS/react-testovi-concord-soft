@@ -1,7 +1,9 @@
 import React from 'react';
+import { useGlobalContext } from './context';
 
-const Alert = (props) => {
-  return <p className={'alert ' + props.alertType}>{props.message}</p>;
+const Alert = () => {
+  const { alertMessage } = useGlobalContext();
+  return <p className={'alert ' + alertMessage.type}>{alertMessage.message}</p>;
 };
 
 export default Alert;
