@@ -1,11 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import Loading from './Loading'
-import Tours from './Tours'
+import React, { useState, useEffect } from 'react';
+import Tours from './Tours';
+import Tour from './Tour';
+import data from './data';
+import './App.css';
 
-const url = 'https://course-api.com/react-tours-project'
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [tours, setTours] = useState([]);
 
-function App() {
-  return <h2 className="test">Tours Project Setup</h2>
-}
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTours(data);
+      setIsLoading(false);
+    }, 2000);
 
-export default App
+    return () => clearTimeout(timer);
+  }, []);
+
+  const deleteTour = (id) => {
+    const updatedTours = tours.filter((tour) => tour.id !== id);
+    setTours(updatedTours);
+  };
+
+  return (
+    <div>
+      {isLoading ? (
+        <div className='loading'>
+          <p>Loading...</p>
+        </div>
+      ) : (
+        <div>
+          <h1>Our Tours</h1>
+          <div className='line'></div>
+          <Tours tours={tours} deleteTour={deleteTour} />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default App;

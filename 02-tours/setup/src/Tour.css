@@ -1,0 +1,62 @@
+.tour {
+    position: relative;
+    width: 370px;
+    height: 588px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1); 
+    margin-bottom: 50px;
+}
+  
+  .tour img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .price {
+    position: absolute;
+    right: 0;
+    background: rgb(235, 247, 255);
+    width: 76px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .price p {
+    color:rgb(73, 166, 233);
+  }
+
+  .tour h2 {
+    color:rgb(16, 42, 66);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .tour a {
+    color: rgb(73, 166, 233);
+  }
+
+  button {
+    border: 1px solid red;
+    border-radius: .25rem;
+    width: 200px;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    padding: .25rem .5rem;
+    margin-top: 16px;
+  }
+
+  .content {
+    padding: 1.5rem 2rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
