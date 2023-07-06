@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "./data";
 import List from "./List";
-function App() {
-  return <h2 className="test">Birthday reminder project setup, asdf </h2>;
-}
+import "./App.css";
+
+const App = () => {
+  return (
+    <section className="container">
+      <List people={data} />
+    </section>
+  );
+};
 
 export default App;
