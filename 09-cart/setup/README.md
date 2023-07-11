@@ -8,7 +8,7 @@ github username: zlatimir_rk@yahoo.com
 
 Ocekivani rezultat
 
-https://react-projects-14-usereducer-cart.netlify.app/
+https://react-vite-projects-14-cart.netlify.app/
 
 // Pomoc kod izrade
 

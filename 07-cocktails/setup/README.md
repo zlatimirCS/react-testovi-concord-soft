@@ -10,7 +10,7 @@ github username: zlatimir_rk@yahoo.com
 
 Ocekivani rezultat
 
-https://react-projects-15-cocktails.netlify.app/
+https://react-vite-projects-17-cocktails.netlify.app/
 
 Neophodno je instalirati react-router
 
