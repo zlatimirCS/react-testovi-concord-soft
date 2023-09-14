@@ -1,9 +1,10 @@
 import React from 'react';
-
+import './loading.css';
+import gif from './images/preloader.gif';
 const Loading = () => {
   return (
-    <div className="loading">
-      <h1>loading...</h1>
+    <div className='preloader'>
+      <img src={gif} alt='Loading...' />
     </div>
   );
 };
