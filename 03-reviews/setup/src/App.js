@@ -3,10 +3,7 @@ import Review from './Review';
 import people from './data.js';
 import './styles.css';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
-//ovde useState koristimo za indexe --> tako cemo da omoguccimo prikaz samo jednog po jednog
-//pomocu funkcije setCountIndex menjacemo indexe dinamicki kako podesimo funkcionalnost
-//da bi pokupili podatke i prikazali neki treba nam naziv niza i index
-//destruktuiracemo podatke
+
 function App() {
   const [index, setIndex] = useState(0);
   const person = people[index];
@@ -57,5 +54,3 @@ function App() {
 }
 
 export default App;
-//Sada, kada trenutni indeks (index) postane jednak poslednjem indeksu (people.length - 1), to znači da ste trenutno prikazali poslednjeg korisnika u nizu.
-//Kada kliknete na "Sledeće" nakon što ste već na poslednjem korisniku, želite se vratiti na prvi korisnik u nizu, što je indeks 0. Zato se koristi index === people.length - 1 kao uslov, da biste znali kada se treba vratiti na početak niza.
