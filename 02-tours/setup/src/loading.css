@@ -117,3 +117,33 @@ article p {
   padding: 5px;
   border-radius: 4px;
 }
+@media screen and (max-width: 1100px) {
+  .tours-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  article {
+    margin: 10px 0;
+  }
+  article p {
+    margin-bottom: 10px;
+  }
+  .not-interuested-btn {
+    margin: 10px 0 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+  .more-btn,
+  .not-interuested-btn {
+    font-size: 16px;
+  }
+
+  .tours-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
