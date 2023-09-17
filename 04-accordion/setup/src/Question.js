@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-const Question = () => {
-  return <h2>question component</h2>;
+import SingleQuestion from './SingleQuestion.js';
+
+const Question = ({ questions }) => {
+  return (
+    <section>
+      {questions.map((question) => {
+        console.log(question.id);
+        return <SingleQuestion key={question.id} {...question} />;
+      })}
+    </section>
+  );
 };
 
 export default Question;
