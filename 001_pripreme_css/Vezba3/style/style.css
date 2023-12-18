@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+  padding: 2rem;
+}
+
+body header .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .title h1 {
+  font-family: 'Lato-Black';
+}
+
+body header .title h2 {
+  font-family: 'Lato-Light';
+}
+
+body main .featureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+body main .featureContainer .featureCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Lato-Black';
+}
+
+body main .featureContainer .featureCard .circle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../assets/images/base.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5rem;
+  z-index: 100;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+body main .featureContainer .featureCard .circle:hover {
+  background-image: url("../assets/images/BaseDark.png");
+  cursor: pointer;
+}
+
+body main .featureContainer .featureCard .circle:hover + .featureTitle {
+  color: #4bcaff;
+}
+
+body main .featureContainer .featureCard .featureTitle {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+body main .featureContainer .featureCard .featureText {
+  font-family: 'Lato-Light';
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
