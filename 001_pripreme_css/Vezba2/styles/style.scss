@@ -21,7 +21,7 @@ html {
 }
 
 button {
-	background-color: $background-color-bottom; /* Green */
+	background-color: $background-color-bottom;
 	border: none;
 	color: white;
 	padding: 0.5rem 4rem;
@@ -53,10 +53,12 @@ body {
 		flex: 1;
 		color: $top-text-color;
 		position: relative;
+
 		.imageContainer {
 			display: flex;
 			padding: 5rem;
 			flex: 1;
+			justify-content: center;
 		}
 
 		.textContainer {
@@ -74,7 +76,6 @@ body {
 			h1 {
 				font-weight: 900;
 				font-size: 4rem;
-				// margin-right: 2rem;
 				text-transform: uppercase;
 				font-family: 'BalooBhai';
 				margin-right: 2rem;
@@ -93,7 +94,7 @@ body {
 		}
 	}
 	.bottomContainer {
-		padding: 2rem;
+		padding: 2rem 2rem 6rem 2rem;
 		display: flex;
 		flex-direction: column;
 		background-color: $background-color-bottom;
@@ -109,7 +110,7 @@ body {
 			margin-top: 2rem;
 
 			h1 {
-				font-size: 38px;
+				font-size: 40px;
 			}
 
 			p {
@@ -122,7 +123,7 @@ body {
 		}
 		.pricingContainer {
 			display: flex;
-			gap: 1rem;
+			gap: 4rem;
 			color: $top-text-color;
 			justify-content: center;
 			align-items: center;
@@ -139,7 +140,10 @@ body {
 				h4 {
 					text-transform: uppercase;
 					font-size: 2rem;
-					margin-top: -1rem;
+
+					&.price {
+						margin-top: -1rem;
+					}
 				}
 
 				img {
@@ -148,9 +152,43 @@ body {
 
 				p {
 					font-family: 'Montserrat';
-					max-width: 250px;
+					max-width: 300px;
 					padding: 1rem;
+					text-align: center;
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	body {
+		text-align: center;
+
+		.topContainer {
+			flex-direction: column;
+
+			.imageContainer {
+				display: flex;
+				padding: 0;
+				flex: 1;
+				img {
+					width: 100%;
+					object-fit: contain;
+				}
+			}
+
+			.textContainer {
+				align-items: center;
+			}
+
+			.shape {
+				display: none;
+			}
+		}
+		.bottomContainer {
+			.pricingContainer {
+				flex-direction: column;
 			}
 		}
 	}

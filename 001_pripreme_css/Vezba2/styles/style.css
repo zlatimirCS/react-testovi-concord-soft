@@ -24,7 +24,6 @@ html {
 
 button {
   background-color: #6c9894;
-  /* Green */
   border: none;
   color: white;
   padding: 0.5rem 4rem;
@@ -80,6 +79,9 @@ body .topContainer .imageContainer {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .topContainer .textContainer {
@@ -127,7 +129,7 @@ body .topContainer .shape {
 }
 
 body .bottomContainer {
-  padding: 2rem;
+  padding: 2rem 2rem 6rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +163,7 @@ body .bottomContainer .title {
 }
 
 body .bottomContainer .title h1 {
-  font-size: 38px;
+  font-size: 40px;
 }
 
 body .bottomContainer .title p {
@@ -176,7 +178,7 @@ body .bottomContainer .pricingContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
   color: #6c9894;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -206,6 +208,9 @@ body .bottomContainer .pricingContainer .priceCard {
 body .bottomContainer .pricingContainer .priceCard h4 {
   text-transform: uppercase;
   font-size: 2rem;
+}
+
+body .bottomContainer .pricingContainer .priceCard h4.price {
   margin-top: -1rem;
 }
 
@@ -215,7 +220,48 @@ body .bottomContainer .pricingContainer .priceCard img {
 
 body .bottomContainer .pricingContainer .priceCard p {
   font-family: 'Montserrat';
-  max-width: 250px;
+  max-width: 300px;
   padding: 1rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    text-align: center;
+  }
+  body .topContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .topContainer .imageContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .topContainer .imageContainer img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body .topContainer .textContainer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .topContainer .shape {
+    display: none;
+  }
+  body .bottomContainer .pricingContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
