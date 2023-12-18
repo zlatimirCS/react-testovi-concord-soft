@@ -18,7 +18,7 @@
 body {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
 	gap: 5rem;
 	padding: 2rem;
 
@@ -27,9 +27,11 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
 			h1 {
 				font-family: 'Lato-Black';
 			}
+
 			h2 {
 				font-family: 'Lato-Light';
 			}
@@ -37,13 +39,15 @@ body {
 	}
 
 	main {
+		flex: 1;
 		.featureContainer {
 			display: flex;
+			justify-content: center;
 			gap: 2rem;
 
 			.featureCard {
 				display: flex;
-				gap: 0.5rem;
+				gap: 2rem;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
@@ -81,7 +85,22 @@ body {
 				.featureText {
 					font-family: 'Lato-Light';
 					text-align: center;
+					font-size: 24px;
+					max-width: 400px;
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		text-align: center;
+		main {
+			.featureContainer {
+				flex-wrap: wrap;
+
+				gap: 2rem;
 			}
 		}
 	}

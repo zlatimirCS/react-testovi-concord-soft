@@ -23,9 +23,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   gap: 5rem;
   padding: 2rem;
 }
@@ -51,10 +51,19 @@ body header .title h2 {
   font-family: 'Lato-Light';
 }
 
+body main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 body main .featureContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 2rem;
 }
 
@@ -62,7 +71,7 @@ body main .featureContainer .featureCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -114,5 +123,18 @@ body main .featureContainer .featureCard .featureTitle {
 body main .featureContainer .featureCard .featureText {
   font-family: 'Lato-Light';
   text-align: center;
+  font-size: 24px;
+  max-width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  body main .featureContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
