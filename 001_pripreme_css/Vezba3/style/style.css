@@ -49,6 +49,7 @@ body header .title h1 {
 
 body header .title h2 {
   font-family: 'Lato-Light';
+  font-size: 18px;
 }
 
 body main {
@@ -127,7 +128,7 @@ body main .featureContainer .featureCard .featureText {
   max-width: 400px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   body {
     text-align: center;
   }

@@ -34,6 +34,7 @@ body {
 
 			h2 {
 				font-family: 'Lato-Light';
+				font-size: 18px;
 			}
 		}
 	}
@@ -93,7 +94,7 @@ body {
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
 	body {
 		text-align: center;
 		main {
