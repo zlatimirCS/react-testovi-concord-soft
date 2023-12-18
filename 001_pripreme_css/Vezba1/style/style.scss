@@ -1,5 +1,4 @@
 @import './variables';
-//@import "./variables";
 
 @font-face {
 	font-family: 'Baskerville';
@@ -11,16 +10,24 @@
 	src: url('../assets/fonts/Barlow-Regular.ttf');
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: center;
-
+	background-image: url('../assets/images/Texture.png');
+	background-position: top right;
+	background-repeat: no-repeat;
 	header {
 		display: flex;
 		justify-content: center;
-
+		padding: 2rem;
 		.title {
 			h2 {
 				font-size: 34px;
@@ -36,14 +43,12 @@ body {
 		flex: 1;
 		display: flex;
 		justify-content: center;
+
 		.cardContainer {
 			display: grid;
-			grid-template-columns: 250px 250px 250px;
+			grid-template-columns: repeat(3, 250px);
 			gap: 2rem;
 			.card {
-				border: 1px solid black;
-				// height: 250px;
-				// width: 250px;
 				display: flex;
 
 				&.Arrow {
@@ -62,14 +67,12 @@ body {
 
 					svg {
 						position: absolute;
-						top: 50%;
+						bottom: 50%;
 						right: 0;
 					}
 				}
 
 				img {
-					flex: 1;
-					// object-fit: contain;
 					height: 100%;
 					width: 100%;
 				}
@@ -79,10 +82,16 @@ body {
 
 	footer {
 		display: flex;
+		align-items: center;
 		justify-content: center;
-		padding: 2rem 5rem 0 5rem;
+
+		padding: 2rem 25vw;
+
 		p {
 			text-align: center;
+			font-size: 12px;
+			font-family: 'Barlow';
+			color: $footer-text;
 		}
 	}
 }

@@ -8,6 +8,13 @@
   src: url("../assets/fonts/Barlow-Regular.ttf");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +29,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url("../assets/images/Texture.png");
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 body header {
@@ -31,6 +41,7 @@ body header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 2rem;
 }
 
 body header .title h2 {
@@ -55,13 +66,12 @@ body main {
 body main .cardContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 250px 250px 250px;
-      grid-template-columns: 250px 250px 250px;
+  -ms-grid-columns: (250px)[3];
+      grid-template-columns: repeat(3, 250px);
   gap: 2rem;
 }
 
 body main .cardContainer .card {
-  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,14 +99,11 @@ body main .cardContainer .card.Arrow .cardText {
 
 body main .cardContainer .card.Arrow svg {
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   right: 0;
 }
 
 body main .cardContainer .card img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   height: 100%;
   width: 100%;
 }
@@ -105,13 +112,19 @@ body footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem 5rem 0 5rem;
+  padding: 2rem 25vw;
 }
 
 body footer p {
   text-align: center;
+  font-size: 12px;
+  font-family: 'Barlow';
+  color: #8c8c8c;
 }
 /*# sourceMappingURL=style.css.map */
