@@ -109,22 +109,17 @@ body main .cardContainer .card img {
 }
 
 body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2rem 25vw;
+  width: 100%;
+  margin: auto 0;
 }
 
 body footer p {
-  text-align: center;
   font-size: 12px;
   font-family: 'Barlow';
   color: #8c8c8c;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 5rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
