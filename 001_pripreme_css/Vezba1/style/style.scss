@@ -24,10 +24,12 @@ body {
 	background-image: url('../assets/images/Texture.png');
 	background-position: top right;
 	background-repeat: no-repeat;
+
 	header {
 		display: flex;
 		justify-content: center;
 		padding: 2rem;
+
 		.title {
 			h2 {
 				font-size: 34px;
@@ -40,14 +42,15 @@ body {
 	}
 
 	main {
-		flex: 1;
 		display: flex;
 		justify-content: center;
 
 		.cardContainer {
 			display: grid;
-			grid-template-columns: repeat(3, 250px);
-			gap: 2rem;
+			justify-content: center;
+			grid-template-columns: repeat(3, 300px);
+			gap: 2rem 5rem;
+
 			.card {
 				display: flex;
 
@@ -92,6 +95,31 @@ body {
 			margin: 0 auto;
 			padding: 2rem 1rem 5rem;
 			text-align: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		main {
+			padding: 1rem;
+			.cardContainer {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	body {
+		header {
+			text-align: center;
+		}
+		main {
+			padding: 1rem;
+			.cardContainer {
+				grid-template-columns: repeat(1, 1fr);
+			}
 		}
 	}
 }
