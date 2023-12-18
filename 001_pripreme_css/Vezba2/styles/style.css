@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'BalooBhai';
+  src: url("../assets/fonts/BalooBhai2-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+button {
+  background-color: #6c9894;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 0.5rem 4rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'BalooBhai';
+  font-weight: bold;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7ba39f;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .topContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  gap: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #6c9894;
+  position: relative;
+}
+
+body .topContainer .imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .topContainer .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  padding: 2rem;
+  gap: 3rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-weight: 600;
+  z-index: 100;
+}
+
+body .topContainer .textContainer h1 {
+  font-weight: 900;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'BalooBhai';
+  margin-right: 2rem;
+  line-height: 5rem;
+}
+
+body .topContainer .textContainer p {
+  font-family: 'Montserrat';
+}
+
+body .topContainer .shape {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: -2rem;
+}
+
+body .bottomContainer {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #6c9894;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-family: 'BalooBhai';
+}
+
+body .bottomContainer .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+body .bottomContainer .title h1 {
+  font-size: 38px;
+}
+
+body .bottomContainer .title p {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem 5rem;
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
+body .bottomContainer .pricingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  color: #6c9894;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .bottomContainer .pricingContainer .priceCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+body .bottomContainer .pricingContainer .priceCard h4 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: -1rem;
+}
+
+body .bottomContainer .pricingContainer .priceCard img {
+  height: 100px;
+}
+
+body .bottomContainer .pricingContainer .priceCard p {
+  font-family: 'Montserrat';
+  max-width: 250px;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

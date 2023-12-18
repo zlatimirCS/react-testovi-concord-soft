@@ -1,0 +1,157 @@
+@import './variables';
+
+@font-face {
+	font-family: 'BalooBhai';
+	src: url('../assets/fonts/BalooBhai2-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	display: flex;
+	height: 100%;
+}
+
+button {
+	background-color: $background-color-bottom; /* Green */
+	border: none;
+	color: white;
+	padding: 0.5rem 4rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: 'BalooBhai';
+	font-weight: bold;
+	flex: 0;
+	z-index: 100;
+	cursor: pointer;
+
+	&:hover {
+		background-color: lighten($color: $background-color-bottom, $amount: 5);
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+
+	.topContainer {
+		display: flex;
+		z-index: 2;
+		gap: 2rem;
+		flex: 1;
+		color: $top-text-color;
+		position: relative;
+		.imageContainer {
+			display: flex;
+			padding: 5rem;
+			flex: 1;
+		}
+
+		.textContainer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+			padding: 2rem;
+			gap: 3rem;
+			flex: 1;
+			align-items: flex-start;
+			font-weight: 600;
+			z-index: 100;
+
+			h1 {
+				font-weight: 900;
+				font-size: 4rem;
+				// margin-right: 2rem;
+				text-transform: uppercase;
+				font-family: 'BalooBhai';
+				margin-right: 2rem;
+				line-height: 5rem;
+			}
+
+			p {
+				font-family: 'Montserrat';
+			}
+		}
+		.shape {
+			position: absolute;
+			z-index: 1;
+			right: 0;
+			top: -2rem;
+		}
+	}
+	.bottomContainer {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		background-color: $background-color-bottom;
+		align-items: center;
+		justify-content: center;
+		color: $bottom-text-color;
+		font-family: 'BalooBhai';
+
+		.title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 2rem;
+
+			h1 {
+				font-size: 38px;
+			}
+
+			p {
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 2rem 1rem 5rem;
+				text-align: center;
+				font-family: 'Montserrat';
+			}
+		}
+		.pricingContainer {
+			display: flex;
+			gap: 1rem;
+			color: $top-text-color;
+			justify-content: center;
+			align-items: center;
+
+			.priceCard {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 1rem;
+				gap: 0.5rem;
+				background-color: $background-color-top;
+				border-radius: 0.5rem;
+
+				h4 {
+					text-transform: uppercase;
+					font-size: 2rem;
+					margin-top: -1rem;
+				}
+
+				img {
+					height: 100px;
+				}
+
+				p {
+					font-family: 'Montserrat';
+					max-width: 250px;
+					padding: 1rem;
+				}
+			}
+		}
+	}
+}
