@@ -1,0 +1,88 @@
+@import './variables';
+//@import "./variables";
+
+@font-face {
+	font-family: 'Baskerville';
+	src: url('../assets/fonts/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Barlow';
+	src: url('../assets/fonts/Barlow-Regular.ttf');
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+
+	header {
+		display: flex;
+		justify-content: center;
+
+		.title {
+			h2 {
+				font-size: 34px;
+				font-family: 'Baskerville';
+				color: $header-color;
+
+				font-weight: 100;
+			}
+		}
+	}
+
+	main {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		.cardContainer {
+			display: grid;
+			grid-template-columns: 250px 250px 250px;
+			gap: 2rem;
+			.card {
+				border: 1px solid black;
+				// height: 250px;
+				// width: 250px;
+				display: flex;
+
+				&.Arrow {
+					display: flex;
+					flex-direction: column;
+					position: relative;
+
+					.cardText {
+						background-color: $card-header;
+						color: $card-text;
+						font-family: 'Barlow';
+						font-weight: 100;
+						padding: 0.25rem 0.5rem;
+						font-size: 10px;
+					}
+
+					svg {
+						position: absolute;
+						top: 50%;
+						right: 0;
+					}
+				}
+
+				img {
+					flex: 1;
+					// object-fit: contain;
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	footer {
+		display: flex;
+		justify-content: center;
+		padding: 2rem 5rem 0 5rem;
+		p {
+			text-align: center;
+		}
+	}
+}

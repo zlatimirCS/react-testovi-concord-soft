@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Baskerville';
+  src: url("../assets/fonts/LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url("../assets/fonts/Barlow-Regular.ttf");
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header .title h2 {
+  font-size: 34px;
+  font-family: 'Baskerville';
+  color: #cb9e61;
+  font-weight: 100;
+}
+
+body main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .cardContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 250px 250px;
+      grid-template-columns: 250px 250px 250px;
+  gap: 2rem;
+}
+
+body main .cardContainer .card {
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .cardContainer .card.Arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+body main .cardContainer .card.Arrow .cardText {
+  background-color: #8c8c8c;
+  color: white;
+  font-family: 'Barlow';
+  font-weight: 100;
+  padding: 0.25rem 0.5rem;
+  font-size: 10px;
+}
+
+body main .cardContainer .card.Arrow svg {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+body main .cardContainer .card img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 5rem 0 5rem;
+}
+
+body footer p {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
