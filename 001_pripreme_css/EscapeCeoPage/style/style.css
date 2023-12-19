@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url("../assets/fonts/Cabin-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: 'Cubano';
+  src: url("../assets/fonts/Cubano.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+body header {
+  font-family: 'Cabin';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-image: url("../assets/images/Header.png");
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body header nav {
+  margin: 0 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 2rem;
+}
+
+body header nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Cubano';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+body header nav .logo:hover {
+  cursor: pointer;
+}
+
+body header nav .logo h4 {
+  letter-spacing: 0.25rem;
+  font-size: 28px;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+body header nav ul li {
+  list-style: none;
+}
+
+body header nav ul li + .hamburger {
+  display: none;
+}
+
+body header nav ul li:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+body header .hero {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+body header .hero .dreams {
+  font-size: 32px;
+}
+
+body header .hero .dreams h2 {
+  font-weight: 100;
+}
+
+body header .hero .answer {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+body header .hero .buttonContainer {
+  margin-top: 8rem;
+}
+
+body header .hero .buttonContainer button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 1rem 5rem;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+body header .hero .buttonContainer button:hover {
+  color: black;
+  background-color: #ffffff;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #777777;
+  font-family: 'Cabin';
+}
+
+body main .development {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .development .webDevelopment,
+body main .development .identityBranding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 2rem;
+}
+
+body main .development .webDevelopment .text,
+body main .development .identityBranding .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 800px;
+  gap: 2rem;
+}
+
+body main .development .webDevelopment .text h1,
+body main .development .identityBranding .text h1 {
+  font-size: 48px;
+  font-weight: 100;
+  color: #222222;
+}
+
+body main .development .webDevelopment .text h1 span,
+body main .development .identityBranding .text h1 span {
+  color: #222222;
+  font-weight: 900;
+}
+
+body main .development .identityBranding {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background-color: #fafafa;
+}
+
+body main .development .ourServicesContainer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (450px)[2];
+      grid-template-columns: repeat(2, 450px);
+  padding: 5rem 2rem;
+  -webkit-column-gap: 15rem;
+          column-gap: 15rem;
+}
+
+body main .development .ourServicesContainer .serviceCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+body main .development .ourServicesContainer .serviceCard .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../assets/images/DarkCircle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+body main .development .ourServicesContainer .serviceCard .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+body main .development .ourServicesContainer .serviceCard .service h3 {
+  color: #222222;
+}
+
+@media only screen and (max-width: 1024px) {
+  body header .hero {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body header .hero {
+    text-align: center;
+    padding: 1rem;
+  }
+  body header .hero h2 {
+    font-size: 24px;
+  }
+  body header .hero h1 {
+    font-size: 48px;
+  }
+  body header nav ul li {
+    display: none;
+  }
+  body header nav ul li + .hamburger {
+    display: block;
+    font-size: 52px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
