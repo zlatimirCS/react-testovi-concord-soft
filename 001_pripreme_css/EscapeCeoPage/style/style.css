@@ -238,8 +238,8 @@ body main .development .ourServicesContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (450px)[2];
-      grid-template-columns: repeat(2, 450px);
+  -ms-grid-columns: (minmax(250px, 450px))[2];
+      grid-template-columns: repeat(2, minmax(250px, 450px));
   padding: 5rem 2rem;
   -webkit-column-gap: 15rem;
           column-gap: 15rem;
