@@ -1,0 +1,158 @@
+@import './variables';
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	color: $text-color;
+	font-family: 'OpenSans';
+
+	header {
+		display: flex;
+		background-color: $header-bg-color;
+		align-items: stretch;
+		justify-content: center;
+		gap: 2rem;
+		padding: 5rem;
+
+		.logo {
+			display: flex;
+			align-items: center;
+
+			img {
+				height: 400px;
+			}
+		}
+
+		.headerRight {
+			display: flex;
+			flex-direction: column;
+
+			gap: 3rem;
+
+			h1 {
+				text-transform: uppercase;
+			}
+
+			p {
+				max-width: 500px;
+			}
+		}
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+		gap: 3rem;
+
+		.features {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+
+			h2 {
+				text-transform: uppercase;
+				font-size: 32px;
+			}
+
+			p {
+				max-width: 800px;
+			}
+		}
+
+		.featureContainer {
+			display: grid;
+			grid-template-columns: repeat(3, 250px);
+			justify-content: center;
+			align-items: center;
+			gap: 5rem;
+
+			.featureCard {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+
+				.featureIcon {
+					display: flex;
+					justify-content: center;
+
+					img {
+						height: 100px;
+					}
+				}
+
+				.showMore {
+					display: flex;
+					justify-content: flex-end;
+
+					a {
+						text-decoration: none;
+						color: $header-bg-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		header {
+			flex-direction: column-reverse;
+			justify-content: center;
+			padding: 1rem;
+			.logo {
+				justify-content: center;
+
+				img {
+					height: 300px;
+				}
+			}
+
+			.headerRight {
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				p {
+					text-align: center;
+				}
+			}
+		}
+
+		main {
+			.featureContainer {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	body {
+		header {
+			.logo {
+				img {
+					height: 200px;
+				}
+			}
+		}
+		main {
+			.featureContainer {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}
