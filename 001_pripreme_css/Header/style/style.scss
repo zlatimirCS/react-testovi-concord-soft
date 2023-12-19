@@ -1,0 +1,51 @@
+@import './variables';
+@font-face {
+	font-family: 'BalooBhai';
+	src: url('../assets/fonts/BalooBhai2-VariableFont_wght.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 2rem;
+	background-color: $background-color;
+	color: $text-color;
+	font-weight: 600;
+	font-family: 'BalooBhai';
+
+	.logo {
+		padding: 1rem;
+		background-color: $logo-background;
+
+		img {
+			filter: invert(62%) sepia(25%) saturate(387%) hue-rotate(125deg) brightness(87%) contrast(86%);
+		}
+	}
+
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		background-color: $logo-line-color;
+		gap: 3rem;
+		padding-right: 4rem;
+
+		flex: 1;
+		li {
+			list-style: none;
+			text-transform: uppercase;
+			padding: 0.5rem 1rem;
+			&:hover {
+				cursor: pointer;
+				color: $link-hover-text;
+				background-color: $link-hover-background;
+			}
+		}
+	}
+}
