@@ -199,6 +199,57 @@ body {
 				}
 			}
 		}
+
+		.clientsContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 5rem 2rem;
+			gap: 2rem;
+			background-color: $section-background;
+
+			.clientsTitle {
+				h1 {
+					font-size: 48px;
+					font-weight: 100;
+					color: $title-text-color;
+
+					span {
+						color: $title-text-color;
+						font-weight: 900;
+					}
+				}
+			}
+
+			.clientCard {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 2rem;
+
+				.clientQuote {
+					background-color: $text-color;
+					display: flex;
+					flex-direction: column;
+					padding: 5rem;
+					gap: 2rem;
+					position: relative;
+
+					&:before {
+						content: '';
+						width: 0px;
+						height: 0px;
+						position: absolute;
+						border-left: 0px solid transparent;
+						border-right: 20px solid white;
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent;
+						left: -20px;
+						top: 50%;
+					}
+				}
+			}
+		}
 	}
 }
 

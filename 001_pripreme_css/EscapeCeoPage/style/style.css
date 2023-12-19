@@ -287,6 +287,73 @@ body main .development .ourServicesContainer .serviceCard .service h3 {
   color: #222222;
 }
 
+body main .clientsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 2rem;
+  gap: 2rem;
+  background-color: #fafafa;
+}
+
+body main .clientsContainer .clientsTitle h1 {
+  font-size: 48px;
+  font-weight: 100;
+  color: #222222;
+}
+
+body main .clientsContainer .clientsTitle h1 span {
+  color: #222222;
+  font-weight: 900;
+}
+
+body main .clientsContainer .clientCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+body main .clientsContainer .clientCard .clientQuote {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem;
+  gap: 2rem;
+  position: relative;
+}
+
+body main .clientsContainer .clientCard .clientQuote:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 0px solid transparent;
+  border-right: 20px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  left: -20px;
+  top: 50%;
+}
+
 @media only screen and (max-width: 1024px) {
   body header .hero {
     text-align: center;
