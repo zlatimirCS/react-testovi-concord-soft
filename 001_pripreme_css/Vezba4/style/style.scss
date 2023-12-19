@@ -101,6 +101,10 @@ body {
 					a {
 						text-decoration: none;
 						color: $header-bg-color;
+
+						&:hover {
+							color: lighten($color: $header-bg-color, $amount: 10);
+						}
 					}
 				}
 			}

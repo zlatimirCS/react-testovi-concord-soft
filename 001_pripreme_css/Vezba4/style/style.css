@@ -159,6 +159,10 @@ body main .featureContainer .featureCard .showMore a {
   color: #fcb440;
 }
 
+body main .featureContainer .featureCard .showMore a:hover {
+  color: #fdc872;
+}
+
 @media only screen and (max-width: 768px) {
   body header {
     -webkit-box-orient: vertical;
