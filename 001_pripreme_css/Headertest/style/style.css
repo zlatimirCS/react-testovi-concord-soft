@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url("../assets/fonts/Cabin-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: 'Cubano';
+  src: url("../assets/fonts/Cubano.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-image: url("../assets/images/Header.png");
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body header {
+  font-family: 'Cabin';
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 2rem;
+}
+
+body header nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Cubano';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+body header nav .logo:hover {
+  cursor: pointer;
+}
+
+body header nav .logo h4 {
+  letter-spacing: 0.25rem;
+  font-size: 28px;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+body header nav ul li {
+  list-style: none;
+}
+
+body header nav ul li + .hamburger {
+  display: none;
+}
+
+body header nav ul li:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+body header .hero {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+body header .hero .dreams {
+  font-size: 32px;
+}
+
+body header .hero .dreams h2 {
+  font-weight: 100;
+}
+
+body header .hero .answer {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+body header .hero .buttonContainer {
+  margin-top: 8rem;
+}
+
+body header .hero .buttonContainer button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  padding: 1rem 5rem;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+body header .hero .buttonContainer button:hover {
+  color: black;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 1024px) {
+  body header .hero {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body header .hero {
+    text-align: center;
+    padding: 1rem;
+  }
+  body header .hero h2 {
+    font-size: 24px;
+  }
+  body header .hero h1 {
+    font-size: 48px;
+  }
+  body header nav ul li {
+    display: none;
+  }
+  body header nav ul li + .hamburger {
+    display: block;
+    font-size: 52px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
