@@ -122,6 +122,9 @@ body {
 @media only screen and (max-width: 1024px) {
 	body {
 		header {
+			nav {
+				justify-content: space-between;
+			}
 			.hero {
 				text-align: center;
 				padding: 1rem;

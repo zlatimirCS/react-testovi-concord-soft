@@ -159,6 +159,11 @@ body header .hero .buttonContainer button:hover {
 }
 
 @media only screen and (max-width: 1024px) {
+  body header nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   body header .hero {
     text-align: center;
     padding: 1rem;
