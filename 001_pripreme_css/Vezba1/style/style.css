@@ -136,6 +136,10 @@ body footer p {
 }
 
 @media only screen and (max-width: 1260px) {
+  body header .title h2 {
+    font-size: 54px;
+    text-align: center;
+  }
   body main {
     padding: 1rem;
   }
