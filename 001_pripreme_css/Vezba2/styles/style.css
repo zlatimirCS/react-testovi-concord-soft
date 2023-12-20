@@ -62,6 +62,9 @@ body .topContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 2;
   gap: 2rem;
   -webkit-box-flex: 1;
@@ -76,9 +79,6 @@ body .topContainer .imageContainer {
   display: -ms-flexbox;
   display: flex;
   padding: 5rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -106,6 +106,7 @@ body .topContainer .textContainer {
           align-items: flex-start;
   font-weight: 600;
   z-index: 100;
+  max-width: 800px;
 }
 
 body .topContainer .textContainer h1 {
@@ -215,7 +216,8 @@ body .bottomContainer .pricingContainer .priceCard h4.price {
 }
 
 body .bottomContainer .pricingContainer .priceCard img {
-  height: 100px;
+  max-width: 100%;
+  height: auto;
 }
 
 body .bottomContainer .pricingContainer .priceCard p {
@@ -225,15 +227,56 @@ body .bottomContainer .pricingContainer .priceCard p {
   text-align: center;
 }
 
+@media only screen and (max-width: 1230px) {
+  body .topContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem;
+  }
+  body .topContainer .imageContainer img {
+    width: 70vw;
+  }
+  body .topContainer .textContainer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    max-width: 90vw;
+  }
+  body .topContainer .textContainer p {
+    font-size: 28px;
+  }
+  body .topContainer .textContainer button {
+    font-size: 34px;
+  }
+  body .bottomContainer .title h1 {
+    font-size: 4rem;
+  }
+  body .bottomContainer .title p {
+    font-size: 28px;
+    max-width: 90vw;
+  }
+  body .bottomContainer .pricingContainer {
+    max-width: 90vw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .bottomContainer .pricingContainer .priceCard p {
+    font-size: 28px;
+  }
+  body .bottomContainer .pricingContainer .priceCard button {
+    font-size: 22px;
+  }
+}
+
 @media only screen and (max-width: 425px) {
   body {
     text-align: center;
-  }
-  body .topContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   body .topContainer .imageContainer {
     display: -webkit-box;
@@ -245,14 +288,16 @@ body .bottomContainer .pricingContainer .priceCard p {
             flex: 1;
   }
   body .topContainer .imageContainer img {
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    display: none;
   }
   body .topContainer .textContainer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  body .topContainer .textContainer h1 {
+    margin-right: 0;
+    font-size: 3rem;
   }
   body .topContainer .shape {
     display: none;

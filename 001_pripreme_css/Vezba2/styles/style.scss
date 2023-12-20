@@ -48,6 +48,7 @@ body {
 
 	.topContainer {
 		display: flex;
+		justify-content: center;
 		z-index: 2;
 		gap: 2rem;
 		flex: 1;
@@ -57,7 +58,6 @@ body {
 		.imageContainer {
 			display: flex;
 			padding: 5rem;
-			flex: 1;
 			justify-content: center;
 		}
 
@@ -72,6 +72,7 @@ body {
 			align-items: flex-start;
 			font-weight: 600;
 			z-index: 100;
+			max-width: 800px;
 
 			h1 {
 				font-weight: 900;
@@ -147,7 +148,8 @@ body {
 				}
 
 				img {
-					height: 100px;
+					max-width: 100%;
+					height: auto;
 				}
 
 				p {
@@ -160,26 +162,84 @@ body {
 		}
 	}
 }
-
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1230px) {
 	body {
-		text-align: center;
-
 		.topContainer {
-			flex-direction: column;
+			flex-direction: column-reverse;
+			align-items: center;
+			padding: 2rem;
 
 			.imageContainer {
-				display: flex;
-				padding: 0;
-				flex: 1;
 				img {
-					width: 100%;
-					object-fit: contain;
+					width: 70vw;
 				}
 			}
 
 			.textContainer {
 				align-items: center;
+				text-align: center;
+				max-width: 90vw;
+
+				p {
+					font-size: 28px;
+				}
+
+				button {
+					font-size: 34px;
+				}
+			}
+		}
+
+		.bottomContainer {
+			.title {
+				h1 {
+					font-size: 4rem;
+				}
+
+				p {
+					font-size: 28px;
+					max-width: 90vw;
+				}
+			}
+
+			.pricingContainer {
+				max-width: 90vw;
+				flex-wrap: wrap;
+
+				.priceCard {
+					p {
+						font-size: 28px;
+					}
+
+					button {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 425px) {
+	body {
+		text-align: center;
+
+		.topContainer {
+			.imageContainer {
+				display: flex;
+				padding: 0;
+				flex: 1;
+				img {
+					display: none;
+				}
+			}
+
+			.textContainer {
+				align-items: center;
+
+				h1 {
+					margin-right: 0;
+					font-size: 3rem;
+				}
 			}
 
 			.shape {
