@@ -29,7 +29,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5rem;
 }
 
 body header {
@@ -314,7 +313,8 @@ body main .clientsContainer .clientsTitle h1 span {
   font-weight: 900;
 }
 
-body main .clientsContainer .clientCard {
+body main .clientsContainer .clientCard,
+body main .clientsContainer .clientCardTwo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,7 +327,8 @@ body main .clientsContainer .clientCard {
   gap: 2rem;
 }
 
-body main .clientsContainer .clientCard .clientQuote {
+body main .clientsContainer .clientCard .clientQuote,
+body main .clientsContainer .clientCardTwo .clientQuote {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,12 +337,14 @@ body main .clientsContainer .clientCard .clientQuote {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5rem;
+  padding: 1rem 2rem;
   gap: 2rem;
   position: relative;
+  max-width: 800px;
 }
 
-body main .clientsContainer .clientCard .clientQuote:before {
+body main .clientsContainer .clientCard .clientQuote:before,
+body main .clientsContainer .clientCardTwo .clientQuote:before {
   content: '';
   width: 0px;
   height: 0px;
@@ -352,6 +355,222 @@ body main .clientsContainer .clientCard .clientQuote:before {
   border-bottom: 10px solid transparent;
   left: -20px;
   top: 50%;
+}
+
+body main .clientsContainer .clientCard .clientQuote h5,
+body main .clientsContainer .clientCardTwo .clientQuote h5 {
+  color: #9baed4;
+  font-weight: 100;
+}
+
+body main .clientsContainer .clientCardTwo {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body main .clientsContainer .clientCardTwo .clientQuote:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 20px solid #fff;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  right: -30px;
+  top: 50%;
+}
+
+body main .clientsContainer .clientCardTwo .clientQuote:before {
+  display: none;
+}
+
+body main .technologies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem;
+  background-color: #fff;
+  gap: 5rem;
+}
+
+body main .ourTeam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+  padding: 5rem;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+body main .ourTeam .teamTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+body main .ourTeam .teamTitle h1 {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+body main .ourTeam .teamTitle h1 span {
+  font-weight: 900;
+}
+
+body main .ourTeam .teamTitle h4 {
+  font-size: 18px;
+  color: #696969;
+}
+
+body main .ourTeam .teamContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+
+body main .ourTeam .teamContainer .teamMember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+body main .ourTeam .teamContainer .teamMember h4 {
+  font-weight: 900;
+}
+
+body main .ourTeam .teamContainer .teamMember p {
+  font-weight: 100;
+}
+
+body main .ourTeam .teamContainer .teamMember .socialContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .ourTeam .teamContainer .teamMember .socialContainer img {
+  padding: 1rem;
+  background-image: url("../assets/images/Twitter Background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body main .ourTeam .teamBottomText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body footer {
+  background-color: #7690c5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem 3rem 2rem 3rem;
+}
+
+body footer .footerUpper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+}
+
+body footer .footerUpper .sayHello {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer .footerUpper .sayHello h1 {
+  font-size: 48px;
+  font-weight: 100;
+}
+
+body footer .footerUpper .sayHello h1 span {
+  font-weight: 900;
+}
+
+body footer .footerUpper .contactContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[2];
+      grid-template-columns: repeat(2, 250px);
 }
 
 @media only screen and (max-width: 1024px) {

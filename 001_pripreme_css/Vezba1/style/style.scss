@@ -48,8 +48,10 @@ body {
 		.cardContainer {
 			display: grid;
 			justify-content: center;
-			grid-template-columns: repeat(3, 300px);
+			max-width: 1200px;
+			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem 5rem;
+			grid-auto-rows: 1fr;
 
 			.card {
 				display: flex;
@@ -64,14 +66,21 @@ body {
 						color: $card-text;
 						font-family: 'Barlow';
 						font-weight: 100;
-						padding: 0.25rem 0.5rem;
+						padding: 1rem;
 						font-size: 10px;
-					}
 
-					svg {
-						position: absolute;
-						bottom: 50%;
-						right: 0;
+						p {
+							font-size: 16px;
+						}
+					}
+					.imageContainer {
+						position: relative;
+						svg {
+							transform: scale(1.5);
+							position: absolute;
+							bottom: 50%;
+							right: 10px;
+						}
 					}
 				}
 
@@ -88,7 +97,7 @@ body {
 		margin: auto 0;
 
 		p {
-			font-size: 12px;
+			font-size: 18px;
 			font-family: 'Barlow';
 			color: $footer-text;
 			max-width: 800px;
@@ -99,12 +108,53 @@ body {
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1260px) {
+	body {
+		main {
+			padding: 1rem;
+
+			.cardContainer {
+				max-width: 90vw;
+				grid-template-columns: repeat(2, 1fr);
+
+				.card {
+					&.Arrow {
+						.cardText {
+							padding: 2rem;
+
+							p {
+								font-size: 24px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 850px) {
 	body {
 		main {
 			padding: 1rem;
 			.cardContainer {
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: 1fr;
+
+				.card {
+					&.Arrow {
+						.cardText {
+							p {
+								font-size: 30px;
+							}
+						}
+
+						.imageContainer {
+							svg {
+								transform: scale(2);
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -66,9 +66,11 @@ body main .cardContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (300px)[3];
-      grid-template-columns: repeat(3, 300px);
+  max-width: 1200px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 2rem 5rem;
+  grid-auto-rows: 1fr;
 }
 
 body main .cardContainer .card {
@@ -93,14 +95,24 @@ body main .cardContainer .card.Arrow .cardText {
   color: white;
   font-family: 'Barlow';
   font-weight: 100;
-  padding: 0.25rem 0.5rem;
+  padding: 1rem;
   font-size: 10px;
 }
 
-body main .cardContainer .card.Arrow svg {
+body main .cardContainer .card.Arrow .cardText p {
+  font-size: 16px;
+}
+
+body main .cardContainer .card.Arrow .imageContainer {
+  position: relative;
+}
+
+body main .cardContainer .card.Arrow .imageContainer svg {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   position: absolute;
   bottom: 50%;
-  right: 0;
+  right: 10px;
 }
 
 body main .cardContainer .card img {
@@ -114,7 +126,7 @@ body footer {
 }
 
 body footer p {
-  font-size: 12px;
+  font-size: 18px;
   font-family: 'Barlow';
   color: #8c8c8c;
   max-width: 800px;
@@ -123,13 +135,37 @@ body footer p {
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1260px) {
   body main {
     padding: 1rem;
   }
   body main .cardContainer {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    max-width: 90vw;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  body main .cardContainer .card.Arrow .cardText {
+    padding: 2rem;
+  }
+  body main .cardContainer .card.Arrow .cardText p {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  body main {
+    padding: 1rem;
+  }
+  body main .cardContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body main .cardContainer .card.Arrow .cardText p {
+    font-size: 30px;
+  }
+  body main .cardContainer .card.Arrow .imageContainer svg {
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
 }
 
