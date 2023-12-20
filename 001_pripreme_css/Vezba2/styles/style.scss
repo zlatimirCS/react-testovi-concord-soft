@@ -170,6 +170,8 @@ body {
 			padding: 2rem;
 
 			.imageContainer {
+				padding: 1rem;
+
 				img {
 					width: 70vw;
 				}
@@ -179,6 +181,7 @@ body {
 				align-items: center;
 				text-align: center;
 				max-width: 90vw;
+				padding: 0;
 
 				p {
 					font-size: 28px;
@@ -225,9 +228,6 @@ body {
 
 		.topContainer {
 			.imageContainer {
-				display: flex;
-				padding: 0;
-				flex: 1;
 				img {
 					display: none;
 				}
@@ -240,15 +240,25 @@ body {
 					margin-right: 0;
 					font-size: 3rem;
 				}
-			}
 
-			.shape {
-				display: none;
+				p {
+					font-size: 24px;
+				}
 			}
 		}
 		.bottomContainer {
+			.title {
+				p {
+					font-size: 24px;
+				}
+			}
+
 			.pricingContainer {
-				flex-direction: column;
+				.priceCard {
+					p {
+						font-size: 20px;
+					}
+				}
 			}
 		}
 	}
