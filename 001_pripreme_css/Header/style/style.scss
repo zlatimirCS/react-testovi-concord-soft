@@ -41,10 +41,39 @@ header {
 			list-style: none;
 			text-transform: uppercase;
 			padding: 0.5rem 1rem;
+			font-size: 32px;
 			&:hover {
 				cursor: pointer;
 				color: $link-hover-text;
 				background-color: $link-hover-background;
+			}
+		}
+
+		.hamburger {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	header {
+		ul {
+			li {
+				gap: 0.25rem;
+				font-size: 26px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 930px) {
+	header {
+		ul {
+			li {
+				display: none;
+			}
+			.hamburger {
+				display: block;
 			}
 		}
 	}
