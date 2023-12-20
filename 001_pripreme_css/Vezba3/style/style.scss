@@ -18,7 +18,7 @@
 body {
 	display: flex;
 	flex-direction: column;
-	align-items: stretch;
+	align-items: center;
 	gap: 5rem;
 	padding: 2rem;
 
@@ -30,11 +30,12 @@ body {
 
 			h1 {
 				font-family: 'Lato-Black';
+				font-size: 4rem;
 			}
 
 			h2 {
 				font-family: 'Lato-Light';
-				font-size: 18px;
+				font-size: 2rem;
 			}
 		}
 	}
@@ -45,6 +46,8 @@ body {
 			display: flex;
 			justify-content: center;
 			gap: 2rem;
+			width: 95vw;
+			max-width: 1800px;
 
 			.featureCard {
 				display: flex;
@@ -94,7 +97,7 @@ body {
 	}
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1600px) {
 	body {
 		text-align: center;
 		main {
@@ -102,6 +105,38 @@ body {
 				flex-wrap: wrap;
 
 				gap: 2rem;
+
+				.featureCard {
+					.featureTitle {
+						font-size: 30px;
+					}
+
+					.featureText {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	body {
+		header {
+			.title {
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				h2 {
+					font-size: 1.5rem;
+				}
+			}
+		}
+
+		main {
+			.featureContainer {
+				gap: 5rem;
 			}
 		}
 	}

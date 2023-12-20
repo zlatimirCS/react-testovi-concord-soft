@@ -23,9 +23,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5rem;
   padding: 2rem;
 }
@@ -45,11 +45,12 @@ body header .title {
 
 body header .title h1 {
   font-family: 'Lato-Black';
+  font-size: 4rem;
 }
 
 body header .title h2 {
   font-family: 'Lato-Light';
-  font-size: 18px;
+  font-size: 2rem;
 }
 
 body main {
@@ -66,6 +67,8 @@ body main .featureContainer {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 2rem;
+  width: 95vw;
+  max-width: 1800px;
 }
 
 body main .featureContainer .featureCard {
@@ -128,7 +131,7 @@ body main .featureContainer .featureCard .featureText {
   max-width: 400px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1600px) {
   body {
     text-align: center;
   }
@@ -136,6 +139,24 @@ body main .featureContainer .featureCard .featureText {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 2rem;
+  }
+  body main .featureContainer .featureCard .featureTitle {
+    font-size: 30px;
+  }
+  body main .featureContainer .featureCard .featureText {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  body header .title h1 {
+    font-size: 2.5rem;
+  }
+  body header .title h2 {
+    font-size: 1.5rem;
+  }
+  body main .featureContainer {
+    gap: 5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
