@@ -21,24 +21,28 @@ body {
 	header {
 		display: flex;
 		background-color: $header-bg-color;
-		align-items: stretch;
+		align-items: center;
 		justify-content: center;
-		gap: 2rem;
+		gap: 5rem;
 		padding: 5rem;
 
 		.logo {
 			display: flex;
 			align-items: center;
+			justify-content: flex-end;
+			flex: 1;
+			width: 70vw;
 
 			img {
-				height: 400px;
+				max-width: 100%;
+				height: auto;
 			}
 		}
 
 		.headerRight {
 			display: flex;
 			flex-direction: column;
-
+			flex: 1;
 			gap: 3rem;
 
 			h1 {
@@ -54,6 +58,7 @@ body {
 	main {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		padding: 2rem;
 		gap: 3rem;
 
@@ -75,9 +80,10 @@ body {
 
 		.featureContainer {
 			display: grid;
-			grid-template-columns: repeat(3, 250px);
+			grid-template-columns: repeat(3, 1fr);
 			justify-content: center;
 			align-items: center;
+			max-width: 1400px;
 			gap: 5rem;
 
 			.featureCard {
@@ -112,6 +118,47 @@ body {
 	}
 }
 
+@media only screen and (max-width: 1120px) {
+	body {
+		header {
+			.logo {
+				justify-content: center;
+			}
+			flex-direction: column-reverse;
+			justify-content: center;
+			padding: 1rem;
+			.headerRight {
+				align-items: center;
+
+				h1 {
+					font-size: 38px;
+				}
+				p {
+					font-size: 24px;
+					max-width: 90vw;
+					text-align: center;
+				}
+			}
+		}
+
+		main {
+			text-align: center;
+
+			.features {
+				p {
+					font-size: 28px;
+				}
+			}
+			.featureContainer {
+				max-width: 90vw;
+				grid-template-columns: repeat(2, 1fr);
+
+				font-size: 24px;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	body {
 		header {
@@ -132,30 +179,41 @@ body {
 				align-items: center;
 				p {
 					text-align: center;
+					font-size: 24px;
 				}
 			}
 		}
 
 		main {
 			.featureContainer {
-				grid-template-columns: 1fr 1fr;
+				grid-template-columns: 1fr;
 			}
 		}
 	}
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
 	body {
 		header {
 			.logo {
+				width: 70vw;
 				img {
-					height: 200px;
+					// height: 200px;
+					display: none;
+				}
+			}
+
+			.headerRight {
+				p {
+					font-size: 20px;
 				}
 			}
 		}
 		main {
-			.featureContainer {
-				grid-template-columns: 1fr;
+			.features {
+				p {
+					font-size: 22px;
+				}
 			}
 		}
 	}

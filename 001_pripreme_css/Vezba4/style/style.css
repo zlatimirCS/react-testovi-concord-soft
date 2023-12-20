@@ -30,13 +30,13 @@ body header {
   display: -ms-flexbox;
   display: flex;
   background-color: #fcb440;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
   padding: 5rem;
 }
 
@@ -47,10 +47,18 @@ body header .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 70vw;
 }
 
 body header .logo img {
-  height: 400px;
+  max-width: 100%;
+  height: auto;
 }
 
 body header .headerRight {
@@ -61,6 +69,9 @@ body header .headerRight {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   gap: 3rem;
 }
 
@@ -80,6 +91,9 @@ body main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2rem;
   gap: 3rem;
 }
@@ -110,14 +124,15 @@ body main .features p {
 body main .featureContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (250px)[3];
-      grid-template-columns: repeat(3, 250px);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1400px;
   gap: 5rem;
 }
 
@@ -163,6 +178,49 @@ body main .featureContainer .featureCard .showMore a:hover {
   color: #fdc872;
 }
 
+@media only screen and (max-width: 1120px) {
+  body header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem;
+  }
+  body header .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body header .headerRight {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header .headerRight h1 {
+    font-size: 38px;
+  }
+  body header .headerRight p {
+    font-size: 24px;
+    max-width: 90vw;
+    text-align: center;
+  }
+  body main {
+    text-align: center;
+  }
+  body main .features p {
+    font-size: 28px;
+  }
+  body main .featureContainer {
+    max-width: 90vw;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    font-size: 24px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   body header {
     -webkit-box-orient: vertical;
@@ -193,20 +251,26 @@ body main .featureContainer .featureCard .showMore a:hover {
   }
   body header .headerRight p {
     text-align: center;
-  }
-  body main .featureContainer {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  body header .logo img {
-    height: 200px;
+    font-size: 24px;
   }
   body main .featureContainer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body header .logo {
+    width: 70vw;
+  }
+  body header .logo img {
+    display: none;
+  }
+  body header .headerRight p {
+    font-size: 20px;
+  }
+  body main .features p {
+    font-size: 22px;
   }
 }
 /*# sourceMappingURL=style.css.map */
