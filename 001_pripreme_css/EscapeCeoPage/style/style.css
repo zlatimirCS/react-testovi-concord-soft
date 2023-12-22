@@ -90,6 +90,7 @@ body header nav ul {
 
 body header nav ul li {
   list-style: none;
+  font-size: 28px;
 }
 
 body header nav ul li + .hamburger {
@@ -221,6 +222,11 @@ body main .development .identityBranding .text h1 span {
   font-weight: 900;
 }
 
+body main .development .webDevelopment .text p,
+body main .development .identityBranding .text p {
+  font-size: 24px;
+}
+
 body main .development .identityBranding {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -229,20 +235,30 @@ body main .development .identityBranding {
   background-color: #fafafa;
 }
 
-body main .development .ourServicesContainer {
+body main .development .ourServices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .development .ourServices .ourServicesContainer {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-columns: (minmax(250px, 450px))[2];
-      grid-template-columns: repeat(2, minmax(250px, 450px));
+  max-width: 1300px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   padding: 5rem 2rem;
   -webkit-column-gap: 15rem;
           column-gap: 15rem;
 }
 
-body main .development .ourServicesContainer .serviceCard {
+body main .development .ourServices .ourServicesContainer .serviceCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,7 +266,7 @@ body main .development .ourServicesContainer .serviceCard {
   gap: 1rem;
 }
 
-body main .development .ourServicesContainer .serviceCard .logo {
+body main .development .ourServices .ourServicesContainer .serviceCard .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,7 +285,7 @@ body main .development .ourServicesContainer .serviceCard .logo {
   height: 50px;
 }
 
-body main .development .ourServicesContainer .serviceCard .service {
+body main .development .ourServices .ourServicesContainer .serviceCard .service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,8 +296,12 @@ body main .development .ourServicesContainer .serviceCard .service {
   gap: 1rem;
 }
 
-body main .development .ourServicesContainer .serviceCard .service h3 {
+body main .development .ourServices .ourServicesContainer .serviceCard .service h3 {
   color: #222222;
+}
+
+body main .development .ourServices .ourServicesContainer .serviceCard .service p {
+  font-size: 20px;
 }
 
 body main .clientsContainer {
@@ -300,6 +320,19 @@ body main .clientsContainer {
   background-color: #fafafa;
 }
 
+body main .clientsContainer .clientsTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body main .clientsContainer .clientsTitle h1 {
   font-size: 48px;
   font-weight: 100;
@@ -309,6 +342,10 @@ body main .clientsContainer .clientsTitle h1 {
 body main .clientsContainer .clientsTitle h1 span {
   color: #222222;
   font-weight: 900;
+}
+
+body main .clientsContainer .clientsTitle h3 {
+  font-size: 24px;
 }
 
 body main .clientsContainer .clientCard,
@@ -355,10 +392,16 @@ body main .clientsContainer .clientCardTwo .clientQuote:before {
   top: 50%;
 }
 
+body main .clientsContainer .clientCard .clientQuote h4,
+body main .clientsContainer .clientCardTwo .clientQuote h4 {
+  font-size: 24px;
+}
+
 body main .clientsContainer .clientCard .clientQuote h5,
 body main .clientsContainer .clientCardTwo .clientQuote h5 {
   color: #9baed4;
   font-weight: 100;
+  font-size: 24px;
 }
 
 body main .clientsContainer .clientCardTwo {
@@ -448,7 +491,7 @@ body main .ourTeam .teamTitle h1 span {
 }
 
 body main .ourTeam .teamTitle h4 {
-  font-size: 18px;
+  font-size: 24px;
   color: #696969;
 }
 
@@ -481,10 +524,12 @@ body main .ourTeam .teamContainer .teamMember {
 
 body main .ourTeam .teamContainer .teamMember h4 {
   font-weight: 900;
+  font-size: 24px;
 }
 
 body main .ourTeam .teamContainer .teamMember p {
   font-weight: 100;
+  font-size: 20px;
 }
 
 body main .ourTeam .teamContainer .teamMember .socialContainer {
@@ -513,6 +558,7 @@ body main .ourTeam .teamBottomText {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  font-size: 20px;
 }
 
 body footer {
@@ -532,13 +578,13 @@ body footer {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5rem 3rem 2rem 3rem;
+  font-size: 24px;
 }
 
 body footer .footerUpper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 5rem;
 }
 
@@ -614,6 +660,7 @@ body footer .footerUpper .formContainer form {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  min-width: 500px;
 }
 
 body footer .footerUpper .formContainer form input,
@@ -645,5 +692,189 @@ body footer .footerUpper .formContainer form input::placeholder,
 body footer .footerUpper .formContainer form textarea::placeholder {
   color: #c9c9c9;
   font-size: 18px;
+}
+
+@media only screen and (max-width: 1270px) {
+  body h1 {
+    font-size: 36px;
+  }
+  body h3 {
+    font-size: 28px;
+  }
+  body h4 {
+    font-size: 32px;
+  }
+  body h5 {
+    font-size: 28px;
+  }
+  body header nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body header nav ul li {
+    font-size: 24px;
+  }
+  body header .hero {
+    text-align: center;
+    padding: 1rem;
+  }
+  body header .hero h2 {
+    font-size: 48px;
+  }
+  body header .hero h1 {
+    font-size: 96px;
+  }
+  body main .development {
+    text-align: center;
+  }
+  body main .development .webDevelopment,
+  body main .development .identityBranding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .development .webDevelopment .text,
+  body main .development .identityBranding .text {
+    max-width: 90%;
+    font-size: 24px;
+  }
+  body main .development .ourServices .ourServicesContainer {
+    text-align: left;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 90vw;
+  }
+  body main .development .ourServices .ourServicesContainer .serviceCard {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+  }
+  body main .development .ourServices .ourServicesContainer .serviceCard .service {
+    font-size: 24px;
+  }
+  body main .technologies {
+    gap: 1rem;
+    padding: 2rem;
+  }
+  body main .clientsContainer .clientsTitle {
+    text-align: center;
+  }
+  body main .ourTeam {
+    padding: 2rem;
+  }
+  body main .ourTeam p {
+    font-size: 24px;
+  }
+  body main .ourTeam .teamContainer {
+    gap: 1rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .ourTeam .teamTitle h4 {
+    font-size: 32px;
+  }
+  body footer .footerUpper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body footer .footerUpper .sayHello {
+    text-align: center;
+  }
+  body footer .footerUpper .formContainer form {
+    min-width: 80vw;
+  }
+  body footer p {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  body main .development .ourServices .ourServicesContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body main .technologies {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .ourTeam .teamContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  body header .hero {
+    text-align: center;
+    padding: 1rem;
+  }
+  body header .hero h2 {
+    font-size: 24px;
+  }
+  body header .hero h1 {
+    font-size: 48px;
+  }
+  body header nav ul li {
+    display: none;
+  }
+  body header nav ul li + .hamburger {
+    display: block;
+    font-size: 52px;
+  }
+  body main .clientsContainer .clientCard,
+  body main .clientsContainer .clientCardTwo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body footer {
+    text-align: center;
+  }
+  body footer .footerUpper .ourContact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body footer .footerUpper .ourContact .contactContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body footer .footerUpper .formContainer form {
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body main .development .ourServices .ourServicesContainer .serviceCard {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .development .ourServices .ourServicesContainer .serviceCard .service {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  body main .development .webDevelopment .text h1,
+  body main .development .identityBranding .text h1 {
+    font-size: 32px;
+  }
+  body main .ourTeam {
+    text-align: center;
+  }
+  body main .ourTeam .teamTitle h1 {
+    font-size: 32px;
+  }
+  body main .ourTeam .teamContainer .teamMember h4 {
+    font-size: 28px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

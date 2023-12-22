@@ -37,7 +37,6 @@ body {
 		background-repeat: no-repeat;
 
 		nav {
-			// margin: 0 20rem;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -64,6 +63,7 @@ body {
 
 				li {
 					list-style: none;
+					font-size: 28px;
 
 					+ .hamburger {
 						display: none;
@@ -154,6 +154,10 @@ body {
 							font-weight: 900;
 						}
 					}
+
+					p {
+						font-size: 24px;
+					}
 				}
 			}
 
@@ -161,40 +165,47 @@ body {
 				flex-direction: row-reverse;
 				background-color: $section-background;
 			}
-
-			.ourServicesContainer {
-				display: grid;
+			.ourServices {
+				display: flex;
 				justify-content: center;
-				grid-template-columns: repeat(2, minmax(250px, 450px));
-				padding: 5rem 2rem;
 
-				column-gap: 15rem;
+				.ourServicesContainer {
+					display: grid;
+					justify-content: center;
+					max-width: 1300px;
+					grid-template-columns: repeat(2, 1fr);
+					padding: 5rem 2rem;
+					column-gap: 15rem;
 
-				.serviceCard {
-					display: flex;
-					padding: 2rem;
-					gap: 1rem;
-
-					.logo {
+					.serviceCard {
 						display: flex;
-						align-items: center;
-						justify-content: center;
-						background-image: url('../assets/images/DarkCircle.png');
-						background-repeat: no-repeat;
-						background-position: center;
 						padding: 2rem;
-						border-radius: 50%;
-						width: 50px;
-						height: 50px;
-					}
-
-					.service {
-						display: flex;
-						flex-direction: column;
 						gap: 1rem;
 
-						h3 {
-							color: $title-text-color;
+						.logo {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							background-image: url('../assets/images/DarkCircle.png');
+							background-repeat: no-repeat;
+							background-position: center;
+							padding: 2rem;
+							border-radius: 50%;
+							width: 50px;
+							height: 50px;
+						}
+
+						.service {
+							display: flex;
+							flex-direction: column;
+							gap: 1rem;
+
+							h3 {
+								color: $title-text-color;
+							}
+							p {
+								font-size: 20px;
+							}
 						}
 					}
 				}
@@ -210,6 +221,10 @@ body {
 			background-color: $section-background;
 
 			.clientsTitle {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
 				h1 {
 					font-size: 48px;
 					font-weight: 100;
@@ -219,6 +234,9 @@ body {
 						color: $title-text-color;
 						font-weight: 900;
 					}
+				}
+				h3 {
+					font-size: 24px;
 				}
 			}
 
@@ -250,10 +268,13 @@ body {
 						left: -20px;
 						top: 50%;
 					}
-
+					h4 {
+						font-size: 24px;
+					}
 					h5 {
 						color: $quote-color-text;
 						font-weight: 100;
+						font-size: 24px;
 					}
 				}
 			}
@@ -317,7 +338,7 @@ body {
 				}
 
 				h4 {
-					font-size: 18px;
+					font-size: 24px;
 					color: $amazing-team-text;
 				}
 			}
@@ -336,10 +357,12 @@ body {
 
 					h4 {
 						font-weight: 900;
+						font-size: 24px;
 					}
 
 					p {
 						font-weight: 100;
+						font-size: 20px;
 					}
 
 					.socialContainer {
@@ -361,6 +384,7 @@ body {
 				max-width: 800px;
 				justify-content: center;
 				text-align: center;
+				font-size: 20px;
 			}
 		}
 	}
@@ -373,10 +397,10 @@ body {
 		align-items: center;
 		justify-content: center;
 		padding: 5rem 3rem 2rem 3rem;
+		font-size: 24px;
 
 		.footerUpper {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			display: flex;
 			gap: 5rem;
 
 			.ourContact {
@@ -428,6 +452,7 @@ body {
 					display: flex;
 					flex-direction: column;
 					gap: 1rem;
+					min-width: 500px;
 
 					input,
 					textarea {
@@ -438,6 +463,256 @@ body {
 						&::placeholder {
 							color: $placeholder-text-color;
 							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1270px) {
+	body {
+		h1 {
+			font-size: 36px;
+		}
+
+		h3 {
+			font-size: 28px;
+		}
+		h4 {
+			font-size: 32px;
+		}
+		h5 {
+			font-size: 28px;
+		}
+
+		header {
+			nav {
+				justify-content: space-between;
+				ul {
+					li {
+						font-size: 24px;
+					}
+				}
+			}
+			.hero {
+				text-align: center;
+				padding: 1rem;
+
+				h2 {
+					font-size: 48px;
+				}
+
+				h1 {
+					font-size: 96px;
+				}
+			}
+		}
+
+		main {
+			.development {
+				text-align: center;
+				.webDevelopment,
+				.identityBranding {
+					flex-direction: column;
+					.text {
+						max-width: 90%;
+						font-size: 24px;
+					}
+				}
+
+				.ourServices {
+					.ourServicesContainer {
+						text-align: left;
+						padding: 1rem;
+						gap: 1rem;
+						max-width: 90vw;
+
+						.serviceCard {
+							align-items: center;
+							padding: 1rem;
+							.service {
+								font-size: 24px;
+							}
+						}
+					}
+				}
+			}
+
+			.technologies {
+				gap: 1rem;
+				padding: 2rem;
+			}
+
+			.clientsContainer {
+				.clientsTitle {
+					text-align: center;
+				}
+			}
+
+			.ourTeam {
+				padding: 2rem;
+
+				p {
+					font-size: 24px;
+				}
+
+				.teamContainer {
+					gap: 1rem;
+					flex-wrap: wrap;
+				}
+				.teamTitle {
+					h4 {
+						font-size: 32px;
+					}
+				}
+			}
+		}
+
+		footer {
+			.footerUpper {
+				flex-direction: column;
+
+				.sayHello {
+					text-align: center;
+				}
+
+				.formContainer {
+					form {
+						min-width: 80vw;
+					}
+				}
+			}
+
+			p {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	body {
+		main {
+			.development {
+				.ourServices {
+					.ourServicesContainer {
+						grid-template-columns: 1fr;
+					}
+				}
+			}
+
+			.technologies {
+				flex-wrap: wrap;
+			}
+			.ourTeam {
+				.teamContainer {
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 740px) {
+	body {
+		header {
+			.hero {
+				text-align: center;
+				padding: 1rem;
+
+				h2 {
+					font-size: 24px;
+				}
+
+				h1 {
+					font-size: 48px;
+				}
+			}
+
+			nav {
+				ul {
+					li {
+						display: none;
+					}
+
+					li + .hamburger {
+						display: block;
+						font-size: 52px;
+					}
+				}
+			}
+		}
+
+		main {
+			.clientsContainer {
+				.clientCard,
+				.clientCardTwo {
+					flex-wrap: wrap;
+				}
+			}
+		}
+
+		footer {
+			text-align: center;
+			.footerUpper {
+				.ourContact {
+					align-items: center;
+
+					.contactContainer {
+						grid-template-columns: 1fr;
+					}
+				}
+
+				.formContainer {
+					form {
+						min-width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	body {
+		main {
+			.development {
+				.ourServices {
+					.ourServicesContainer {
+						.serviceCard {
+							flex-wrap: wrap;
+							justify-content: center;
+
+							.service {
+								align-items: center;
+								text-align: center;
+							}
+						}
+					}
+				}
+				.webDevelopment,
+				.identityBranding {
+					.text {
+						h1 {
+							font-size: 32px;
+						}
+					}
+				}
+			}
+
+			.ourTeam {
+				text-align: center;
+				.teamTitle {
+					h1 {
+						font-size: 32px;
+					}
+				}
+				.teamContainer {
+					.teamMember {
+						h4 {
+							font-size: 28px;
 						}
 					}
 				}
