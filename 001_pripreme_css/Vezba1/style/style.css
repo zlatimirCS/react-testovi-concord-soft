@@ -105,6 +105,9 @@ body main .cardContainer .card.Arrow .cardText p {
 
 body main .cardContainer .card.Arrow .imageContainer {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 body main .cardContainer .card.Arrow .imageContainer svg {
@@ -116,7 +119,11 @@ body main .cardContainer .card.Arrow .imageContainer svg {
 }
 
 body main .cardContainer .card img {
-  height: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
 }
 
