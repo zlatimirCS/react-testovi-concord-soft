@@ -1,0 +1,487 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'OpenSans';
+  font-size: 24px;
+  color: #636363;
+}
+
+body img {
+  max-height: 200px;
+}
+
+body a {
+  text-decoration: none;
+  color: #636363;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fcb440;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body header .content .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.25rem;
+  background-color: #e1e1e1;
+  padding: 0.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header .content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+body header .content nav img {
+  max-width: 100px;
+}
+
+body header .content nav li {
+  display: none;
+}
+
+body header .content nav .hamburger {
+  display: block;
+  font-size: 32px;
+}
+
+body header .content .headerSection {
+  color: #ffffff;
+  font-weight: 100;
+  background-image: url("../assets/images/HeaderBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .content .headerSection .headerSectionContainer {
+  background-image: url("../assets/images/HeaderImageLines.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body header .content .headerSection .headerSectionContainer h1 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+body main .section {
+  text-align: center;
+  font-size: 20px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+body main .section h1 {
+  text-transform: uppercase;
+}
+
+body main .section--one {
+  gap: 2rem;
+}
+
+body main .section--one .sectionOneContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+body main .section--one .sectionOneContainer button {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #000;
+  font-family: 'OpenSans';
+  font-size: 18px;
+  padding: 1rem 4rem;
+  text-decoration: none;
+}
+
+body main .section--two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  gap: 2rem;
+  background-color: #fcb440;
+}
+
+body main .section--three {
+  gap: 2rem;
+}
+
+body main .section--three .sectionThreeContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+body main .section--three .sectionThreeContainer .featureCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+body main .section--three .sectionThreeContainer .featureCard .featureText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+body main .section--three .sectionThreeContainer .featureCard .featureText a {
+  text-align: right;
+  color: #fcb440;
+}
+
+body main .section--four {
+  background-image: url("../assets/images/SectionThreeBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 2rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fdf9f2;
+}
+
+body main .section--four .sectionFourUpperContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 100;
+  gap: 2rem;
+}
+
+body main .section--four .sectionFourLowerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+body main .section--four .sectionFourLowerContainer .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+body main .section--four .sectionFourLowerContainer .card h5 {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+body main .section--four .sectionFourLowerContainer .card a {
+  text-align: right;
+  color: #fdf9f2;
+}
+
+body main .section--five {
+  display: none;
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #636363;
+  color: #fdf9f2;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+body footer h4 {
+  font-size: 30px;
+}
+
+body footer .footerUpper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+body footer .footerUpper .footerLeftContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+body footer .footerUpper .footerLeftContainer .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+body footer .footerUpper .footerLeftContainer .contactContainer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .footerUpper .footerLeftContainer .contactContainer .socialsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+body footer .footerUpper .footerRightContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+body footer .footerUpper .footerRightContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer .footerUpper .footerRightContainer form input,
+body footer .footerUpper .footerRightContainer form textarea {
+  padding: 1rem;
+  font-size: 22px;
+  background-color: transparent;
+  border: 1px solid #fdf9f2;
+  border-radius: 0.5rem;
+}
+
+body footer .footerUpper .footerRightContainer form input::-webkit-input-placeholder,
+body footer .footerUpper .footerRightContainer form textarea::-webkit-input-placeholder {
+  color: #fdf9f2;
+}
+
+body footer .footerUpper .footerRightContainer form input:-ms-input-placeholder,
+body footer .footerUpper .footerRightContainer form textarea:-ms-input-placeholder {
+  color: #fdf9f2;
+}
+
+body footer .footerUpper .footerRightContainer form input::-ms-input-placeholder,
+body footer .footerUpper .footerRightContainer form textarea::-ms-input-placeholder {
+  color: #fdf9f2;
+}
+
+body footer .footerUpper .footerRightContainer form input::placeholder,
+body footer .footerUpper .footerRightContainer form textarea::placeholder {
+  color: #fdf9f2;
+}
+
+body footer .footerUpper .footerRightContainer form button {
+  padding: 2rem;
+  background-color: transparent;
+  color: #fdf9f2;
+  font-size: 22px;
+  border: 1px solid #fdf9f2;
+  border-radius: 5rem;
+}
+
+body footer .footerLower {
+  text-align: center;
+}
+
+body footer .footerLower #scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
+@media only screen and (min-width: 800px) {
+  body header .content nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body header .content nav img {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  body header .content nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+  }
+  body header .content nav ul li {
+    display: block;
+    padding: 0.5rem;
+  }
+  body header .content nav ul .hamburger {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
