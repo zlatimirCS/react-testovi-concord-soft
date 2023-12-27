@@ -424,8 +424,6 @@ main .container--one .content--bottom .cardContent {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
 }
 
 main .container--one .content--bottom .cardContent:hover {
@@ -466,8 +464,8 @@ main .container--one .content--bottom .cardContent .cardFront {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 main .container--one .content--bottom .cardContent .cardFront img {
@@ -495,7 +493,7 @@ main .container--one .content--bottom .cardContent .hiddenText {
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

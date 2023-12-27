@@ -352,7 +352,6 @@ main {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				transition: opacity 400ms;
 				&:hover {
 					background-color: $header-text-color;
 
@@ -380,7 +379,7 @@ main {
 					justify-content: center;
 					opacity: 1;
 					flex: 1;
-					transition: opacity 400ms;
+					transition: opacity 400ms ease-in;
 
 					img {
 						max-width: 50px;
@@ -404,12 +403,11 @@ main {
 				}
 
 				.hiddenText {
-					// display: none;
 					position: absolute;
 					visibility: hidden;
 					opacity: 0;
 					text-align: center;
-					transition: opacity 400ms;
+					transition: opacity 400ms ease-in-out;
 				}
 			}
 		}
