@@ -1691,4 +1691,125 @@ main .container--seven .wrapper .content--bottom .studentsContainer .studentCard
 main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo strong {
   text-transform: uppercase;
 }
+
+main .container--eight .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+main .container--eight .content--top h1 {
+  color: #b13;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+main .container--eight .content--bottom {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+main .container--eight .content--bottom img {
+  max-width: 100px;
+}
+
+main .container--nine {
+  background-image: url("../assets/images/chef-finishing-plated-dish.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+main .container--nine .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+main .container--nine .wrapper .content--top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+main .container--nine .wrapper .content--top h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+main .container--nine .wrapper .content--top hr {
+  height: 1px;
+  width: 20px;
+  border-color: #b13;
+}
+
+main .container--nine .wrapper .content--bottom .chooseUsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard img {
+  max-width: 80px;
+}
+
+main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h4 {
+  font-size: 24px;
+}
+
+main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h5 {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard p {
+  font-size: 12px;
+}
 /*# sourceMappingURL=style.css.map */
