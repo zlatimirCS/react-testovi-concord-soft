@@ -1,4 +1,5 @@
 @import './variables';
+@import './carousel.scss';
 
 @font-face {
 	font-family: 'Lato-Black';
@@ -26,12 +27,12 @@
 	box-sizing: border-box;
 }
 
-h1 {
-	text-transform: uppercase;
-	font-size: 1.8em;
-	font-weight: 900;
-	color: $main-red-color;
-}
+// h1 {
+// 	text-transform: uppercase;
+// 	font-size: 1.8em;
+// 	font-weight: 900;
+// 	color: $main-red-color;
+// }
 
 img,
 video {
@@ -600,7 +601,8 @@ main {
 							h2 {
 								text-transform: uppercase;
 								color: $main-text-color-dark;
-								font-weight: 700;
+								font-weight: 900;
+								font-size: 20px;
 							}
 
 							p {
@@ -814,9 +816,8 @@ main {
 									background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.18248 8.27304C4.0661 8.27304 3.94972 8.22849 3.86062 8.14029L1.13297 5.41265C0.955676 5.23535 0.955676 4.94713 1.13297 4.76983C1.31027 4.59254 1.59849 4.59254 1.77579 4.76983L4.18157 7.17562L10.2242 1.13297C10.4015 0.955676 10.6897 0.955676 10.867 1.13297C11.0443 1.31027 11.0443 1.59849 10.867 1.77579L4.50252 8.14029C4.41342 8.2294 4.29704 8.27304 4.18066 8.27304H4.18248Z' fill='%23997755' stroke='%23997755'/%3E%3C/svg%3E%0A");
 									background-repeat: no-repeat;
 									background-position: center;
-									padding: 1rem;
+									padding: 0.75rem;
 									content: '';
-									margin-left: 0.25rem;
 									border: 2px solid $card-back-text-color;
 									border-radius: 50%;
 								}
@@ -824,11 +825,212 @@ main {
 						}
 					}
 					.courseRight {
-						flex: 1;
-
 						img {
 							max-width: none;
 							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.container--five {
+		background-color: $black-color;
+
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+			padding: 1rem;
+
+			.content--top {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 2rem;
+
+				h2 {
+					color: $header-text-color;
+					font-weight: 500;
+					text-align: center;
+					font-size: 26px;
+				}
+			}
+		}
+	}
+
+	.container--six {
+		.wrapper {
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			.content--top {
+				h1 {
+					color: $main-red-color;
+					font-size: 32px;
+					font-weight: 500;
+				}
+			}
+
+			.content--bottom {
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 1rem;
+
+				.descriptionContainer {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					gap: 2rem;
+
+					h2 {
+						text-transform: uppercase;
+						color: $card-back-text-color;
+						text-align: center;
+						margin: 0 2rem;
+						font-weight: 900;
+						font-size: 28px;
+					}
+
+					ul {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						gap: 3rem;
+
+						li {
+							list-style: none;
+							font-size: 24px;
+							font-weight: 700;
+							color: $card-text-color;
+							display: flex;
+							align-items: flex-start;
+							gap: 2rem;
+
+							&::before {
+								background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/05/checkmark-2x-red.png');
+								background-repeat: no-repeat;
+								background-position: center;
+								padding: 0.75rem;
+								content: '';
+								border-radius: 50%;
+								background-size: contain;
+							}
+						}
+					}
+				}
+				.videoContainer {
+					min-height: 300px;
+					margin: -1rem;
+					background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/Escoffier-student-rolling-dough.jpg');
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.playButton {
+						background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png');
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;
+						padding: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	.container--seven {
+		.wrapper {
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			.content--top {
+				display: flex;
+				align-items: center;
+
+				h1 {
+					color: $main-red-color;
+					font-size: 32px;
+					font-weight: 500;
+				}
+			}
+
+			.content--bottom {
+				.studentsContainer {
+					display: flex;
+					flex-direction: column;
+					gap: 3rem;
+
+					.studentCard {
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+
+						.studentTitle {
+							color: $card-back-text-color;
+
+							& span:first-child {
+								font-weight: 500;
+								font-size: 20px;
+							}
+
+							span {
+								font-weight: 900;
+								font-size: 28px;
+							}
+						}
+
+						.videoContainer {
+							height: auto;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							background-image: url('../assets/images/Michael-Pythoud.jpg');
+							min-height: 200px;
+							background-position: center;
+							background-size: contain;
+							background-repeat: no-repeat;
+
+							.playButton {
+								background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png');
+								background-position: center;
+								background-size: contain;
+								background-repeat: no-repeat;
+								padding: 1.5rem;
+							}
+						}
+						[data-video='two'] {
+							background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/wyl-lima.jpg');
+						}
+						[data-video='three'] {
+							background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/lance-mcwhorter-1.jpg');
+						}
+						[data-video='four'] {
+							background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/jennifer-etzkin.jpg');
+						}
+						[data-video='five'] {
+							background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/academics-culinary-arts.jpg');
+						}
+						[data-video='six'] {
+							background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/holden-oleary.jpg');
+						}
+
+						.studentInfo {
+							color: $card-text-color;
+							font-weight: 100;
+
+							strong {
+								text-transform: uppercase;
+							}
 						}
 					}
 				}

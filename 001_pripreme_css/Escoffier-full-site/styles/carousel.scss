@@ -1,0 +1,279 @@
+@import './variables';
+
+@font-face {
+	font-family: 'CrimsonText';
+	src: url('../assets/fonts/CrimsonText-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'TradeGothic';
+	src: url('../assets/fonts/Trade\ Gothic\ LT.ttf');
+}
+
+@keyframes tonext {
+	75% {
+		left: 0;
+	}
+	95% {
+		left: 100%;
+	}
+	98% {
+		left: 100%;
+	}
+	99% {
+		left: 0;
+	}
+}
+
+@keyframes tostart {
+	75% {
+		left: 0;
+	}
+	95% {
+		left: -300%;
+	}
+	98% {
+		left: -300%;
+	}
+	99% {
+		left: 0;
+	}
+}
+
+@keyframes snap {
+	96% {
+		scroll-snap-align: center;
+	}
+	97% {
+		scroll-snap-align: none;
+	}
+	99% {
+		scroll-snap-align: none;
+	}
+	100% {
+		scroll-snap-align: center;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	scrollbar-color: transparent transparent; /* thumb and track color */
+	scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+	width: 0;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: transparent;
+	border: none;
+}
+
+* {
+	-ms-overflow-style: none;
+}
+
+ol,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.carousel {
+	position: relative;
+	filter: drop-shadow(0 0 10px #0003);
+	perspective: 100px;
+	min-height: calc(100vh + 5rem);
+}
+
+.carousel__viewport {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+}
+
+.carousel__slide:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -40%, 70px);
+	color: #fff;
+	font-size: 2em;
+}
+
+.carousel__snapper {
+	position: absolute;
+	min-height: 100vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+	scroll-snap-align: center;
+	display: flex;
+	align-items: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.carousel__snapper {
+		animation-name: none;
+	}
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+	animation-name: none;
+}
+
+.carousel__prev,
+.carousel__next {
+	padding: 1rem;
+	width: 4rem;
+	height: 4rem;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	font-size: 0;
+	outline: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6875 25.3125C19.9273 25.3125 20.1673 25.2208 20.3503 25.0378C20.7166 24.6715 20.7166 24.0783 20.3503 23.7122L11.6381 15L20.3503 6.28778C20.7166 5.92145 20.7166 5.32825 20.3503 4.96216C19.984 4.59606 19.3908 4.59583 19.0247 4.96216L9.64969 14.3372C9.28336 14.7035 9.28336 15.2967 9.64969 15.6628L19.0247 25.0378C19.2077 25.2208 19.4477 25.3125 19.6875 25.3125Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.carousel::before,
+.carousel__prev {
+	left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+	right: -1rem;
+}
+
+.carousel__next {
+	transform: rotate(180deg) translateY(50%);
+}
+
+.carousel::before,
+.carousel::after {
+	content: '';
+	z-index: 1;
+	background-color: #333;
+	background-size: 1.5rem 1.5rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: #fff;
+	font-size: 2.5rem;
+	line-height: 4rem;
+	text-align: center;
+	pointer-events: none;
+}
+
+.carousel::before {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.carousel::after {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.galeryCard {
+	background-color: white;
+	// display: flex;
+	flex-direction: column;
+	padding: 2rem 1rem;
+	height: 100vh;
+
+	.galeryCardUpper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+
+		img {
+			border-radius: 50%;
+		}
+
+		.courseAuthor {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			gap: 1rem;
+
+			h4 {
+				font-family: 'Crimson';
+				font-size: 24px;
+				color: $main-text-color-dark;
+				font-weight: 500;
+			}
+
+			h5 {
+				font-family: 'TradeGothic';
+				color: $card-back-text-color;
+				font-size: 18px;
+				font-weight: 100;
+				text-transform: none;
+			}
+
+			button {
+				background-color: transparent;
+				border: 2px solid $main-red-color;
+				color: $main-red-color;
+				padding: 0.5rem;
+				font-size: 18px;
+				padding-right: 1rem;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					background-position: bottom;
+					background-repeat: no-repeat;
+					width: 16px;
+					height: 16px;
+					background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjAwMDEgN0w2LjAzODI2ZS0wNSAxMy45MjgyTDYuMDk4ODNlLTA1IDAuMDcxNzk2NEwxMi4wMDAxIDdaIiBmaWxsPSIjQkIxMTMzIi8+Cjwvc3ZnPgo=);
+					padding: 0 12px 0 0;
+				}
+			}
+		}
+
+		h5 {
+			align-self: flex-start;
+			color: $card-back-text-color;
+			text-transform: uppercase;
+			font-size: 18px;
+		}
+
+		hr {
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+	}
+
+	.galeryCardLower {
+		display: flex;
+		flex: 1;
+
+		p {
+			font-family: 'Crimson';
+			font-size: 18px;
+			line-height: 1.5rem;
+		}
+	}
+}
