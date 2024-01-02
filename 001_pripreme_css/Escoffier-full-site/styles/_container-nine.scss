@@ -1,0 +1,70 @@
+@import './variables';
+@import './fonts';
+
+.container--nine {
+	background-image: url('../assets/images/chef-finishing-plated-dish.jpg');
+	background-size: cover;
+	background-position: 50% 20%;
+	background-repeat: no-repeat;
+	color: $header-button-text-color;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		padding: 1rem;
+
+		.content--top {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+			text-align: center;
+
+			h1 {
+				font-size: 32px;
+				text-transform: uppercase;
+				position: relative;
+			}
+
+			hr {
+				height: 1px;
+				width: 20px;
+				border-color: $main-red-color;
+			}
+		}
+
+		.content--bottom {
+			.chooseUsContainer {
+				display: flex;
+				flex-direction: column;
+				gap: 5rem;
+
+				.chooseUsCard {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+					gap: 1rem;
+
+					img {
+						max-width: 80px;
+					}
+
+					h4 {
+						font-size: 24px;
+					}
+
+					h5 {
+						text-transform: uppercase;
+						font-size: 14px;
+					}
+
+					p {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}

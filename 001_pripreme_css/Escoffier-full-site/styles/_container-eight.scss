@@ -1,0 +1,29 @@
+@import './variables';
+@import './fonts';
+
+.container--eight {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+		padding: 1rem;
+	}
+
+	.content--top {
+		h1 {
+			color: $main-red-color;
+			font-size: 32px;
+			font-weight: 800;
+		}
+	}
+
+	.content--bottom {
+		display: grid;
+		justify-items: center;
+		gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		img {
+			max-width: 100px;
+		}
+	}
+}

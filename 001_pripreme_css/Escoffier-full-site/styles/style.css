@@ -1,4 +1,24 @@
 @font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+@font-face {
   font-family: 'CrimsonText';
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
@@ -382,32 +402,6 @@ li {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-img,
-video {
-  max-width: 200px;
-}
-
-button {
-  background-color: #b13;
-  color: #fff;
-  padding: 1rem;
-  border: 0;
-  border-radius: 0.5rem;
-  font-family: 'TradeGothic';
-  font-size: 22px;
-  font-weight: 900;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
 .hamburgerMenu input[type='checkbox'] + label .icon-bar {
   display: block;
   width: 22px;
@@ -626,6 +620,26 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   vertical-align: middle;
 }
 
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
 .video {
   height: 80vh;
   display: -webkit-box;
@@ -722,20 +736,27 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   display: flex;
 }
 
-main {
-  margin-top: 5rem;
-  font-family: 'TradeGothic';
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 5rem;
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
 }
 
-main .container--one .content--top {
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--one .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,13 +773,13 @@ main .container--one .content--top {
   background-size: cover;
 }
 
-main .container--one .content--top h2 {
+.container--one .content--top h2 {
   color: #b13;
   font-size: 30px;
   font-weight: 100;
 }
 
-main .container--one .content--top p {
+.container--one .content--top p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -771,12 +792,12 @@ main .container--one .content--top p {
   gap: 0.5rem;
 }
 
-main .container--one .content--top p a {
+.container--one .content--top p a {
   color: #252525;
   font-weight: 900;
 }
 
-main .container--one .content--top p a::after {
+.container--one .content--top p a::after {
   content: '';
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_22_2)'%3E%3Cpath d='M12.1181 0.223577C11.8723 -0.0745258 11.4665 -0.0745258 11.2093 0.223577C10.9635 0.514905 10.9635 0.995935 11.2093 1.28726L15.8107 6.74119H0.634487C0.280089 6.74119 0 7.07317 0 7.49323C0 7.91328 0.280089 8.25881 0.634487 8.25881H15.8107L11.2093 13.6992C10.9635 13.9973 10.9635 14.4851 11.2093 14.7764C11.4608 15.0745 11.8723 15.0745 12.1181 14.7764L17.8057 8.03523C18.0572 7.7439 18.0572 7.26287 17.8057 6.97155L12.1181 0.223577Z' fill='%23252525'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_22_2'%3E%3Crect width='18' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
   width: 20px;
@@ -785,7 +806,7 @@ main .container--one .content--top p a::after {
   background-position: center;
 }
 
-main .container--one .content--bottom {
+.container--one .content--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,7 +818,7 @@ main .container--one .content--bottom {
   gap: 1rem;
 }
 
-main .container--one .content--bottom .cardContent {
+.container--one .content--bottom .cardContent {
   height: 20em;
   background-color: #f4f4f4;
   display: -webkit-box;
@@ -811,16 +832,17 @@ main .container--one .content--bottom .cardContent {
           justify-content: center;
 }
 
-main .container--one .content--bottom .cardContent:hover {
+.container--one .content--bottom .cardContent:hover {
   background-color: #fff;
 }
 
-main .container--one .content--bottom .cardContent:hover .cardFront {
+.container--one .content--bottom .cardContent:hover .cardFront {
   visibility: hidden;
+  background-color: blue;
   opacity: 0;
 }
 
-main .container--one .content--bottom .cardContent:hover .hiddenText {
+.container--one .content--bottom .cardContent:hover .hiddenText {
   visibility: visible;
   padding: 2rem;
   font-size: 18px;
@@ -829,7 +851,7 @@ main .container--one .content--bottom .cardContent:hover .hiddenText {
   opacity: 1;
 }
 
-main .container--one .content--bottom .cardContent .cardFront {
+.container--one .content--bottom .cardContent .cardFront {
   padding: 5rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -853,11 +875,11 @@ main .container--one .content--bottom .cardContent .cardFront {
   transition: opacity 400ms ease-in;
 }
 
-main .container--one .content--bottom .cardContent .cardFront img {
+.container--one .content--bottom .cardContent .cardFront img {
   max-width: 50px;
 }
 
-main .container--one .content--bottom .cardContent .cardFront h2 {
+.container--one .content--bottom .cardContent .cardFront h2 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: -2px;
@@ -866,14 +888,14 @@ main .container--one .content--bottom .cardContent .cardFront h2 {
   font-size: 30px;
 }
 
-main .container--one .content--bottom .cardContent .cardFront p {
+.container--one .content--bottom .cardContent .cardFront p {
   font-family: 'Lato-Light';
   text-align: center;
   font-weight: 900;
   color: #5c6b80;
 }
 
-main .container--one .content--bottom .cardContent .hiddenText {
+.container--one .content--bottom .cardContent .hiddenText {
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -882,11 +904,31 @@ main .container--one .content--bottom .cardContent .hiddenText {
   transition: opacity 400ms ease-in-out;
 }
 
-main .container--two {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--two {
   color: #b13;
 }
 
-main .container--two .wrapper {
+.container--two .wrapper {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -898,7 +940,7 @@ main .container--two .wrapper {
   gap: 2rem;
 }
 
-main .container--two .content--top {
+.container--two .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -910,19 +952,19 @@ main .container--two .content--top {
   padding-top: 2rem;
 }
 
-main .container--two .content--top h1 {
+.container--two .content--top h1 {
   font-size: 30px;
   font-weight: 500;
 }
 
-main .container--two .content--top h4 {
+.container--two .content--top h4 {
   color: #5c6b80;
   font-size: 22px;
   font-weight: 600;
   line-height: 2rem;
 }
 
-main .container--two .content--bottom {
+.container--two .content--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -940,7 +982,7 @@ main .container--two .content--bottom {
   color: #5c6b80;
 }
 
-main .container--two .content--bottom .takeQuizContainer {
+.container--two .content--bottom .takeQuizContainer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -954,7 +996,7 @@ main .container--two .content--bottom .takeQuizContainer {
   gap: 2rem;
 }
 
-main .container--two .content--bottom .takeQuizContainer .card {
+.container--two .content--bottom .takeQuizContainer .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -972,11 +1014,11 @@ main .container--two .content--bottom .takeQuizContainer .card {
   padding: 1rem;
 }
 
-main .container--two .content--bottom .takeQuizContainer .card img {
+.container--two .content--bottom .takeQuizContainer .card img {
   max-width: 80px;
 }
 
-main .container--two .content--bottom .takeQuizContainer .card h4 {
+.container--two .content--bottom .takeQuizContainer .card h4 {
   color: #8e6c4a;
   font-weight: 600;
   line-height: 1;
@@ -985,7 +1027,7 @@ main .container--two .content--bottom .takeQuizContainer .card h4 {
   font-stretch: extra-condensed;
 }
 
-main .container--two .content--bottom .takeQuizBottom {
+.container--two .content--bottom .takeQuizBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1000,17 +1042,37 @@ main .container--two .content--bottom .takeQuizBottom {
   text-align: center;
 }
 
-main .container--two .content--bottom .takeQuizBottom button {
+.container--two .content--bottom .takeQuizBottom button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-main .container--three .wrapper {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--three .wrapper {
   padding: 1rem;
 }
 
-main .container--three .wrapper .content--top {
+.container--three .wrapper .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1021,19 +1083,19 @@ main .container--three .wrapper .content--top {
   gap: 1rem;
 }
 
-main .container--three .wrapper .content--top h1 {
+.container--three .wrapper .content--top h1 {
   font-size: 28px;
   color: #b13;
   font-weight: 100;
 }
 
-main .container--three .wrapper .content--top h5 {
+.container--three .wrapper .content--top h5 {
   font-size: 18px;
   font-family: 'CrimsonText';
   font-weight: 600;
 }
 
-main .container--three .wrapper .content--top ul li {
+.container--three .wrapper .content--top ul li {
   list-style: none;
   padding: 2rem 0 0 2rem;
   background-position: top 35px left 10px;
@@ -1041,18 +1103,18 @@ main .container--three .wrapper .content--top ul li {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMTcnIHZpZXdCb3g9JzAgMCAyNCAxNycgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTYuMTU3NSAwLjI0NTkzNUMxNS44Mjk4IC0wLjA4MTk3ODMgMTUuMjg4NyAtMC4wODE5NzgzIDE0Ljk0NTcgMC4yNDU5MzVDMTQuNjE4IDAuNTY2Mzk2IDE0LjYxOCAxLjA5NTUzIDE0Ljk0NTcgMS40MTU5OUwyMS4wODEgNy40MTUzMUgwLjg0NTk4M0MwLjM3MzQ1MiA3LjQxNTMxIDAgNy43ODA0OSAwIDguMjQyNTVDMCA4LjcwNDYxIDAuMzczNDUyIDkuMDg0NjkgMC44NDU5ODMgOS4wODQ2OUgyMS4wODFMMTQuOTQ1NyAxNS4wNjkxQzE0LjYxOCAxNS4zOTcgMTQuNjE4IDE1LjkzMzYgMTQuOTQ1NyAxNi4yNTQxQzE1LjI4MSAxNi41ODIgMTUuODI5OCAxNi41ODIgMTYuMTU3NSAxNi4yNTQxTDIzLjc0MDkgOC44Mzg3NUMyNC4wNzYyIDguNTE4MjkgMjQuMDc2MiA3Ljk4OTE2IDIzLjc0MDkgNy42Njg3TDE2LjE1NzUgMC4yNDU5MzVaJyBmaWxsPScjQkIxMTMzJy8+PC9zdmc+Cg==");
 }
 
-main .container--three .wrapper .content--top ul li p {
+.container--three .wrapper .content--top ul li p {
   font-size: 22px;
   font-weight: 900;
   padding-left: 1rem;
   color: #5c6b80;
 }
 
-main .container--three .wrapper .content--top ul li p a {
+.container--three .wrapper .content--top ul li p a {
   color: #b13;
 }
 
-main .container--three .wrapper .content--bottom {
+.container--three .wrapper .content--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1063,7 +1125,7 @@ main .container--three .wrapper .content--bottom {
   gap: 5rem;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer {
+.container--three .wrapper .content--bottom .programsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1075,11 +1137,11 @@ main .container--three .wrapper .content--bottom .programsContainer {
   padding-top: 2rem;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer a {
+.container--three .wrapper .content--bottom .programsContainer a {
   text-decoration: none;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard {
+.container--three .wrapper .content--bottom .programsContainer .programCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1093,11 +1155,11 @@ main .container--three .wrapper .content--bottom .programsContainer .programCard
   background-color: #f4f4f4;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programBackground {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programBackground {
   width: 100%;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programBackground img {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programBackground img {
   max-width: none;
   width: 100%;
   height: 100%;
@@ -1105,7 +1167,7 @@ main .container--three .wrapper .content--bottom .programsContainer .programCard
      object-fit: contain;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programText {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1118,19 +1180,19 @@ main .container--three .wrapper .content--bottom .programsContainer .programCard
   color: #000;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programText h2 {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programText h2 {
   text-transform: uppercase;
   color: #252525;
   font-weight: 900;
   font-size: 20px;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programText p {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programText p {
   font-size: 18px;
   font-weight: 900;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programText span {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programText span {
   font-size: 20px;
   text-transform: uppercase;
   color: #8e6c4a;
@@ -1138,7 +1200,7 @@ main .container--three .wrapper .content--bottom .programsContainer .programCard
   text-decoration: underline;
 }
 
-main .container--three .wrapper .content--bottom .programsContainer .programCard .programText span::after {
+.container--three .wrapper .content--bottom .programsContainer .programCard .programText span::after {
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_78_364)'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23997755'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_78_364'%3E%3Crect width='18' height='12.375' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: left;
@@ -1148,7 +1210,7 @@ main .container--three .wrapper .content--bottom .programsContainer .programCard
   margin-left: 0.25rem;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer {
+.container--three .wrapper .content--bottom .programQuoteContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1159,14 +1221,14 @@ main .container--three .wrapper .content--bottom .programQuoteContainer {
   gap: 2rem;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer h1 {
+.container--three .wrapper .content--bottom .programQuoteContainer h1 {
   font-size: 32px;
   color: #8e6c4a;
   font-weight: 100;
   margin-left: 3rem;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer h1::before {
+.container--three .wrapper .content--bottom .programQuoteContainer h1::before {
   padding: 1rem;
   content: '';
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 475.082 475.081' xml:space='preserve'%3E%3Cpath fill='%23997755' d='M164.45,219.27h-63.954c-7.614,0-14.087-2.664-19.417-7.994c-5.327-5.33-7.994-11.801-7.994-19.417v-9.132 c0-20.177,7.139-37.401,21.416-51.678c14.276-14.272,31.503-21.411,51.678-21.411h18.271c4.948,0,9.229-1.809,12.847-5.424 c3.616-3.617,5.424-7.898,5.424-12.847V54.819c0-4.948-1.809-9.233-5.424-12.85c-3.617-3.612-7.898-5.424-12.847-5.424h-18.271 c-19.797,0-38.684,3.858-56.673,11.563c-17.987,7.71-33.545,18.132-46.68,31.267c-13.134,13.129-23.553,28.688-31.262,46.677 C3.855,144.039,0,162.931,0,182.726v200.991c0,15.235,5.327,28.171,15.986,38.834c10.66,10.657,23.606,15.985,38.832,15.985 h109.639c15.225,0,28.167-5.328,38.828-15.985c10.657-10.663,15.987-23.599,15.987-38.834V274.088 c0-15.232-5.33-28.168-15.994-38.832C192.622,224.6,179.675,219.27,164.45,219.27z'/%3E%3Cpath fill='%23997755' d='M459.103,235.256c-10.656-10.656-23.599-15.986-38.828-15.986h-63.953c-7.61,0-14.089-2.664-19.41-7.994 c-5.332-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177,7.139-37.401,21.409-51.678c14.271-14.272,31.497-21.411,51.682-21.411 h18.267c4.949,0,9.233-1.809,12.848-5.424c3.613-3.617,5.428-7.898,5.428-12.847V54.819c0-4.948-1.814-9.233-5.428-12.85 c-3.614-3.612-7.898-5.424-12.848-5.424h-18.267c-19.808,0-38.691,3.858-56.685,11.563c-17.984,7.71-33.537,18.132-46.672,31.267 c-13.135,13.129-23.559,28.688-31.265,46.677c-7.707,17.987-11.567,36.879-11.567,56.674v200.991 c0,15.235,5.332,28.171,15.988,38.834c10.657,10.657,23.6,15.985,38.828,15.985h109.633c15.229,0,28.171-5.328,38.827-15.985 c10.664-10.663,15.985-23.599,15.985-38.834V274.088C475.082,258.855,469.76,245.92,459.103,235.256z'/%3E%3C/svg%3E");
@@ -1177,7 +1239,7 @@ main .container--three .wrapper .content--bottom .programQuoteContainer h1::befo
   position: absolute;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer {
+.container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1190,11 +1252,11 @@ main .container--three .wrapper .content--bottom .programQuoteContainer .quoteBy
   gap: 2rem;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer img {
+.container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer img {
   border-radius: 50%;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy {
+.container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1205,16 +1267,36 @@ main .container--three .wrapper .content--bottom .programQuoteContainer .quoteBy
   gap: 1rem;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy h4 {
+.container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy h4 {
   text-transform: uppercase;
   font-weight: 100;
 }
 
-main .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy h4:first-child {
+.container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy h4:first-child {
   font-weight: 900;
 }
 
-main .container--four .wrapper {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--four .wrapper {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1226,7 +1308,7 @@ main .container--four .wrapper {
   gap: 5rem;
 }
 
-main .container--four .wrapper .content--top {
+.container--four .wrapper .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1237,13 +1319,13 @@ main .container--four .wrapper .content--top {
   gap: 5rem;
 }
 
-main .container--four .wrapper .content--top h1 {
+.container--four .wrapper .content--top h1 {
   font-size: 28px;
   color: #b13;
   font-weight: 100;
 }
 
-main .container--four .wrapper .content--top .learnOnline {
+.container--four .wrapper .content--top .learnOnline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1254,16 +1336,16 @@ main .container--four .wrapper .content--top .learnOnline {
   gap: 2rem;
 }
 
-main .container--four .wrapper .content--top .learnOnline .left {
+.container--four .wrapper .content--top .learnOnline .left {
   margin: -1rem;
 }
 
-main .container--four .wrapper .content--top .learnOnline .left img {
+.container--four .wrapper .content--top .learnOnline .left img {
   width: 100%;
   max-width: none;
 }
 
-main .container--four .wrapper .content--top .learnOnline .right {
+.container--four .wrapper .content--top .learnOnline .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1274,12 +1356,12 @@ main .container--four .wrapper .content--top .learnOnline .right {
   gap: 2rem;
 }
 
-main .container--four .wrapper .content--top .learnOnline .right p {
+.container--four .wrapper .content--top .learnOnline .right p {
   font-size: 20px;
   font-family: 'Crimson';
 }
 
-main .container--four .wrapper .content--top .learnOnline .right ul {
+.container--four .wrapper .content--top .learnOnline .right ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1289,7 +1371,7 @@ main .container--four .wrapper .content--top .learnOnline .right ul {
           flex-direction: column;
 }
 
-main .container--four .wrapper .content--top .learnOnline .right ul li {
+.container--four .wrapper .content--top .learnOnline .right ul li {
   list-style: none;
   padding: 1rem 1rem 1rem 0;
   font-size: 22px;
@@ -1300,7 +1382,7 @@ main .container--four .wrapper .content--top .learnOnline .right ul li {
   border-top: 1px solid rgba(152, 119, 88, 0.3);
 }
 
-main .container--four .wrapper .content--top .learnOnline .right ul li::after {
+.container--four .wrapper .content--top .learnOnline .right ul li::after {
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_78_364)'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23997755'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_78_364'%3E%3Crect width='18' height='12.375' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: left;
@@ -1310,11 +1392,11 @@ main .container--four .wrapper .content--top .learnOnline .right ul li::after {
   margin-left: 0.25rem;
 }
 
-main .container--four .wrapper .content--top .learnOnline .right ul li:last-child {
+.container--four .wrapper .content--top .learnOnline .right ul li:last-child {
   border-bottom: 1px solid rgba(152, 119, 88, 0.3);
 }
 
-main .container--four .wrapper .content--bottom {
+.container--four .wrapper .content--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1325,7 +1407,7 @@ main .container--four .wrapper .content--bottom {
   gap: 2rem;
 }
 
-main .container--four .wrapper .content--bottom .titleDiv {
+.container--four .wrapper .content--bottom .titleDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1336,19 +1418,19 @@ main .container--four .wrapper .content--bottom .titleDiv {
   gap: 1rem;
 }
 
-main .container--four .wrapper .content--bottom .titleDiv h1 {
+.container--four .wrapper .content--bottom .titleDiv h1 {
   font-weight: 600;
   font-size: 32px;
   text-transform: capitalize;
 }
 
-main .container--four .wrapper .content--bottom .titleDiv h2 {
+.container--four .wrapper .content--bottom .titleDiv h2 {
   color: #8e6c4a;
   font-size: 19px;
   font-weight: 900;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer {
+.container--four .wrapper .content--bottom .courseContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,7 +1441,7 @@ main .container--four .wrapper .content--bottom .courseContainer {
   gap: 2rem;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer .courseLeft {
+.container--four .wrapper .content--bottom .courseContainer .courseLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1370,12 +1452,12 @@ main .container--four .wrapper .content--bottom .courseContainer .courseLeft {
   gap: 2rem;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer .courseLeft h2 {
+.container--four .wrapper .content--bottom .courseContainer .courseLeft h2 {
   font-size: 28px;
   font-weight: 900;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
+.container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1389,7 +1471,7 @@ main .container--four .wrapper .content--bottom .courseContainer .courseLeft ul 
   gap: 1rem;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer .courseLeft ul li {
+.container--four .wrapper .content--bottom .courseContainer .courseLeft ul li {
   list-style: none;
   font-size: 20px;
   font-weight: 900;
@@ -1403,7 +1485,7 @@ main .container--four .wrapper .content--bottom .courseContainer .courseLeft ul 
   gap: 1rem;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer .courseLeft ul li::before {
+.container--four .wrapper .content--bottom .courseContainer .courseLeft ul li::before {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.18248 8.27304C4.0661 8.27304 3.94972 8.22849 3.86062 8.14029L1.13297 5.41265C0.955676 5.23535 0.955676 4.94713 1.13297 4.76983C1.31027 4.59254 1.59849 4.59254 1.77579 4.76983L4.18157 7.17562L10.2242 1.13297C10.4015 0.955676 10.6897 0.955676 10.867 1.13297C11.0443 1.31027 11.0443 1.59849 10.867 1.77579L4.50252 8.14029C4.41342 8.2294 4.29704 8.27304 4.18066 8.27304H4.18248Z' fill='%23997755' stroke='%23997755'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
@@ -1413,16 +1495,36 @@ main .container--four .wrapper .content--bottom .courseContainer .courseLeft ul 
   border-radius: 50%;
 }
 
-main .container--four .wrapper .content--bottom .courseContainer .courseRight img {
+.container--four .wrapper .content--bottom .courseContainer .courseRight img {
   max-width: none;
   width: 100%;
 }
 
-main .container--five {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--five {
   background-color: #000;
 }
 
-main .container--five .wrapper {
+.container--five .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1434,7 +1536,7 @@ main .container--five .wrapper {
   padding: 1rem;
 }
 
-main .container--five .wrapper .content--top {
+.container--five .wrapper .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1448,14 +1550,34 @@ main .container--five .wrapper .content--top {
   gap: 2rem;
 }
 
-main .container--five .wrapper .content--top h2 {
+.container--five .wrapper .content--top h2 {
   color: #fff;
   font-weight: 500;
   text-align: center;
   font-size: 26px;
 }
 
-main .container--six .wrapper {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--six .wrapper {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1467,13 +1589,13 @@ main .container--six .wrapper {
   gap: 2rem;
 }
 
-main .container--six .wrapper .content--top h1 {
+.container--six .wrapper .content--top h1 {
   color: #b13;
   font-size: 32px;
   font-weight: 500;
 }
 
-main .container--six .wrapper .content--bottom {
+.container--six .wrapper .content--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1484,7 +1606,7 @@ main .container--six .wrapper .content--bottom {
   gap: 1rem;
 }
 
-main .container--six .wrapper .content--bottom .descriptionContainer {
+.container--six .wrapper .content--bottom .descriptionContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1501,7 +1623,7 @@ main .container--six .wrapper .content--bottom .descriptionContainer {
   gap: 2rem;
 }
 
-main .container--six .wrapper .content--bottom .descriptionContainer h2 {
+.container--six .wrapper .content--bottom .descriptionContainer h2 {
   text-transform: uppercase;
   color: #8e6c4a;
   text-align: center;
@@ -1510,7 +1632,7 @@ main .container--six .wrapper .content--bottom .descriptionContainer h2 {
   font-size: 28px;
 }
 
-main .container--six .wrapper .content--bottom .descriptionContainer ul {
+.container--six .wrapper .content--bottom .descriptionContainer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1524,7 +1646,7 @@ main .container--six .wrapper .content--bottom .descriptionContainer ul {
   gap: 3rem;
 }
 
-main .container--six .wrapper .content--bottom .descriptionContainer ul li {
+.container--six .wrapper .content--bottom .descriptionContainer ul li {
   list-style: none;
   font-size: 24px;
   font-weight: 700;
@@ -1538,7 +1660,7 @@ main .container--six .wrapper .content--bottom .descriptionContainer ul li {
   gap: 2rem;
 }
 
-main .container--six .wrapper .content--bottom .descriptionContainer ul li::before {
+.container--six .wrapper .content--bottom .descriptionContainer ul li::before {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/05/checkmark-2x-red.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -1548,7 +1670,7 @@ main .container--six .wrapper .content--bottom .descriptionContainer ul li::befo
   background-size: contain;
 }
 
-main .container--six .wrapper .content--bottom .videoContainer {
+.container--six .wrapper .content--bottom .videoContainer {
   min-height: 300px;
   margin: -1rem;
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/Escoffier-student-rolling-dough.jpg");
@@ -1566,7 +1688,7 @@ main .container--six .wrapper .content--bottom .videoContainer {
           justify-content: center;
 }
 
-main .container--six .wrapper .content--bottom .videoContainer .playButton {
+.container--six .wrapper .content--bottom .videoContainer .playButton {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png");
   background-position: center;
   background-size: contain;
@@ -1574,7 +1696,27 @@ main .container--six .wrapper .content--bottom .videoContainer .playButton {
   padding: 1.5rem;
 }
 
-main .container--seven .wrapper {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--seven .wrapper {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1586,7 +1728,7 @@ main .container--seven .wrapper {
   gap: 2rem;
 }
 
-main .container--seven .wrapper .content--top {
+.container--seven .wrapper .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1595,13 +1737,13 @@ main .container--seven .wrapper .content--top {
           align-items: center;
 }
 
-main .container--seven .wrapper .content--top h1 {
+.container--seven .wrapper .content--top h1 {
   color: #b13;
   font-size: 32px;
   font-weight: 500;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer {
+.container--seven .wrapper .content--bottom .studentsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1612,7 +1754,7 @@ main .container--seven .wrapper .content--bottom .studentsContainer {
   gap: 3rem;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1623,21 +1765,21 @@ main .container--seven .wrapper .content--bottom .studentsContainer .studentCard
   gap: 1rem;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle {
   color: #8e6c4a;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle span:first-child {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle span:first-child {
   font-weight: 500;
   font-size: 20px;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle span {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle span {
   font-weight: 900;
   font-size: 28px;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1655,7 +1797,7 @@ main .container--seven .wrapper .content--bottom .studentsContainer .studentCard
   background-repeat: no-repeat;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer .playButton {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer .playButton {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png");
   background-position: center;
   background-size: contain;
@@ -1663,36 +1805,56 @@ main .container--seven .wrapper .content--bottom .studentsContainer .studentCard
   padding: 1.5rem;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='two'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='two'] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/wyl-lima.jpg");
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='three'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='three'] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/lance-mcwhorter-1.jpg");
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='four'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='four'] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/jennifer-etzkin.jpg");
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='five'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='five'] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/academics-culinary-arts.jpg");
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='six'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='six'] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/holden-oleary.jpg");
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo {
   color: #5c6b80;
   font-weight: 100;
 }
 
-main .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo strong {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo strong {
   text-transform: uppercase;
 }
 
-main .container--eight .wrapper {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--eight .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1704,13 +1866,13 @@ main .container--eight .wrapper {
   padding: 1rem;
 }
 
-main .container--eight .content--top h1 {
+.container--eight .content--top h1 {
   color: #b13;
   font-size: 32px;
   font-weight: 800;
 }
 
-main .container--eight .content--bottom {
+.container--eight .content--bottom {
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -1719,11 +1881,31 @@ main .container--eight .content--bottom {
       grid-template-columns: repeat(2, 1fr);
 }
 
-main .container--eight .content--bottom img {
+.container--eight .content--bottom img {
   max-width: 100px;
 }
 
-main .container--nine {
+@font-face {
+  font-family: 'Lato-Black';
+  src: url("../assets/fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../assets/fonts/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: 'TradeGothic';
+  src: url("../assets/fonts/Trade Gothic LT.ttf");
+}
+
+@font-face {
+  font-family: 'CrimsonText';
+  src: url("../assets/fonts/CrimsonText-Regular.ttf");
+}
+
+.container--nine {
   background-image: url("../assets/images/chef-finishing-plated-dish.jpg");
   background-size: cover;
   background-position: 50% 20%;
@@ -1731,7 +1913,7 @@ main .container--nine {
   color: #fff;
 }
 
-main .container--nine .wrapper {
+.container--nine .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1743,7 +1925,7 @@ main .container--nine .wrapper {
   padding: 1rem;
 }
 
-main .container--nine .wrapper .content--top {
+.container--nine .wrapper .content--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1758,19 +1940,19 @@ main .container--nine .wrapper .content--top {
   text-align: center;
 }
 
-main .container--nine .wrapper .content--top h1 {
+.container--nine .wrapper .content--top h1 {
   font-size: 32px;
   text-transform: uppercase;
   position: relative;
 }
 
-main .container--nine .wrapper .content--top hr {
+.container--nine .wrapper .content--top hr {
   height: 1px;
   width: 20px;
   border-color: #b13;
 }
 
-main .container--nine .wrapper .content--bottom .chooseUsContainer {
+.container--nine .wrapper .content--bottom .chooseUsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1781,7 +1963,7 @@ main .container--nine .wrapper .content--bottom .chooseUsContainer {
   gap: 5rem;
 }
 
-main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+.container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1796,20 +1978,59 @@ main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard
   gap: 1rem;
 }
 
-main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard img {
+.container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard img {
   max-width: 80px;
 }
 
-main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h4 {
+.container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h4 {
   font-size: 24px;
 }
 
-main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h5 {
+.container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h5 {
   text-transform: uppercase;
   font-size: 14px;
 }
 
-main .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard p {
+.container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard p {
   font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 200px;
+}
+
+button {
+  background-color: #b13;
+  color: #fff;
+  padding: 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  font-family: 'TradeGothic';
+  font-size: 22px;
+  font-weight: 900;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main {
+  margin-top: 5rem;
+  font-family: 'TradeGothic';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
 }
 /*# sourceMappingURL=style.css.map */

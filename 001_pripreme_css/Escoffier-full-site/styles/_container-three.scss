@@ -1,0 +1,171 @@
+@import './variables';
+@import './fonts';
+
+.container--three {
+	.wrapper {
+		padding: 1rem;
+
+		.content--top {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+
+			h1 {
+				font-size: 28px;
+				color: $main-red-color;
+				font-weight: 100;
+			}
+
+			h5 {
+				font-size: 18px;
+				font-family: 'CrimsonText';
+				font-weight: 600;
+			}
+
+			ul {
+				li {
+					list-style: none;
+					padding: 2rem 0 0 2rem;
+					background-position: top 35px left 10px;
+					background-repeat: no-repeat;
+					background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMTcnIHZpZXdCb3g9JzAgMCAyNCAxNycgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTYuMTU3NSAwLjI0NTkzNUMxNS44Mjk4IC0wLjA4MTk3ODMgMTUuMjg4NyAtMC4wODE5NzgzIDE0Ljk0NTcgMC4yNDU5MzVDMTQuNjE4IDAuNTY2Mzk2IDE0LjYxOCAxLjA5NTUzIDE0Ljk0NTcgMS40MTU5OUwyMS4wODEgNy40MTUzMUgwLjg0NTk4M0MwLjM3MzQ1MiA3LjQxNTMxIDAgNy43ODA0OSAwIDguMjQyNTVDMCA4LjcwNDYxIDAuMzczNDUyIDkuMDg0NjkgMC44NDU5ODMgOS4wODQ2OUgyMS4wODFMMTQuOTQ1NyAxNS4wNjkxQzE0LjYxOCAxNS4zOTcgMTQuNjE4IDE1LjkzMzYgMTQuOTQ1NyAxNi4yNTQxQzE1LjI4MSAxNi41ODIgMTUuODI5OCAxNi41ODIgMTYuMTU3NSAxNi4yNTQxTDIzLjc0MDkgOC44Mzg3NUMyNC4wNzYyIDguNTE4MjkgMjQuMDc2MiA3Ljk4OTE2IDIzLjc0MDkgNy42Njg3TDE2LjE1NzUgMC4yNDU5MzVaJyBmaWxsPScjQkIxMTMzJy8+PC9zdmc+Cg==');
+
+					p {
+						font-size: 22px;
+						font-weight: 900;
+						padding-left: 1rem;
+						color: $card-text-color;
+
+						a {
+							color: $main-red-color;
+						}
+					}
+				}
+			}
+		}
+
+		.content--bottom {
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+
+			.programsContainer {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				padding-top: 2rem;
+
+				a {
+					text-decoration: none;
+				}
+
+				.programCard {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					background-color: $card-background-color;
+
+					.programBackground {
+						width: 100%;
+
+						img {
+							max-width: none;
+							width: 100%;
+							height: 100%;
+							object-fit: contain;
+						}
+					}
+
+					.programText {
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+						padding: 2rem 1rem;
+						color: $black-color;
+
+						h2 {
+							text-transform: uppercase;
+							color: $main-text-color-dark;
+							font-weight: 900;
+							font-size: 20px;
+						}
+
+						p {
+							font-size: 18px;
+							font-weight: 900;
+						}
+
+						span {
+							font-size: 20px;
+							text-transform: uppercase;
+							color: $card-back-text-color;
+							font-weight: 900;
+							text-decoration: underline;
+
+							&::after {
+								background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_78_364)'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23997755'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_78_364'%3E%3Crect width='18' height='12.375' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+								background-repeat: no-repeat;
+								background-position: left;
+								background-size: contain;
+								padding: 0.5rem;
+								content: '';
+								margin-left: 0.25rem;
+							}
+						}
+					}
+				}
+			}
+
+			.programQuoteContainer {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+
+				h1 {
+					font-size: 32px;
+					color: $card-back-text-color;
+					font-weight: 100;
+					margin-left: 3rem;
+
+					&::before {
+						padding: 1rem;
+
+						content: '';
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 475.082 475.081' xml:space='preserve'%3E%3Cpath fill='%23997755' d='M164.45,219.27h-63.954c-7.614,0-14.087-2.664-19.417-7.994c-5.327-5.33-7.994-11.801-7.994-19.417v-9.132 c0-20.177,7.139-37.401,21.416-51.678c14.276-14.272,31.503-21.411,51.678-21.411h18.271c4.948,0,9.229-1.809,12.847-5.424 c3.616-3.617,5.424-7.898,5.424-12.847V54.819c0-4.948-1.809-9.233-5.424-12.85c-3.617-3.612-7.898-5.424-12.847-5.424h-18.271 c-19.797,0-38.684,3.858-56.673,11.563c-17.987,7.71-33.545,18.132-46.68,31.267c-13.134,13.129-23.553,28.688-31.262,46.677 C3.855,144.039,0,162.931,0,182.726v200.991c0,15.235,5.327,28.171,15.986,38.834c10.66,10.657,23.606,15.985,38.832,15.985 h109.639c15.225,0,28.167-5.328,38.828-15.985c10.657-10.663,15.987-23.599,15.987-38.834V274.088 c0-15.232-5.33-28.168-15.994-38.832C192.622,224.6,179.675,219.27,164.45,219.27z'/%3E%3Cpath fill='%23997755' d='M459.103,235.256c-10.656-10.656-23.599-15.986-38.828-15.986h-63.953c-7.61,0-14.089-2.664-19.41-7.994 c-5.332-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177,7.139-37.401,21.409-51.678c14.271-14.272,31.497-21.411,51.682-21.411 h18.267c4.949,0,9.233-1.809,12.848-5.424c3.613-3.617,5.428-7.898,5.428-12.847V54.819c0-4.948-1.814-9.233-5.428-12.85 c-3.614-3.612-7.898-5.424-12.848-5.424h-18.267c-19.808,0-38.691,3.858-56.685,11.563c-17.984,7.71-33.537,18.132-46.672,31.267 c-13.135,13.129-23.559,28.688-31.265,46.677c-7.707,17.987-11.567,36.879-11.567,56.674v200.991 c0,15.235,5.332,28.171,15.988,38.834c10.657,10.657,23.6,15.985,38.828,15.985h109.633c15.229,0,28.171-5.328,38.827-15.985 c10.664-10.663,15.985-23.599,15.985-38.834V274.088C475.082,258.855,469.76,245.92,459.103,235.256z'/%3E%3C/svg%3E");
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-position: center;
+						left: 1rem;
+						position: absolute;
+					}
+				}
+
+				.quoteByContainer {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 2rem;
+
+					img {
+						border-radius: 50%;
+					}
+
+					.quoteBy {
+						display: flex;
+						flex-direction: column;
+						gap: 1rem;
+
+						h4 {
+							text-transform: uppercase;
+							font-weight: 100;
+						}
+
+						& h4:first-child {
+							font-weight: 900;
+						}
+					}
+				}
+			}
+		}
+	}
+}

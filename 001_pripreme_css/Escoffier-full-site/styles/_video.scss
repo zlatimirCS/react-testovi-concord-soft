@@ -1,0 +1,80 @@
+@import './variables';
+@import './fonts';
+
+.video {
+	height: 80vh;
+	display: flex;
+	font-family: 'TradeGothic';
+
+	.videoContainer {
+		display: flex;
+		flex-direction: column;
+
+		video {
+			flex: 1;
+
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+		}
+
+		.enrollmentVideoBanner {
+			background-color: rgba($color: #000000, $alpha: 0.9);
+			color: $header-text-color;
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+			gap: 1rem;
+			position: relative;
+
+			.videoControls {
+				position: absolute;
+				top: -70px;
+				right: 0;
+				gap: 1rem;
+				padding: 1rem;
+				display: flex;
+
+				.play,
+				.pause {
+					border-radius: 50%;
+					background-position: center;
+					padding: 1rem;
+					background-repeat: no-repeat;
+					cursor: pointer;
+				}
+
+				.play {
+					background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white'/%3E%3Cpath d='M20.6637 15.2581L13.7887 11.3794C13.5642 11.2511 13.3097 11.1845 13.0511 11.1865C12.7925 11.1885 12.539 11.2589 12.3165 11.3906C12.0997 11.5146 11.9196 11.6938 11.7944 11.9099C11.6693 12.1261 11.6036 12.3715 11.604 12.6213V20.3788C11.6036 20.6285 11.6693 20.8739 11.7944 21.0901C11.9196 21.3062 12.0997 21.4854 12.3165 21.6094C12.5391 21.7411 12.7925 21.8114 13.0511 21.8134C13.3097 21.8154 13.5642 21.7489 13.7887 21.6206L20.6637 17.7419C20.8854 17.6191 21.0702 17.4391 21.1989 17.2207C21.3276 17.0023 21.3954 16.7535 21.3954 16.5C21.3954 16.2465 21.3276 15.9977 21.1989 15.7793C21.0702 15.5609 20.8854 15.381 20.6637 15.2581Z' fill='black'/%3E%3C/svg%3E%0A");
+
+					&:hover {
+						background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='black'/%3E%3Cpath d='M20.6637 15.2581L13.7887 11.3794C13.5642 11.2511 13.3097 11.1845 13.0511 11.1865C12.7925 11.1885 12.539 11.2589 12.3165 11.3906C12.0997 11.5146 11.9196 11.6938 11.7944 11.9099C11.6693 12.1261 11.6036 12.3715 11.604 12.6213V20.3788C11.6036 20.6285 11.6693 20.8739 11.7944 21.0901C11.9196 21.3062 12.0997 21.4854 12.3165 21.6094C12.5391 21.7411 12.7925 21.8114 13.0511 21.8134C13.3097 21.8154 13.5642 21.7489 13.7887 21.6206L20.6637 17.7419C20.8854 17.6191 21.0702 17.4391 21.1989 17.2207C21.3276 17.0023 21.3954 16.7535 21.3954 16.5C21.3954 16.2465 21.3276 15.9977 21.1989 15.7793C21.0702 15.5609 20.8854 15.381 20.6637 15.2581Z' fill='white'/%3E%3C/svg%3E%0A");
+					}
+				}
+
+				.pause {
+					background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white'/%3E%3Cpath d='M13.3466 22C12.6857 22 12.1503 21.4643 12.1503 20.8037V12.1963C12.1503 11.5352 12.6857 11 13.3466 11C14.0074 11 14.5429 11.5355 14.5429 12.1963V20.8037C14.5429 21.4645 14.0076 22 13.3466 22Z' fill='black'/%3E%3Cpath d='M17.6532 22C16.9924 22 16.4569 21.4643 16.4569 20.8037V12.1963C16.4569 11.5355 16.9924 11 17.6532 11C18.314 11 18.8495 11.5355 18.8495 12.1963V20.8037C18.8495 21.4643 18.314 22 17.6532 22Z' fill='black'/%3E%3C/svg%3E%0A");
+
+					&:hover {
+						background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='black'/%3E%3Cpath d='M13.3466 22C12.6857 22 12.1503 21.4643 12.1503 20.8037V12.1963C12.1503 11.5352 12.6857 11 13.3466 11C14.0074 11 14.5429 11.5355 14.5429 12.1963V20.8037C14.5429 21.4645 14.0076 22 13.3466 22Z' fill='white'/%3E%3Cpath d='M17.6532 22C16.9924 22 16.4569 21.4643 16.4569 20.8037V12.1963C16.4569 11.5355 16.9924 11 17.6532 11C18.314 11 18.8495 11.5355 18.8495 12.1963V20.8037C18.8495 21.4643 18.314 22 17.6532 22Z' fill='white'/%3E%3C/svg%3E%0A");
+					}
+				}
+			}
+
+			h1 {
+				text-transform: uppercase;
+				font-size: 26px;
+				font-weight: 900;
+			}
+
+			h2 {
+				font-weight: 500;
+				font-size: 20px;
+			}
+
+			.bannerRight {
+				display: flex;
+			}
+		}
+	}
+}
