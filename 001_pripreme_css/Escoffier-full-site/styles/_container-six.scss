@@ -1,11 +1,20 @@
 @import './variables';
 @import './fonts';
 
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+%centered-content {
+	align-items: center;
+	justify-content: center;
+}
+
 .container--six {
 	.wrapper {
+		@extend %flex-column;
 		padding: 1rem;
-		display: flex;
-		flex-direction: column;
 		gap: 2rem;
 
 		.content--top {
@@ -17,15 +26,13 @@
 		}
 
 		.content--bottom {
-			display: flex;
+			@extend %flex-column;
 			flex-direction: column-reverse;
 			gap: 1rem;
 
 			.descriptionContainer {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+				@extend %flex-column;
+				@extend %centered-content;
 				gap: 2rem;
 
 				h2 {
@@ -38,9 +45,8 @@
 				}
 
 				ul {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
+					@extend %flex-column;
+					@extend %centered-content;
 					gap: 3rem;
 
 					li {
@@ -51,7 +57,6 @@
 						display: flex;
 						align-items: flex-start;
 						gap: 2rem;
-
 						&::before {
 							background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/05/checkmark-2x-red.png');
 							background-repeat: no-repeat;
@@ -64,6 +69,7 @@
 					}
 				}
 			}
+
 			.videoContainer {
 				min-height: 300px;
 				margin: -1rem;
@@ -71,9 +77,8 @@
 				background-position: center;
 				background-size: contain;
 				background-repeat: no-repeat;
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				@extend %flex-column;
+				@extend %centered-content;
 
 				.playButton {
 					background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png');

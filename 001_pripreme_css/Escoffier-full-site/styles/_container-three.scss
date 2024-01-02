@@ -1,19 +1,38 @@
 @import './variables';
 @import './fonts';
 
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+%centered-content {
+	align-items: center;
+	justify-content: center;
+}
+
+%common-heading-style {
+	font-weight: 100;
+	color: $main-red-color;
+}
+
+%common-text-style {
+	font-size: 22px;
+	font-weight: 900;
+	color: $card-text-color;
+}
+
 .container--three {
 	.wrapper {
 		padding: 1rem;
 
 		.content--top {
-			display: flex;
-			flex-direction: column;
+			@extend %flex-column;
 			gap: 1rem;
 
 			h1 {
+				@extend %common-heading-style;
 				font-size: 28px;
-				color: $main-red-color;
-				font-weight: 100;
 			}
 
 			h5 {
@@ -26,15 +45,11 @@
 				li {
 					list-style: none;
 					padding: 2rem 0 0 2rem;
-					background-position: top 35px left 10px;
-					background-repeat: no-repeat;
-					background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMTcnIHZpZXdCb3g9JzAgMCAyNCAxNycgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTYuMTU3NSAwLjI0NTkzNUMxNS44Mjk4IC0wLjA4MTk3ODMgMTUuMjg4NyAtMC4wODE5NzgzIDE0Ljk0NTcgMC4yNDU5MzVDMTQuNjE4IDAuNTY2Mzk2IDE0LjYxOCAxLjA5NTUzIDE0Ljk0NTcgMS40MTU5OUwyMS4wODEgNy40MTUzMUgwLjg0NTk4M0MwLjM3MzQ1MiA3LjQxNTMxIDAgNy43ODA0OSAwIDguMjQyNTVDMCA4LjcwNDYxIDAuMzczNDUyIDkuMDg0NjkgMC44NDU5ODMgOS4wODQ2OUgyMS4wODFMMTQuOTQ1NyAxNS4wNjkxQzE0LjYxOCAxNS4zOTcgMTQuNjE4IDE1LjkzMzYgMTQuOTQ1NyAxNi4yNTQxQzE1LjI4MSAxNi41ODIgMTUuODI5OCAxNi41ODIgMTYuMTU3NSAxNi4yNTQxTDIzLjc0MDkgOC44Mzg3NUMyNC4wNzYyIDguNTE4MjkgMjQuMDc2MiA3Ljk4OTE2IDIzLjc0MDkgNy42Njg3TDE2LjE1NzUgMC4yNDU5MzVaJyBmaWxsPScjQkIxMTMzJy8+PC9zdmc+Cg==');
+					background: url('data:image/svg+xml;base64,...') top 35px left 10px no-repeat;
 
 					p {
-						font-size: 22px;
-						font-weight: 900;
+						@extend %common-text-style;
 						padding-left: 1rem;
-						color: $card-text-color;
 
 						a {
 							color: $main-red-color;
@@ -45,13 +60,11 @@
 		}
 
 		.content--bottom {
-			display: flex;
-			flex-direction: column;
+			@extend %flex-column;
 			gap: 5rem;
 
 			.programsContainer {
-				display: flex;
-				flex-direction: column;
+				@extend %flex-column;
 				gap: 2rem;
 				padding-top: 2rem;
 
@@ -60,9 +73,8 @@
 				}
 
 				.programCard {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
+					@extend %flex-column;
+					@extend %centered-content;
 					background-color: $card-background-color;
 
 					.programBackground {
@@ -115,17 +127,15 @@
 					}
 				}
 			}
-
 			.programQuoteContainer {
-				display: flex;
-				flex-direction: column;
+				@extend %flex-column;
 				gap: 2rem;
 
 				h1 {
 					font-size: 32px;
-					color: $card-back-text-color;
-					font-weight: 100;
 					margin-left: 3rem;
+					font-weight: 100;
+					color: $card-back-text-color;
 
 					&::before {
 						padding: 1rem;
@@ -142,8 +152,7 @@
 
 				.quoteByContainer {
 					display: flex;
-					align-items: center;
-					justify-content: center;
+					@extend %centered-content;
 					gap: 2rem;
 
 					img {

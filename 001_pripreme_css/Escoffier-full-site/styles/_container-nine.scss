@@ -1,6 +1,16 @@
 @import './variables';
 @import './fonts';
 
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+%centered-content {
+	align-items: center;
+	justify-content: center;
+}
+
 .container--nine {
 	background-image: url('../assets/images/chef-finishing-plated-dish.jpg');
 	background-size: cover;
@@ -9,15 +19,13 @@
 	color: $header-button-text-color;
 
 	.wrapper {
-		display: flex;
-		flex-direction: column;
+		@extend %flex-column;
 		gap: 3rem;
 		padding: 1rem;
 
 		.content--top {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			@extend %flex-column;
+			@extend %centered-content;
 			gap: 1rem;
 			text-align: center;
 
@@ -36,15 +44,15 @@
 
 		.content--bottom {
 			.chooseUsContainer {
-				display: flex;
-				flex-direction: column;
+				@extend %flex-column;
 				gap: 5rem;
+				padding: 5rem 0rem;
 
 				.chooseUsCard {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
+					@extend %flex-column;
+					@extend %centered-content;
 					text-align: center;
+
 					gap: 1rem;
 
 					img {

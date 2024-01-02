@@ -1,6 +1,6 @@
 @import './variables';
 @import './fonts';
-@import './carousel.scss';
+@import './carousel';
 @import './header';
 @import './video';
 @import './container-one';
@@ -13,14 +13,41 @@
 @import './container-eight';
 @import './container-nine';
 
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+//Tu ce mozda neki h1 size u removima i mozda neki media query da to bude vise responsive
+// h1 {
+// 	font-size: 2em; // 32px equivalent
 
+// }
 
+// h2 {
+// 	font-size: 1.625em; // 26px equivalent
+
+// }
+
+// h3 {
+// 	font-size: 1.5em; // 24px equivalent
+
+// }
+
+// h4 {
+// 	font-size: 1.25em; // 20px equivalent
+
+// }
+
+// h5 {
+// 	font-size: 0.875em; // 14px equivalent
+
+// }
+
+// h6 {
+// 	font-size: 0.75em; // 12px equivalent
+
+// }
 
 img,
 video {
@@ -41,15 +68,10 @@ button {
 
 //Hamburger meni
 
-
-
-
-
 main {
 	margin-top: 5rem;
 	font-family: 'TradeGothic';
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
-
 }

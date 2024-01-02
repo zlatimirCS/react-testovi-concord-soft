@@ -518,6 +518,44 @@ li {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='24.174 106.118 436.686 265.01' width='436.686' height='265.01' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 225.547 364.1 L 31.204 169.756 C 21.831 160.383 21.831 145.187 31.204 135.815 L 53.871 113.148 C 63.228 103.791 78.393 103.773 87.772 113.108 L 242.518 267.129 L 397.263 113.108 C 406.642 103.773 421.807 103.791 431.164 113.148 L 453.831 135.815 C 463.204 145.188 463.204 160.384 453.831 169.756 L 259.489 364.1 C 250.116 373.472 234.92 373.472 225.547 364.1 Z'/%3E%3C/svg%3E");
 }
 
+header.headerScroll .wrapper .headerTop .headerTopUpper .logo img {
+  max-width: 20px;
+}
+
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li.dissapear {
+  display: none;
+}
+
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: block;
+}
+
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow,
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo {
+  white-space: nowrap;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow::before,
+header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo::before {
+  content: none;
+  background-image: none;
+}
+
+header.headerScroll .wrapper .headerTop .buttonContainer {
+  display: none;
+}
+
 header {
   font-family: 'Lato-Light';
   position: -webkit-sticky;
@@ -561,19 +599,35 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul {
 header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li {
   list-style-type: none;
   font-weight: 900;
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
 }
 
 header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li img {
   width: 20px;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 
-header .wrapper .headerTop .buttonContainer {
+header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: none;
+}
+
+.buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
-header .wrapper .headerTop .buttonContainer button {
+.buttonContainer button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -584,12 +638,12 @@ header .wrapper .headerTop .buttonContainer button {
   border-radius: 0;
 }
 
-header .wrapper .headerTop .buttonContainer .applyNow {
+.buttonContainer .applyNow {
   background-color: #e1e1e1;
   color: #252525;
 }
 
-header .wrapper .headerTop .buttonContainer .applyNow::before {
+.buttonContainer .applyNow::before {
   content: ' ';
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1792 1824' style='enable-background:new 0 0 1792 1824;' xml:space='preserve'%3E%3Cpath d='M1764,43c22,16,31,37.3,27,64l-256,1536c-3.3,19.3-14,34.3-32,45c-9.3,5.3-19.7,8-31,8c-7.3,0-15.3-1.7-24-5l-527-215 l-298,327c-12,14-27.7,21-47,21c-9.3,0-17-1.3-23-4c-12.7-4.7-22.7-12.5-30-23.5s-11-23.2-11-36.5v-452L40,1115 c-24.7-9.3-38-27.7-40-55c-2-26,8.7-45.7,32-59L1696,41C1719.3,27,1742,27.7,1764,43z M1422,1542l221-1323L209,1046l336,137l863-639 l-478,797L1422,1542z'/%3E%3C/svg%3E");
@@ -602,12 +656,12 @@ header .wrapper .headerTop .buttonContainer .applyNow::before {
   vertical-align: middle;
 }
 
-header .wrapper .headerTop .buttonContainer .requestInfo {
+.buttonContainer .requestInfo {
   background-color: #b13;
   color: #fff;
 }
 
-header .wrapper .headerTop .buttonContainer .requestInfo::before {
+.buttonContainer .requestInfo::before {
   content: '';
   display: inline-block;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='138.832 50.522 182.716 402' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(1, 0, 0, 1, 29.191046, 50.521725)'%3E%3Cg%3E%3Cpath d='M164.454,91.363h73.098c4.945,0,9.226-1.807,12.847-5.424c3.61-3.614,5.421-7.898,5.421-12.847V18.274 c0-4.948-1.811-9.229-5.428-12.85C246.777,1.812,242.49,0,237.544,0h-73.091c-4.946,0-9.229,1.812-12.847,5.424 c-3.615,3.617-5.424,7.902-5.424,12.85v54.818c0,4.949,1.809,9.233,5.424,12.847C155.224,89.556,159.507,91.363,164.454,91.363z' style='fill: rgb(255, 255, 255);'/%3E%3Cpath d='M286.936,334.331c-3.613-3.617-7.897-5.427-12.847-5.427h-18.274V164.452c0-4.947-1.807-9.229-5.421-12.845 c-3.62-3.617-7.904-5.426-12.847-5.426H127.912c-4.949,0-9.231,1.809-12.847,5.426c-3.618,3.616-5.424,7.898-5.424,12.845v36.547 c0,4.946,1.807,9.231,5.424,12.845c3.615,3.621,7.898,5.428,12.847,5.428h18.274v109.633h-18.274 c-4.949,0-9.231,1.81-12.847,5.427c-3.618,3.614-5.424,7.898-5.424,12.847v36.546c0,4.948,1.807,9.232,5.424,12.854 c3.615,3.61,7.898,5.421,12.847,5.421h146.177c4.949,0,9.233-1.811,12.847-5.421c3.614-3.621,5.421-7.905,5.421-12.854v-36.546 C292.357,342.229,290.56,337.945,286.936,334.331z' style='fill: rgb(255, 255, 255);'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -756,7 +810,9 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
-.container--one .content--top {
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -764,56 +820,39 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
-  padding: 3rem 1rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.85))), url("../assets/images/ducasse-paris.jpeg");
-  background-image: linear-gradient(to bottom, rgba(244, 244, 244, 0.85)), url("../assets/images/ducasse-paris.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-.container--one .content--top h2 {
+.container--one .content--top {
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.85))), url("../assets/images/ducasse-paris.jpeg") center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(244, 244, 244, 0.85)), url("../assets/images/ducasse-paris.jpeg") center/cover no-repeat;
+}
+
+.container--one .content--top h2,
+.container--one .content--top p a {
   color: #b13;
-  font-size: 30px;
   font-weight: 100;
 }
 
 .container--one .content--top p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   font-size: 20px;
   font-weight: 500;
   gap: 0.5rem;
 }
 
 .container--one .content--top p a {
-  color: #252525;
   font-weight: 900;
+  color: #252525;
 }
 
 .container--one .content--top p a::after {
   content: '';
-  background-image: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_22_2)'%3E%3Cpath d='M12.1181 0.223577C11.8723 -0.0745258 11.4665 -0.0745258 11.2093 0.223577C10.9635 0.514905 10.9635 0.995935 11.2093 1.28726L15.8107 6.74119H0.634487C0.280089 6.74119 0 7.07317 0 7.49323C0 7.91328 0.280089 8.25881 0.634487 8.25881H15.8107L11.2093 13.6992C10.9635 13.9973 10.9635 14.4851 11.2093 14.7764C11.4608 15.0745 11.8723 15.0745 12.1181 14.7764L17.8057 8.03523C18.0572 7.7439 18.0572 7.26287 17.8057 6.97155L12.1181 0.223577Z' fill='%23252525'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_22_2'%3E%3Crect width='18' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
-  width: 20px;
+  background: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_22_2)'%3E%3Cpath d='M12.1181 0.223577C11.8723 -0.0745258 11.4665 -0.0745258 11.2093 0.223577C10.9635 0.514905 10.9635 0.995935 11.2093 1.28726L15.8107 6.74119H0.634487C0.280089 6.74119 0 7.07317 0 7.49323C0 7.91328 0.280089 8.25881 0.634487 8.25881H15.8107L11.2093 13.6992C10.9635 13.9973 10.9635 14.4851 11.2093 14.7764C11.4608 15.0745 11.8723 15.0745 12.1181 14.7764L17.8057 8.03523C18.0572 7.7439 18.0572 7.26287 17.8057 6.97155L12.1181 0.223577Z' fill='%23252525'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_22_2'%3E%3Crect width='18' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") center/20px no-repeat;
   padding: 1rem;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .container--one .content--bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding: 0.5rem;
   gap: 1rem;
 }
@@ -821,9 +860,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 .container--one .content--bottom .cardContent {
   height: 20em;
   background-color: #f4f4f4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -838,7 +874,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 
 .container--one .content--bottom .cardContent:hover .cardFront {
   visibility: hidden;
-  background-color: blue;
   opacity: 0;
 }
 
@@ -853,13 +888,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 
 .container--one .content--bottom .cardContent .cardFront {
   padding: 5rem 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -879,19 +907,21 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   max-width: 50px;
 }
 
+.container--one .content--bottom .cardContent .cardFront h2,
+.container--one .content--bottom .cardContent .cardFront p {
+  text-align: center;
+  font-weight: 900;
+}
+
 .container--one .content--bottom .cardContent .cardFront h2 {
   text-transform: uppercase;
-  text-align: center;
   letter-spacing: -2px;
-  color: #b13;
-  font-weight: 900;
   font-size: 30px;
+  color: #b13;
 }
 
 .container--one .content--bottom .cardContent .cardFront p {
   font-family: 'Lato-Light';
-  text-align: center;
-  font-weight: 900;
   color: #5c6b80;
 }
 
@@ -924,32 +954,49 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container--two {
   color: #b13;
 }
 
-.container--two .wrapper {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom {
   gap: 2rem;
 }
 
+.container--two .wrapper {
+  padding: 1rem;
+}
+
 .container--two .content--top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 1rem;
   padding-top: 2rem;
+}
+
+.container--two .content--top h1,
+.container--two .content--top h4 {
+  font-weight: 600;
 }
 
 .container--two .content--top h1 {
@@ -960,25 +1007,10 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 .container--two .content--top h4 {
   color: #5c6b80;
   font-size: 22px;
-  font-weight: 600;
   line-height: 2rem;
 }
 
 .container--two .content--bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2rem;
   color: #5c6b80;
 }
 
@@ -987,29 +1019,10 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 2rem;
 }
 
 .container--two .content--bottom .takeQuizContainer .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 1rem;
   padding: 1rem;
 }
@@ -1028,16 +1041,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--two .content--bottom .takeQuizBottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 2rem;
   text-align: center;
 }
@@ -1068,11 +1071,9 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
-.container--three .wrapper {
-  padding: 1rem;
-}
-
-.container--three .wrapper .content--top {
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1080,13 +1081,39 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container--three .wrapper .content--top h1, .container--four .wrapper .content--top h1 {
+  font-weight: 100;
+  color: #b13;
+}
+
+.container--three .wrapper .content--top ul li p, .container--four .wrapper .content--top .learnOnline .right ul li {
+  font-size: 22px;
+  font-weight: 900;
+  color: #5c6b80;
+}
+
+.container--three .wrapper {
+  padding: 1rem;
+}
+
+.container--three .wrapper .content--top {
   gap: 1rem;
 }
 
 .container--three .wrapper .content--top h1 {
   font-size: 28px;
-  color: #b13;
-  font-weight: 100;
 }
 
 .container--three .wrapper .content--top h5 {
@@ -1098,16 +1125,11 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 .container--three .wrapper .content--top ul li {
   list-style: none;
   padding: 2rem 0 0 2rem;
-  background-position: top 35px left 10px;
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMTcnIHZpZXdCb3g9JzAgMCAyNCAxNycgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTYuMTU3NSAwLjI0NTkzNUMxNS44Mjk4IC0wLjA4MTk3ODMgMTUuMjg4NyAtMC4wODE5NzgzIDE0Ljk0NTcgMC4yNDU5MzVDMTQuNjE4IDAuNTY2Mzk2IDE0LjYxOCAxLjA5NTUzIDE0Ljk0NTcgMS40MTU5OUwyMS4wODEgNy40MTUzMUgwLjg0NTk4M0MwLjM3MzQ1MiA3LjQxNTMxIDAgNy43ODA0OSAwIDguMjQyNTVDMCA4LjcwNDYxIDAuMzczNDUyIDkuMDg0NjkgMC44NDU5ODMgOS4wODQ2OUgyMS4wODFMMTQuOTQ1NyAxNS4wNjkxQzE0LjYxOCAxNS4zOTcgMTQuNjE4IDE1LjkzMzYgMTQuOTQ1NyAxNi4yNTQxQzE1LjI4MSAxNi41ODIgMTUuODI5OCAxNi41ODIgMTYuMTU3NSAxNi4yNTQxTDIzLjc0MDkgOC44Mzg3NUMyNC4wNzYyIDguNTE4MjkgMjQuMDc2MiA3Ljk4OTE2IDIzLjc0MDkgNy42Njg3TDE2LjE1NzUgMC4yNDU5MzVaJyBmaWxsPScjQkIxMTMzJy8+PC9zdmc+Cg==");
+  background: url("data:image/svg+xml;base64,...") top 35px left 10px no-repeat;
 }
 
 .container--three .wrapper .content--top ul li p {
-  font-size: 22px;
-  font-weight: 900;
   padding-left: 1rem;
-  color: #5c6b80;
 }
 
 .container--three .wrapper .content--top ul li p a {
@@ -1115,24 +1137,10 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--three .wrapper .content--bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 5rem;
 }
 
 .container--three .wrapper .content--bottom .programsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2rem;
   padding-top: 2rem;
 }
@@ -1142,16 +1150,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--three .wrapper .content--bottom .programsContainer .programCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #f4f4f4;
 }
 
@@ -1211,21 +1209,14 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--three .wrapper .content--bottom .programQuoteContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2rem;
 }
 
 .container--three .wrapper .content--bottom .programQuoteContainer h1 {
   font-size: 32px;
-  color: #8e6c4a;
-  font-weight: 100;
   margin-left: 3rem;
+  font-weight: 100;
+  color: #8e6c4a;
 }
 
 .container--three .wrapper .content--bottom .programQuoteContainer h1::before {
@@ -1243,12 +1234,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 2rem;
 }
 
@@ -1296,8 +1281,9 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
-.container--four .wrapper {
-  padding: 1rem;
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,34 +1291,33 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.container--three .wrapper .content--top h1, .container--four .wrapper .content--top h1 {
+  font-weight: 100;
+  color: #b13;
+}
+
+.container--three .wrapper .content--top ul li p, .container--four .wrapper .content--top .learnOnline .right ul li {
+  font-size: 22px;
+  font-weight: 900;
+  color: #5c6b80;
+}
+
+.container--four .wrapper {
+  padding: 1rem;
   gap: 5rem;
 }
 
 .container--four .wrapper .content--top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 5rem;
 }
 
 .container--four .wrapper .content--top h1 {
   font-size: 28px;
-  color: #b13;
-  font-weight: 100;
 }
 
 .container--four .wrapper .content--top .learnOnline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2rem;
 }
 
@@ -1346,13 +1331,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--four .wrapper .content--top .learnOnline .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2rem;
 }
 
@@ -1361,34 +1339,22 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   font-family: 'Crimson';
 }
 
-.container--four .wrapper .content--top .learnOnline .right ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .container--four .wrapper .content--top .learnOnline .right ul li {
+  color: #8e6c4a;
   list-style: none;
   padding: 1rem 1rem 1rem 0;
-  font-size: 22px;
-  font-weight: 900;
   text-transform: uppercase;
-  color: #8e6c4a;
   text-decoration: underline;
   border-top: 1px solid rgba(152, 119, 88, 0.3);
 }
 
 .container--four .wrapper .content--top .learnOnline .right ul li::after {
-  background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_78_364)'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23997755'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_78_364'%3E%3Crect width='18' height='12.375' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23987757'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
   padding: 0.5rem;
-  content: '';
   margin-left: 0.25rem;
 }
 
@@ -1397,24 +1363,10 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--four .wrapper .content--bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2rem;
 }
 
 .container--four .wrapper .content--bottom .titleDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 1rem;
 }
 
@@ -1422,6 +1374,7 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   font-weight: 600;
   font-size: 32px;
   text-transform: capitalize;
+  color: #b13;
 }
 
 .container--four .wrapper .content--bottom .titleDiv h2 {
@@ -1442,13 +1395,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--four .wrapper .content--bottom .courseContainer .courseLeft {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 2rem;
 }
 
@@ -1458,13 +1404,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1486,11 +1425,11 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--four .wrapper .content--bottom .courseContainer .courseLeft ul li::before {
+  content: '';
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.18248 8.27304C4.0661 8.27304 3.94972 8.22849 3.86062 8.14029L1.13297 5.41265C0.955676 5.23535 0.955676 4.94713 1.13297 4.76983C1.31027 4.59254 1.59849 4.59254 1.77579 4.76983L4.18157 7.17562L10.2242 1.13297C10.4015 0.955676 10.6897 0.955676 10.867 1.13297C11.0443 1.31027 11.0443 1.59849 10.867 1.77579L4.50252 8.14029C4.41342 8.2294 4.29704 8.27304 4.18066 8.27304H4.18248Z' fill='%23997755' stroke='%23997755'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
   padding: 0.75rem;
-  content: '';
   border: 2px solid #8e6c4a;
   border-radius: 50%;
 }
@@ -1520,33 +1459,38 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container--five {
   background-color: #000;
 }
 
 .container--five .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 5rem;
   padding: 1rem;
 }
 
 .container--five .wrapper .content--top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 2rem;
 }
 
@@ -1577,8 +1521,9 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
-.container--six .wrapper {
-  padding: 1rem;
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1586,6 +1531,20 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container--six .wrapper {
+  padding: 1rem;
   gap: 2rem;
 }
 
@@ -1596,9 +1555,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--six .wrapper .content--bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -1607,19 +1563,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--six .wrapper .content--bottom .descriptionContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 2rem;
 }
 
@@ -1633,16 +1576,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--six .wrapper .content--bottom .descriptionContainer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 3rem;
 }
 
@@ -1677,15 +1610,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .container--six .wrapper .content--bottom .videoContainer .playButton {
@@ -1716,8 +1640,9 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
-.container--seven .wrapper {
-  padding: 1rem;
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1725,6 +1650,20 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container--seven .wrapper {
+  padding: 1rem;
   gap: 2rem;
 }
 
@@ -1732,9 +1671,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .container--seven .wrapper .content--top h1 {
@@ -1744,24 +1680,10 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--seven .wrapper .content--bottom .studentsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 3rem;
 }
 
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 1rem;
 }
 
@@ -1784,12 +1706,6 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-image: url("../assets/images/Michael-Pythoud.jpg");
   min-height: 200px;
   background-position: center;
@@ -1905,6 +1821,28 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
 
+.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.container--two .content--top,
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+
+.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container--nine {
   background-image: url("../assets/images/chef-finishing-plated-dish.jpg");
   background-size: cover;
@@ -1914,28 +1852,11 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--nine .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 3rem;
   padding: 1rem;
 }
 
 .container--nine .wrapper .content--top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 1rem;
   text-align: center;
 }
@@ -1953,27 +1874,11 @@ header .wrapper .headerTop .buttonContainer .requestInfo::before {
 }
 
 .container--nine .wrapper .content--bottom .chooseUsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   gap: 5rem;
+  padding: 5rem 0rem;
 }
 
 .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
   gap: 1rem;
 }
