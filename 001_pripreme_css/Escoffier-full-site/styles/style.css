@@ -336,8 +336,7 @@ li {
   bottom: 0;
   opacity: 0;
   transform: translateY(-100%);
-  transition: transform 400ms;
-  transition: opacity 500ms;
+  transition: opacity 0.4s;
 }
 .hamburgerMenu .menu li {
   font-size: 14px;
@@ -384,13 +383,13 @@ header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul
 }
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer {
   display: flex;
-  gap: 1rem;
 }
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo {
   white-space: nowrap;
   text-align: center;
   padding: 0.5rem;
+  text-transform: uppercase;
 }
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow::before,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo::before {

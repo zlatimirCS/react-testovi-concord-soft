@@ -54,8 +54,7 @@
 		bottom: 0;
 		opacity: 0;
 		transform: translateY(-100%);
-		transition: transform 400ms;
-		transition: opacity 500ms;
+		transition: opacity 0.4s;
 
 		li {
 			font-size: 14px;
@@ -113,13 +112,14 @@ header.headerScroll {
 
 								.buttonContainer {
 									display: flex;
-									gap: 1rem;
 
 									.applyNow,
 									.requestInfo {
 										white-space: nowrap;
 										text-align: center;
 										padding: 0.5rem;
+										text-transform: uppercase;
+
 										&::before {
 											content: none;
 											background-image: none;
