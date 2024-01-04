@@ -10,6 +10,11 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+p {
+	line-height: 1.2em;
+}
+
 body {
 	font-family: 'OpenSans';
 	font-size: 24px;
@@ -27,6 +32,7 @@ body {
 			color: lighten($color: $text-color, $amount: 20);
 		}
 	}
+
 	header {
 		display: flex;
 
@@ -173,6 +179,10 @@ body {
 					align-items: center;
 					justify-content: center;
 					gap: 1rem;
+
+					img {
+						max-height: 200px;
+					}
 
 					.featureText {
 						display: flex;
@@ -460,6 +470,13 @@ body {
 				align-items: center;
 				justify-content: center;
 				gap: 2rem;
+				text-align: left;
+
+				.sectionTwoTextContainer {
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+				}
 			}
 
 			.section--five {

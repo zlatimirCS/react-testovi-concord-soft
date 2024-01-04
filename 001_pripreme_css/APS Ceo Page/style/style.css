@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+p {
+  line-height: 1.2em;
+}
+
 body {
   font-family: "OpenSans";
   font-size: 24px;
@@ -151,6 +155,9 @@ body main .section--three .sectionThreeContainer .featureCard {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+body main .section--three .sectionThreeContainer .featureCard img {
+  max-height: 200px;
 }
 body main .section--three .sectionThreeContainer .featureCard .featureText {
   display: flex;
@@ -377,6 +384,12 @@ body footer .footerLower #scrollToTop {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+    text-align: left;
+  }
+  body main .section--two .sectionTwoTextContainer {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
   }
   body main .section--five {
