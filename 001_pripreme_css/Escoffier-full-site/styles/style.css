@@ -369,6 +369,9 @@ li {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='24.174 106.118 436.686 265.01' width='436.686' height='265.01' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 225.547 364.1 L 31.204 169.756 C 21.831 160.383 21.831 145.187 31.204 135.815 L 53.871 113.148 C 63.228 103.791 78.393 103.773 87.772 113.108 L 242.518 267.129 L 397.263 113.108 C 406.642 103.773 421.807 103.791 431.164 113.148 L 453.831 135.815 C 463.204 145.188 463.204 160.384 453.831 169.756 L 259.489 364.1 C 250.116 373.472 234.92 373.472 225.547 364.1 Z'/%3E%3C/svg%3E");
 }
 
+header.headerScroll {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
 header.headerScroll .wrapper .headerTop .headerTopUpper .logo img {
   max-width: 20px;
 }
@@ -599,10 +602,14 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   color: #b13;
   font-weight: 100;
 }
+.container--one .content--top h2 {
+  font-size: 2em;
+}
 .container--one .content--top p {
   font-size: 20px;
   font-weight: 500;
   gap: 0.5rem;
+  line-height: 2rem;
 }
 .container--one .content--top p a {
   font-weight: 900;
@@ -760,6 +767,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 }
 .container--two .content--bottom .takeQuizBottom button {
   flex: 1;
+  width: 100%;
 }
 
 @font-face {
@@ -1405,6 +1413,10 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 img,
