@@ -21,8 +21,6 @@ html {
 }
 
 img {
-	max-width: 100%;
-	max-height: 100%;
 	object-fit: contain;
 }
 body {
@@ -470,7 +468,7 @@ body {
 
 					.contactCard {
 						display: grid;
-						grid-template-columns: 1fr 5fr;
+						grid-template-columns: 25px 5fr;
 						align-items: center;
 						gap: 1rem;
 
