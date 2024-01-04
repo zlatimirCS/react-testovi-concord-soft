@@ -15,6 +15,12 @@
 	box-sizing: border-box;
 }
 
+img {
+	max-width: 50px;
+	max-height: 50px;
+	object-fit: contain;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -42,6 +48,7 @@ body {
 
 	main {
 		flex: 1;
+
 		.featureContainer {
 			display: flex;
 			justify-content: center;
@@ -58,18 +65,19 @@ body {
 				font-family: 'Lato-Black';
 
 				.circle {
-					position: relative;
+					z-index: 100;
+					width: 200px;
+					height: 200px;
+					border-radius: 50%;
+					overflow: hidden;
 					display: flex;
-					align-items: center;
 					justify-content: center;
+					align-items: center;
+
 					background-image: url('../assets/images/base.png');
 					background-repeat: no-repeat;
 					background-position: center;
-					padding: 5rem;
-					z-index: 100;
-					border-radius: 50%;
-					width: 50px;
-					height: 50px;
+					background-size: cover;
 
 					&:hover {
 						background-image: url('../assets/images/BaseDark.png');
