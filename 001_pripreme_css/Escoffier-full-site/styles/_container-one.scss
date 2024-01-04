@@ -36,6 +36,7 @@
 			a {
 				font-weight: 900;
 				color: $main-text-color-dark;
+				text-decoration: underline;
 
 				&::after {
 					content: '';

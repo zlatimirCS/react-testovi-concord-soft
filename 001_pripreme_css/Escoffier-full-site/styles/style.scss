@@ -1,18 +1,3 @@
-// @import './variables';
-// @import './fonts';
-// @import './carousel';
-// @import './header';
-// @import './video';
-// @import './container-one';
-// @import './container-two';
-// @import './container-three';
-// @import './container-four';
-// @import './container-five';
-// @import './container-six';
-// @import './container-seven';
-// @import './container-eight';
-// @import './container-nine';
-
 @import './base';
 
 * {
@@ -25,10 +10,10 @@ h1 {
 	font-size: 2em; // 32px equivalent
 }
 
-// h2 {
-// 	font-size: 1.625em; // 26px equivalent
-
-// }
+h2 {
+	// font-size: 1.625em; // 26px equivalent
+	// color: white;
+}
 
 // h3 {
 // 	font-size: 1.5em; // 24px equivalent
@@ -53,6 +38,10 @@ h1 {
 img,
 video {
 	max-width: 200px;
+}
+
+a {
+	text-decoration: none;
 }
 
 button {

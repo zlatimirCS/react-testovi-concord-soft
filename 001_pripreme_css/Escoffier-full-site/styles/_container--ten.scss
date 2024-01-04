@@ -1,0 +1,234 @@
+@import './variables';
+@import './fonts';
+
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.container--ten {
+	h2 {
+		font-size: 2em;
+		color: $main-red-color;
+		font-weight: 700;
+	}
+
+	h5 {
+		color: $card-text-color;
+		text-transform: uppercase;
+		font-family: 'Lato-Dark';
+		font-weight: 800;
+		font-size: 16px;
+		word-spacing: 0.5rem;
+	}
+
+	.wrapper {
+		@extend %flex-column;
+		padding: 1rem;
+		gap: 3rem;
+
+		.content--top {
+			@extend %flex-column;
+			gap: 3rem;
+
+			.blogContainer {
+				@extend %flex-column;
+				gap: 1rem;
+
+				.blogImageContainer {
+					max-height: 200px;
+					margin-top: 2rem;
+
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: contain;
+						max-width: none;
+					}
+				}
+
+				h3 {
+					color: $card-back-text-color;
+					font-size: 1.5em;
+				}
+
+				p {
+					color: $card-text-color;
+				}
+			}
+
+			.upcomingEventsContainer {
+				.upcomingEvents {
+					display: flex;
+					gap: 1rem;
+					margin-top: 2rem;
+					font-family: 'Lato-Light';
+
+					.dateContainer {
+						@extend %flex-column;
+						align-items: center;
+						color: $card-back-text-color;
+
+						& span:first-child {
+							font-size: 48px;
+							font-weight: 100;
+						}
+					}
+
+					.eventTitle {
+						@extend %flex-column;
+						gap: 0.5rem;
+						border-left: 1px solid #d4d4d4;
+						padding-left: 1rem;
+
+						h3 {
+							color: $card-back-text-color;
+							font-size: 1.25em;
+							font-family: 'TradeGothic';
+						}
+
+						a {
+							color: $card-text-color;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+
+			.latestNewsContainer {
+				@extend %flex-column;
+				gap: 1rem;
+
+				.newsContainer {
+					height: 400px;
+					padding-bottom: 1rem;
+					overflow: scroll;
+					@extend %flex-column;
+					gap: 1rem;
+					color: $card-text-color;
+
+					.newsCard {
+						@extend %flex-column;
+						gap: 0.5rem;
+
+						a {
+							color: $main-red-color;
+							font-family: 'Lato-Black';
+							font-size: 1em;
+						}
+
+						p {
+							font-size: 12px;
+						}
+
+						& p:first-of-type {
+							font-weight: 900;
+						}
+					}
+				}
+			}
+		}
+
+		.content--bottom {
+			.formContainer {
+				@extend %flex-column;
+
+				background-color: $card-background-color;
+				margin: -1rem;
+				padding: 1rem;
+				margin-top: 5rem;
+				gap: 1rem;
+
+				h1 {
+					text-align: center;
+					text-transform: uppercase;
+					font-size: 2em;
+					font-weight: 900;
+				}
+
+				form {
+					@extend %flex-column;
+					gap: 0.5rem;
+
+					span {
+						color: $main-red-color;
+					}
+
+					.formFieldWrapper {
+						position: relative;
+						flex: 1;
+
+						label {
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							left: 14px;
+							transition: all 0.5s;
+						}
+
+						input {
+							width: 100%;
+							height: 40px;
+							border: 0px;
+							outline: 1px solid $form-outline;
+							border-radius: 0.25rem;
+							font-size: 16px;
+							padding: 0.75rem 1rem 0 0.75rem;
+
+							&:not(:placeholder-shown) {
+								~ label {
+									font-size: 12px;
+									top: 20%;
+								}
+							}
+
+							&:focus {
+								~ label {
+									font-size: 12px;
+									top: 20%;
+								}
+							}
+						}
+					}
+
+					select {
+						width: 100%;
+						height: 40px;
+						border: 0px;
+						outline: 1px solid $form-outline;
+						border-radius: 0.25rem;
+						font-size: 16px;
+						padding: 0.75rem 1rem 0 0.75rem;
+						appearance: none;
+						background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTInIGhlaWdodD0nNicgdmlld0JveD0nMCAwIDEyIDYnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTYgNkwwLjgwMzg0OCAwLjIxNDI4NkgxMS4xOTYyTDYgNlonIGZpbGw9JyM1OTU5NTknLz48L3N2Zz4K');
+						background-repeat: no-repeat;
+						background-position: calc(100% - 10px) center;
+
+						&:valid ~ label {
+							font-size: 12px;
+							top: 20%;
+							left: 16px;
+						}
+					}
+
+					button {
+						width: 100%;
+						padding: 1rem;
+						font-size: 22px;
+					}
+				}
+
+				p {
+					font-size: 12px;
+					line-height: 12px;
+					color: $header-link-color;
+
+					a {
+						text-decoration: underline;
+						color: $header-link-color;
+					}
+				}
+			}
+		}
+	}
+}

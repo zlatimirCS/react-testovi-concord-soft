@@ -667,28 +667,62 @@
 					<div class="content content--top">
 						<div class="blogContainer">
 							<h2>Escoffier Blog</h2>
-							<h5>More</h5>
+							<h5>More ></h5>
 							<div class="blogImageContainer">
-								<img src="" alt="blog image" />
+								<img src="https://www.escoffier.edu/wp-content/uploads/2024/01/A-charcuterie-board-under-a-spotlight-containing-pita-chips-folded-meats-sliced-strawberries-colby-jack-cheese-and-more.-768x512-1.png" alt="blog image" />
 							</div>
 							<h5>December 21,2023</h5>
 							<h3>How to Find Work-Life Balance as a Chef</h3>
 							<p>You love being a chef, but it can be a tough job. We’ll show you how you can find work-life balance as a professional chef.</p>
 						</div>
-						<div class="UpcomingEventsContainer">
+						<div class="upcomingEventsContainer">
 							<h2>Upcoming Events</h2>
-							<h5>More</h5>
+							<h5>More ></h5>
 							<div class="upcomingEvents">
-								<h4>13 Nov</h4>
-								<h3>Escoffier Crown Scholarship Competition: The Gingerbread Structure Spectacle</h3>
-								<a href="#">VIRTUAL</a>
+								<div class="dateContainer"><span>13</span><span> Nov</span></div>
+								<div class="eventTitle">
+									<h3>Escoffier Crown Scholarship Competition: The Gingerbread Structure Spectacle</h3>
+									<a href="#">Virtual</a>
+								</div>
 							</div>
+						</div>
+						<div class="openHousesContainer">
 							<h2>Open Houses</h2>
-							<h5>More</h5>
+							<h5>More ></h5>
 						</div>
 						<div class="latestNewsContainer">
 							<h2>Latest News</h2>
 							<div class="newsContainer">
+								<div class="newsCard">
+									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
+									<p>September 28, 2023 | Yours Bulletin</p>
+									<p>Texas Christian University, then later went to Boulder’s Auguste Escoffier School of Culinary Arts and worked at Denver restaurant Root Down ...</p>
+								</div>
+								<div class="newsCard">
+									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
+									<p>September 28, 2023 | Yours Bulletin</p>
+									<p>Texas Christian University, then later went to Boulder’s Auguste Escoffier School of Culinary Arts and worked at Denver restaurant Root Down ...</p>
+								</div>
+								<div class="newsCard">
+									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
+									<p>September 28, 2023 | Yours Bulletin</p>
+									<p>Texas Christian University, then later went to Boulder’s Auguste Escoffier School of Culinary Arts and worked at Denver restaurant Root Down ...</p>
+								</div>
+								<div class="newsCard">
+									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
+									<p>September 28, 2023 | Yours Bulletin</p>
+									<p>Texas Christian University, then later went to Boulder’s Auguste Escoffier School of Culinary Arts and worked at Denver restaurant Root Down ...</p>
+								</div>
+								<div class="newsCard">
+									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
+									<p>September 28, 2023 | Yours Bulletin</p>
+									<p>Texas Christian University, then later went to Boulder’s Auguste Escoffier School of Culinary Arts and worked at Denver restaurant Root Down ...</p>
+								</div>
+								<div class="newsCard">
+									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
+									<p>September 28, 2023 | Yours Bulletin</p>
+									<p>Texas Christian University, then later went to Boulder’s Auguste Escoffier School of Culinary Arts and worked at Denver restaurant Root Down ...</p>
+								</div>
 								<div class="newsCard">
 									<a href="#">Farm & Market hydroponic retail farm opens at edge of RiNo</a>
 									<p>September 28, 2023 | Yours Bulletin</p>
@@ -701,41 +735,50 @@
 						<div class="formContainer">
 							<h1>Request more information</h1>
 							<form action="">
-								<select name="capus" id="campus">
-									<option value="Online">Online</option>
-									<option value="Austin">Austin, TX</option>
-									<option value="Boulder">Boulder, CO</option>
-								</select>
-								<select name="program" id="program">
-									<option value="Online">Online</option>
-									<option value="Austin">Austin, TX</option>
-									<option value="Boulder">Boulder, CO</option>
-								</select>
 								<div class="formFieldWrapper">
+									<select name="campus" id="campus" required>
+										<option value="" selected></option>
+										<option value="Online">Online</option>
+										<option value="Austin">Austin, TX</option>
+										<option value="Boulder">Boulder, CO</option>
+									</select>
+									<label for="campus">Campus of Interest <span>*</span></label>
+								</div>
+								<div class="formFieldWrapper">
+									<select name="program" id="program" required>
+										<option value="" selected></option>
+										<option value="Online">Online</option>
+										<option value="Austin">Austin, TX</option>
+										<option value="Boulder">Boulder, CO</option>
+									</select>
+									<label for="firstName">Program of interest <span>*</span></label>
+								</div>
+								<div class="formFieldWrapper">
+									<input type="text" id="firstName" placeholder="" />
 									<label for="firstName">First Name <span>*</span></label>
-									<input type="text" id="firstName" />
 								</div>
 								<div class="formFieldWrapper">
+									<input type="text" id="lastName" placeholder="" />
 									<label for="lastName">Last Name <span>*</span></label>
-									<input type="text" id="lastName" />
 								</div>
 								<div class="formFieldWrapper">
+									<input type="text" id="email" placeholder="" />
 									<label for="email">Email <span>*</span></label>
-									<input type="text" id="email" />
 								</div>
 								<div class="formFieldWrapper">
+									<input type="text" id="phone" placeholder="" />
 									<label for="phone">Phone <span>*</span></label>
-									<input type="text" id="phone" />
 								</div>
 								<div class="buttonContainer">
 									<button>Send Request</button>
 								</div>
 							</form>
-							<p>
-								Clicking the "Send Request" button constitutes your express request, and your express written consent, to be contacted by and to receive automated or pre-recorded call, texts, messages and/or emails from via phone,
-								text, and/or emails by Auguste Escoffier School of Culinary Arts at the number(s)/email you provided, regarding furthering your education and enrolling. You understand that these calls, texts, messages and/or emails
-								may be generated using an automated or pre-recorded technology. You are not required to agree to receive automated or pre-recorded calls, texts, messages or emails as a condition of enrolling at Escoffier. You can
-								unsubscribe at any time or request removal of street address, phone number, email address via Escoffier website.
+							<p class="tmm-edu-disclosure-text">
+								Clicking the <span class="btn-text">"Send Request"</span> button constitutes <strong>your express request, and your express written consent, to be contacted</strong> by and to receive automated or pre-recorded call,
+								texts, messages and/or emails from via phone, text, and/or emails by Auguste Escoffier School of Culinary Arts at the number(s)/email you provided, regarding furthering your education
+								<strong>and enrolling. You understand that these calls</strong>, texts, messages and/or emails may be generated using an automated or pre-recorded technology.
+								<strong>You are not required to agree to receive automated or pre-recorded calls, texts, messages or emails as a condition of enrolling at Escoffier.</strong> You can unsubscribe at any time or request removal of
+								street address, phone number, email address via Escoffier <a target="_blank" href="https://www.escoffier.edu/privacy-policy/">website</a>.
 							</p>
 						</div>
 					</div>
