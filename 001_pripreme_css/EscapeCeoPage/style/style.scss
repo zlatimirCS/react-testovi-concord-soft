@@ -19,6 +19,12 @@ html {
 	height: 100%;
 	width: 100%;
 }
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
 body {
 	color: $text-color;
 	display: flex;
@@ -133,8 +139,8 @@ body {
 			.identityBranding {
 				display: flex;
 				justify-content: center;
-				gap: 2rem;
-				align-items: center;
+				gap: 3rem;
+				align-items: flex-start;
 				padding: 5rem 2rem;
 
 				.text {
@@ -143,6 +149,7 @@ body {
 					flex-direction: column;
 					max-width: 800px;
 					gap: 2rem;
+					flex: 1;
 
 					h1 {
 						font-size: 48px;
@@ -157,6 +164,16 @@ body {
 
 					p {
 						font-size: 24px;
+					}
+				}
+
+				.image {
+					max-width: 250px;
+					max-height: 250px;
+					align-self: center;
+
+					img {
+						object-fit: contain;
 					}
 				}
 			}
@@ -180,19 +197,26 @@ body {
 					.serviceCard {
 						display: flex;
 						padding: 2rem;
+						align-items: center;
 						gap: 1rem;
 
 						.logo {
+							width: 250px;
+							height: 250px;
+							border-radius: 50%;
+							overflow: hidden;
 							display: flex;
-							align-items: center;
 							justify-content: center;
+							align-items: center;
 							background-image: url('../assets/images/DarkCircle.png');
 							background-repeat: no-repeat;
 							background-position: center;
-							padding: 2rem;
-							border-radius: 50%;
-							width: 50px;
-							height: 50px;
+
+							img {
+								max-width: 50px;
+								max-height: 50px;
+								object-fit: contain;
+							}
 						}
 
 						.service {
@@ -355,6 +379,14 @@ body {
 					align-items: center;
 					gap: 1rem;
 
+					img {
+						width: 235px;
+						height: 235px;
+						object-fit: cover;
+						object-position: center;
+						border-radius: 50%;
+					}
+
 					h4 {
 						font-weight: 900;
 						font-size: 24px;
@@ -375,6 +407,9 @@ body {
 							background-image: url('../assets/images/Twitter\ Background.png');
 							background-repeat: no-repeat;
 							background-position: center;
+							max-width: 50px;
+							max-height: 50px;
+							object-fit: contain;
 						}
 					}
 				}
@@ -398,6 +433,7 @@ body {
 		justify-content: center;
 		padding: 5rem 3rem 2rem 3rem;
 		font-size: 24px;
+		font-family: 'Cabin';
 
 		.footerUpper {
 			display: flex;
