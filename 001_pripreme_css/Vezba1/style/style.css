@@ -1,123 +1,78 @@
 @font-face {
-  font-family: 'Baskerville';
+  font-family: "Baskerville";
   src: url("../assets/fonts/LibreBaskerville-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'Barlow';
+  font-family: "Barlow";
   src: url("../assets/fonts/Barlow-Regular.ttf");
 }
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   background-image: url("../assets/images/Texture.png");
   background-position: top right;
   background-repeat: no-repeat;
 }
-
 body header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 2rem;
 }
-
 body header .title h2 {
   font-size: 34px;
-  font-family: 'Baskerville';
-  color: #cb9e61;
+  font-family: "Baskerville";
+  color: rgb(203, 158, 97);
   font-weight: 100;
 }
-
 body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 body main .cardContainer {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   max-width: 1200px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem 5rem;
   grid-auto-rows: 1fr;
 }
-
 body main .cardContainer .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 body main .cardContainer .card.Arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
-
 body main .cardContainer .card.Arrow .cardText {
-  background-color: #8c8c8c;
-  color: white;
-  font-family: 'Barlow';
+  background-color: rgb(140, 140, 140);
+  color: rgb(255, 255, 255);
+  font-family: "Barlow";
   font-weight: 100;
   padding: 1rem;
   font-size: 10px;
 }
-
 body main .cardContainer .card.Arrow .cardText p {
   font-size: 16px;
 }
-
 body main .cardContainer .card.Arrow .imageContainer {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 body main .cardContainer .card.Arrow .imageContainer svg {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
   position: absolute;
   bottom: 50%;
   right: 10px;
 }
-
 body main .cardContainer .card img {
   min-height: 100%;
   -o-object-fit: cover;
@@ -126,16 +81,14 @@ body main .cardContainer .card img {
      object-position: center;
   width: 100%;
 }
-
 body footer {
   width: 100%;
   margin: auto 0;
 }
-
 body footer p {
   font-size: 18px;
-  font-family: 'Barlow';
-  color: #8c8c8c;
+  font-family: "Barlow";
+  color: rgb(140, 140, 140);
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem 5rem;
@@ -152,8 +105,7 @@ body footer p {
   }
   body main .cardContainer {
     max-width: 90vw;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   body main .cardContainer .card.Arrow .cardText {
     padding: 2rem;
@@ -162,24 +114,20 @@ body footer p {
     font-size: 24px;
   }
 }
-
 @media only screen and (max-width: 850px) {
   body main {
     padding: 1rem;
   }
   body main .cardContainer {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   body main .cardContainer .card.Arrow .cardText p {
     font-size: 30px;
   }
   body main .cardContainer .card.Arrow .imageContainer svg {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    transform: scale(2);
   }
 }
-
 @media only screen and (max-width: 425px) {
   body header {
     text-align: center;
@@ -188,8 +136,6 @@ body footer p {
     padding: 1rem;
   }
   body main .cardContainer {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

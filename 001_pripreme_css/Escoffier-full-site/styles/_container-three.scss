@@ -12,7 +12,7 @@
 }
 
 %common-heading-style {
-	font-weight: 100;
+	font-weight: 500;
 	color: $main-red-color;
 }
 
@@ -45,7 +45,8 @@
 				li {
 					list-style: none;
 					padding: 2rem 0 0 2rem;
-					background: url('data:image/svg+xml;base64,...') top 35px left 10px no-repeat;
+					background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMTcnIHZpZXdCb3g9JzAgMCAyNCAxNycgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTYuMTU3NSAwLjI0NTkzNUMxNS44Mjk4IC0wLjA4MTk3ODMgMTUuMjg4NyAtMC4wODE5NzgzIDE0Ljk0NTcgMC4yNDU5MzVDMTQuNjE4IDAuNTY2Mzk2IDE0LjYxOCAxLjA5NTUzIDE0Ljk0NTcgMS40MTU5OUwyMS4wODEgNy40MTUzMUgwLjg0NTk4M0MwLjM3MzQ1MiA3LjQxNTMxIDAgNy43ODA0OSAwIDguMjQyNTVDMCA4LjcwNDYxIDAuMzczNDUyIDkuMDg0NjkgMC44NDU5ODMgOS4wODQ2OUgyMS4wODFMMTQuOTQ1NyAxNS4wNjkxQzE0LjYxOCAxNS4zOTcgMTQuNjE4IDE1LjkzMzYgMTQuOTQ1NyAxNi4yNTQxQzE1LjI4MSAxNi41ODIgMTUuODI5OCAxNi41ODIgMTYuMTU3NSAxNi4yNTQxTDIzLjc0MDkgOC44Mzg3NUMyNC4wNzYyIDguNTE4MjkgMjQuMDc2MiA3Ljk4OTE2IDIzLjc0MDkgNy42Njg3TDE2LjE1NzUgMC4yNDU5MzVaJyBmaWxsPScjQkIxMTMzJy8+PC9zdmc+Cg==')
+						top 35px left 10px no-repeat;
 
 					p {
 						@extend %common-text-style;
@@ -104,7 +105,7 @@
 
 						p {
 							font-size: 18px;
-							font-weight: 900;
+							font-weight: 200;
 						}
 
 						span {
