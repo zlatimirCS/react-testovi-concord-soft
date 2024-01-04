@@ -2350,6 +2350,22 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: 'TradeGothic';
 }
 
+.stickyQuiz.active button {
+  font-size: 20px;
+  width: 90%;
+}
+
+.stickyQuiz.active button::after {
+  content: '';
+  padding: 0.5rem;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTcnIGhlaWdodD0nMTInIHZpZXdCb3g9JzAgMCAxNyAxMicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTEuMjExOCAwLjg5MzMzNkMxMC45OTU2IDAuNjgzMzUxIDEwLjYzODYgMC42ODMzNTEgMTAuNDEyNCAwLjg5MzMzNkMxMC4xOTYxIDEuMDk4NTUgMTAuMTk2MSAxLjQzNzM5IDEwLjQxMjQgMS42NDI2TDE0LjQ1OTkgNS40ODQzNkgxLjExMDQ2QzAuNzk4NzIgNS40ODQzNiAwLjU1MjM0NSA1LjcxODIxIDAuNTUyMzQ1IDYuMDE0MDlDMC41NTIzNDUgNi4zMDk5OCAwLjc5ODcyIDYuNTUzMzcgMS4xMTA0NiA2LjU1MzM3SDE0LjQ1OTlMMTAuNDEyNCAxMC4zODU2QzEwLjE5NjEgMTAuNTk1NiAxMC4xOTYxIDEwLjkzOTIgMTAuNDEyNCAxMS4xNDQ0QzEwLjYzMzYgMTEuMzU0NCAxMC45OTU2IDExLjM1NDQgMTEuMjExOCAxMS4xNDQ0TDE2LjIxNDcgNi4zOTU4OEMxNi40MzYgNi4xOTA2NyAxNi40MzYgNS44NTE4MyAxNi4yMTQ3IDUuNjQ2NjJMMTEuMjExOCAwLjg5MzMzNlonIGZpbGw9J3doaXRlJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzAuMjUnLz48L3N2Zz4K");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
 * {
   margin: 0;
   padding: 0;
