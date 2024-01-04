@@ -170,6 +170,9 @@ body .bottomContainer .pricingContainer .priceCard p {
   body .topContainer .textContainer button {
     font-size: 34px;
   }
+  body .topContainer .shape {
+    display: none;
+  }
   body .bottomContainer .title h1 {
     font-size: 4rem;
   }

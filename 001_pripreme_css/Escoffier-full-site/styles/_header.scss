@@ -11,9 +11,11 @@
 			margin: 4px;
 			transition: all 0.2s;
 		}
+
 		.top-bar {
 			transform: rotate(0);
 		}
+
 		.middle-bar {
 			opacity: 1;
 		}
@@ -24,9 +26,11 @@
 			transform: rotate(45deg);
 			transform-origin: 10% 10%;
 		}
+
 		.middle-bar {
 			opacity: 0;
 		}
+
 		.bottom-bar {
 			transform: rotate(-45deg);
 			transform-origin: 10% 90%;
@@ -42,6 +46,7 @@
 			opacity: 1;
 		}
 	}
+
 	.menu {
 		position: absolute;
 		background-color: $header-text-color;
@@ -91,6 +96,7 @@
 //Styles for when the page is scrolled
 header.headerScroll {
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+
 	.wrapper {
 		.headerTop {
 			.headerTopUpper {
