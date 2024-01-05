@@ -17,7 +17,8 @@
 	.wrapper,
 	.content--top,
 	.content--bottom {
-		@extend %flex-column;
+		display: flex;
+		flex-direction: column;
 		gap: 2rem;
 	}
 
@@ -140,6 +141,36 @@
 			.takeQuizBottom {
 				button {
 					width: auto;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.container--two {
+		.wrapper {
+			align-items: center;
+
+			.content--top {
+				max-width: 800px;
+				align-items: center;
+				text-align: center;
+				padding: 0 2rem;
+				margin: 0 auto;
+
+				h1 {
+					font-size: 2.9em;
+				}
+			}
+
+			.content--bottom {
+				.takeQuizContainer {
+					max-width: 800px;
+				}
+
+				.takeQuizBottom {
+					font-size: 0.9em;
 				}
 			}
 		}

@@ -27,7 +27,8 @@
 		}
 
 		p {
-			@extend %flex-column;
+			display: flex;
+			flex-direction: column;
 			font-size: 20px;
 			font-weight: 500;
 			gap: 0.5rem;
@@ -49,7 +50,6 @@
 	}
 
 	.content--bottom {
-		// @extend %flex-column;
 		display: flex;
 		flex-direction: column;
 		padding: 0.5rem;
@@ -58,9 +58,11 @@
 		.cardContent {
 			height: 20em;
 			background-color: $card-background-color;
-			@extend %flex-column;
+			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			position: relative;
 
 			&:hover {
 				background-color: $header-text-color;
@@ -82,7 +84,8 @@
 
 			.cardFront {
 				padding: 5rem 1.5rem;
-				@extend %flex-column;
+				display: flex;
+				flex-direction: column;
 				gap: 1rem;
 				align-items: center;
 				justify-content: center;
@@ -90,8 +93,15 @@
 				flex: 1;
 				transition: opacity 400ms ease-in;
 
-				img {
-					max-width: 50px;
+				.imgContainer {
+					width: 80px;
+					height: 80px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
 				}
 
 				h2,
@@ -129,6 +139,61 @@
 		.content--bottom {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+
+			.card {
+				.cardContent {
+					.cardFront {
+						justify-content: flex-start;
+						margin-top: 50px;
+						gap: 0rem;
+						padding: 0 1rem;
+
+						.imgContainer {
+							margin-bottom: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.container--one {
+		.content--top {
+			margin-bottom: 3rem;
+			padding: 80px 60px;
+
+			h2 {
+				font-size: 2.3em;
+			}
+
+			p {
+				display: block;
+			}
+		}
+
+		.content--bottom {
+			grid-template-columns: repeat(4, 1fr);
+
+			.card {
+				.cardContent {
+					.cardFront {
+						h2 {
+							font-size: 1.5em;
+							letter-spacing: -1px;
+						}
+
+						p {
+							font-size: 20px;
+						}
+					}
+
+					.hiddenText {
+						font-size: 28px;
+					}
+				}
+			}
 		}
 	}
 }

@@ -106,8 +106,30 @@
 		.wrapper {
 			.content--bottom {
 				.studentsContainer {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
+					flex-direction: row;
+					justify-content: center;
+					flex-wrap: wrap;
+					gap: 3rem;
+
+					.studentCard {
+						width: 44%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.container--seven {
+		.wrapper {
+			.content--bottom {
+				.studentsContainer {
+					gap: 3rem;
+
+					.studentCard {
+						width: 28%;
+					}
 				}
 			}
 		}

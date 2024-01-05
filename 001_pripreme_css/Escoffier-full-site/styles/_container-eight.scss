@@ -39,3 +39,21 @@
 		}
 	}
 }
+
+@media screen and (min-width: 1024px) {
+	.container--eight {
+		.wrapper {
+			.content--top {
+				h1 {
+					text-align: center;
+				}
+			}
+
+			.content--bottom {
+				grid-template-columns: repeat(4, 1fr);
+				img {
+				}
+			}
+		}
+	}
+}

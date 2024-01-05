@@ -39,6 +39,7 @@
 				.blogImageContainer {
 					margin-top: 2rem;
 					height: 200px;
+					width: 300px;
 
 					img {
 						height: 100%;
@@ -135,6 +136,9 @@
 		}
 
 		.content--bottom {
+			display: flex;
+
+			justify-content: center;
 			.formContainer {
 				@extend %flex-column;
 
@@ -152,7 +156,8 @@
 				}
 
 				form {
-					@extend %flex-column;
+					display: flex;
+					flex-direction: column;
 					gap: 0.5rem;
 
 					span {
@@ -168,7 +173,7 @@
 							top: 50%;
 							transform: translateY(-50%);
 							left: 14px;
-							transition: all 0.5s;
+							transition: all 0.2s;
 						}
 
 						input {
@@ -247,6 +252,30 @@
 				.blogContainer {
 					h3 {
 						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container--ten {
+		.wrapper {
+			.content--bottom {
+				.formContainer {
+					max-width: 800px;
+					padding: 2rem 4rem;
+					form {
+						flex-direction: row;
+						flex-wrap: wrap;
+						justify-content: center;
+
+						gap: 2rem;
+
+						.formFieldWrapper {
+							flex: 1 1 47%;
+						}
 					}
 				}
 			}

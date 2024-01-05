@@ -31,8 +31,10 @@
 			gap: 1rem;
 
 			.descriptionContainer {
-				@extend %flex-column;
-				@extend %centered-content;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				gap: 2rem;
 
 				h2 {
@@ -78,8 +80,10 @@
 				background-position: center;
 				background-size: cover;
 				background-repeat: no-repeat;
-				@extend %flex-column;
-				@extend %centered-content;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 
 				.playButton {
 					background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png');
@@ -99,7 +103,27 @@
 			.content--bottom {
 				.videoContainer {
 					background-position: center top;
-					margin: 3rem 0;
+					margin: 3rem -1rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container--six {
+		.wrapper {
+			.content--bottom {
+				flex-direction: row;
+
+				.descriptionContainer {
+					flex: 1 1 50%;
+				}
+
+				.videoContainer {
+					flex: 1 1 50%;
+
+					margin: 0;
 				}
 			}
 		}

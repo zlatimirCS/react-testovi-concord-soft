@@ -19,12 +19,15 @@
 
 .container--four {
 	.wrapper {
-		@extend %flex-column;
+		display: flex;
+		flex-direction: column;
 		padding: 1rem;
 		gap: 5rem;
 
 		.content--top {
-			@extend %flex-column;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			gap: 5rem;
 
 			h1 {
@@ -33,7 +36,8 @@
 			}
 
 			.learnOnline {
-				@extend %flex-column;
+				display: flex;
+				flex-direction: column;
 				gap: 2rem;
 
 				.left {
@@ -178,6 +182,47 @@
 
 				.courseContainer {
 					flex-direction: row;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container--four {
+		.wrapper {
+			.content--top {
+				.learnOnline {
+					flex-direction: row;
+
+					.left {
+						width: 50%;
+					}
+
+					.right {
+						width: 50%;
+						justify-content: center;
+
+						p {
+							font-size: 24px;
+							line-height: 1.4em;
+						}
+					}
+				}
+			}
+
+			.content--bottom {
+				.contain {
+					display: flex;
+					justify-content: center;
+					.courseContainer {
+						max-width: 1100px;
+						.courseLeft {
+							button {
+								flex: 0;
+							}
+						}
+					}
 				}
 			}
 		}

@@ -106,3 +106,17 @@
 		}
 	}
 }
+
+@media only screen and (min-width: 1024px) {
+	.container--nine {
+		.wrapper {
+			.content--bottom {
+				.chooseUsContainer {
+					& > .chooseUsCard {
+						flex: 0 0 33%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -9,6 +9,8 @@
 	.videoContainer {
 		display: flex;
 		flex-direction: column;
+		flex: 1;
+		position: relative;
 
 		video {
 			flex: 1;
@@ -25,7 +27,9 @@
 			flex-direction: column;
 			padding: 1rem;
 			gap: 1rem;
-			position: relative;
+			position: absolute;
+			width: 100%;
+			bottom: 0;
 
 			.videoControls {
 				position: absolute;
@@ -74,6 +78,43 @@
 
 			.bannerRight {
 				display: flex;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.video {
+		display: flex;
+		justify-content: center;
+
+		.videoContainer {
+			max-width: 1400px;
+
+			.enrollmentVideoBanner {
+				flex-direction: row;
+				padding: 2rem;
+
+				.bannerLeft {
+					flex: 1;
+
+					h1 {
+						font-size: 60px;
+					}
+
+					h2 {
+						font-size: 30px;
+					}
+				}
+
+				.bannerRight {
+					align-items: center;
+					button {
+						flex: 0;
+						white-space: nowrap;
+						text-align: center;
+					}
+				}
 			}
 		}
 	}
