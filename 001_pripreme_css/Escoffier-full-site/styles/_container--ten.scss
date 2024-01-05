@@ -28,7 +28,8 @@
 		gap: 3rem;
 
 		.content--top {
-			@extend %flex-column;
+			display: flex;
+			flex-direction: column;
 			gap: 3rem;
 
 			.blogContainer {
@@ -36,14 +37,14 @@
 				gap: 1rem;
 
 				.blogImageContainer {
-					max-height: 200px;
 					margin-top: 2rem;
+					height: 200px;
 
 					img {
 						height: 100%;
 						width: 100%;
-						object-fit: contain;
-						max-width: none;
+						object-fit: cover;
+						max-width: 100%;
 					}
 				}
 
@@ -92,6 +93,10 @@
 							text-transform: uppercase;
 						}
 					}
+				}
+
+				.openHousesContainer {
+					margin-top: 2rem;
 				}
 			}
 
@@ -226,6 +231,22 @@
 					a {
 						text-decoration: underline;
 						color: $header-link-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.container--ten {
+		.wrapper {
+			.content--top {
+				flex-direction: row;
+				gap: 0.5rem;
+				.blogContainer {
+					h3 {
+						font-size: 20px;
 					}
 				}
 			}

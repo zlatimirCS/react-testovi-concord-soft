@@ -30,7 +30,8 @@
 
 		.content--bottom {
 			.studentsContainer {
-				@extend %flex-column;
+				display: flex;
+				flex-direction: column;
 				gap: 3rem;
 
 				.studentCard {
@@ -57,8 +58,8 @@
 						@extend %centered-content;
 						background-image: url('../assets/images/Michael-Pythoud.jpg');
 						min-height: 200px;
-						background-position: center;
-						background-size: contain;
+						background-position: center top;
+						background-size: cover;
 						background-repeat: no-repeat;
 
 						.playButton {
@@ -94,6 +95,19 @@
 							text-transform: uppercase;
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.container--seven {
+		.wrapper {
+			.content--bottom {
+				.studentsContainer {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
 				}
 			}
 		}

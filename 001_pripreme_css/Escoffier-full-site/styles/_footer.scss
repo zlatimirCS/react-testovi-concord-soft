@@ -13,7 +13,8 @@
 		gap: 3rem;
 
 		.content--top {
-			@extend %flex-column;
+			display: flex;
+			flex-direction: column;
 			gap: 3rem;
 
 			.footerCatalog {
@@ -148,7 +149,6 @@
 
 		button {
 			font-size: 20px;
-			width: 90%;
 
 			&::after {
 				content: '';
@@ -159,6 +159,28 @@
 				background-size: contain;
 				margin-left: 5px;
 				vertical-align: middle;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container--footer {
+		.wrapper {
+			.content--top {
+				flex-direction: row;
+				flex-wrap: wrap;
+				gap: 3rem 0;
+
+				.footerCatalog {
+					button {
+						flex: 0;
+					}
+				}
+
+				& > div {
+					flex: 0 0 50%;
+				}
 			}
 		}
 	}

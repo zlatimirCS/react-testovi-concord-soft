@@ -1,48 +1,27 @@
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
-@-webkit-keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
 @keyframes tonext {
   75% {
     left: 0;
@@ -57,22 +36,6 @@
     left: 0;
   }
 }
-
-@-webkit-keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-
 @keyframes tostart {
   75% {
     left: 0;
@@ -87,22 +50,6 @@
     left: 0;
   }
 }
-
-@-webkit-keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-
 @keyframes snap {
   96% {
     scroll-snap-align: center;
@@ -117,12 +64,9 @@
     scroll-snap-align: center;
   }
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scrollbar-color: transparent transparent;
-  /* thumb and track color */
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
   scrollbar-width: 0px;
 }
 
@@ -152,10 +96,8 @@ li {
 
 .carousel {
   position: relative;
-  -webkit-filter: drop-shadow(0 0 10px #0003);
-          filter: drop-shadow(0 0 10px #0003);
-  -webkit-perspective: 100px;
-          perspective: 100px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+  perspective: 100px;
   min-height: calc(100vh + 5rem);
 }
 
@@ -165,20 +107,15 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
 .carousel__slide {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   width: 100%;
 }
 
@@ -186,8 +123,7 @@ li {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate3d(-50%, -40%, 70px);
-          transform: translate3d(-50%, -40%, 70px);
+  transform: translate3d(-50%, -40%, 70px);
   color: #fff;
   font-size: 2em;
 }
@@ -199,25 +135,18 @@ li {
   left: 0;
   width: 100%;
   scroll-snap-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .carousel__snapper {
-    -webkit-animation-name: none;
-            animation-name: none;
+    animation-name: none;
   }
 }
-
 .carousel:hover .carousel__snapper,
 .carousel:focus-within .carousel__snapper {
-  -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
 }
 
 .carousel__prev,
@@ -225,8 +154,7 @@ li {
   padding: 1rem;
   width: 4rem;
   height: 4rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 50%;
   font-size: 0;
   outline: 0;
@@ -246,13 +174,12 @@ li {
 }
 
 .carousel__next {
-  -webkit-transform: rotate(180deg) translateY(50%);
-          transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
 }
 
 .carousel::before,
 .carousel::after {
-  content: '';
+  content: "";
   z-index: 1;
   background-color: #333;
   background-size: 1.5rem 1.5rem;
@@ -275,65 +202,40 @@ li {
 
 .galeryCard {
   background-color: white;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 2rem 1rem;
   height: 100vh;
 }
-
 .galeryCard .galeryCardUpper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
-
 .galeryCard .galeryCardUpper img {
   border-radius: 50%;
 }
-
 .galeryCard .galeryCardUpper .courseAuthor {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   gap: 1rem;
 }
-
 .galeryCard .galeryCardUpper .courseAuthor h4 {
-  font-family: 'Crimson';
+  font-family: "Crimson";
   font-size: 24px;
   color: #252525;
   font-weight: 500;
 }
-
 .galeryCard .galeryCardUpper .courseAuthor h5 {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   color: #8e6c4a;
   font-size: 18px;
   font-weight: 100;
   text-transform: none;
 }
-
 .galeryCard .galeryCardUpper .courseAuthor button {
   background-color: transparent;
   border: 2px solid #b13;
@@ -342,9 +244,8 @@ li {
   font-size: 18px;
   padding-right: 1rem;
 }
-
 .galeryCard .galeryCardUpper .courseAuthor button::before {
-  content: '';
+  content: "";
   display: inline-block;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -353,147 +254,101 @@ li {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjAwMDEgN0w2LjAzODI2ZS0wNSAxMy45MjgyTDYuMDk4ODNlLTA1IDAuMDcxNzk2NEwxMi4wMDAxIDdaIiBmaWxsPSIjQkIxMTMzIi8+Cjwvc3ZnPgo=);
   padding: 0 12px 0 0;
 }
-
 .galeryCard .galeryCardUpper h5 {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   color: #8e6c4a;
   text-transform: uppercase;
   font-size: 18px;
 }
-
 .galeryCard .galeryCardUpper hr {
   margin-bottom: 1rem;
   width: 100%;
 }
-
 .galeryCard .galeryCardLower {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .galeryCard .galeryCardLower p {
-  font-family: 'Crimson';
+  font-family: "Crimson";
   font-size: 18px;
   line-height: 1.5rem;
 }
 
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.hamburgerMenu input[type='checkbox'] + label .icon-bar {
+.hamburgerMenu input[type=checkbox] + label .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
   background-color: #252525;
   margin: 4px;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
-.hamburgerMenu input[type='checkbox'] + label .top-bar {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+.hamburgerMenu input[type=checkbox] + label .top-bar {
+  transform: rotate(0);
 }
-
-.hamburgerMenu input[type='checkbox'] + label .middle-bar {
+.hamburgerMenu input[type=checkbox] + label .middle-bar {
   opacity: 1;
 }
-
-.hamburgerMenu input[type='checkbox']:checked + label .top-bar {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 10% 10%;
-          transform-origin: 10% 10%;
+.hamburgerMenu input[type=checkbox]:checked + label .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
 }
-
-.hamburgerMenu input[type='checkbox']:checked + label .middle-bar {
+.hamburgerMenu input[type=checkbox]:checked + label .middle-bar {
   opacity: 0;
 }
-
-.hamburgerMenu input[type='checkbox']:checked + label .bottom-bar {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: 10% 90%;
-          transform-origin: 10% 90%;
+.hamburgerMenu input[type=checkbox]:checked + label .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
 }
-
 .hamburgerMenu #menu-toggle {
   display: none;
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
   transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
 }
-
 .hamburgerMenu #menu-toggle:checked ~ .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  transform: translateY(100%);
   opacity: 1;
 }
-
 .hamburgerMenu .menu {
   position: absolute;
   background-color: #fff;
   z-index: 0;
   left: 0;
   width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
   opacity: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: opacity 0.4s;
+  transform: translateY(-100%);
   transition: opacity 0.4s;
 }
-
 .hamburgerMenu .menu li {
   font-size: 14px;
   font-weight: 900;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 0.5rem 1rem;
   border-bottom: 0.5px solid #252525;
   position: relative;
 }
-
 .hamburgerMenu .menu li::after {
-  content: ' ';
+  content: " ";
   display: inline-block;
   position: absolute;
   top: 0;
@@ -502,7 +357,6 @@ li {
   width: 14px;
   padding: 0 1em;
   cursor: pointer;
-  -webkit-transition: 0.4s all;
   transition: 0.4s all;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='24.174 106.118 436.686 265.01' width='436.686' height='265.01' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 225.547 364.1 L 31.204 169.756 C 21.831 160.383 21.831 145.187 31.204 135.815 L 53.871 113.148 C 63.228 103.791 78.393 103.773 87.772 113.108 L 242.518 267.129 L 397.263 113.108 C 406.642 103.773 421.807 103.791 431.164 113.148 L 453.831 135.815 C 463.204 145.188 463.204 160.384 453.831 169.756 L 259.489 364.1 C 250.116 373.472 234.92 373.472 225.547 364.1 Z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -515,31 +369,21 @@ li {
 }
 
 header.headerScroll {
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
-
 header.headerScroll .wrapper .headerTop .headerTopUpper .logo img {
   max-width: 20px;
 }
-
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li.dissapear {
   display: none;
 }
-
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
   display: block;
 }
-
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo {
   white-space: nowrap;
@@ -547,106 +391,71 @@ header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul
   padding: 0.5rem;
   text-transform: uppercase;
 }
-
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow::before,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo::before {
   content: none;
   background-image: none;
 }
-
 header.headerScroll .wrapper .headerTop .buttonContainer {
   display: none;
 }
 
 header {
-  font-family: 'Lato-Light';
-  position: -webkit-sticky;
+  font-family: "Lato-Light";
   position: sticky;
   top: 0;
   z-index: 100;
 }
-
 header .wrapper .headerTop {
   background-color: #fff;
   position: relative;
 }
-
 header .wrapper .headerTop .headerTopUpper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.5rem;
 }
-
 header .wrapper .headerTop .headerTopUpper .logo .regularLogo {
   display: none;
 }
-
 header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 0.5rem;
 }
-
 header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li {
   list-style-type: none;
   font-weight: 900;
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
+  order: 6;
 }
-
 header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li img {
   width: 20px;
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
+  order: 5;
 }
-
 header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
   display: none;
 }
 
 .buttonContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
-
 .buttonContainer button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-family: 'Lato-Black';
+  flex: 1;
+  font-family: "Lato-Black";
   border: 0px;
   font-size: 14px;
   padding: 0;
   border-radius: 0;
 }
-
 .buttonContainer .applyNow {
   background-color: #e1e1e1;
   color: #252525;
 }
-
 .buttonContainer .applyNow::before {
-  content: ' ';
+  content: " ";
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1792 1824' style='enable-background:new 0 0 1792 1824;' xml:space='preserve'%3E%3Cpath d='M1764,43c22,16,31,37.3,27,64l-256,1536c-3.3,19.3-14,34.3-32,45c-9.3,5.3-19.7,8-31,8c-7.3,0-15.3-1.7-24-5l-527-215 l-298,327c-12,14-27.7,21-47,21c-9.3,0-17-1.3-23-4c-12.7-4.7-22.7-12.5-30-23.5s-11-23.2-11-36.5v-452L40,1115 c-24.7-9.3-38-27.7-40-55c-2-26,8.7-45.7,32-59L1696,41C1719.3,27,1742,27.7,1764,43z M1422,1542l221-1323L209,1046l336,137l863-639 l-478,797L1422,1542z'/%3E%3C/svg%3E");
   background-position: 0 9px;
@@ -657,14 +466,12 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   position: relative;
   vertical-align: middle;
 }
-
 .buttonContainer .requestInfo {
   background-color: #b13;
   color: #fff;
 }
-
 .buttonContainer .requestInfo::before {
-  content: '';
+  content: "";
   display: inline-block;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='138.832 50.522 182.716 402' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(1, 0, 0, 1, 29.191046, 50.521725)'%3E%3Cg%3E%3Cpath d='M164.454,91.363h73.098c4.945,0,9.226-1.807,12.847-5.424c3.61-3.614,5.421-7.898,5.421-12.847V18.274 c0-4.948-1.811-9.229-5.428-12.85C246.777,1.812,242.49,0,237.544,0h-73.091c-4.946,0-9.229,1.812-12.847,5.424 c-3.615,3.617-5.424,7.902-5.424,12.85v54.818c0,4.949,1.809,9.233,5.424,12.847C155.224,89.556,159.507,91.363,164.454,91.363z' style='fill: rgb(255, 255, 255);'/%3E%3Cpath d='M286.936,334.331c-3.613-3.617-7.897-5.427-12.847-5.427h-18.274V164.452c0-4.947-1.807-9.229-5.421-12.845 c-3.62-3.617-7.904-5.426-12.847-5.426H127.912c-4.949,0-9.231,1.809-12.847,5.426c-3.618,3.616-5.424,7.898-5.424,12.845v36.547 c0,4.946,1.807,9.231,5.424,12.845c3.615,3.621,7.898,5.428,12.847,5.428h18.274v109.633h-18.274 c-4.949,0-9.231,1.81-12.847,5.427c-3.618,3.614-5.424,7.898-5.424,12.847v36.546c0,4.948,1.807,9.232,5.424,12.854 c3.615,3.61,7.898,5.421,12.847,5.421h146.177c4.949,0,9.233-1.811,12.847-5.421c3.614-3.621,5.421-7.905,5.421-12.854v-36.546 C292.357,342.229,290.56,337.945,286.936,334.331z' style='fill: rgb(255, 255, 255);'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-position: 0 10px;
@@ -676,80 +483,88 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   vertical-align: middle;
 }
 
+@media only screen and (min-width: 768px) {
+  header .wrapper .headerTop .headerTopUpper .logo .regularLogo {
+    display: block;
+    height: 100%;
+    width: 150px;
+  }
+  header .wrapper .headerTop .headerTopUpper .logo .mobileLogo {
+    display: none;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer {
+    gap: 0.5rem;
+    margin: 0 5rem 0 1rem;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons {
+    flex: 1;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .logo .regularLogo {
+    display: none;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .logo .mobileLogo {
+    display: block;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer {
+    flex: 1;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButons {
+    flex: 1;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButons .buttonContainer {
+    margin: 0 5rem 0 1rem;
+    gap: 1rem;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
 .video {
   height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
 }
-
 .video .videoContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .video .videoContainer video {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   max-height: 100%;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .video .videoContainer .enrollmentVideoBanner {
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 1rem;
   gap: 1rem;
   position: relative;
 }
-
 .video .videoContainer .enrollmentVideoBanner .videoControls {
   position: absolute;
   top: -70px;
   right: 0;
   gap: 1rem;
   padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .video .videoContainer .enrollmentVideoBanner .videoControls .play,
 .video .videoContainer .enrollmentVideoBanner .videoControls .pause {
   border-radius: 50%;
@@ -758,136 +573,105 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
 .video .videoContainer .enrollmentVideoBanner .videoControls .play {
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white'/%3E%3Cpath d='M20.6637 15.2581L13.7887 11.3794C13.5642 11.2511 13.3097 11.1845 13.0511 11.1865C12.7925 11.1885 12.539 11.2589 12.3165 11.3906C12.0997 11.5146 11.9196 11.6938 11.7944 11.9099C11.6693 12.1261 11.6036 12.3715 11.604 12.6213V20.3788C11.6036 20.6285 11.6693 20.8739 11.7944 21.0901C11.9196 21.3062 12.0997 21.4854 12.3165 21.6094C12.5391 21.7411 12.7925 21.8114 13.0511 21.8134C13.3097 21.8154 13.5642 21.7489 13.7887 21.6206L20.6637 17.7419C20.8854 17.6191 21.0702 17.4391 21.1989 17.2207C21.3276 17.0023 21.3954 16.7535 21.3954 16.5C21.3954 16.2465 21.3276 15.9977 21.1989 15.7793C21.0702 15.5609 20.8854 15.381 20.6637 15.2581Z' fill='black'/%3E%3C/svg%3E%0A");
 }
-
 .video .videoContainer .enrollmentVideoBanner .videoControls .play:hover {
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='black'/%3E%3Cpath d='M20.6637 15.2581L13.7887 11.3794C13.5642 11.2511 13.3097 11.1845 13.0511 11.1865C12.7925 11.1885 12.539 11.2589 12.3165 11.3906C12.0997 11.5146 11.9196 11.6938 11.7944 11.9099C11.6693 12.1261 11.6036 12.3715 11.604 12.6213V20.3788C11.6036 20.6285 11.6693 20.8739 11.7944 21.0901C11.9196 21.3062 12.0997 21.4854 12.3165 21.6094C12.5391 21.7411 12.7925 21.8114 13.0511 21.8134C13.3097 21.8154 13.5642 21.7489 13.7887 21.6206L20.6637 17.7419C20.8854 17.6191 21.0702 17.4391 21.1989 17.2207C21.3276 17.0023 21.3954 16.7535 21.3954 16.5C21.3954 16.2465 21.3276 15.9977 21.1989 15.7793C21.0702 15.5609 20.8854 15.381 20.6637 15.2581Z' fill='white'/%3E%3C/svg%3E%0A");
 }
-
 .video .videoContainer .enrollmentVideoBanner .videoControls .pause {
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white'/%3E%3Cpath d='M13.3466 22C12.6857 22 12.1503 21.4643 12.1503 20.8037V12.1963C12.1503 11.5352 12.6857 11 13.3466 11C14.0074 11 14.5429 11.5355 14.5429 12.1963V20.8037C14.5429 21.4645 14.0076 22 13.3466 22Z' fill='black'/%3E%3Cpath d='M17.6532 22C16.9924 22 16.4569 21.4643 16.4569 20.8037V12.1963C16.4569 11.5355 16.9924 11 17.6532 11C18.314 11 18.8495 11.5355 18.8495 12.1963V20.8037C18.8495 21.4643 18.314 22 17.6532 22Z' fill='black'/%3E%3C/svg%3E%0A");
 }
-
 .video .videoContainer .enrollmentVideoBanner .videoControls .pause:hover {
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='black'/%3E%3Cpath d='M13.3466 22C12.6857 22 12.1503 21.4643 12.1503 20.8037V12.1963C12.1503 11.5352 12.6857 11 13.3466 11C14.0074 11 14.5429 11.5355 14.5429 12.1963V20.8037C14.5429 21.4645 14.0076 22 13.3466 22Z' fill='white'/%3E%3Cpath d='M17.6532 22C16.9924 22 16.4569 21.4643 16.4569 20.8037V12.1963C16.4569 11.5355 16.9924 11 17.6532 11C18.314 11 18.8495 11.5355 18.8495 12.1963V20.8037C18.8495 21.4643 18.314 22 17.6532 22Z' fill='white'/%3E%3C/svg%3E%0A");
 }
-
 .video .videoContainer .enrollmentVideoBanner h1 {
   text-transform: uppercase;
   font-size: 26px;
   font-weight: 900;
 }
-
 .video .videoContainer .enrollmentVideoBanner h2 {
   font-weight: 500;
   font-size: 20px;
 }
-
 .video .videoContainer .enrollmentVideoBanner .bannerRight {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top, .container--four .wrapper, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--one .content--bottom .cardContent .cardFront, .container--one .content--bottom .cardContent, .container--one .content--top p, .container--one .content--top {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .container--one .content--top {
   gap: 2rem;
   padding: 3rem 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.85)), to(rgba(244, 244, 244, 0.85))), url("../assets/images/ducasse-paris.jpeg");
   background: linear-gradient(to bottom, rgba(244, 244, 244, 0.85), rgba(244, 244, 244, 0.85)), url("../assets/images/ducasse-paris.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .container--one .content--top h2,
 .container--one .content--top p a {
   color: #b13;
   font-weight: 100;
 }
-
 .container--one .content--top h2 {
   font-size: 2em;
 }
-
 .container--one .content--top p {
   font-size: 20px;
   font-weight: 500;
   gap: 0.5rem;
   line-height: 2rem;
 }
-
 .container--one .content--top p a {
   font-weight: 900;
   color: #252525;
   text-decoration: underline;
 }
-
 .container--one .content--top p a::after {
-  content: '';
+  content: "";
   background: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_22_2)'%3E%3Cpath d='M12.1181 0.223577C11.8723 -0.0745258 11.4665 -0.0745258 11.2093 0.223577C10.9635 0.514905 10.9635 0.995935 11.2093 1.28726L15.8107 6.74119H0.634487C0.280089 6.74119 0 7.07317 0 7.49323C0 7.91328 0.280089 8.25881 0.634487 8.25881H15.8107L11.2093 13.6992C10.9635 13.9973 10.9635 14.4851 11.2093 14.7764C11.4608 15.0745 11.8723 15.0745 12.1181 14.7764L17.8057 8.03523C18.0572 7.7439 18.0572 7.26287 17.8057 6.97155L12.1181 0.223577Z' fill='%23252525'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_22_2'%3E%3Crect width='18' height='15' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") center/20px no-repeat;
   padding: 1rem;
 }
-
 .container--one .content--bottom {
+  display: flex;
+  flex-direction: column;
   padding: 0.5rem;
   gap: 1rem;
 }
-
 .container--one .content--bottom .cardContent {
   height: 20em;
   background-color: #f4f4f4;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .container--one .content--bottom .cardContent:hover {
   background-color: #fff;
 }
-
 .container--one .content--bottom .cardContent:hover .cardFront {
   visibility: hidden;
   opacity: 0;
 }
-
 .container--one .content--bottom .cardContent:hover .hiddenText {
   visibility: visible;
   padding: 2rem;
@@ -896,152 +680,121 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   color: #8e6c4a;
   opacity: 1;
 }
-
 .container--one .content--bottom .cardContent .cardFront {
   padding: 5rem 1.5rem;
   gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   opacity: 1;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-transition: opacity 400ms ease-in;
+  flex: 1;
   transition: opacity 400ms ease-in;
 }
-
 .container--one .content--bottom .cardContent .cardFront img {
   max-width: 50px;
 }
-
 .container--one .content--bottom .cardContent .cardFront h2,
 .container--one .content--bottom .cardContent .cardFront p {
   text-align: center;
   font-weight: 900;
 }
-
 .container--one .content--bottom .cardContent .cardFront h2 {
   text-transform: uppercase;
   letter-spacing: -2px;
   font-size: 30px;
   color: #b13;
 }
-
 .container--one .content--bottom .cardContent .cardFront p {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   color: #5c6b80;
 }
-
 .container--one .content--bottom .cardContent .hiddenText {
   position: absolute;
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  -webkit-transition: opacity 400ms ease-in-out;
   transition: opacity 400ms ease-in-out;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--one .content--bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top, .container--four .wrapper, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--five .wrapper .content--top, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--two .content--bottom .takeQuizBottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom {
+  align-items: center;
+  justify-content: center;
 }
 
 .container--two {
   color: #b13;
 }
-
 .container--two .wrapper,
 .container--two .content--top,
 .container--two .content--bottom {
   gap: 2rem;
 }
-
 .container--two .wrapper {
   padding: 1rem;
 }
-
 .container--two .content--top {
   padding-top: 2rem;
 }
-
 .container--two .content--top h1,
 .container--two .content--top h4 {
   font-weight: 600;
 }
-
 .container--two .content--top h1 {
   font-size: 30px;
   font-weight: 500;
 }
-
 .container--two .content--top h4 {
   color: #5c6b80;
   font-size: 22px;
   line-height: 2rem;
 }
-
 .container--two .content--bottom {
   color: #5c6b80;
 }
-
 .container--two .content--bottom .takeQuizContainer {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
-
 .container--two .content--bottom .takeQuizContainer .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem;
 }
-
 .container--two .content--bottom .takeQuizContainer .card img {
   max-width: 80px;
 }
-
 .container--two .content--bottom .takeQuizContainer .card h4 {
   color: #8e6c4a;
   font-weight: 600;
@@ -1050,73 +803,88 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   text-transform: uppercase;
   font-stretch: extra-condensed;
 }
-
 .container--two .content--bottom .takeQuizBottom {
   gap: 2rem;
   text-align: center;
 }
-
 .container--two .content--bottom .takeQuizBottom h2 {
   font-weight: 400;
   color: #5c6b80;
   font-size: 1.625em;
 }
-
 .container--two .content--bottom .takeQuizBottom button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--two .content--bottom .takeQuizContainer {
+    display: flex;
+  }
+  .container--two .content--bottom .takeQuizContainer .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .container--two .content--bottom .takeQuizContainer .card::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75.57' height='36.58' viewBox='0 0 75.57 36.58'%3E%3Cpath d='M75.071,144.493,57.9,127.948a1.763,1.763,0,0,0-2.422-.18,1.613,1.613,0,0,0-.187,2.333,1.682,1.682,0,0,0,.187.18l14.238,13.733H1.717a1.656,1.656,0,1,0,0,3.309H69.712L55.474,161.038a1.613,1.613,0,0,0-.187,2.333,1.763,1.763,0,0,0,2.422.18,1.683,1.683,0,0,0,.187-.18l17.175-16.545a1.612,1.612,0,0,0,0-2.333Z' transform='translate(0 -127.369)'/%3E%3C/svg%3E");
+    padding: 1rem;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-150%);
+  }
+  .container--two .content--bottom .takeQuizContainer .card h4 {
+    text-align: center;
+  }
+  .container--two .content--bottom .takeQuizContainer .card:last-child::after {
+    content: none;
+  }
+  .container--two .content--bottom .takeQuizBottom button {
+    width: auto;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top, .container--four .wrapper, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--five .wrapper .content--top, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom {
+  align-items: center;
+  justify-content: center;
 }
 
-.container--three .wrapper .content--top h1, .container--four .wrapper .content--top h1 {
+.container--four .wrapper .content--top h1, .container--three .wrapper .content--top h1 {
   font-weight: 500;
   color: #b13;
 }
 
-.container--three .wrapper .content--top ul li p, .container--four .wrapper .content--top .learnOnline .right ul li {
+.container--four .wrapper .content--top .learnOnline .right ul li, .container--three .wrapper .content--top ul li p {
   font-size: 22px;
   font-weight: 900;
   color: #5c6b80;
@@ -1125,57 +893,47 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .container--three .wrapper {
   padding: 1rem;
 }
-
 .container--three .wrapper .content--top {
   gap: 1rem;
 }
-
 .container--three .wrapper .content--top h1 {
   font-size: 28px;
 }
-
 .container--three .wrapper .content--top h5 {
   font-size: 18px;
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   font-weight: 600;
   line-height: 1.5;
 }
-
 .container--three .wrapper .content--top ul li {
   list-style: none;
   padding: 2rem 0 0 2rem;
   background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjQnIGhlaWdodD0nMTcnIHZpZXdCb3g9JzAgMCAyNCAxNycgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTYuMTU3NSAwLjI0NTkzNUMxNS44Mjk4IC0wLjA4MTk3ODMgMTUuMjg4NyAtMC4wODE5NzgzIDE0Ljk0NTcgMC4yNDU5MzVDMTQuNjE4IDAuNTY2Mzk2IDE0LjYxOCAxLjA5NTUzIDE0Ljk0NTcgMS40MTU5OUwyMS4wODEgNy40MTUzMUgwLjg0NTk4M0MwLjM3MzQ1MiA3LjQxNTMxIDAgNy43ODA0OSAwIDguMjQyNTVDMCA4LjcwNDYxIDAuMzczNDUyIDkuMDg0NjkgMC44NDU5ODMgOS4wODQ2OUgyMS4wODFMMTQuOTQ1NyAxNS4wNjkxQzE0LjYxOCAxNS4zOTcgMTQuNjE4IDE1LjkzMzYgMTQuOTQ1NyAxNi4yNTQxQzE1LjI4MSAxNi41ODIgMTUuODI5OCAxNi41ODIgMTYuMTU3NSAxNi4yNTQxTDIzLjc0MDkgOC44Mzg3NUMyNC4wNzYyIDguNTE4MjkgMjQuMDc2MiA3Ljk4OTE2IDIzLjc0MDkgNy42Njg3TDE2LjE1NzUgMC4yNDU5MzVaJyBmaWxsPScjQkIxMTMzJy8+PC9zdmc+Cg==") top 35px left 10px no-repeat;
 }
-
 .container--three .wrapper .content--top ul li p {
   padding-left: 1rem;
 }
-
 .container--three .wrapper .content--top ul li p a {
   color: #b13;
 }
-
 .container--three .wrapper .content--bottom {
   gap: 5rem;
 }
-
 .container--three .wrapper .content--bottom .programsContainer {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding-top: 2rem;
 }
-
 .container--three .wrapper .content--bottom .programsContainer a {
   text-decoration: none;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard {
   background-color: #f4f4f4;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programBackground {
   width: 100%;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programBackground img {
   max-width: none;
   width: 100%;
@@ -1183,32 +941,23 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1rem;
   padding: 2rem 1rem;
   color: #000;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programText h2 {
   text-transform: uppercase;
   color: #252525;
   font-weight: 900;
   font-size: 20px;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programText p {
   font-size: 18px;
   font-weight: 200;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programText span {
   font-size: 20px;
   text-transform: uppercase;
@@ -1216,31 +965,27 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-weight: 900;
   text-decoration: underline;
 }
-
 .container--three .wrapper .content--bottom .programsContainer .programCard .programText span::after {
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_78_364)'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23997755'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_78_364'%3E%3Crect width='18' height='12.375' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
   padding: 0.5rem;
-  content: '';
+  content: "";
   margin-left: 0.25rem;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer {
   gap: 2rem;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer h1 {
   font-size: 32px;
   margin-left: 3rem;
   font-weight: 100;
   color: #8e6c4a;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer h1::before {
   padding: 1rem;
-  content: '';
+  content: "";
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 475.082 475.081' xml:space='preserve'%3E%3Cpath fill='%23997755' d='M164.45,219.27h-63.954c-7.614,0-14.087-2.664-19.417-7.994c-5.327-5.33-7.994-11.801-7.994-19.417v-9.132 c0-20.177,7.139-37.401,21.416-51.678c14.276-14.272,31.503-21.411,51.678-21.411h18.271c4.948,0,9.229-1.809,12.847-5.424 c3.616-3.617,5.424-7.898,5.424-12.847V54.819c0-4.948-1.809-9.233-5.424-12.85c-3.617-3.612-7.898-5.424-12.847-5.424h-18.271 c-19.797,0-38.684,3.858-56.673,11.563c-17.987,7.71-33.545,18.132-46.68,31.267c-13.134,13.129-23.553,28.688-31.262,46.677 C3.855,144.039,0,162.931,0,182.726v200.991c0,15.235,5.327,28.171,15.986,38.834c10.66,10.657,23.606,15.985,38.832,15.985 h109.639c15.225,0,28.167-5.328,38.828-15.985c10.657-10.663,15.987-23.599,15.987-38.834V274.088 c0-15.232-5.33-28.168-15.994-38.832C192.622,224.6,179.675,219.27,164.45,219.27z'/%3E%3Cpath fill='%23997755' d='M459.103,235.256c-10.656-10.656-23.599-15.986-38.828-15.986h-63.953c-7.61,0-14.089-2.664-19.41-7.994 c-5.332-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177,7.139-37.401,21.409-51.678c14.271-14.272,31.497-21.411,51.682-21.411 h18.267c4.949,0,9.233-1.809,12.848-5.424c3.613-3.617,5.428-7.898,5.428-12.847V54.819c0-4.948-1.814-9.233-5.428-12.85 c-3.614-3.612-7.898-5.424-12.848-5.424h-18.267c-19.808,0-38.691,3.858-56.685,11.563c-17.984,7.71-33.537,18.132-46.672,31.267 c-13.135,13.129-23.559,28.688-31.265,46.677c-7.707,17.987-11.567,36.879-11.567,56.674v200.991 c0,15.235,5.332,28.171,15.988,38.834c10.657,10.657,23.6,15.985,38.828,15.985h109.633c15.229,0,28.171-5.328,38.827-15.985 c10.664-10.663,15.985-23.599,15.985-38.834V274.088C475.082,258.855,469.76,245.92,459.103,235.256z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1248,76 +993,61 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   left: 1rem;
   position: absolute;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer img {
   border-radius: 50%;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 1rem;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy h4 {
   text-transform: uppercase;
   font-weight: 100;
 }
-
 .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer .quoteBy h4:first-child {
   font-weight: 900;
 }
 
+@media screen and (min-width: 768px) {
+  .container--three .wrapper .content--bottom .programsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top, .container--four .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-.container--three .wrapper .content--top h1, .container--four .wrapper .content--top h1 {
+.container--four .wrapper .content--top h1, .container--three .wrapper .content--top h1 {
   font-weight: 100;
   color: #b13;
 }
 
-.container--three .wrapper .content--top ul li p, .container--four .wrapper .content--top .learnOnline .right ul li {
+.container--four .wrapper .content--top .learnOnline .right ul li, .container--three .wrapper .content--top ul li p {
   font-size: 22px;
   font-weight: 900;
   color: #5c6b80;
@@ -1327,37 +1057,29 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   padding: 1rem;
   gap: 5rem;
 }
-
 .container--four .wrapper .content--top {
   gap: 5rem;
 }
-
 .container--four .wrapper .content--top h1 {
   font-size: 28px;
 }
-
 .container--four .wrapper .content--top .learnOnline {
   gap: 2rem;
 }
-
 .container--four .wrapper .content--top .learnOnline .left {
   margin: -1rem;
 }
-
 .container--four .wrapper .content--top .learnOnline .left img {
   width: 100%;
   max-width: none;
 }
-
 .container--four .wrapper .content--top .learnOnline .right {
   gap: 2rem;
 }
-
 .container--four .wrapper .content--top .learnOnline .right p {
   font-size: 20px;
-  font-family: 'Crimson';
+  font-family: "Crimson";
 }
-
 .container--four .wrapper .content--top .learnOnline .right ul li {
   color: #8e6c4a;
   list-style: none;
@@ -1366,9 +1088,8 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   text-decoration: underline;
   border-top: 1px solid rgba(152, 119, 88, 0.3);
 }
-
 .container--four .wrapper .content--top .learnOnline .right ul li::after {
-  content: '';
+  content: "";
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.1181 0.184451C11.8723 -0.0614837 11.4665 -0.0614837 11.2093 0.184451C10.9635 0.424797 10.9635 0.821646 11.2093 1.06199L15.8107 5.56148H0.634487C0.280089 5.56148 0 5.83537 0 6.18191C0 6.52846 0.280089 6.81352 0.634487 6.81352H15.8107L11.2093 11.3018C10.9635 11.5478 10.9635 11.9502 11.2093 12.1905C11.4608 12.4365 11.8723 12.4365 12.1181 12.1905L17.8057 6.62907C18.0572 6.38872 18.0572 5.99187 17.8057 5.75152L12.1181 0.184451Z' fill='%23987757'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: left;
@@ -1376,75 +1097,55 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   padding: 0.5rem;
   margin-left: 0.25rem;
 }
-
 .container--four .wrapper .content--top .learnOnline .right ul li:last-child {
   border-bottom: 1px solid rgba(152, 119, 88, 0.3);
 }
-
 .container--four .wrapper .content--bottom {
   gap: 2rem;
 }
-
 .container--four .wrapper .content--bottom .titleDiv {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
-
 .container--four .wrapper .content--bottom .titleDiv h1 {
   font-weight: 600;
   font-size: 32px;
   text-transform: capitalize;
   color: #b13;
 }
-
 .container--four .wrapper .content--bottom .titleDiv h2 {
   color: #8e6c4a;
   font-size: 19px;
   font-weight: 900;
 }
-
 .container--four .wrapper .content--bottom .courseContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
   gap: 2rem;
 }
-
 .container--four .wrapper .content--bottom .courseContainer .courseLeft {
   gap: 2rem;
 }
-
 .container--four .wrapper .content--bottom .courseContainer .courseLeft h2 {
   font-size: 28px;
   font-weight: 900;
 }
-
 .container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 1rem;
 }
-
 .container--four .wrapper .content--bottom .courseContainer .courseLeft ul li {
   list-style: none;
   font-size: 20px;
   font-weight: 900;
   color: #5c6b80;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 1rem;
 }
-
 .container--four .wrapper .content--bottom .courseContainer .courseLeft ul li::before {
-  content: '';
+  content: "";
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.18248 8.27304C4.0661 8.27304 3.94972 8.22849 3.86062 8.14029L1.13297 5.41265C0.955676 5.23535 0.955676 4.94713 1.13297 4.76983C1.31027 4.59254 1.59849 4.59254 1.77579 4.76983L4.18157 7.17562L10.2242 1.13297C10.4015 0.955676 10.6897 0.955676 10.867 1.13297C11.0443 1.31027 11.0443 1.59849 10.867 1.77579L4.50252 8.14029C4.41342 8.2294 4.29704 8.27304 4.18066 8.27304H4.18248Z' fill='%23997755' stroke='%23997755'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: center;
@@ -1452,67 +1153,65 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   border: 2px solid #8e6c4a;
   border-radius: 50%;
 }
-
 .container--four .wrapper .content--bottom .courseContainer .courseRight img {
   max-width: none;
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--four .wrapper h1 {
+    font-size: 2.3em !important;
+  }
+  .container--four .wrapper .content--bottom .titleDiv {
+    text-align: center;
+  }
+  .container--four .wrapper .content--bottom .titleDiv h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.85em;
+  }
+  .container--four .wrapper .content--bottom .courseContainer {
+    flex-direction: row;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--five .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer {
+  align-items: center;
+  justify-content: center;
 }
 
 .container--five {
   background-color: #000;
 }
-
 .container--five .wrapper {
   gap: 5rem;
   padding: 1rem;
 }
-
 .container--five .wrapper .content--top {
   gap: 2rem;
 }
-
 .container--five .wrapper .content--top h2 {
   color: #fff;
   font-weight: 500;
@@ -1521,73 +1220,50 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 }
 
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .videoContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .descriptionContainer, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top {
+  align-items: center;
+  justify-content: center;
 }
 
 .container--six .wrapper {
   padding: 1rem;
   gap: 2rem;
 }
-
 .container--six .wrapper .content--top h1 {
   color: #b13;
   font-size: 32px;
   font-weight: 500;
 }
-
 .container--six .wrapper .content--bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
   gap: 1rem;
 }
-
 .container--six .wrapper .content--bottom .descriptionContainer {
   gap: 2rem;
 }
-
 .container--six .wrapper .content--bottom .descriptionContainer h2 {
   text-transform: uppercase;
   color: #8e6c4a;
@@ -1596,44 +1272,35 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-weight: 900;
   font-size: 28px;
 }
-
 .container--six .wrapper .content--bottom .descriptionContainer ul {
   gap: 3rem;
 }
-
 .container--six .wrapper .content--bottom .descriptionContainer ul li {
   list-style: none;
   font-size: 24px;
   font-weight: 400;
   color: #5c6b80;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   gap: 2rem;
 }
-
 .container--six .wrapper .content--bottom .descriptionContainer ul li::before {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/05/checkmark-2x-red.png");
   background-repeat: no-repeat;
   background-position: center;
   padding: 0.75rem;
-  content: '';
+  content: "";
   border-radius: 50%;
   background-size: contain;
 }
-
 .container--six .wrapper .content--bottom .videoContainer {
   min-height: 300px;
   margin: -1rem;
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/Escoffier-student-rolling-dough.jpg");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-
 .container--six .wrapper .content--bottom .videoContainer .playButton {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png");
   background-position: center;
@@ -1642,99 +1309,80 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   padding: 1.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--six .wrapper .content--bottom .videoContainer {
+    background-position: center top;
+    margin: 3rem 0;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer {
+  align-items: center;
+  justify-content: center;
 }
 
 .container--seven .wrapper {
   padding: 1rem;
   gap: 2rem;
 }
-
 .container--seven .wrapper .content--top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .container--seven .wrapper .content--top h1 {
   color: #b13;
   font-size: 32px;
   font-weight: 500;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer {
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard {
   gap: 1rem;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle {
   color: #8e6c4a;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle span:first-child {
   font-weight: 500;
   font-size: 20px;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentTitle span {
   font-weight: 900;
   font-size: 28px;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer {
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-image: url("../assets/images/Michael-Pythoud.jpg");
   min-height: 200px;
-  background-position: center;
-  background-size: contain;
+  background-position: center top;
+  background-size: cover;
   background-repeat: no-repeat;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer .playButton {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png");
   background-position: center;
@@ -1742,127 +1390,103 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-repeat: no-repeat;
   padding: 1.5rem;
 }
-
-.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='two'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video=two] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/wyl-lima.jpg");
 }
-
-.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='three'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video=three] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/lance-mcwhorter-1.jpg");
 }
-
-.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='four'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video=four] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/jennifer-etzkin.jpg");
 }
-
-.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='five'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video=five] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/academics-culinary-arts.jpg");
 }
-
-.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video='six'] {
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video=six] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/holden-oleary.jpg");
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo {
   color: #5c6b80;
   font-weight: 100;
 }
-
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .studentInfo strong {
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--seven .wrapper .content--bottom .studentsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
 .container--eight .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 3rem;
   padding: 1rem;
 }
-
 .container--eight .content--top h1 {
   color: #b13;
   font-size: 32px;
   font-weight: 800;
 }
-
 .container--eight .content--bottom {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   gap: 1rem;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-
 .container--eight .content--bottom img {
   max-width: 100px;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--eight .wrapper .content--bottom img {
+    max-width: 200px;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
-
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container--nine .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer .quoteByContainer, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer {
+  align-items: center;
+  justify-content: center;
 }
 
 .container--nine {
@@ -1872,87 +1496,91 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-repeat: no-repeat;
   color: #fff;
 }
-
 .container--nine .wrapper {
   gap: 3rem;
   padding: 1rem;
 }
-
 .container--nine .wrapper .content--top {
   gap: 1rem;
   text-align: center;
   margin-top: 2rem;
 }
-
 .container--nine .wrapper .content--top h1 {
   font-size: 32px;
   text-transform: uppercase;
   position: relative;
 }
-
 .container--nine .wrapper .content--top hr {
   height: 1px;
   width: 20px;
   border-color: #b13;
 }
-
 .container--nine .wrapper .content--bottom .chooseUsContainer {
+  display: flex;
+  flex-direction: column;
   gap: 5rem;
   padding: 5rem 0rem;
 }
-
 .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   gap: 1rem;
 }
-
 .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard img {
   max-width: 80px;
 }
-
 .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h4 {
   font-size: 24px;
 }
-
 .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard h5 {
   text-transform: uppercase;
   font-size: 14px;
 }
-
 .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard p {
   font-size: 12px;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--nine .wrapper .content--bottom .chooseUsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 4em 0;
+  }
+  .container--nine .wrapper .content--bottom .chooseUsContainer > .chooseUsCard {
+    flex: 0 0 50%;
+    justify-content: flex-start;
+  }
+  .container--nine .wrapper .content--bottom .chooseUsContainer > .chooseUsCard:last-child {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer form, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .container--ten h2 {
@@ -1960,93 +1588,78 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   color: #b13;
   font-weight: 700;
 }
-
 .container--ten h5 {
   color: #5c6b80;
   text-transform: uppercase;
-  font-family: 'Lato-Dark';
+  font-family: "Lato-Dark";
   font-weight: 800;
   font-size: 16px;
   word-spacing: 0.5rem;
 }
-
 .container--ten .wrapper {
   padding: 1rem;
   gap: 3rem;
 }
-
 .container--ten .wrapper .content--top {
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
-
 .container--ten .wrapper .content--top .blogContainer {
   gap: 1rem;
 }
-
 .container--ten .wrapper .content--top .blogContainer .blogImageContainer {
-  max-height: 200px;
   margin-top: 2rem;
+  height: 200px;
 }
-
 .container--ten .wrapper .content--top .blogContainer .blogImageContainer img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
 }
-
 .container--ten .wrapper .content--top .blogContainer h3 {
   color: #8e6c4a;
   font-size: 1.5em;
 }
-
 .container--ten .wrapper .content--top .blogContainer p {
   color: #5c6b80;
 }
-
 .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
 }
-
 .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #8e6c4a;
 }
-
 .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer span:first-child {
   font-size: 48px;
   font-weight: 100;
 }
-
 .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle {
   gap: 0.5rem;
   border-left: 1px solid #d4d4d4;
   padding-left: 1rem;
 }
-
 .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle h3 {
   color: #8e6c4a;
   font-size: 1.25em;
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
 }
-
 .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle a {
   color: #5c6b80;
   text-transform: uppercase;
 }
-
+.container--ten .wrapper .content--top .upcomingEventsContainer .openHousesContainer {
+  margin-top: 2rem;
+}
 .container--ten .wrapper .content--top .latestNewsContainer {
   gap: 1rem;
 }
-
 .container--ten .wrapper .content--top .latestNewsContainer .newsContainer {
   height: 400px;
   padding-bottom: 1rem;
@@ -2054,25 +1667,20 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   gap: 1rem;
   color: #5c6b80;
 }
-
 .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard {
   gap: 0.5rem;
 }
-
 .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard a {
   color: #b13;
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   font-size: 1em;
 }
-
 .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard p {
   font-size: 12px;
 }
-
 .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard p:first-of-type {
   font-weight: 900;
 }
-
 .container--ten .wrapper .content--bottom .formContainer {
   background-color: #f4f4f4;
   margin: -1rem;
@@ -2080,39 +1688,29 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   margin-top: 5rem;
   gap: 1rem;
 }
-
 .container--ten .wrapper .content--bottom .formContainer h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
   font-weight: 900;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form {
   gap: 0.5rem;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form span {
   color: #b13;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper label {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   left: 14px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper input {
   width: 100%;
   height: 40px;
@@ -2122,17 +1720,18 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-size: 16px;
   padding: 0.75rem 1rem 0 0.75rem;
 }
-
+.container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper input:not(:-moz-placeholder-shown) ~ label {
+  font-size: 12px;
+  top: 20%;
+}
 .container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper input:not(:placeholder-shown) ~ label {
   font-size: 12px;
   top: 20%;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper input:focus ~ label {
   font-size: 12px;
   top: 20%;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form select {
   width: 100%;
   height: 40px;
@@ -2148,112 +1747,97 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-repeat: no-repeat;
   background-position: calc(100% - 10px) center;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form select:valid ~ label {
   font-size: 12px;
   top: 20%;
   left: 16px;
 }
-
 .container--ten .wrapper .content--bottom .formContainer form button {
   width: 100%;
   padding: 1rem;
   font-size: 22px;
 }
-
 .container--ten .wrapper .content--bottom .formContainer p {
   font-size: 12px;
   line-height: 12px;
   color: #333333;
 }
-
 .container--ten .wrapper .content--bottom .formContainer p a {
   text-decoration: underline;
   color: #333333;
 }
 
+@media only screen and (min-width: 768px) {
+  .container--ten .wrapper .content--top {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .container--ten .wrapper .content--top .blogContainer h3 {
+    font-size: 20px;
+  }
+}
 @font-face {
-  font-family: 'Lato-Black';
+  font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
 }
-
 @font-face {
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   src: url("../assets/fonts/Lato-Light.ttf");
 }
-
 @font-face {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   src: url("../assets/fonts/Trade Gothic LT.ttf");
 }
-
 @font-face {
-  font-family: 'CrimsonText';
+  font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-
-.container--one .content--top, .container--one .content--top p, .container--one .content--bottom, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--one .content--top, .container--one .content--top p, .container--one .content--bottom .cardContent, .container--one .content--bottom .cardContent .cardFront, .container--two .wrapper,
 .container--two .content--top,
-.container--two .content--bottom, .container--two .content--bottom .takeQuizContainer .card, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .titleDiv, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper .content--bottom .chooseUsContainer, .container--nine .wrapper .content--bottom .chooseUsContainer .chooseUsCard, .container--ten .wrapper, .container--ten .wrapper .content--top, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form, .container--footer .wrapper, .container--footer .wrapper .content--top, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerLocations .locationCard, .container--footer .wrapper .content--top .footerLinks ul, .container--footer .wrapper .content--bottom, .stickyQuiz.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container--two .content--bottom, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programsContainer .programCard, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper, .container--four .wrapper .content--top, .container--four .wrapper .content--top .learnOnline, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper .content--bottom .videoContainer, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--ten .wrapper, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--bottom .formContainer form {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .container--footer .wrapper {
   padding: 1rem;
   gap: 3rem;
 }
-
 .container--footer .wrapper .content--top {
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
-
 .container--footer .wrapper .content--top .footerCatalog {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 1rem;
 }
-
 .container--footer .wrapper .content--top .footerCatalog button {
   width: 100%;
 }
-
 .container--footer .wrapper .content--top .footerCatalog a {
   text-decoration: underline;
   color: #b13;
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   font-weight: 900;
 }
-
 .container--footer .wrapper .content--top .footerLocations {
   gap: 2rem;
   margin-top: 2rem;
 }
-
 .container--footer .wrapper .content--top .footerLocations .locationCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 .container--footer .wrapper .content--top .footerLocations .locationCard h3 {
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
 }
-
 .container--footer .wrapper .content--top .footerLocations .locationCard h3 a {
   color: #8e6c4a;
   font-size: 1.2em;
 }
-
 .container--footer .wrapper .content--top .footerLocations .locationCard h3 a::before {
-  content: '';
+  content: "";
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz48c3ZnIHZpZXdCb3g9JzUuNzgzIDY0LjQ5OCAzNjUuNDQ0IDQzOC41MzYnIHdpZHRoPSczNjUuNDQ0JyBoZWlnaHQ9JzQzOC41MzYnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PGcgdHJhbnNmb3JtPSdtYXRyaXgoMSwgMCwgMCwgMSwgNS43ODI4OTMsIDY0LjQ5Nzg0MSknPjxwYXRoIGQ9J00zMjIuNjIxLDQyLjgyNUMyOTQuMDczLDE0LjI3MiwyNTkuNjE5LDAsMjE5LjI2OCwwYy00MC4zNTMsMC03NC44MDMsMTQuMjc1LTEwMy4zNTMsNDIuODI1IGMtMjguNTQ5LDI4LjU0OS00Mi44MjUsNjMtNDIuODI1LDEwMy4zNTNjMCwyMC43NDksMy4xNCwzNy43ODIsOS40MTksNTEuMTA2bDEwNC4yMSwyMjAuOTg2IGMyLjg1Niw2LjI3Niw3LjI4MywxMS4yMjUsMTMuMjc4LDE0LjgzOGM1Ljk5NiwzLjYxNywxMi40MTksNS40MjgsMTkuMjczLDUuNDI4YzYuODUyLDAsMTMuMjc4LTEuODExLDE5LjI3My01LjQyOCBjNS45OTYtMy42MTMsMTAuNTEzLTguNTYyLDEzLjU1OS0xNC44MzhsMTAzLjkxOC0yMjAuOTg2YzYuMjgyLTEzLjMyNCw5LjQyNC0zMC4zNTgsOS40MjQtNTEuMTA2IEMzNjUuNDQ5LDEwNS44MjUsMzUxLjE3Niw3MS4zNzgsMzIyLjYyMSw0Mi44MjV6IE0yNzAuOTQyLDE5Ny44NTVjLTE0LjI3MywxNC4yNzItMzEuNDk3LDIxLjQxMS01MS42NzQsMjEuNDExIHMtMzcuNDAxLTcuMTM5LTUxLjY3OC0yMS40MTFjLTE0LjI3NS0xNC4yNzctMjEuNDE0LTMxLjUwMS0yMS40MTQtNTEuNjc4YzAtMjAuMTc1LDcuMTM5LTM3LjQwMiwyMS40MTQtNTEuNjc1IGMxNC4yNzctMTQuMjc1LDMxLjUwNC0yMS40MTQsNTEuNjc4LTIxLjQxNGMyMC4xNzcsMCwzNy40MDEsNy4xMzksNTEuNjc0LDIxLjQxNGMxNC4yNzQsMTQuMjcyLDIxLjQxMywzMS41LDIxLjQxMyw1MS42NzUgQzI5Mi4zNTUsMTY2LjM1MiwyODUuMjE3LDE4My41NzUsMjcwLjk0MiwxOTcuODU1eicgc3R5bGU9J2ZpbGw6IHJnYigxNTMsIDExOSwgODUpOycvPjwvZz48ZyB0cmFuc2Zvcm09J21hdHJpeCgxLCAwLCAwLCAxLCA1Ljc4Mjg5MywgNjQuNDk3ODQxKScvPjxnIHRyYW5zZm9ybT0nbWF0cml4KDEsIDAsIDAsIDEsIDUuNzgyODkzLCA2NC40OTc4NDEpJy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoMSwgMCwgMCwgMSwgNS43ODI4OTMsIDY0LjQ5Nzg0MSknLz48ZyB0cmFuc2Zvcm09J21hdHJpeCgxLCAwLCAwLCAxLCA1Ljc4Mjg5MywgNjQuNDk3ODQxKScvPjxnIHRyYW5zZm9ybT0nbWF0cml4KDEsIDAsIDAsIDEsIDUuNzgyODkzLCA2NC40OTc4NDEpJy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoMSwgMCwgMCwgMSwgNS43ODI4OTMsIDY0LjQ5Nzg0MSknLz48ZyB0cmFuc2Zvcm09J21hdHJpeCgxLCAwLCAwLCAxLCA1Ljc4Mjg5MywgNjQuNDk3ODQxKScvPjxnIHRyYW5zZm9ybT0nbWF0cml4KDEsIDAsIDAsIDEsIDUuNzgyODkzLCA2NC40OTc4NDEpJy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoMSwgMCwgMCwgMSwgNS43ODI4OTMsIDY0LjQ5Nzg0MSknLz48ZyB0cmFuc2Zvcm09J21hdHJpeCgxLCAwLCAwLCAxLCA1Ljc4Mjg5MywgNjQuNDk3ODQxKScvPjxnIHRyYW5zZm9ybT0nbWF0cml4KDEsIDAsIDAsIDEsIDUuNzgyODkzLCA2NC40OTc4NDEpJy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoMSwgMCwgMCwgMSwgNS43ODI4OTMsIDY0LjQ5Nzg0MSknLz48ZyB0cmFuc2Zvcm09J21hdHJpeCgxLCAwLCAwLCAxLCA1Ljc4Mjg5MywgNjQuNDk3ODQxKScvPjxnIHRyYW5zZm9ybT0nbWF0cml4KDEsIDAsIDAsIDEsIDUuNzgyODkzLCA2NC40OTc4NDEpJy8+PGcgdHJhbnNmb3JtPSdtYXRyaXgoMSwgMCwgMCwgMSwgNS43ODI4OTMsIDY0LjQ5Nzg0MSknLz48L3N2Zz4=");
   padding: 0.5rem;
   background-position: center;
@@ -2261,66 +1845,48 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-size: contain;
   margin-right: 0.5rem;
 }
-
 .container--footer .wrapper .content--top .footerLocations .locationCard a {
   color: #000;
   line-height: 48px;
 }
-
 .container--footer .wrapper .content--top .footerLinks ul {
   gap: 1rem;
 }
-
 .container--footer .wrapper .content--top .footerLinks ul li {
   margin-left: 2rem;
 }
-
 .container--footer .wrapper .content--top .footerLinks ul li::before {
-  content: '>';
+  content: ">";
   margin-right: 0.5em;
 }
-
 .container--footer .wrapper .content--top .footerSocialsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .container--footer .wrapper .content--top .footerSocialsContainer .footerSocials {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50px)[2];
-      grid-template-columns: repeat(2, 50px);
+  grid-template-columns: repeat(2, 50px);
   justify-items: center;
   gap: 2rem;
 }
-
 .container--footer .wrapper .content--top .footerSocialsContainer .footerSocials img {
   max-width: 50px;
   max-height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 .container--footer .wrapper .content--bottom {
   gap: 1rem;
   color: #000;
-  font-family: 'Lato-Light';
+  font-family: "Lato-Light";
   font-size: 0.8em;
   font-weight: 900;
 }
-
 .container--footer .wrapper .content--bottom p a {
   text-decoration: underline;
   color: #000;
 }
-
 .container--footer .wrapper .content--bottom .copyrightText {
   margin-top: 1rem;
   text-align: center;
@@ -2329,34 +1895,26 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .stickyQuiz {
   display: none;
 }
-
 .stickyQuiz.active {
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   z-index: 100;
   background-color: #252525;
   padding: 1rem;
   gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 .stickyQuiz.active h2 {
   font-size: 18px;
   color: #fff;
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
 }
-
 .stickyQuiz.active button {
   font-size: 20px;
-  width: 90%;
 }
-
 .stickyQuiz.active button::after {
-  content: '';
+  content: "";
   padding: 0.5rem;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTcnIGhlaWdodD0nMTInIHZpZXdCb3g9JzAgMCAxNyAxMicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTEuMjExOCAwLjg5MzMzNkMxMC45OTU2IDAuNjgzMzUxIDEwLjYzODYgMC42ODMzNTEgMTAuNDEyNCAwLjg5MzMzNkMxMC4xOTYxIDEuMDk4NTUgMTAuMTk2MSAxLjQzNzM5IDEwLjQxMjQgMS42NDI2TDE0LjQ1OTkgNS40ODQzNkgxLjExMDQ2QzAuNzk4NzIgNS40ODQzNiAwLjU1MjM0NSA1LjcxODIxIDAuNTUyMzQ1IDYuMDE0MDlDMC41NTIzNDUgNi4zMDk5OCAwLjc5ODcyIDYuNTUzMzcgMS4xMTA0NiA2LjU1MzM3SDE0LjQ1OTlMMTAuNDEyNCAxMC4zODU2QzEwLjE5NjEgMTAuNTk1NiAxMC4xOTYxIDEwLjkzOTIgMTAuNDEyNCAxMS4xNDQ0QzEwLjYzMzYgMTEuMzU0NCAxMC45OTU2IDExLjM1NDQgMTEuMjExOCAxMS4xNDQ0TDE2LjIxNDcgNi4zOTU4OEMxNi40MzYgNi4xOTA2NyAxNi40MzYgNS44NTE4MyAxNi4yMTQ3IDUuNjQ2NjJMMTEuMjExOCAwLjg5MzMzNlonIGZpbGw9J3doaXRlJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzAuMjUnLz48L3N2Zz4K");
   background-repeat: no-repeat;
@@ -2366,11 +1924,23 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   vertical-align: middle;
 }
 
+@media screen and (min-width: 768px) {
+  .container--footer .wrapper .content--top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem 0;
+  }
+  .container--footer .wrapper .content--top .footerCatalog button {
+    flex: 0;
+  }
+  .container--footer .wrapper .content--top > div {
+    flex: 0 0 50%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -2392,24 +1962,16 @@ button {
   padding: 1rem;
   border: 0;
   border-radius: 0.5rem;
-  font-family: 'TradeGothic';
+  font-family: "TradeGothic";
   font-size: 22px;
   font-weight: 900;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 main {
   margin-top: 5rem;
-  font-family: 'TradeGothic';
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-family: "TradeGothic";
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 5rem;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

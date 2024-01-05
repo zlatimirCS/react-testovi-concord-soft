@@ -45,13 +45,16 @@
 
 		.content--bottom {
 			.chooseUsContainer {
-				@extend %flex-column;
+				display: flex;
+				flex-direction: column;
 				gap: 5rem;
 				padding: 5rem 0rem;
 
 				.chooseUsCard {
-					@extend %flex-column;
-					@extend %centered-content;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 					text-align: center;
 
 					gap: 1rem;
@@ -71,6 +74,32 @@
 
 					p {
 						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.container--nine {
+		.wrapper {
+			.content--bottom {
+				.chooseUsContainer {
+					flex-direction: row;
+					flex-wrap: wrap;
+					justify-content: flex-start;
+					gap: 4em 0;
+
+					& > .chooseUsCard {
+						flex: 0 0 50%;
+						justify-content: flex-start;
+					}
+
+					& > .chooseUsCard:last-child {
+						flex: 0 0 100%;
+						display: flex;
+						justify-content: center;
 					}
 				}
 			}

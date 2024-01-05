@@ -56,8 +56,10 @@
 			gap: 2rem;
 
 			.card {
-				@extend %flex-column;
-				@extend %centered-content;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				gap: 1rem;
 				padding: 1rem;
 
@@ -91,6 +93,54 @@
 			button {
 				flex: 1;
 				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.container--two {
+		.content--bottom {
+			.takeQuizContainer {
+				display: flex;
+
+				.card {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: relative;
+
+					&::after {
+						content: '';
+						background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75.57' height='36.58' viewBox='0 0 75.57 36.58'%3E%3Cpath d='M75.071,144.493,57.9,127.948a1.763,1.763,0,0,0-2.422-.18,1.613,1.613,0,0,0-.187,2.333,1.682,1.682,0,0,0,.187.18l14.238,13.733H1.717a1.656,1.656,0,1,0,0,3.309H69.712L55.474,161.038a1.613,1.613,0,0,0-.187,2.333,1.763,1.763,0,0,0,2.422.18,1.683,1.683,0,0,0,.187-.18l17.175-16.545a1.612,1.612,0,0,0,0-2.333Z' transform='translate(0 -127.369)'/%3E%3C/svg%3E");
+						padding: 1rem;
+						width: 10px;
+						height: 10px;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: contain;
+						position: absolute;
+						top: 50%;
+						right: -20%;
+						transform: translateY(-150%);
+					}
+
+					h4 {
+						text-align: center;
+					}
+				}
+
+				.card:last-child {
+					&::after {
+						content: none;
+					}
+				}
+			}
+
+			.takeQuizBottom {
+				button {
+					width: auto;
+				}
 			}
 		}
 	}

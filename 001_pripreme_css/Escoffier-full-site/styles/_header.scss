@@ -245,3 +245,69 @@ header {
 		}
 	}
 }
+
+@media only screen and (min-width: 768px) {
+	header {
+		.wrapper {
+			.headerTop {
+				.headerTopUpper {
+					.logo {
+						.regularLogo {
+							display: block;
+							height: 100%;
+							width: 150px;
+						}
+
+						.mobileLogo {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer {
+		gap: 0.5rem;
+		margin: 0 5rem 0 1rem;
+	}
+
+	header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons {
+		flex: 1;
+	}
+
+	header.headerScroll {
+		.wrapper {
+			.headerTop {
+				.headerTopUpper {
+					.logo {
+						.regularLogo {
+							display: none;
+						}
+
+						.mobileLogo {
+							display: block;
+						}
+					}
+
+					.mobileLinksContainer {
+						flex: 1;
+
+						ul {
+							li {
+								& + li.headerScrollButons {
+									flex: 1;
+
+									.buttonContainer {
+										margin: 0 5rem 0 1rem;
+										gap: 1rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

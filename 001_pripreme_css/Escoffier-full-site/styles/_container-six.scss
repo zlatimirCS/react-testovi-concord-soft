@@ -76,7 +76,7 @@
 				margin: -1rem;
 				background-image: url('https://www.escoffier.edu/wp-content/uploads/2020/06/Escoffier-student-rolling-dough.jpg');
 				background-position: center;
-				background-size: contain;
+				background-size: cover;
 				background-repeat: no-repeat;
 				@extend %flex-column;
 				@extend %centered-content;
@@ -87,6 +87,19 @@
 					background-size: contain;
 					background-repeat: no-repeat;
 					padding: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.container--six {
+		.wrapper {
+			.content--bottom {
+				.videoContainer {
+					background-position: center top;
+					margin: 3rem 0;
 				}
 			}
 		}
