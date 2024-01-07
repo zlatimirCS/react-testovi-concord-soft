@@ -141,7 +141,7 @@
 		position: sticky;
 		bottom: 0;
 		z-index: 100;
-		background-color: $main-text-color-dark;
+		background-color: $black-color;
 		padding: 1rem;
 
 		@extend %flex-column;
@@ -169,6 +169,10 @@
 				vertical-align: middle;
 			}
 		}
+	}
+
+	.close {
+		display: none;
 	}
 }
 
@@ -198,6 +202,11 @@
 	footer {
 		display: flex;
 		justify-content: center;
+		margin-top: 3rem;
+
+		.maxWidth {
+			max-width: 1150px;
+		}
 	}
 	.container--footer {
 		.wrapper {
@@ -246,6 +255,7 @@
 	.stickyQuiz.active {
 		flex-direction: row;
 		justify-content: center;
+		padding: 3rem;
 
 		h2 {
 			font-size: 2em;
@@ -254,6 +264,24 @@
 			flex: 0;
 			white-space: nowrap;
 			text-align: center;
+		}
+
+		.close {
+			display: block;
+			position: absolute;
+			right: 5%;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: transparent;
+
+			&::after {
+				content: '';
+				background-image: url('../assets/images/x-mark-48.png');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				padding: 0.5rem;
+			}
 		}
 	}
 }

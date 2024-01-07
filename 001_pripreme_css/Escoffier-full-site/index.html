@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Escoffier</title>
 		<link rel="stylesheet" href="./styles/style.css" />
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+		<!-- Swiper's JS -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 		<script src="./script/script.js" defer></script>
 	</head>
 	<body>
@@ -50,11 +55,25 @@
 							</ul>
 						</div>
 						<div class="buttonContainer wide">
-							<span class="phone">
-								<a href="tel:8559557555">(855) 955-7555</a>
-							</span>
-							<button class="requestInformation">Request Information</button>
-							<button class="applyNow">Apply Now</button>
+							<div class="upperLinks">
+								<ul>
+									<li>Student Login</li>
+									<li>Alumni</li>
+									<li>Employers</li>
+									<li>Educators</li>
+									<li>Store</li>
+									<li>(855) 955-7555</li>
+									<li class="searchIcon"></li>
+								</ul>
+							</div>
+							<div class="scrollContainer">
+								<span class="phone">
+									<a href="tel:8559557555">(855) 955-7555</a>
+								</span>
+
+								<button class="requestInformation">Request Information</button>
+								<button class="applyNow">Apply Now</button>
+							</div>
 						</div>
 					</div>
 					<div class="buttonContainer nonWide">
@@ -97,7 +116,7 @@
 		</div>
 
 		<main>
-			<div class="test">
+			<div class="maxWidth">
 				<section class="container container--one">
 					<div class="wrapper">
 						<div class="content content--top">
@@ -133,10 +152,9 @@
 								<div class="cardContent">
 									<div class="cardFront">
 										<div class="imgContainer"><img src=https://www.escoffier.edu/wp-content/uploads/2020/03/top10-2x.png alt="logo" /></div>
-										<div class="test">
-											<h2>top 10 schools</h2>
-											<p>Top 10 culinary schools in the United States - USA Today 2019</p>
-										</div>
+
+										<h2>top 10 schools</h2>
+										<p>Top 10 culinary schools in the United States - USA Today 2019</p>
 									</div>
 									<div class="hiddenText">
 										<p>An affordable, quality education is accessible online and on-ground at our Boulder, CO campus, and on-ground at our Austin, TX campus.</p>
@@ -147,10 +165,9 @@
 								<div class="cardContent">
 									<div class="cardFront">
 										<div class="imgContainer"><img src=https://www.escoffier.edu/wp-content/uploads/2022/02/five-star-rating-row-260.png alt="logo" /></div>
-										<div class="test">
-											<h2>best online schools 2023</h2>
-											<p>Newsweek 5-star Award: America's Top Online Learning Schools 2023</p>
-										</div>
+
+										<h2>best online schools 2023</h2>
+										<p>Newsweek 5-star Award: America's Top Online Learning Schools 2023</p>
 									</div>
 									<div class="hiddenText">
 										<p>Newsweek recognized Escoffier as one of America's Best Online Learning Schools (Learning Providers) for adult learners in 2023.</p>
@@ -370,113 +387,93 @@
 							</h2>
 						</div>
 						<div class="content content--bottom">
-							<section class="carousel" aria-label="Gallery">
-								<ol class="carousel__viewport">
-									<li id="carousel__slide1" tabindex="0" class="carousel__slide">
-										<div class="carousel__snapper">
-											<a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
-											<div class="galeryCard">
-												<div class="galeryCardUpper">
-													<img src="https://www.escoffier.edu/wp-content/uploads/2023/05/Gaby-Dalkin-Featured-Image-125x125.jpg" alt="Course author" />
-													<div class="courseAuthor">
-														<h4>Gaby Dalkin</h4>
-														<h5>Author of What's Gaby Cooking</h5>
-														<button>Listen or Watch</button>
-													</div>
-													<h5>Episode #84</h5>
-													<hr />
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="galeryCard">
+											<div class="galeryCardUpper">
+												<img src="https://www.escoffier.edu/wp-content/uploads/2023/05/Gaby-Dalkin-Featured-Image-125x125.jpg" alt="Course author" />
+												<div class="courseAuthor">
+													<h4>Gaby Dalkin</h4>
+													<h5>Author of What's Gaby Cooking</h5>
+													<button>Listen or Watch</button>
 												</div>
-												<div class="galeryCardLower">
-													<p>
-														Gaby Dalkin is the <strong>California-based chef</strong> and <strong>author</strong> behind the popular <strong>blog and cookbook, What's Gaby Cooking.</strong> Her career has been focused on
-														celebrating the fresh, diverse, and experimental nature of Southern California food trends. With 13 years of successful food blogging under her belt, she explains how she makes her recipes
-														simple, accessible, and delicious.
-													</p>
-												</div>
+												<h5>Episode #84</h5>
+												<hr />
 											</div>
-
-											<a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
-										</div>
-									</li>
-
-									<li id="carousel__slide2" tabindex="0" class="carousel__slide">
-										<div class="carousel__snapper">
-											<a href="#carousel__slide1" class="carousel__prev">Go to last slide</a>
-											<div class="galeryCard">
-												<div class="galeryCardUpper">
-													<img src="https://www.escoffier.edu/wp-content/uploads/2022/10/Curtis-Duffy-Featured-Image-125x125.jpg" alt="Course author" />
-													<div class="courseAuthor">
-														<h4>Curtis Duffy</h4>
-														<h5>Iron Chef challenger</h5>
-														<button>Listen or Watch</button>
-													</div>
-													<h5>Episode #63</h5>
-													<hr />
-												</div>
-												<div class="galeryCardLower">
-													<p>
-														Curtis Duffy competed on <b>Iron Chef</b> in 2022 and has earned <b>5 Michelin Stars.</b> When asked&nbsp; what inspires him, he answered that it's the littlest things in life. His attention to
-														detail shows up both in his culinary successes and the way he runs his family kitchen culture, and he's joined us to explain how.
-													</p>
-												</div>
+											<div class="galeryCardLower">
+												<p>
+													Gaby Dalkin is the <strong>California-based chef</strong> and <strong>author</strong> behind the popular <strong>blog and cookbook, What's Gaby Cooking.</strong> Her career has been focused on
+													celebrating the fresh, diverse, and experimental nature of Southern California food trends. With 13 years of successful food blogging under her belt, she explains how she makes her recipes simple,
+													accessible, and delicious.
+												</p>
 											</div>
-
-											<a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
 										</div>
-									</li>
-									<li id="carousel__slide3" tabindex="0" class="carousel__slide">
-										<div class="carousel__snapper">
-											<a href="#carousel__slide2" class="carousel__prev">Go to last slide</a>
-											<div class="galeryCard">
-												<div class="galeryCardUpper">
-													<img src="https://www.escoffier.edu/wp-content/uploads/2022/11/Beau-MacMillan-Featured-Image-125x125.jpg" alt="Course author" />
-													<div class="courseAuthor">
-														<h4>Beau MacMillan</h4>
-														<h5>Iron Chef America winner</h5>
-														<button>Listen or Watch</button>
-													</div>
-													<h5>Episode #67</h5>
-													<hr />
+									</div>
+									<div class="swiper-slide">
+										<div class="galeryCard">
+											<div class="galeryCardUpper">
+												<img src="https://www.escoffier.edu/wp-content/uploads/2022/10/Curtis-Duffy-Featured-Image-125x125.jpg" alt="Course author" />
+												<div class="courseAuthor">
+													<h4>Curtis Duffy</h4>
+													<h5>Iron Chef challenger</h5>
+													<button>Listen or Watch</button>
 												</div>
-												<div class="galeryCardLower">
-													<p>
-														According to Beau MacMillan, <b>Iron Chef America winner </b>and <b>guest judge </b>on <b>Worst Cooks in America </b>and <b>Chopped, </b>each meal has the potential to deeply impact our
-														emotions. From evoking feelings of nostalgia and comfort, to bringing people together through shared memories and traditions, Beau discusses how food plays a central role in shaping each of our
-														stories.
-													</p>
-												</div>
+												<h5>Episode #63</h5>
+												<hr />
 											</div>
-
-											<a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
-										</div>
-									</li>
-									<li id="carousel__slide4" tabindex="0" class="carousel__slide">
-										<div class="carousel__snapper">
-											<a href="#carousel__slide3" class="carousel__prev">Go to last slide</a>
-											<div class="galeryCard">
-												<div class="galeryCardUpper">
-													<img src="https://www.escoffier.edu/wp-content/uploads/2022/01/Elle-Simone-Featured-Image-125x125.png" alt="Course author" />
-													<div class="courseAuthor">
-														<h4>Elle Simone Scott</h4>
-														<h5>America's Test Kitchen Food Stylist</h5>
-														<button>Listen or Watch</button>
-													</div>
-													<h5>Episode #27</h5>
-													<hr />
-												</div>
-												<div class="galeryCardLower">
-													<p>
-														Elle Simone is the <b>first African American woman </b>to serve as the resident food stylist and test cook on <b>America's Test Kitchen on PBS.&nbsp; </b>Her strength and perseverance while
-														battling ovarian cancer has allowed her to build a flourishing career amidst her chronic illness, and she discusses how her setbacks inspired her to find meaning in each day.
-													</p>
-												</div>
+											<div class="galeryCardLower">
+												<p>
+													Curtis Duffy competed on <b>Iron Chef</b> in 2022 and has earned <b>5 Michelin Stars.</b> When asked&nbsp; what inspires him, he answered that it's the littlest things in life. His attention to
+													detail shows up both in his culinary successes and the way he runs his family kitchen culture, and he's joined us to explain how.
+												</p>
 											</div>
-
-											<a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
 										</div>
-									</li>
-								</ol>
-							</section>
+									</div>
+									<div class="swiper-slide">
+										<div class="galeryCard">
+											<div class="galeryCardUpper">
+												<img src="https://www.escoffier.edu/wp-content/uploads/2022/11/Beau-MacMillan-Featured-Image-125x125.jpg" alt="Course author" />
+												<div class="courseAuthor">
+													<h4>Beau MacMillan</h4>
+													<h5>Iron Chef America winner</h5>
+													<button>Listen or Watch</button>
+												</div>
+												<h5>Episode #67</h5>
+												<hr />
+											</div>
+											<div class="galeryCardLower">
+												<p>
+													According to Beau MacMillan, <b>Iron Chef America winner </b>and <b>guest judge </b>on <b>Worst Cooks in America </b>and <b>Chopped, </b>each meal has the potential to deeply impact our emotions.
+													From evoking feelings of nostalgia and comfort, to bringing people together through shared memories and traditions, Beau discusses how food plays a central role in shaping each of our stories.
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="galeryCard">
+											<div class="galeryCardUpper">
+												<img src="https://www.escoffier.edu/wp-content/uploads/2022/01/Elle-Simone-Featured-Image-125x125.png" alt="Course author" />
+												<div class="courseAuthor">
+													<h4>Elle Simone Scott</h4>
+													<h5>America's Test Kitchen Food Stylist</h5>
+													<button>Listen or Watch</button>
+												</div>
+												<h5>Episode #27</h5>
+												<hr />
+											</div>
+											<div class="galeryCardLower">
+												<p>
+													Elle Simone is the <b>first African American woman </b>to serve as the resident food stylist and test cook on <b>America's Test Kitchen on PBS.&nbsp; </b>Her strength and perseverance while battling
+													ovarian cancer has allowed her to build a flourishing career amidst her chronic illness, and she discusses how her setbacks inspired her to find meaning in each day.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
 						</div>
 					</div>
 				</section>
@@ -779,7 +776,7 @@
 			</div>
 		</main>
 		<footer>
-			<div class="test">
+			<div class="maxWidth">
 				<div class="container container--footer">
 					<div class="wrapper">
 						<div class="content content--top">
@@ -889,6 +886,7 @@
 		<div class="stickyQuiz">
 			<h2>Is Culinary School Right For You?</h2>
 			<button>Take This Short Quiz</button>
+			<button class="close"></button>
 		</div>
 	</body>
 </html>

@@ -4,6 +4,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	// outline: 1px solid #f00 !important;
 }
 
 main {
@@ -22,7 +24,7 @@ section {
 	margin-top: 5rem;
 }
 
-.test {
+.maxWidth {
 	max-width: 1400px;
 }
 
@@ -75,6 +77,18 @@ button {
 	font-size: 22px;
 	font-weight: 900;
 	flex: 1;
+
+	&:hover {
+		cursor: pointer;
+
+		background-color: lighten($color: $header-information-button-color, $amount: 20);
+	}
+}
+
+header {
+	li {
+		cursor: pointer;
+	}
 }
 
 //Hamburger meni

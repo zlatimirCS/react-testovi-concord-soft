@@ -14,208 +14,40 @@
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-@font-face {
-  font-family: "CrimsonText";
-  src: url("../assets/fonts/CrimsonText-Regular.ttf");
-}
-@font-face {
-  font-family: "TradeGothic";
-  src: url("../assets/fonts/Trade Gothic LT.ttf");
-}
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
-ol,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.carousel {
-  position: relative;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-  perspective: 100px;
-  min-height: calc(100vh + 5rem);
-}
-
-.carousel__viewport {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.container--five .wrapper .content--bottom {
   display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel__slide {
+  justify-content: center;
   position: relative;
-  flex: 0 0 100%;
-  width: 100%;
 }
-
-.carousel__slide:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
-  font-size: 2em;
+.container--five .wrapper .content--bottom .swiper {
+  margin-top: 3rem;
+  width: 60vw;
 }
-
-.carousel__snapper {
-  position: absolute;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  width: 100%;
-  scroll-snap-align: center;
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper {
   display: flex;
-  align-items: center;
+  flex-direction: row;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
-    animation-name: none;
-  }
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide {
+  flex: 0 0 auto; /* Do not grow or shrink */
+  height: auto; /* Allow the height to be determined by the tallest slide */
 }
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-
-.carousel__prev,
-.carousel__next {
-  padding: 1rem;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  font-size: 0;
-  outline: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6875 25.3125C19.9273 25.3125 20.1673 25.2208 20.3503 25.0378C20.7166 24.6715 20.7166 24.0783 20.3503 23.7122L11.6381 15L20.3503 6.28778C20.7166 5.92145 20.7166 5.32825 20.3503 4.96216C19.984 4.59606 19.3908 4.59583 19.0247 4.96216L9.64969 14.3372C9.28336 14.7035 9.28336 15.2967 9.64969 15.6628L19.0247 25.0378C19.2077 25.2208 19.4477 25.3125 19.6875 25.3125Z' fill='white'/%3E%3C/svg%3E%0A");
-}
-
-.carousel::before,
-.carousel__prev {
-  left: -1rem;
-}
-
-.carousel::after,
-.carousel__next {
-  right: -1rem;
-}
-
-.carousel__next {
-  transform: rotate(180deg) translateY(50%);
-}
-
-.carousel::before,
-.carousel::after {
-  content: "";
-  z-index: 1;
-  background-color: #333;
-  background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: #fff;
-  font-size: 2.5rem;
-  line-height: 4rem;
-  text-align: center;
-  pointer-events: none;
-}
-
-.carousel::before {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-
-.carousel::after {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-
-.galeryCard {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard {
   background-color: white;
   flex-direction: column;
   padding: 2rem 1rem;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
-.galeryCard .galeryCardUpper {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.galeryCard .galeryCardUpper img {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper img {
   border-radius: 50%;
 }
-.galeryCard .galeryCardUpper .courseAuthor {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper .courseAuthor {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,20 +55,20 @@ li {
   text-align: center;
   gap: 1rem;
 }
-.galeryCard .galeryCardUpper .courseAuthor h4 {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper .courseAuthor h4 {
   font-family: "Crimson";
   font-size: 24px;
   color: #252525;
   font-weight: 500;
 }
-.galeryCard .galeryCardUpper .courseAuthor h5 {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper .courseAuthor h5 {
   font-family: "TradeGothic";
   color: #8e6c4a;
   font-size: 18px;
   font-weight: 100;
   text-transform: none;
 }
-.galeryCard .galeryCardUpper .courseAuthor button {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper .courseAuthor button {
   background-color: transparent;
   border: 2px solid #b13;
   color: #b13;
@@ -244,7 +76,7 @@ li {
   font-size: 18px;
   padding-right: 1rem;
 }
-.galeryCard .galeryCardUpper .courseAuthor button::before {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper .courseAuthor button::before {
   content: "";
   display: inline-block;
   background-position: bottom;
@@ -254,24 +86,33 @@ li {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMiAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjAwMDEgN0w2LjAzODI2ZS0wNSAxMy45MjgyTDYuMDk4ODNlLTA1IDAuMDcxNzk2NEwxMi4wMDAxIDdaIiBmaWxsPSIjQkIxMTMzIi8+Cjwvc3ZnPgo=);
   padding: 0 12px 0 0;
 }
-.galeryCard .galeryCardUpper h5 {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper h5 {
   align-self: flex-start;
   color: #8e6c4a;
   text-transform: uppercase;
   font-size: 18px;
 }
-.galeryCard .galeryCardUpper hr {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardUpper hr {
   margin-bottom: 1rem;
   width: 100%;
 }
-.galeryCard .galeryCardLower {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardLower {
   display: flex;
   flex: 1;
 }
-.galeryCard .galeryCardLower p {
+.container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard .galeryCardLower p {
   font-family: "Crimson";
   font-size: 18px;
   line-height: 1.5rem;
+  color: #252525;
+}
+.container--five .wrapper .content--bottom .swiper-button-next,
+.container--five .wrapper .content--bottom .swiper-button-prev {
+  color: white;
+}
+.container--five .wrapper .content--bottom .swiper-button-next::after,
+.container--five .wrapper .content--bottom .swiper-button-prev::after {
+  font-size: 2em;
 }
 
 @font-face {
@@ -409,10 +250,14 @@ header.headerScroll .wrapper .headerTop .buttonContainer {
 }
 
 header {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   font-family: "Lato-Light";
   position: sticky;
   top: 0;
   z-index: 100;
+}
+header img {
+  max-height: 50px;
 }
 header .wrapper {
   flex: 1;
@@ -453,6 +298,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .buttonContainer {
   display: flex;
   order: 1;
+}
+.buttonContainer .upperLinks {
+  display: none;
 }
 .buttonContainer button {
   flex: 1;
@@ -541,6 +389,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   }
   header .wrapper .headerTop {
     width: 100%;
+    padding: 0 5rem;
   }
   header .wrapper .headerTop .wide {
     display: block;
@@ -550,12 +399,39 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   }
   header .wrapper .headerTop .headerTopUpper {
     width: 100%;
+    padding: 1rem 2rem 0 2rem;
   }
   header .wrapper .headerTop .headerTopUpper .buttonContainer.wide {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: center;
     gap: 1rem;
+  }
+  header .wrapper .headerTop .headerTopUpper .buttonContainer.wide .upperLinks {
+    display: block;
+  }
+  header .wrapper .headerTop .headerTopUpper .buttonContainer.wide .upperLinks ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #5c6b80;
+    padding: 0.5rem;
+    font-weight: 900;
+    font-size: 12px;
+  }
+  header .wrapper .headerTop .headerTopUpper .buttonContainer.wide .upperLinks ul li {
+    list-style-type: none;
+  }
+  header .wrapper .headerTop .headerTopUpper .buttonContainer.wide .upperLinks ul .searchIcon {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='10.3 13.978 475.085 475.079' width='475.085' height='475.079' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23333333' d='M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087 c-10.561-24.842-24.838-46.254-42.825-64.241c-17.987-17.987-39.396-32.264-64.233-42.826 C254.246,5.285,228.217,0.003,200.999,0.003c-27.216,0-53.247,5.282-78.085,15.847C98.072,26.412,76.66,40.689,58.673,58.676 c-17.989,17.987-32.264,39.403-42.827,64.241C5.282,147.758,0,173.786,0,201.004c0,27.216,5.282,53.238,15.846,78.083 c10.562,24.838,24.838,46.247,42.827,64.234c17.987,17.993,39.403,32.264,64.241,42.832c24.841,10.563,50.869,15.844,78.085,15.844 c41.879,0,79.852-11.807,113.922-35.405l97.929,97.641c6.852,7.231,15.406,10.849,25.693,10.849 c9.897,0,18.467-3.617,25.694-10.849c7.23-7.23,10.848-15.796,10.848-25.693C475.088,428.458,471.567,419.889,464.524,412.846z M291.363,291.358c-25.029,25.033-55.148,37.549-90.364,37.549c-35.21,0-65.329-12.519-90.36-37.549 c-25.031-25.029-37.546-55.144-37.546-90.36c0-35.21,12.518-65.334,37.546-90.36c25.026-25.032,55.15-37.546,90.36-37.546 c35.212,0,65.331,12.519,90.364,37.546c25.033,25.026,37.548,55.15,37.548,90.36C328.911,236.214,316.392,266.329,291.363,291.358z ' style='fill: %23333333;' transform='matrix(1, 0, 0, 1, 10.299733, 13.974972)'/%3E%3C/svg%3E");
+    background-position: center;
+    padding: 0.25rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  header .wrapper .headerTop .headerTopUpper .buttonContainer.wide .scrollContainer span {
+    display: none;
   }
   header .wrapper .headerTop .headerTopUpper .buttonContainer.wide span a {
     text-decoration: none;
@@ -597,6 +473,32 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
     list-style-type: none;
     font-weight: 900;
     font-size: 14px;
+  }
+  header.headerScroll .wrapper {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  header.headerScroll .wrapper .headerTop {
+    width: 100%;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .buttonContainer.wide .upperLinks {
+    display: none;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .buttonContainer.wide .upperLinks ul .searchIcon {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg viewBox='10.3 13.978 475.085 475.079' width='475.085' height='475.079' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23333333' d='M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087 c-10.561-24.842-24.838-46.254-42.825-64.241c-17.987-17.987-39.396-32.264-64.233-42.826 C254.246,5.285,228.217,0.003,200.999,0.003c-27.216,0-53.247,5.282-78.085,15.847C98.072,26.412,76.66,40.689,58.673,58.676 c-17.989,17.987-32.264,39.403-42.827,64.241C5.282,147.758,0,173.786,0,201.004c0,27.216,5.282,53.238,15.846,78.083 c10.562,24.838,24.838,46.247,42.827,64.234c17.987,17.993,39.403,32.264,64.241,42.832c24.841,10.563,50.869,15.844,78.085,15.844 c41.879,0,79.852-11.807,113.922-35.405l97.929,97.641c6.852,7.231,15.406,10.849,25.693,10.849 c9.897,0,18.467-3.617,25.694-10.849c7.23-7.23,10.848-15.796,10.848-25.693C475.088,428.458,471.567,419.889,464.524,412.846z M291.363,291.358c-25.029,25.033-55.148,37.549-90.364,37.549c-35.21,0-65.329-12.519-90.36-37.549 c-25.031-25.029-37.546-55.144-37.546-90.36c0-35.21,12.518-65.334,37.546-90.36c25.026-25.032,55.15-37.546,90.36-37.546 c35.212,0,65.331,12.519,90.364,37.546c25.033,25.026,37.548,55.15,37.548,90.36C328.911,236.214,316.392,266.329,291.363,291.358z ' style='fill: %23333333;' transform='matrix(1, 0, 0, 1, 10.299733, 13.974972)'/%3E%3C/svg%3E");
+    background-position: center;
+    padding: 0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .buttonContainer.wide .scrollContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .buttonContainer.wide .scrollContainer span {
+    display: block;
   }
 }
 @font-face {
@@ -731,7 +633,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--one .content--top {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--one .content--top {
   display: flex;
   flex-direction: column;
 }
@@ -900,12 +802,12 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--one .content--top {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--one .content--top {
   display: flex;
   flex-direction: column;
 }
 
-.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--five .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom {
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--two .content--bottom .takeQuizBottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom {
   align-items: center;
   justify-content: center;
 }
@@ -1051,12 +953,12 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--one .content--top, .container--two .content--bottom .takeQuizBottom {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--three .wrapper .content--bottom .programQuoteContainer, .container--three .wrapper .content--bottom, .container--three .wrapper .content--top, .container--one .content--top, .container--two .content--bottom .takeQuizBottom {
   display: flex;
   flex-direction: column;
 }
 
-.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--five .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom {
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom {
   align-items: center;
   justify-content: center;
 }
@@ -1274,7 +1176,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--top .learnOnline .right, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer {
   display: flex;
   flex-direction: column;
 }
@@ -1460,24 +1362,19 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper, .container--five .wrapper .content--top, .container--five .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--five .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom {
-  align-items: center;
-  justify-content: center;
-}
-
 .container--five {
   background-color: #000;
 }
 .container--five .wrapper {
-  gap: 5rem;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
 }
 .container--five .wrapper .content--top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 .container--five .wrapper .content--top h2 {
@@ -1503,18 +1400,17 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--six .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--six .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul {
   display: flex;
   flex-direction: column;
 }
 
-.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--five .wrapper .content--top {
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom {
   align-items: center;
   justify-content: center;
 }
 
 .container--six .wrapper {
-  padding: 1rem;
   gap: 2rem;
 }
 .container--six .wrapper .content--top h1 {
@@ -1525,7 +1421,8 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .container--six .wrapper .content--bottom {
   display: flex;
   flex-direction: column-reverse;
-  gap: 1rem;
+  background-color: #f4f4f4;
+  gap: 3rem;
 }
 .container--six .wrapper .content--bottom .descriptionContainer {
   display: flex;
@@ -1543,6 +1440,10 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-size: 28px;
 }
 .container--six .wrapper .content--bottom .descriptionContainer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 3rem;
 }
 .container--six .wrapper .content--bottom .descriptionContainer ul li {
@@ -1562,10 +1463,10 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   content: "";
   border-radius: 50%;
   background-size: contain;
+  margin: 0 0 0 2rem;
 }
 .container--six .wrapper .content--bottom .videoContainer {
   min-height: 300px;
-  margin: -1rem;
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/Escoffier-student-rolling-dough.jpg");
   background-position: center;
   background-size: cover;
@@ -1586,15 +1487,22 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 @media only screen and (min-width: 768px) {
   .container--six .wrapper .content--bottom .videoContainer {
     background-position: center top;
-    margin: 3rem -1rem;
+    margin: 3rem 0;
+  }
+  .container--six .wrapper .content--bottom .descriptionContainer {
+    padding: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
+  .container--six .wrapper .content--top {
+    text-align: center;
+  }
   .container--six .wrapper .content--bottom {
     flex-direction: row;
   }
   .container--six .wrapper .content--bottom .descriptionContainer {
     flex: 1 1 50%;
+    padding: 3rem;
   }
   .container--six .wrapper .content--bottom .videoContainer {
     flex: 1 1 50%;
@@ -1617,12 +1525,12 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--seven .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--six .wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer ul {
+.container--nine .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer, .container--seven .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom {
   align-items: center;
   justify-content: center;
 }
@@ -1782,18 +1690,18 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--nine .wrapper .content--top, .container--nine .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--six .wrapper, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard {
   display: flex;
   flex-direction: column;
 }
 
-.container--nine .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--five .wrapper .content--top, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer {
+.container--nine .wrapper .content--top, .container--two .content--bottom, .container--two .content--bottom .takeQuizContainer, .container--two .content--bottom .takeQuizBottom, .container--seven .wrapper .content--top, .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer {
   align-items: center;
   justify-content: center;
 }
 
 .container--nine {
-  background-image: url("../assets/images/chef-finishing-plated-dish.jpg");
+  background-image: url("../assets/images/why-choose-escoffier-mobile-crop.jpg");
   background-size: cover;
   background-position: 50% 20%;
   background-repeat: no-repeat;
@@ -1847,6 +1755,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 }
 
 @media only screen and (min-width: 768px) {
+  .container--nine {
+    background-image: url("../assets/images/chef-finishing-plated-dish.jpg");
+  }
   .container--nine .wrapper .content--bottom .chooseUsContainer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1884,7 +1795,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--bottom .formContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--six .wrapper, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top {
   display: flex;
   flex-direction: column;
 }
@@ -1917,7 +1828,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .container--ten .wrapper .content--top .blogContainer .blogImageContainer {
   margin-top: 2rem;
   height: 200px;
-  width: 300px;
+  max-width: 300px;
 }
 .container--ten .wrapper .content--top .blogContainer .blogImageContainer img {
   height: 100%;
@@ -1993,8 +1904,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   justify-content: center;
 }
 .container--ten .wrapper .content--bottom .formContainer {
+  display: flex;
+  flex-direction: column;
   background-color: #f4f4f4;
-  margin: -1rem;
   padding: 1rem;
   margin-top: 5rem;
   gap: 1rem;
@@ -2120,7 +2032,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   font-family: "CrimsonText";
   src: url("../assets/fonts/CrimsonText-Regular.ttf");
 }
-.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--five .wrapper, .container--five .wrapper .content--top, .container--six .wrapper, .container--six .wrapper .content--bottom .descriptionContainer ul, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--ten .wrapper, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard, .container--ten .wrapper .content--bottom .formContainer {
+.stickyQuiz.active, .container--footer .wrapper .content--bottom, .container--footer .wrapper .content--top .footerLocations, .container--footer .wrapper .content--top .footerCatalog, .container--footer .wrapper, .container--one .content--top, .container--two .content--bottom .takeQuizBottom, .container--three .wrapper .content--top, .container--three .wrapper .content--bottom, .container--three .wrapper .content--bottom .programQuoteContainer, .container--four .wrapper .content--top .learnOnline .right, .container--four .wrapper .content--top .learnOnline .right ul, .container--four .wrapper .content--bottom, .container--four .wrapper .content--bottom .courseContainer .courseLeft, .container--four .wrapper .content--bottom .courseContainer .courseLeft ul, .container--six .wrapper, .container--seven .wrapper, .container--seven .wrapper .content--bottom .studentsContainer .studentCard, .container--nine .wrapper, .container--nine .wrapper .content--top, .container--ten .wrapper, .container--ten .wrapper .content--top .blogContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .dateContainer, .container--ten .wrapper .content--top .upcomingEventsContainer .upcomingEvents .eventTitle, .container--ten .wrapper .content--top .latestNewsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer, .container--ten .wrapper .content--top .latestNewsContainer .newsContainer .newsCard {
   display: flex;
   flex-direction: column;
 }
@@ -2234,7 +2146,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   position: sticky;
   bottom: 0;
   z-index: 100;
-  background-color: #252525;
+  background-color: #000;
   padding: 1rem;
   gap: 1rem;
   align-items: center;
@@ -2258,6 +2170,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   margin-left: 5px;
   vertical-align: middle;
 }
+.stickyQuiz .close {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .container--footer .wrapper .content--top {
@@ -2276,6 +2191,10 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   footer {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
+  }
+  footer .maxWidth {
+    max-width: 1150px;
   }
   .container--footer .wrapper .content--top {
     gap: 3rem;
@@ -2311,6 +2230,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   .stickyQuiz.active {
     flex-direction: row;
     justify-content: center;
+    padding: 3rem;
   }
   .stickyQuiz.active h2 {
     font-size: 2em;
@@ -2319,6 +2239,22 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
     flex: 0;
     white-space: nowrap;
     text-align: center;
+  }
+  .stickyQuiz.active .close {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+  }
+  .stickyQuiz.active .close::after {
+    content: "";
+    background-image: url("../assets/images/x-mark-48.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0.5rem;
   }
 }
 * {
@@ -2344,7 +2280,7 @@ section {
   margin-top: 5rem;
 }
 
-.test {
+.maxWidth {
   max-width: 1400px;
 }
 
@@ -2371,6 +2307,14 @@ button {
   font-size: 22px;
   font-weight: 900;
   flex: 1;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #ee4466;
+}
+
+header li {
+  cursor: pointer;
 }
 
 main {

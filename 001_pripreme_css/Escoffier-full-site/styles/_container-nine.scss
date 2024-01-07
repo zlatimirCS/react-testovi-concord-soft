@@ -12,7 +12,8 @@
 }
 
 .container--nine {
-	background-image: url('../assets/images/chef-finishing-plated-dish.jpg');
+	background-image: url('../assets/images/why-choose-escoffier-mobile-crop.jpg');
+
 	background-size: cover;
 	background-position: 50% 20%;
 	background-repeat: no-repeat;
@@ -83,6 +84,7 @@
 
 @media only screen and (min-width: 768px) {
 	.container--nine {
+		background-image: url('../assets/images/chef-finishing-plated-dish.jpg');
 		.wrapper {
 			.content--bottom {
 				.chooseUsContainer {

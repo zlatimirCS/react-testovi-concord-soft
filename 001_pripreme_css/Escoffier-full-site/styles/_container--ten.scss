@@ -39,7 +39,7 @@
 				.blogImageContainer {
 					margin-top: 2rem;
 					height: 200px;
-					width: 300px;
+					max-width: 300px;
 
 					img {
 						height: 100%;
@@ -140,10 +140,11 @@
 
 			justify-content: center;
 			.formContainer {
-				@extend %flex-column;
+				display: flex;
+				flex-direction: column;
 
 				background-color: $card-background-color;
-				margin: -1rem;
+				// margin: -1rem;
 				padding: 1rem;
 				margin-top: 5rem;
 				gap: 1rem;

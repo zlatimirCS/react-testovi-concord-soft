@@ -1,27 +1,19 @@
 @import './variables';
 @import './fonts';
 
-%flex-column {
-	display: flex;
-	flex-direction: column;
-}
-
-%centered-content {
-	align-items: center;
-	justify-content: center;
-}
-
 .container--five {
 	background-color: $black-color;
 
 	.wrapper {
-		@extend %flex-column;
-		gap: 5rem;
+		display: flex;
+		flex-direction: column;
 		padding: 1rem;
 
 		.content--top {
-			@extend %flex-column;
-			@extend %centered-content;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			gap: 2rem;
 
 			h2 {
