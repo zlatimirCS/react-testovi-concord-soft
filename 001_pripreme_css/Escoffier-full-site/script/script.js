@@ -10,9 +10,6 @@ const handleResize = () => {
 		});
 
 		let observer = new IntersectionObserver((entries) => {
-			// if (windowWidth > 1024) {
-			// 	// return;
-			// }
 			if (entries[0].boundingClientRect.y < 0) {
 				header.classList.add('headerScroll');
 				stickyQuiz.classList.add('active');
@@ -61,15 +58,9 @@ const mySwiper = new Swiper('.mySwiper', {
 			centeredSlides: false
 		},
 		1400: {
-			slidesPerView: 3, // Set to show 2 slides per view on larger screens
-			spaceBetween: 50,
+			slidesPerView: 3,
+			spaceBetween: 40,
 			centeredSlides: false
 		}
-	}
-});
-
-document.querySelectorAll('*').forEach((el) => {
-	if (el.offsetWidth > document.documentElement.offsetWidth) {
-		console.log('Found the worst element ever: ', el);
 	}
 });

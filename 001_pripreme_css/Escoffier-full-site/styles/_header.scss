@@ -93,7 +93,8 @@
 		}
 	}
 }
-//Styles for when the page is scrolled
+
+//Styles for  header when the page is scrolled
 header.headerScroll {
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 
@@ -126,6 +127,7 @@ header.headerScroll {
 										text-align: center;
 										padding: 0.5rem;
 										text-transform: uppercase;
+										font-weight: 200;
 
 										&::before {
 											content: none;
@@ -259,6 +261,34 @@ header {
 			position: relative;
 			vertical-align: middle;
 		}
+	}
+}
+
+@media only screen and (min-width: 425px) {
+	header {
+		.wrapper {
+			.headerTop {
+				.headerTopUpper {
+					.logo {
+						img {
+							max-width: 150px;
+						}
+						.regularLogo {
+							display: block;
+							height: 100%;
+							width: 150px;
+						}
+
+						.mobileLogo {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	header.headerScroll .wrapper .headerTop .headerTopUpper .logo img {
+		max-width: 100px;
 	}
 }
 

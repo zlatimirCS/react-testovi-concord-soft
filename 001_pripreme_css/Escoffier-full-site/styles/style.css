@@ -21,7 +21,7 @@
 }
 .container--five .wrapper .content--bottom .swiper {
   margin-top: 3rem;
-  width: 60vw;
+  width: 70vw;
 }
 .container--five .wrapper .content--bottom .swiper .swiper-wrapper {
   display: flex;
@@ -114,7 +114,21 @@
 .container--five .wrapper .content--bottom .swiper-button-prev::after {
   font-size: 2em;
 }
+.container--five .wrapper .content--bottom .swiper-button-prev {
+  left: 0;
+}
+.container--five .wrapper .content--bottom .swiper-button-next {
+  right: 0;
+}
 
+@media (min-width: 1400px) {
+  .container--five .wrapper .content--bottom .swiper {
+    margin: 3rem;
+  }
+  .container--five .wrapper .content--bottom .swiper .swiper-wrapper .swiper-slide .galeryCard {
+    margin: auto 1rem;
+  }
+}
 @font-face {
   font-family: "Lato-Black";
   src: url("../assets/fonts/Lato-Black.ttf");
@@ -234,6 +248,7 @@ header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul
   text-align: center;
   padding: 0.5rem;
   text-transform: uppercase;
+  font-weight: 200;
 }
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow::before,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo::before {
@@ -343,6 +358,22 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   vertical-align: middle;
 }
 
+@media only screen and (min-width: 425px) {
+  header .wrapper .headerTop .headerTopUpper .logo img {
+    max-width: 150px;
+  }
+  header .wrapper .headerTop .headerTopUpper .logo .regularLogo {
+    display: block;
+    height: 100%;
+    width: 150px;
+  }
+  header .wrapper .headerTop .headerTopUpper .logo .mobileLogo {
+    display: none;
+  }
+  header.headerScroll .wrapper .headerTop .headerTopUpper .logo img {
+    max-width: 100px;
+  }
+}
 @media only screen and (min-width: 768px) {
   header .wrapper .headerTop .headerTopUpper .logo .regularLogo {
     display: block;
@@ -603,10 +634,10 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
     flex: 1;
   }
   .video .videoContainer .enrollmentVideoBanner .bannerLeft h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
   .video .videoContainer .enrollmentVideoBanner .bannerLeft h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
   .video .videoContainer .enrollmentVideoBanner .bannerRight {
     align-items: center;
@@ -615,6 +646,11 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
     flex: 0;
     white-space: nowrap;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .video {
+    height: auto;
   }
 }
 @font-face {
@@ -765,6 +801,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   .container--one .content--top {
     margin-bottom: 3rem;
     padding: 80px 60px;
+    background-position: right 90%;
   }
   .container--one .content--top h2 {
     font-size: 2.3em;
@@ -936,6 +973,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   .container--two .wrapper .content--bottom .takeQuizBottom {
     font-size: 0.9em;
   }
+  .container--two .wrapper .content--bottom .takeQuizBottom button {
+    padding: 1.5rem 8rem;
+  }
 }
 @font-face {
   font-family: "Lato-Black";
@@ -986,7 +1026,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .container--three .wrapper .content--top h5 {
   font-size: 18px;
   font-family: "CrimsonText";
-  font-weight: 600;
+  font-weight: 200;
   line-height: 1.5;
 }
 .container--three .wrapper .content--top ul li {
@@ -1040,7 +1080,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   text-transform: uppercase;
   color: #252525;
   font-weight: 900;
-  font-size: 20px;
+  letter-spacing: -1px;
 }
 .container--three .wrapper .content--bottom .programsContainer .programCard .programText p {
   font-size: 18px;
@@ -1445,6 +1485,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  padding-bottom: 3rem;
 }
 .container--six .wrapper .content--bottom .descriptionContainer ul li {
   list-style: none;
@@ -1454,6 +1495,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+  padding-right: 2rem;
 }
 .container--six .wrapper .content--bottom .descriptionContainer ul li::before {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/05/checkmark-2x-red.png");
@@ -1649,7 +1691,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 .container--eight .content--top h1 {
   color: #b13;
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 400;
 }
 .container--eight .content--bottom {
   display: grid;
@@ -1669,6 +1711,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 @media screen and (min-width: 1024px) {
   .container--eight .wrapper .content--top h1 {
     text-align: center;
+    font-size: 36px;
   }
   .container--eight .wrapper .content--bottom {
     grid-template-columns: repeat(4, 1fr);
@@ -1979,8 +2022,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 }
 .container--ten .wrapper .content--bottom .formContainer form button {
   width: 100%;
-  padding: 1rem;
-  font-size: 22px;
+  padding: 0.75rem;
+  font-size: 18px;
+  border-radius: 0.5rem;
 }
 .container--ten .wrapper .content--bottom .formContainer p {
   font-size: 12px;
@@ -2014,6 +2058,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   }
   .container--ten .wrapper .content--bottom .formContainer form .formFieldWrapper {
     flex: 1 1 47%;
+  }
+  .container--ten .wrapper .content--bottom .formContainer form button {
+    padding: 1rem 3rem;
   }
 }
 @font-face {
@@ -2101,6 +2148,8 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 }
 .container--footer .wrapper .content--top .footerLinks ul li {
   margin-left: 2rem;
+  list-style-type: none;
+  font-family: "Lato-Light";
 }
 .container--footer .wrapper .content--top .footerLinks ul li::before {
   content: ">";
@@ -2146,7 +2195,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   position: sticky;
   bottom: 0;
   z-index: 100;
-  background-color: #000;
+  background-color: #252525;
   padding: 1rem;
   gap: 1rem;
   align-items: center;
@@ -2159,6 +2208,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
 }
 .stickyQuiz.active button {
   font-size: 20px;
+  padding: 0.5rem 1rem;
 }
 .stickyQuiz.active button::after {
   content: "";
@@ -2202,6 +2252,9 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   .container--footer .wrapper .content--top .footerCatalog button {
     white-space: nowrap;
     text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 22px;
+    font-weight: 400;
   }
   .container--footer .wrapper .content--top > div {
     flex: 0 0 20%;
@@ -2227,10 +2280,14 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   .container--footer .wrapper .content--top .footerLinks .mobileFooterLinks {
     display: none;
   }
+  .container--footer .wrapper .content--top .footerSocialsContainer {
+    align-items: normal;
+  }
   .stickyQuiz.active {
     flex-direction: row;
     justify-content: center;
     padding: 3rem;
+    background-color: #000;
   }
   .stickyQuiz.active h2 {
     font-size: 2em;
@@ -2239,6 +2296,10 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
     flex: 0;
     white-space: nowrap;
     text-align: center;
+    padding: 1rem;
+  }
+  .stickyQuiz.active button::after {
+    content: none;
   }
   .stickyQuiz.active .close {
     display: block;
@@ -2261,10 +2322,6 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-main {
-  align-items: center;
 }
 
 header {
@@ -2318,9 +2375,10 @@ header li {
 }
 
 main {
-  margin-top: 5rem;
+  margin-top: 0;
   font-family: "TradeGothic";
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5rem;
 }/*# sourceMappingURL=style.css.map */

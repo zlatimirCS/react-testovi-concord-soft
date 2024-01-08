@@ -9,7 +9,7 @@
 
 			.swiper {
 				margin-top: 3rem;
-				width: 60vw;
+				width: 70vw;
 
 				.swiper-wrapper {
 					display: flex;
@@ -18,6 +18,7 @@
 					.swiper-slide {
 						flex: 0 0 auto; /* Do not grow or shrink */
 						height: auto; /* Allow the height to be determined by the tallest slide */
+
 						.galeryCard {
 							background-color: white;
 							flex-direction: column;
@@ -114,6 +115,33 @@
 
 				&::after {
 					font-size: 2em;
+				}
+			}
+
+			.swiper-button-prev {
+				left: 0;
+			}
+
+			.swiper-button-next {
+				right: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.container--five {
+		.wrapper {
+			.content--bottom {
+				.swiper {
+					margin: 3rem;
+					.swiper-wrapper {
+						.swiper-slide {
+							.galeryCard {
+								margin: auto 1rem;
+							}
+						}
+					}
 				}
 			}
 		}
