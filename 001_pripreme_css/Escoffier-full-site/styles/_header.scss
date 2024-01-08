@@ -123,11 +123,12 @@ header.headerScroll {
 
 									.applyNow,
 									.requestInfo {
+										font-family: 'Lato-Light';
 										white-space: nowrap;
 										text-align: center;
 										padding: 0.5rem;
 										text-transform: uppercase;
-										font-weight: 200;
+										font-weight: 700;
 
 										&::before {
 											content: none;

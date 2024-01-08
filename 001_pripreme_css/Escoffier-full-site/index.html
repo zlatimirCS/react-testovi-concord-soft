@@ -11,6 +11,13 @@
 
 		<!-- Swiper's JS -->
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+
+		<!-- Video.js CSS -->
+		<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet" />
+
+		<!-- Video.js JavaScript -->
+		<script src="https://unpkg.com/video.js/dist/video.js" defer></script>
+
 		<script src="./script/script.js" defer></script>
 	</head>
 	<body>
@@ -511,6 +518,17 @@
 									</div>
 									<div class="videoContainer" data-video="one">
 										<div class="playButton"></div>
+
+										<div id="video-overlay" style="display: none">
+											<!-- Custom close button -->
+											<div class="videoContent">
+												<button id="close-button">×</button>
+												<video id="video-player" class="video-js vjs-default-skin" width="640" height="264" controls preload="none">
+													<source src="https://player.vimeo.com/video/406354470/" type="video/mp4" />
+													Your browser does not support the video tag.
+												</video>
+											</div>
+										</div>
 									</div>
 									<div class="studentInfo">
 										<p><strong> MICHAEL PYTHOUD,</strong> Employment Partner; Former Culinary Director, Walt Disney World Resorts</p>

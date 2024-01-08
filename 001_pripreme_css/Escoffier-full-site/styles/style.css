@@ -244,11 +244,12 @@ header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul
 }
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo {
+  font-family: "Lato-Light";
   white-space: nowrap;
   text-align: center;
   padding: 0.5rem;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 700;
 }
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .applyNow::before,
 header.headerScroll .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.headerScrollButtons .buttonContainer .requestInfo::before {
@@ -1616,6 +1617,7 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  /* Custom close button styles */
 }
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer .playButton {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/03/play_button.png");
@@ -1623,6 +1625,34 @@ header .wrapper .headerTop .headerTopUpper .mobileLinksContainer ul li + li.head
   background-size: contain;
   background-repeat: no-repeat;
   padding: 1.5rem;
+}
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer .video-js {
+  display: none;
+}
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer #video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer .videoContent {
+  position: relative;
+}
+.container--seven .wrapper .content--bottom .studentsContainer .studentCard .videoContainer #video-overlay #close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 .container--seven .wrapper .content--bottom .studentsContainer .studentCard [data-video=two] {
   background-image: url("https://www.escoffier.edu/wp-content/uploads/2020/06/wyl-lima.jpg");

@@ -64,3 +64,33 @@ const mySwiper = new Swiper('.mySwiper', {
 		}
 	}
 });
+
+const player = videojs('video-player', {
+	fluid: true // Ensures video aspect ratio is maintained
+});
+
+const playButtons = document.querySelectorAll('.playButton');
+
+playButtons.forEach(function (button) {
+	button.addEventListener('click', function () {
+		console.log(button);
+		let video = document.querySelector('#video-player');
+		const videoOverlay = document.querySelector('#video-overlay');
+		const closeButton = document.querySelector('#close-button');
+		const videoContainer = button.closest('.videoContent');
+
+		closeButton.addEventListener('click', () => {
+			video.style.display = 'none';
+			videoOverlay.style.display = 'none';
+			player.pause();
+		});
+		video.style.display = 'block';
+		videoOverlay.style.display = 'flex';
+		let videoUrl = videoContainer.getAttribute('data-video-url');
+		player.src({ type: 'video/mp4', src: videoUrl });
+		player.ready(function () {
+			player.play();
+			// player.requestFullscreen();
+		});
+	});
+});
