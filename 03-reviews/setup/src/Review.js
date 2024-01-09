@@ -10,11 +10,13 @@ const Review = () => {
 	const handleReviewChange = (type) => {
 		const arrayLength = people.length;
 
+		// If type is undefined, get a random review
 		if (type === undefined) {
 			setReview((prevState) => getRandomUniqueReview(prevState));
 			return;
 		}
 
+		// If type is next, get the next review , else get previous
 		if (type === 'next') {
 			setReview((prevState) => (prevState === arrayLength - 1 ? 0 : prevState + 1));
 		} else {
@@ -27,6 +29,7 @@ const Review = () => {
 		const arrayLength = people.length;
 		let randomReview = Math.floor(Math.random() * arrayLength);
 
+		// If random review is the current review, call function until a unique review is found
 		if (randomReview === currentReview) {
 			return getRandomUniqueReview(currentReview);
 		}
