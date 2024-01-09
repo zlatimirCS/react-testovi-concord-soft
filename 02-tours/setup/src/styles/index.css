@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 1rem 1rem 1rem;
+}
+.container .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.container .title .underline {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: #49a6e9;
+}
+
+.toursContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .toursContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .toursContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.singleTour {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singleTour .imageContainer {
+  height: 20rem;
+  width: 100%;
+  position: relative;
+}
+.singleTour .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.singleTour .imageContainer .tourPrice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ebf7ff;
+  color: #49a6e9;
+  padding: 0.5rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.singleTour .imageContainer .tourPrice h3 {
+  font-weight: 100;
+}
+.singleTour .textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  color: #617d98;
+}
+.singleTour .textContainer h4 {
+  align-self: flex-start;
+  color: #102a42;
+}
+.singleTour .textContainer p {
+  font-size: 14px;
+}
+.singleTour .textContainer button {
+  border: none;
+  background-color: transparent;
+  color: #49a6e9;
+  font-size: 16px;
+}
+.singleTour .textContainer .deleteBtn {
+  background-color: transparent;
+  border: 1px solid #bb2525;
+  color: #bb2525;
+  width: 200px;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1170px;
+}
+main h1 {
+  font-size: 2.5rem;
+}
+main h2 {
+  color: #102a42;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+main button {
+  background-color: #49a6e9;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=index.css.map */
