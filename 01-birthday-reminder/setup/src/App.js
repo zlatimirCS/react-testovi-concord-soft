@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import data from './data';
-import List from './List';
+import List from './components/List';
 function App() {
 	const [birthdays, setBirthdays] = useState(data);
 
