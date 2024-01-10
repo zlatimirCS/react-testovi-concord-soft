@@ -8,14 +8,7 @@ function App() {
 	const [tours, setTours] = useState([]);
 	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		fetchTours();
-	}, []);
-
-	const fetchTours = async () => {
-		const controller = new AbortController();
-		const signal = controller.signal;
-
+	const fetchTours = async (signal) => {
 		setLoading(true);
 
 		try {
@@ -27,11 +20,17 @@ function App() {
 			setLoading(false);
 			console.log(error);
 		}
+	};
+
+	useEffect(() => {
+		const controller = new AbortController();
+		const signal = controller.signal;
+		fetchTours(signal);
 
 		return () => {
 			controller.abort();
 		};
-	};
+	}, []);
 
 	const removeTourHandler = (id) => {
 		const newTours = tours.filter((tour) => tour.id !== id);
