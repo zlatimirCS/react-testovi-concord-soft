@@ -1,0 +1,38 @@
+@import './variables';
+
+.cocktail {
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+
+	.imgContainer {
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			border-radius: $border-radius;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	.text-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background-color: $white-color;
+		gap: 0.5rem;
+		padding: 1.5rem;
+
+		h5 {
+			font-weight: 400;
+		}
+
+		p {
+			color: $paragraph-color;
+		}
+
+		a {
+			padding: 0.375rem 0.875rem;
+		}
+	}
+}

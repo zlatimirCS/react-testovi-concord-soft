@@ -1,0 +1,38 @@
+@import './variables';
+
+nav {
+	background-color: $white-color;
+	letter-spacing: 2px;
+	width: 100%;
+
+	.activeLink {
+		color: $main-green-color;
+	}
+
+	.linksContainer {
+		width: $view-width;
+		max-width: $max-width;
+		padding: 1.5rem 0;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		li {
+			list-style: none;
+		}
+
+		.logo {
+			color: $main-green-color;
+			font-size: clamp(1.5rem, 3vw, 3rem);
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 1rem;
+			color: $main-dark-color;
+		}
+	}
+}

@@ -1,0 +1,136 @@
+nav {
+  background-color: #fff;
+  letter-spacing: 2px;
+  width: 100%;
+}
+nav .activeLink {
+  color: #10b981;
+}
+nav .linksContainer {
+  width: 90vw;
+  max-width: 1120px;
+  padding: 1.5rem 0;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul .logo {
+  color: #10b981;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+nav ul a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.formContainer {
+  width: 90vw;
+}
+.formContainer form {
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  max-width: 1120px;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.formContainer form input {
+  background-color: #f8fafc;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.cocktail {
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.cocktail .imgContainer img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.cocktail .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+.cocktail .text-container h5 {
+  font-weight: 400;
+}
+.cocktail .text-container p {
+  color: #64748b;
+}
+.cocktail .text-container a {
+  padding: 0.375rem 0.875rem;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.875rem;
+  background-color: #f8fafc;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 2rem);
+  text-transform: capitalize;
+}
+
+h5 {
+  font-size: clamp(0.875rem, 1.5vw, 1.5rem);
+  text-transform: capitalize;
+}
+
+.btn {
+  background: #10b981;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.cocktail-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 90vw;
+}/*# sourceMappingURL=index.css.map */

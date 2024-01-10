@@ -1,0 +1,22 @@
+@import './variables';
+
+.formContainer {
+	width: 90vw;
+
+	form {
+		padding: 2rem 2.5rem;
+		background-color: $white-color;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		max-width: $max-width;
+		border-radius: $border-radius;
+		box-shadow: $box-shadow;
+
+		input {
+			background-color: $search-background-color;
+			padding: 0.5rem;
+			width: 50%;
+		}
+	}
+}
