@@ -29,6 +29,11 @@ nav {
 			text-decoration: none;
 			font-size: 1rem;
 			color: $main-dark-color;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: $main-green-color;
+			}
 		}
 
 		.links {

@@ -60,6 +60,12 @@ p {
 	color: $white-color;
 	padding: 0.5rem;
 	flex: 1;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: darken($color: $main-green-color, $amount: 20);
+	}
 }
 
 .page {
@@ -104,6 +110,7 @@ p {
 	border-radius: $border-radius;
 	box-shadow: $box-shadow;
 	padding: 2rem 2.5rem;
+	margin: 0 auto;
 
 	.form-control {
 		display: flex;
@@ -136,7 +143,11 @@ p {
 
 	.btn {
 		color: $main-green-color;
-		background-color: $white-color;
+		background-color: transparent;
+
+		&:hover {
+			color: darken($color: $main-green-color, $amount: 20);
+		}
 	}
 }
 
