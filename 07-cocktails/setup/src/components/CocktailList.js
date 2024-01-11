@@ -9,9 +9,17 @@ const CocktailList = () => {
 	if (loading) {
 		return <Loading />;
 	}
+
+	if (cocktails.length < 1) {
+		return (
+			<h4 className='section-title' style={{ textAlign: 'center', margin: '0 auto' }}>
+				no matching cocktails founds...
+			</h4>
+		);
+	}
+
 	return (
 		<div className='cocktail-container'>
-			{cocktails.length < 1 && <h4 className='section-title'>No matching cocktails found...</h4>}
 			{cocktails.map((item) => {
 				return <Cocktail key={item.id} {...item} />;
 			})}

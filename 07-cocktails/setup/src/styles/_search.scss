@@ -2,6 +2,8 @@
 
 .formContainer {
 	width: 90vw;
+	max-width: 600px;
+	align-self: center;
 
 	form {
 		padding: 2rem 2.5rem;
@@ -9,14 +11,62 @@
 		display: flex;
 		width: 100%;
 		justify-content: center;
-		max-width: $max-width;
 		border-radius: $border-radius;
 		box-shadow: $box-shadow;
 
+		.submit {
+			flex: 0;
+		}
+	}
+
+	.active {
+		display: block;
+	}
+
+	.searchContainer {
+		&:hover {
+			input:not(:placeholder-shown) {
+				~ .deleteSearchInput {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.searchContainer {
+		flex: 1;
+		display: flex;
+		position: relative;
+
 		input {
+			flex: 1;
 			background-color: $search-background-color;
 			padding: 0.5rem;
-			width: 50%;
+		}
+
+		.deleteSearchInput {
+			display: none;
+			background-color: transparent;
+			border: none;
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: blue;
+			font-size: 12px;
+			font-weight: 900;
+		}
+
+		.active {
+			display: block;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.formContainer {
+		.searchContainer {
+			width: 100%;
 		}
 	}
 }

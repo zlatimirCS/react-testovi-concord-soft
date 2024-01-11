@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../logo.svg';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Navbar = () => {
@@ -14,19 +13,17 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<NavLink to='/' exact activeClassName='activeLink'>
-							Home
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to='/about' activeClassName='activeLink'>
-							About
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to='/newsletter' activeClassName='activeLink'>
-							Newsletter
-						</NavLink>
+						<div className='links'>
+							<NavLink to='/' exact activeClassName='activeLink'>
+								Home
+							</NavLink>
+							<NavLink to='/about' activeClassName='activeLink'>
+								About
+							</NavLink>
+							<NavLink to='/newsletter' activeClassName='activeLink'>
+								Newsletter
+							</NavLink>
+						</div>
 					</li>
 				</ul>
 			</div>
