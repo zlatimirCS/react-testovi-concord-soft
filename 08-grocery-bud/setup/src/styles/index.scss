@@ -1,0 +1,175 @@
+@import './variables.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+}
+
+body {
+	background-color: $background-color;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: $para-color;
+	line-height: 1.5;
+	font-size: 0.875rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+h3 {
+	font-size: 1.25rem;
+	text-transform: capitalize;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.groceryBudContainer {
+	width: 90vw;
+	max-width: 35rem;
+	margin: 8rem auto 0;
+	box-shadow: $box-shadow;
+	border-radius: $border-radius;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 2rem;
+	background-color: $white-color;
+}
+
+.alert {
+	text-transform: capitalize;
+	text-align: center;
+	border-radius: $border-radius;
+	margin-bottom: 1rem;
+}
+
+.danger {
+	background-color: lighten($clear-items-color, 25);
+}
+
+.success {
+	background-color: lighten($edit-icon-color, 25);
+}
+
+.groceryForm {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	margin-bottom: 2rem;
+
+	.formControl {
+		display: flex;
+	}
+
+	input {
+		padding: 0.5rem 1rem;
+		border: none;
+		border-top-left-radius: $border-radius;
+		border-bottom-left-radius: $border-radius;
+		background-color: $input-bg-color;
+		flex: 1 0 auto;
+	}
+
+	button {
+		padding: 0.25rem 0.5rem;
+		border: none;
+		border-top-right-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
+		background-color: $submit-bg-color;
+		text-transform: capitalize;
+		cursor: pointer;
+
+		&:hover {
+			background-color: darken($color: $submit-bg-color, $amount: 10);
+			color: $white-color;
+		}
+	}
+}
+
+.groceryContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.groceryItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+
+	&:hover {
+		background-color: $input-bg-color;
+	}
+
+	.title {
+		letter-spacing: 2px;
+		text-transform: capitalize;
+		overflow: auto;
+	}
+
+	.btnContainer {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	button {
+		background: transparent;
+		border: none;
+	}
+
+	.edit-btn svg {
+		fill: $edit-icon-color;
+
+		&:hover {
+			fill: darken($color: $edit-icon-color, $amount: 20);
+		}
+	}
+
+	.delete-btn svg {
+		fill: $clear-items-color;
+
+		&:hover {
+			fill: darken($color: $clear-items-color, $amount: 20);
+		}
+	}
+}
+
+.clear-btn {
+	border: none;
+	background-color: transparent;
+	text-transform: capitalize;
+	color: $clear-items-color;
+	font-size: 0.875rem;
+
+	&:hover {
+		color: darken($color: $clear-items-color, $amount: 20);
+	}
+}
+
+@media screen and (min-width: 370px) {
+	.groceryForm {
+		.formControl {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+	body {
+		font-size: 1rem;
+	}
+	h3 {
+		font-size: 1.75rem;
+	}
+}
